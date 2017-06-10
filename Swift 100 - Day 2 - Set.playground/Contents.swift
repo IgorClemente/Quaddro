@@ -30,3 +30,4 @@ pares.union(impares)
 
 let primos:Set<Int> = [1,2,3,5,7,9,11,13,15,17,19,23]
 impares.intersection(primos)
+
