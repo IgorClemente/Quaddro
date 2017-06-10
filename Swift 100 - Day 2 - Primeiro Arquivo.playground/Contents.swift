@@ -51,5 +51,8 @@ print("Capitais Populacao > 5000000\(capitaisFiltro)")
 let capitaisMapa = capitais.map{ $0.nome }
 print("Capitais Nome: \(capitaisMapa)")
 
+//" reduce(0) - Valor Inicial"
 let capitaisReduce = capitais.reduce(0){ $0 + $1.populacao }
 print("Numero Total: \(capitaisReduce)")
+
+
