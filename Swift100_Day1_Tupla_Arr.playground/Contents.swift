@@ -219,9 +219,10 @@ listaDeCompras.forEach {
 listaDeCompras[2].comprado = true
 listaDeCompras[3].comprado = true
 
+/*
 let filtrado = listaDeCompras.filter { $0.comprado == false }
 
 filtrado.forEach{
 
     print("Falta: \($0.nome)")
-}
+}*/
