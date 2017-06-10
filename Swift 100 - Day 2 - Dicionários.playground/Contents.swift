@@ -53,9 +53,6 @@ for(numero, nome) in nomeDoNumero {
 print(todosOsNumeros)
 
 
-
-
-
 /*
  
  Faca um dicionario com filmes, em que a chave seja o nome do filme 
@@ -73,6 +70,13 @@ var filmes:[String:Descricao] = [
 ]
 print("\(Array(filmes.keys))")
 print("\(Array(filmes.values))")
+
+
+//Ultimo módulo de Swift:
+
+filmes["O Hobbit"]?.diretor
+
+
 
 
 
