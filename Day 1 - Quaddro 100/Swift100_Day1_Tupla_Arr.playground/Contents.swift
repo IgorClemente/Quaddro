@@ -15,7 +15,7 @@ var carro:(nome:String, ano:Int) = ("Fiat", 1443)
     carro.ano
 
 
-//Dar apelidos a tupla
+// :Dar apelidos a tupla
 
 typealias NomeCompleto = (nome: String, sobrenome: String)
 let aluno:NomeCompleto = ("Igor", "Clemente")
@@ -24,7 +24,8 @@ let aluno:NomeCompleto = ("Igor", "Clemente")
 let aluno2:NomeCompleto = ("KKK","LLL")
     aluno2.nome
 
-//Podemos usar tuplas em retornos de funcao
+// :Podemos usar tuplas em retornos de funcao
+
 func acessarSite() -> (error: String, código: Int){
 
     return ("Não Encontrado",404)
@@ -34,7 +35,7 @@ acessarSite().código
 acessarSite().error
 
 
-//Quiz
+// :Quiz
 // 1.Faca uma tupla para representar um endereco, com:
 // -- rua, numero, cidade
 
@@ -56,9 +57,7 @@ var cpf:CPF = (464654123,7)
 // 3. Faca uma tupla para representar uma pessoa, com:
 // -- nome, cpf e endereco (Tupla de Tuplas)
 
-var pessoa2:(nome: String, CPF, Endereco) = ("Igor Clemente",
-                                            (134_456_677,7),
-                                            ("Rua 43",23,"São Paulo"))    // O '_' é desconsiderado na prática
+var pessoa2:(nome: String, CPF, Endereco) = ("Igor Clemente",(134_456_677,7),("Rua 43",23,"São Paulo")) // O '_' é desconsiderado na prática
     pessoa2.nome
     pessoa2.1.numero
     pessoa2.1.digito
@@ -71,16 +70,19 @@ var pessoa2:(nome: String, CPF, Endereco) = ("Igor Clemente",
 //: Array
 
 
-//Construcao
-var pessoas = ["Igor","João","Maria","Joana"]
-// Tamanho Virtualmente Infinito
+// :Construcao
 
-//Tipagem Explicita (Dois Jeitos)
+var pessoas = ["Igor","João","Maria","Joana"]
+
+
+// O tamanho do vetor e vitualmente infinito
+
+// :Tipagem Explicita (Dois Jeitos)
 
 let constantes:[Int] = [1,2,3,5,8,13]
 let megaNumeros:Array<Int> = [12,18,46,50,53,55]
 
-//Array de Tuplas
+// :Array de Tuplas
 
 var arrayDeTuplas:[(nome:String, idade:Int)]
 var tuplaComArray:(nome:String, filhos:[String])
@@ -95,16 +97,17 @@ tuplaComArray = ("Maria de Lourdes",pessoas)
 tuplaComArray.filhos[0]
 tuplaComArray.filhos[1]
 
-//Diferenca de VAR e LET com Array
+// :Diferenca de VAR e LET com Array
 
 let lista = ["Pão","Queijo"]
 
-//Não Podemos alterar, Pois foi declarado com LET
+//: Não Podemos alterar, Pois foi declarado com LET
 
 pessoas.append("Simone")
 pessoas.insert("Miguel", at: 0)
 
-//Removendo
+// :Removendo
+
 pessoas.removeFirst()
 pessoas.removeLast()
 
@@ -112,20 +115,21 @@ pessoas.dropFirst()   //Retorna um novo Array
 
 var notas = [8,10,8,7,9]
 let melhores = notas.sorted().dropFirst()
-
-//Contando
+        
+//: Contando
 
 var refeicoes = ["Arroz","Arroz","Pizza"]
     refeicoes.count
-    refeicoes.isEmpty // <- Melhor do Count == 0
-    refeicoes.underestimatedCount    //Estimacao de Contagem
+    refeicoes.isEmpty // <- Melhor do que Count == 0
+    refeicoes.underestimatedCount    //Contagem do Estimada do Vetor
 
 
-//Procurar em um vetor
+// :Procurar em um vetor
 
 refeicoes.contains("Pizza")
 
-//Vetor Vázio
+// :Vetor Vázio
+
 let solidão:[Int] = []
 
 Array(refeicoes.enumerated())   //Para saber a posicao e o que tem dentro
@@ -140,37 +144,48 @@ Array(refeicoes.enumerated())   //Para saber a posicao e o que tem dentro
  4 Vez: $0 -> 3
  5 Vez: $0 -> 4
  6 Vez: $0 -> 5
-  Vez: $0 -> 6
+   Vez: $0 -> 6
+ 
 */
 
 var soma = 0
 constantes.forEach{ soma += $0 }
 print(soma)
 
-//Filter - Percorre o Vetor e Verifica Qual item deve aparecer - Através do Cloujure
+// :Filter - Percorre o Vetor e Verifica Qual item deve aparecer - Através do Cloujure
+
 let filtrado = constantes.filter{ $0%2 == 0 }
 filtrado
 
 
-//Map - Passa em cada item transformando cada coisa
+// :Map - Passa em cada item transformando cada coisa
+
 let mapeado = constantes.map{ $0 * 2}
 
 // - Reduce
-// Reduzo o vetor a um item só
+// Reduz o vetor a um item só - Exemplo abaixo usa '$0' como indice temporario e '$1' como valor corrente
 
 let reduzido = constantes.reduce(0) { $0 + $1 }
 print(reduzido)
 
-//Quiz
-//: Lista de Compras
-// 1. Criar uma tupla Produto (nome: String, comprado: Bool)
-// 2. Adicionar produtos na listaDeCompras (vetor de Produtos)
-// 3. Listar com print os produtos (nome e se foi comprado)
-// 4. Marcar dois produtos como comprado
-// 5. Listar produtos (igual passo 3)
-// 6. Listar somente os não comprados 
+/* 
+ 
+   Quiz
+   Lista de Compras
+   
+   1. Criar uma tupla Produto (nome: String, comprado: Bool)
+   2. Adicionar produtos na listaDeCompras (vetor de Produtos)
+   3. Listar com print os produtos (nome e se foi comprado)
+   4. Marcar dois produtos como comprado
+   5. Listar produtos (igual passo 3)
+   6. Listar somente os não comprados
+
+*/
 
 /*
+
+:Minha Solucao - Ruim Porem Funcional
+ 
 typealias Produto = (nome: String, comprado: Bool)
 
 var produto1:Produto = ("Arroz",false)
@@ -179,21 +194,19 @@ var produto3:Produto = ("Feijão",false)
 
 var listaDeCompras:[Produto]
     listaDeCompras = [produto1,produto2,produto3]
-
 print(listaDeCompras)
 
     listaDeCompras[0].comprado = true
     listaDeCompras[1].comprado = true
-
 print(listaDeCompras)
 
 let filtro = listaDeCompras.filter{ $0.comprado == false }
 filtro
+
 */
 
 
-
-// Solucao Lino
+// :Solucao Lino
 
 typealias Produto = (nome: String, comprado: Bool)
 var listaDeCompras:[Produto] = []
@@ -207,22 +220,71 @@ listaDeCompras.append(("Feijão",false))
     listaDeCompras.append(novoProduto)
 }
 
-// Listar
+// :Listar
 
 listaDeCompras.forEach {
 
     print("\($0.nome)")
 }
 
-//Marcar como comprado
+// :Marcar como comprado
 
 listaDeCompras[2].comprado = true
 listaDeCompras[3].comprado = true
 
-/*
-let filtrado = listaDeCompras.filter { $0.comprado == false }
 
-filtrado.forEach{
+let filtrado3 = listaDeCompras.filter { $0.comprado == false }
+
+filtrado3.forEach{
 
     print("Falta: \($0.nome)")
-}*/
+}
+
+
+/*
+    
+ - Trabalhando com Arrays
+ - Aplicando Metodos - Arrays
+ 
+*/
+
+
+var funcionarios:[String] = ["Igor Clemente dos Santos","Pedro Nogueira","Caio Lorde"]
+var departamentos = Array<Int>()
+    departamentos = [102,104,108,110]
+
+for departamento in (111...190){
+    
+    departamentos.append(departamento)
+}
+
+departamentos.forEach{
+    print($0)
+}
+
+departamentos.insert(156, at:3)
+departamentos.sorted()
+departamentos.removeFirst()
+departamentos.removeLast()
+departamentos.count
+departamentos.isEmpty
+
+var retornados = Array(departamentos.enumerated())
+
+departamentos.dropFirst()
+departamentos.remove(at: 3)
+departamentos.contains(108)
+
+let parDepartamentos = departamentos.filter{
+    $0%2 == 0
+}
+
+let mapeadoDepartamentos = parDepartamentos.map{
+    $0*2
+}
+
+let reduzidoDepartamentos = mapeadoDepartamentos.reduce(0){
+    $1 + $0
+}
+
+

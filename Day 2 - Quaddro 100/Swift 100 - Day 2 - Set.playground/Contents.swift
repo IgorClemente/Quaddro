@@ -9,6 +9,15 @@ var conjunto:Set<String> = []
 
 print(conjunto)
 
+var novoConjunto:Set<String> = ["Vl","Str","String"]
+
+
+conjunto.intersection(novoConjunto)
+print(novoConjunto)
+
+conjunto.union(novoConjunto)
+print(conjunto)
+
 //Não tem cópia
 
 //conjunto.insert("Pinheiros") <- Não pode duplicar o valor

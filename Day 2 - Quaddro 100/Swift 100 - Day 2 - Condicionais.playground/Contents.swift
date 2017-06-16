@@ -96,7 +96,12 @@ if ferias || feriado {
 */
 
 
-//Quizz
+
+/*
+ 
+  - Quizzzzeiraaa
+ 
+ */
 
 //Dado:
 
@@ -115,14 +120,12 @@ let texto = "Aaah, eu conheco esse lugar! 🗼"
 //1)
 
 if número > 0 {
-
     print("O número é maior")
 }
 
 //2)
 
 if número%2 == 0 {
-
     print("O número é par")
 }else{
     print("O número é impar")
@@ -131,7 +134,6 @@ if número%2 == 0 {
 //3)
 
 if texto.characters.count > 3 {
-    
     print("Ele tem mais que 3 Letras")
 }else{
     print("Ele tem menos, \(texto.characters.count) Caracteres")
@@ -147,15 +149,18 @@ if texto.lowercased().characters.first == "a" {
 
 
 
-//Desafio
-//Já posso aposentar no brasil colonial?
-//Tempo de contribuicao mínimo: 15 anos
-//Idade miníma? é preciso de 65 anos para homem, 60 para mulheres
+/*
+ 
+ - Desafio
+ - Já posso aposentar no brasil colonial?
+ - Tempo de contribuicao mínimo: 15 anos
+ - Idade miníma? é preciso de 65 anos para homem, 60 para mulheres
+
+*/
 
 let éMulher = false // depois: true
 let tempoDeContribuicao = 15 //depois: 10, 25
 let idade = 65 //depois: 70
-
 
 if !éMulher && idade >= 65 {
     if tempoDeContribuicao >= 15 {
@@ -178,7 +183,7 @@ if !éMulher && idade >= 65 {
 if tempoDeContribuicao >= 15 {
     let idadeMinima = éMulher ? 60 : 65
     if idadeMinima {
-        print("N")
+        print("")
     }
 }
 
