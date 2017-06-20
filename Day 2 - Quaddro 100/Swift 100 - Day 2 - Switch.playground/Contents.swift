@@ -1,6 +1,10 @@
-//: Switch
+/*
 
-let numero = 100
+ - Trabalhando com Switch Case
+ 
+*/
+
+let numero = 10
 
 switch numero {
 
@@ -21,7 +25,7 @@ case 4:
 case 10..<30:
     print("Número entre 10 e 30, 30 não incluso")
     
-case 30 ... 100:
+case 30...100:
     print("Número entre 30 e 100, com 30 e 100 inclusos")
     
 default:
@@ -29,9 +33,11 @@ default:
 }
 
 
-//Quiz
-//Faca um Switch que diga se uma
-//Variável é vogal
+/*
+ - Quiz
+ - Faca um Switch que diga se uma
+ - Variável é vogal
+*/
 
 let letra:Character = "a"
 
@@ -107,6 +113,47 @@ default:
     print("Não vamos falar de dinheiro ")
 }
 
+/*
+ - Separando Vogais e Nao Vogais
+ - Usando Arrays e String
+*/
+
+var vogais:String = ""
+var naoVogais:String = ""
+var letras:[Character] = ["y","l","e","q","m","i"]
+for letra in letras{
+    switch letra{
+    case "a","e","i","o","u":
+        print("\(letra) e uma vogal")
+        vogais += String(letra)
+    default:
+        print("Nao e uma VOGAL")
+        naoVogais += String(letra)
+    }
+}
+print("Vogais: \(vogais)")
+print("Nao Vogais: \(naoVogais)")
 
 
+/*
+ 
+ - Tuplas com Switch
+ 
+*/
 
+let saldo:Any = 10.0
+
+switch saldo {
+
+case let dinheiro as Double where dinheiro > 10.0:
+    print("Voce ainda tem dinheiro, Relaxa parca e so curtir")
+    
+case let dinheiro as Double where dinheiro >= 0:
+    print("Voce esta ficando zerado")
+
+case let dinheiro as Double where dinheiro < 0:
+    print("Nao tem dinheiro mais")
+
+default:
+    print("Nao posso te ajudar")
+}

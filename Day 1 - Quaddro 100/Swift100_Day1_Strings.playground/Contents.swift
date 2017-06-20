@@ -4,6 +4,7 @@
 print("Hello!")
 
 //Para VAR e LET
+
 var nome = "Igor"
 nome += " Clemente"
 print(nome)
@@ -12,6 +13,7 @@ let idade = 20
 print(idade)
 
 //Interpolacao de String - Texto & Variaveis
+
 print("O nome é \(nome), com idade: \(idade)")
 print("\(4) + \(5) = \(4+5)")
 
@@ -31,6 +33,7 @@ print(comida, bebida, paragrafo, separator: "_", terminator: "_")
 
 comida.uppercased()
 comida.lowercased()
+
 
 
 

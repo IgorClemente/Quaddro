@@ -178,14 +178,26 @@ if !éMulher && idade >= 65 {
     print("Não Atende os requisitos")
 }
 
-//Outra solucao
 
-if tempoDeContribuicao >= 15 {
+if tempoDeContribuicao >= 15{
     let idadeMinima = éMulher ? 60 : 65
-    if idadeMinima {
-        print("")
+    if idadeMinima == 65 || idadeMinima == 60{
+        print("Sim, pode Aposentar")
     }
 }
 
+var nomeCompleto = "Igor Clemente"
+    Array(nomeCompleto.characters)
+    Array(nomeCompleto.characters).first == "i" ? "Letra Encontrada" : "Nao foi possivel Localizar"
 
- 
+var cupom: Int = 1020
+var hora: Int = 11
+
+if cupom == 1010 && hora < 12{
+    print("Desconto concedido \n")
+}else{
+    print("Nao foi possivel conceder o desconto :(")
+}
+
+
+

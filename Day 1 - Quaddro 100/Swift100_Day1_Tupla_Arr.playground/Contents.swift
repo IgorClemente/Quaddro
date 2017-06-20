@@ -280,7 +280,7 @@ let parDepartamentos = departamentos.filter{
 }
 
 let mapeadoDepartamentos = parDepartamentos.map{
-    $0*2
+    $0
 }
 
 let reduzidoDepartamentos = mapeadoDepartamentos.reduce(0){

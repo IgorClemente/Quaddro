@@ -117,11 +117,13 @@ print(textoVogais)
 
 var vogais = ["a","e","i","o","u"]
 
+/*
 var filtrado = Array(textoParaTeste.characters).filter{
     $0 == 
 }
-
 print(filtrado)
+*/
+
 
 
 
