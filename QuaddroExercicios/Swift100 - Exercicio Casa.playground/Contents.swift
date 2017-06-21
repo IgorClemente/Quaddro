@@ -48,6 +48,7 @@ if(aprovado.count >= 2){
 /*
 
  Outra Solucao
+ - Usando Dicionario de Dados
  
 */
 
@@ -93,7 +94,8 @@ if aprovados.count >= 2{
  Segundo Desafio:
  
   - Desafio do carnaval 🎉🎉🎉
-    Dado um vetor de notas de carnaval, retornar a nota final da escola. Regra: são quatro notas de 5.0 até 10.0. Deve descartar a menor e tirar a média das restantes. Se alguma nota faltar, considerar o valor da maior das notas válidas (indicado por nota = 0.0).
+    Dado um vetor de notas de carnaval, retornar a nota final da escola. 
+    Regra: são quatro notas de 5.0 até 10.0. Deve descartar a menor e tirar a média das         restantes. Se alguma nota faltar, considerar o valor da maior das notas válidas (indicado por nota = 0.0).
     Utilize:
  
 */
@@ -101,32 +103,42 @@ if aprovados.count >= 2{
 
 typealias Escola2 = (nome:String, nota:[Double])
 let escolas:[Escola2] = [
-    (nome:"Green House Empire", nota:[10.0, 9.5, 9.0, 10.0]),
-    (nome:"Tucuruvi Academics", nota:[10.0, 10.0, 9.0, 10.0]),
-    (nome:"Faithful Eagles", nota:[0.0,10.0, 10.0, 9.5])
+    
+    (nome:"Green House Empire", nota:[10.0,9.5,9.0,10.0]),
+    (nome:"Tucuruvi Academics", nota:[10.0,10.0,9.0,10.0]),
+    (nome:"Faithful Eagles", nota:[0.0,10.0,10.0,9.5])
 ]
 
-var media2 = Double()
+var mediaEscola = Double()
 var escolasModify = escolas
+var notaMaior:Double = 0.0
+
 for (numero,escola) in escolasModify.enumerated(){
-    
-    var filtroZero = escola.nota.filter{ $0 == 0.0 }
-    if filtroZero.count > 0{
-        for (key,value) in filtroZero.enumerated(){
-            escolasModify[numero].nota[key] = 10.0
+    notaMaior = escola.nota.reduce(0.0){ max($0,$1) }
+    if escola.nota.count == 4{
+        var filtroZero = escola.nota.filter{ $0 < 5.0 }
+        if filtroZero.count > 0{
+            for (key,value) in filtroZero.enumerated(){
+                escolasModify[numero].nota[key] = notaMaior
+            }
+        }
+    }else{
+        let faltam = (4 - escola.nota.count)
+        let notaInserir = (faltam != 0) ? notaMaior : 0.0
+        
+        for nota in (0..<faltam){
+            escolasModify[numero].nota.append(notaInserir)
         }
     }
 }
 
 for (chave,valor) in escolasModify.enumerated(){
-
+    
     let melhores = valor.nota.sorted().dropFirst()
-    media2 = melhores.reduce(0.0){ $1+$0 }
-    media2 /= Double(melhores.count)
-    print("Escola: \(valor.nome), Nota: \(media2))") //Valor Arredondado
+    
+    mediaEscola = melhores.reduce(0.0){ $1+$0 }
+    mediaEscola /= Double(melhores.count)
+    print("Escola: \(valor.nome), Nota: \(mediaEscola))") //Valor Arredondado
 }
-
-
-
 
 

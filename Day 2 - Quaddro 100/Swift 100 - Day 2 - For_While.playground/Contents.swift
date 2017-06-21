@@ -96,6 +96,10 @@ for i in (0...10).reversed(){
     }
 }
 
+for j in (0..<10){
+    print(j)
+}
+
 let textoParaTeste = "ola,bem vindo"
 var textoVogais:String = " "
 
