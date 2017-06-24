@@ -52,6 +52,8 @@ if(aprovado.count >= 2){
  
 */
 
+//Obs: Poderia usar tupla em notas[], para que o conteudo tenha 4 notas
+
 typealias Materia = (nome:String,notas:[Double])
 typealias ItemBoletim = (materia: Materia,media:Double,aprovado:Bool)
 
@@ -80,16 +82,22 @@ for (aluno,boletim) in escola{
 
 for (aluno,boletim) in escola{
     let materiasAprovado = boletim.filter{ $0.aprovado == true }
+    
     if materiasAprovado.count == 2{
         let recuperacao = boletim.filter{ $0.aprovado == false }
         let materiaRecuperacao = recuperacao.map{ $0.media }
+        
         switch materiaRecuperacao[0]{
+            
         case 6...7:
             materiasAprovado.forEach{
-                print("O aluno: \(aluno) foi aprovado em: \($0.materia.nome), com Media: \($0.media), Porem ficou de recuperacao em: \(materiaRecuperacao)")
+                print("O aluno: \(aluno) foi aprovado em: \($0.materia.nome), com Media: \($0.media), Porem ficou de recuperacao em: \(recuperacao[0].materia.nome)")
             }
+        case 0...5:
+            print("O aluno reprovou")
+            
         default:
-            print("Infelizmente nao posso ajudar")
+            print("Infelizmente não posso ajudar")
         }
     }else{
         print("O aluno: \(aluno) Reprovou")
@@ -111,7 +119,6 @@ for (aluno,boletim) in escola{
 
 typealias EscolaSamba = (nome:String, nota:[Double])
 let escolas:[EscolaSamba] = [
-    
     (nome:"Green House Empire", nota:[10.0,9.5,9.0,10.0]),
     (nome:"Tucuruvi Academics", nota:[10.0,10.0,9.0,10.0]),
     (nome:"Faithful Eagles", nota:[0.0,10.0,10.0,9.5])
@@ -146,8 +153,10 @@ for (chave,valor) in escolasModify.enumerated(){
     
     mediaEscola = melhoresNotas.reduce(0.0){ $1+$0 }
     mediaEscola /= Double(melhoresNotas.count)
-    print("Escola: \(valor.nome), Nota: \(mediaEscola.rounded())") //Valor Arredondado
+    print("Escola: \(valor.nome), Nota: \(mediaEscola)")
 }
+
+
 
 
 
