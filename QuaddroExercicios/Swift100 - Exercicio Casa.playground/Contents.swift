@@ -55,36 +55,37 @@ if(aprovado.count >= 2){
 typealias Materia = (nome:String,notas:[Double])
 typealias ItemBoletim = (materia: Materia,media:Double,aprovado:Bool)
 
-var materias = Array<Materia>()
 var boletim = Array<ItemBoletim>()
-var escola = Dictionary<String,[Materia]>()
+var escola = Dictionary<String,[ItemBoletim]>()
 
-    materias.append(("Calculo",[3,8,9,7]))
-    materias.append(("Financas",[9,9,8,9]))
-    materias.append(("Redacao",[10,10,4,6]))
-
-    escola["Julio"] = materias
+boletim.append((("Calculo",[3,8,9,7]),0.0,false))
+boletim.append((("Financas",[9,9,8,9]),0.0,false))
+boletim.append((("Redacao",[10,10,4,6]),0.0,false))
+escola["Julio"] = boletim
 
 var media = Double()
+var materias = Array<ItemBoletim>()
 
-for (aluno,materias) in escola{
-    materias.forEach{
-        media = $0.notas.reduce(0.0){ $1 + $0 }
-        media /= 4
-        boletim.append(($0,media,false))
-    }
-    
-    for (chave,valor) in boletim.enumerated(){
-        if(!(valor.media <= 5)){
-            boletim[chave].aprovado = (valor.media <= 7) ? false : true
+for (aluno,boletim) in escola{
+    boletim.forEach{
+        media = $0.materia.notas.reduce(0.0){$0+$1}
+        media /= Double($0.materia.notas.count)
+        if !(media <= 5.0) {
+           let aprovado = (media <= 7) ? false : true
+           materias.append(($0.materia,media,aprovado))
         }
     }
+    escola[aluno] = materias
 }
 
-let aprovados = boletim.filter{ $0.aprovado == true }
-if aprovados.count >= 2{
-    aprovados.forEach{
-        print("Aprovado em: \($0.materia.nome), Media: \($0.media)")
+for (aluno,boletim) in escola{
+    let materiasAprovado = boletim.filter{ $0.aprovado == true }
+    if materiasAprovado.count == 2{
+        let recuperacao = boletim.filter{ $0.aprovado == false }
+        let materiaRecuperacao = recuperacao.map{ $0.materia }
+        materiasAprovado.forEach{
+            print("O aluno: \(aluno) foi aprovado em: \($0.materia.nome), com Media: \($0.media), Porem ficou de recuperacao em: \(materiaRecuperacao)")
+        }
     }
 }
 
@@ -101,8 +102,8 @@ if aprovados.count >= 2{
 */
 
 
-typealias Escola2 = (nome:String, nota:[Double])
-let escolas:[Escola2] = [
+typealias EscolaSamba = (nome:String, nota:[Double])
+let escolas:[EscolaSamba] = [
     
     (nome:"Green House Empire", nota:[10.0,9.5,9.0,10.0]),
     (nome:"Tucuruvi Academics", nota:[10.0,10.0,9.0,10.0]),
@@ -116,29 +117,30 @@ var notaMaior:Double = 0.0
 for (numero,escola) in escolasModify.enumerated(){
     notaMaior = escola.nota.reduce(0.0){ max($0,$1) }
     if escola.nota.count == 4{
-        var filtroZero = escola.nota.filter{ $0 < 5.0 }
-        if filtroZero.count > 0{
-            for (key,value) in filtroZero.enumerated(){
-                escolasModify[numero].nota[key] = notaMaior
+        var filtroZero = escola.nota.filter{ $0 == 0.0 }
+        if !filtroZero.isEmpty{
+            for (chave,valor) in filtroZero.enumerated(){
+                escolasModify[numero].nota[chave] = notaMaior
             }
         }
-    }else{
+    }/*else{
         let faltam = (4 - escola.nota.count)
         let notaInserir = (faltam != 0) ? notaMaior : 0.0
         
         for nota in (0..<faltam){
             escolasModify[numero].nota.append(notaInserir)
         }
-    }
+    } */
 }
 
 for (chave,valor) in escolasModify.enumerated(){
     
-    let melhores = valor.nota.sorted().dropFirst()
+    let melhoresNotas = valor.nota.sorted().dropFirst()
     
-    mediaEscola = melhores.reduce(0.0){ $1+$0 }
-    mediaEscola /= Double(melhores.count)
-    print("Escola: \(valor.nome), Nota: \(mediaEscola))") //Valor Arredondado
+    mediaEscola = melhoresNotas.reduce(0.0){ $1+$0 }
+    mediaEscola /= Double(melhoresNotas.count)
+    print("Escola: \(valor.nome), Nota: \(mediaEscola.rounded())") //Valor Arredondado
 }
+
 
 

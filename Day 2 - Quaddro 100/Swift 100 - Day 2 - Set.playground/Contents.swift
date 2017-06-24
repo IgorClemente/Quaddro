@@ -32,11 +32,23 @@ print(conjunto)
 
 //Operacoes em conjunto
 
-let pares:Set<Int> = [2,4,6,8,10]
-let impares:Set<Int> = [1,3,5,7,9,7]
+var conjunto3:Set<Double> = []
+    conjunto3.insert(90.90)
+    conjunto3.insert(56.84)
 
-pares.union(impares)
+var conjunto4:Set<Double> = []
+    conjunto4.insert(90.90)
+    conjunto4.insert(50.89)
 
-let primos:Set<Int> = [1,2,3,5,7,9,11,13,15,17,19,23]
-impares.intersection(primos)
+conjunto3.intersection(conjunto4) // Pega o que e comum aos dois
+conjunto3.union(conjunto4)        // Faz a uniao ignorando valores repetidos
+
+var valoresDiversos:[Double] = [34.0,67.0,87.5,54.5,32.8,54.9,76.8,54.9,98.6,100.0]
+valoresDiversos.forEach{
+    conjunto3.insert($0)
+    conjunto4.insert($0)
+}
+
+
+
 
