@@ -82,10 +82,17 @@ for (aluno,boletim) in escola{
     let materiasAprovado = boletim.filter{ $0.aprovado == true }
     if materiasAprovado.count == 2{
         let recuperacao = boletim.filter{ $0.aprovado == false }
-        let materiaRecuperacao = recuperacao.map{ $0.materia }
-        materiasAprovado.forEach{
-            print("O aluno: \(aluno) foi aprovado em: \($0.materia.nome), com Media: \($0.media), Porem ficou de recuperacao em: \(materiaRecuperacao)")
+        let materiaRecuperacao = recuperacao.map{ $0.media }
+        switch materiaRecuperacao[0]{
+        case 6...7:
+            materiasAprovado.forEach{
+                print("O aluno: \(aluno) foi aprovado em: \($0.materia.nome), com Media: \($0.media), Porem ficou de recuperacao em: \(materiaRecuperacao)")
+            }
+        default:
+            print("Infelizmente nao posso ajudar")
         }
+    }else{
+        print("O aluno: \(aluno) Reprovou")
     }
 }
 
