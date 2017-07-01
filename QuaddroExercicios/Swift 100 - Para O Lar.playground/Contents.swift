@@ -7,6 +7,7 @@
 func dobro(De numero:Int)->Int {
     return numero*2
 }
+
 dobro(De: 4)
 
 
@@ -54,13 +55,32 @@ inverso(De: 5)
 
 func menor(ValorDe valores:[Int])->Int {
     
-    let menor = valores.reduce(valores[0]){ min($0,$1) }
-    return menor
+    if !valores.isEmpty {
+        let menor = valores.reduce(valores[0]){ min($0,$1) }
+        return menor
+    }else {
+        return 0
+    }
 }
 
-let menorNumero = menor(ValorDe: [6,8,5,8,4,6])
+let menorNumero = menor(ValorDe: [6,8,5,8,2,6])
 
 // Exercicio F
+
+/*
+ 
+ - Dividindo palavras
+ 
+ import Foundation
+ 
+ let texto = nome.components(separatedBy:" ")
+ var resposta = ""
+ for pedaco in components {
+    resposta += String(Array(pedaco.characters)[0])
+ }
+ return resposta
+ 
+ */
 
 func iniciais(nome:String)->String {
 
@@ -99,6 +119,19 @@ func ultimasLetras(palavra:String)->String {
 
 ultimasLetras(palavra: "aqui tem muitas palavras")
 
+import Foundation
+
+func finais(nome:String) -> String {
+    
+    let componentes = nome.components(separatedBy: " ")
+    var resposta = ""
+    for pedaco in componentes {
+        resposta += String(Array(pedaco.characters)[componentes.count + 1])
+    }
+    return resposta
+}
+
+
 
 //:Classes
 
@@ -108,17 +141,16 @@ class Motor{
     private var combustivel = String()
     private var ativo = Bool()
     var nivelDoOleo:Float {
-                didSet {
-                    if nivelDoOleo < 0 {
-                        print("Filtro trocado")
-                        nivelDoOleo = 1.0
-                    }
+            didSet {
+                if nivelDoOleo < 0 {
+                    nivelDoOleo = 0
+                }
         }
     }
     
     var kmsRodados = Int()
     
-    init(ligado ativo:Bool, potencia:Int, combustivel:String){
+    init(ligado ativo:Bool, potencia:Int = 90, combustivel:String){
     
         self.potencia = potencia
         self.combustivel = combustivel
@@ -129,22 +161,28 @@ class Motor{
     
     func rodar(kms:Int)->Void {
         
+        if nivelDoOleo <= 0 {
+            print("Não posso rodar porque não tem óleo no motor!")
+        }
+        
         let kmAntigo = kmsRodados
         kmsRodados += kms
         
-        let quantidadeInteiro = kmsRodados / 120
+        let quantidadeAtual = kmsRodados / 120
         let quantidadeAnterior = kmAntigo / 120
         
-        if quantidadeInteiro > quantidadeAnterior {
-            for _ in (1...(quantidadeInteiro-quantidadeAnterior)) {
-              nivelDoOleo -= (nivelDoOleo*0.03)
+        if quantidadeAtual > quantidadeAnterior {
+            for _ in (1...(quantidadeAtual-quantidadeAnterior)) {
+              nivelDoOleo -= 0.03
             }
         }
     }
 }
 
-
-let novoMotor = Motor(ligado:true,potencia:90,combustivel:"Gasolina")
+let novoMotor = Motor(ligado:true, combustivel:"Gasolina")
+    novoMotor.kmsRodados
+    novoMotor.rodar(kms: 4080)
+    novoMotor.nivelDoOleo
 
 
 
@@ -169,36 +207,31 @@ class Pneu {
     
     var kmsRodados = Int()
     
-    init(marca:String,aro:Int) {
+    init(marca:String,aro:Int = 13) {
         
         self.marca = marca
         self.aro = aro
         furado = false
         kmsRodados = 0
         
-        setAro(self.aro)
     }
-    
-    func setAro(_ aro:Int)->() {
-        self.aro = aro
-    }
-    
-    func getAro()->(Int) {
-        return aro
-    }
-    
     
     func rodar(kms:Int)->Void {
         
+        if furado {
+            print("Não posso rodar de pneu furado!")
+            return
+        }
+    
         var porcentagemPneu = Float()
         let kmsAntigo = kmsRodados
         kmsRodados += kms
         
-        let quantidadeInteiro = kmsRodados / 50
+        let quantidadeAtual = kmsRodados / 50
         let quantidadeAnterior = kmsAntigo / 50
         
-        if quantidadeInteiro > quantidadeAnterior {
-            for _ in (1...(quantidadeInteiro-quantidadeAnterior)) {
+        if quantidadeAtual > quantidadeAnterior {
+            for _ in (1...(quantidadeAtual-quantidadeAnterior)) {
                 porcentagemPneu += 0.02
             }
             
@@ -215,6 +248,8 @@ let pneu2 = Pneu(marca:"Pirelli",aro:20)
 let pneu3 = Pneu(marca:"Pirelli",aro:20)
 let pneu4 = Pneu(marca:"Pirelli",aro:20)
 
+
+
 class Carro {
 
     var cor = String()
@@ -224,7 +259,7 @@ class Carro {
     let motor:Motor = novoMotor
     
     init(marca:String,ano:Int,cor:String) {
-        
+    
         self.marca = marca
         self.ano = ano
         self.cor = cor
@@ -235,7 +270,6 @@ class Carro {
         pneus.forEach {
             $0.rodar(kms: kms)
         }
-        
         motor.rodar(kms: kms)
     }
 }
@@ -247,8 +281,7 @@ let novoCarro:Carro = Carro(marca:"Chevrolet",ano:2017,cor:"Vermelho")
     novoCarro.motor.nivelDoOleo
 
 
-
-
+// https://pastebin.com/BwkW5L1Y
 
 
 
