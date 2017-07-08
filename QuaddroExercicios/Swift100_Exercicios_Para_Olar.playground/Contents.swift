@@ -27,14 +27,14 @@ class Carro:Brinquedo {
 class Barco:Brinquedo {
 
     override func mover() -> Void {
-        print("Teco teco teco ...")
+        print("Vrummmmm...")
     }
 }
 
 class Aviao:Brinquedo {
     
     override func mover() -> Void {
-        print("Vrummmmm...")
+        print("Teco teco teco ...")
     }
 }
 
@@ -144,16 +144,16 @@ class EscolaDeSamba {
     }
 }
 
-let novaEscola = EscolaDeSamba("Escola de Teste Maximo")
-novaEscola.notas[.alegorias] = [8,6,8,nil]
-novaEscola.mediaParaCriterio(criterioAvaliado: .alegorias)
 
+    
+ let novaEscola = EscolaDeSamba("Escola de Teste Maximo")
+ novaEscola.notas[.alegorias] = [8,6,8,nil]
+ novaEscola.mediaParaCriterio(criterioAvaliado: .alegorias)
 
 
 class Jurados {
 
     func atribuirNotas(Para escola:EscolaDeSamba) -> Void {
-
         for (criterio,_) in escola.notas {
             for _ in 1...4 {
                 let rand = Float(arc4random_uniform(5)+5)
@@ -162,7 +162,6 @@ class Jurados {
         }
     }
 }
-
 
 
 class Carnaval {
@@ -182,7 +181,7 @@ class Carnaval {
     }
     
     func vencedora() -> String? {
-        
+    
         var melhorEscola:String? = nil
         var melhorNota:Float = 0.0
         
@@ -194,13 +193,14 @@ class Carnaval {
     }
 }
 
-let jurado = Jurados()
-
-let meuCarnaval = Carnaval([EscolaDeSamba("Unidos da Tijuca"),EscolaDeSamba("Sempre unidos"),EscolaDeSamba("PCC")],jurado)
+let meuCarnaval = Carnaval([EscolaDeSamba("Unidos da Tijuca"),EscolaDeSamba("Sempre unidos"),EscolaDeSamba("Outra escola")],Jurados())
     meuCarnaval.apurar()
     meuCarnaval.vencedora()
 
 
+// Desafio Carnaval -> https://pastebin.com/9TAr5VK8    
+// Solucao LINO
 
+// Para o Scopo da funcao que tem menos de 10 linhas é interessante abreviar os nomes dos parametros
 
-
+// Desafio Controle Remoto -> https://pastebin.com/pkQEPrBE
