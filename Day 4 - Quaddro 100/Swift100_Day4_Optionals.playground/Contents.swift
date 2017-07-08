@@ -70,7 +70,7 @@ quemGanhouNosPenalties(mengao, mengao)?.nome
 
 // Mesmo nome não sendo optional na classe Time,
 // o retorno da funcao é optional! Isso faz com que a 
-// chama .nome sej  convertida para optional também
+// chamada .nome seja  convertida para optional também
 // chamamos isso de 'optional chaining'
 
 
@@ -135,7 +135,7 @@ print("O valor é",optional ?? "desconhecido")
 
 let idade:Int?
 idade = 30
-print("Minha idade é \(idade)")
+print("Minha idade é \(idade!)")
 
 // Cuidado se não houver causa um crash na mão do usuário
 

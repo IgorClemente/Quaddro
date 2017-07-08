@@ -94,7 +94,6 @@ class Mapa {
     }
 }
 
-
 let novoMapa = Mapa()
 
 /*
@@ -135,6 +134,8 @@ novoMapa["Outro lugar",80] = "Outro lugar"
  
  }
  */
+
+
 
 
 
