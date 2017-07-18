@@ -18,11 +18,11 @@ class Impressora {
     func imprimir(_ texto:String) throws {
         
         guard quantidadeDePapel > 0 else {
-            throw FalhaNaImpressao.faltouTinta
+            throw FalhaNaImpressao.faltouPapel
         }
         
         guard nivelDaTinta > 0.0 else {
-            throw FalhaNaImpressao.faltouPapel
+            throw FalhaNaImpressao.faltouTinta
         }
         
         print("Imprimindo... \(texto)")
@@ -33,8 +33,8 @@ class Impressora {
 
 
 let EPSON = Impressora()
-/*
- 
+
+
 func tentaImprimir(_ texto:String) -> Bool {
     // Aqui vamos chamar a funcao imprimir que dispara erros
     // dentro de um ambiente controlado:
@@ -54,13 +54,16 @@ func tentaImprimir(_ texto:String) -> Bool {
         
     } catch {
         print("Erro ao imprimir ! 😏")
-        return fa
+        return false
     }
 }
 
-tentaImprimir("Hello Worlds")
+
+tentaImprimir("Oi, Igor")
+
+
  
-*/
+
 
 
 
@@ -80,4 +83,4 @@ func divide(_ a:Int,_ b:Int) throws -> Int {
     return  a/b
 }
 
-let divisao = try? divide(10,5)
+let divisao = try? divide(10,0)

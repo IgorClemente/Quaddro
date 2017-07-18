@@ -101,7 +101,6 @@ import Darwin
 
 func embaralha<T>(Osvalores de:[T]) -> [T] {
     
-    var ultimoGerado:Int = 0
     var vetorEmbaralhado = de
     var retorno = Array<T>()
     

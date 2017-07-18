@@ -78,7 +78,7 @@ protocol QueTemMarca {
 class Motoca: Veiculo, QueLigaDesliga, QueTemMarca {
     
     var ligado: Bool = false //get/set, logo var
-    private(set) var marcar:String //get, o set é privado
+    private(set) var marca:String //get, o set é privado
     
     init(marca:String) {
         self.marca = marca
@@ -90,5 +90,5 @@ var minhaMoto = Motoca(marca: "Yamaha")
 // Com isso podemos modelar várias coisas:
 
 class TV : QueLigaDesliga {
-    var ligado: Bool = falsessss
+    var ligado: Bool = false
 }

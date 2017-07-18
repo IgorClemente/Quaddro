@@ -55,3 +55,5 @@ func salárioDeFevereiro(do funcionario: Funcionario) -> Double {
 let situacao = salárioDeFevereiro(do: marcao)
     print("Marcao ta rico, \(situacao)")
 
+
+
