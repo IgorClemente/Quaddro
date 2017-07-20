@@ -62,10 +62,6 @@ func tentaImprimir(_ texto:String) -> Bool {
 tentaImprimir("Oi, Igor")
 
 
- 
-
-
-
 
 // Podemos utilizar try? para receber valores de funcoes com throws. Nesse caso,
 // se exceptions forem geradas voce recebe um nil

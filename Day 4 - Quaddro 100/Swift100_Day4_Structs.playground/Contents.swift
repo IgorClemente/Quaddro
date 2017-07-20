@@ -3,6 +3,7 @@
  - Structs
  - São bem semelhantes a classes, mas representam de maneira mais simples estruturas menos complexas (não há heranca)
  - Tem init automático
+ - Aceitam funcoes
  
 */
 

@@ -42,7 +42,9 @@ let marcao = Diretor("Igor", salario: 25_000)
 // Type Casting funciona com Switch
 
 func salárioDeFevereiro(do funcionario: Funcionario) -> Double {
+    
     switch funcionario {
+        
     case let d as Diretor:
         return d.salario + d.PLR * d.salario + d.bonus
     case let s as Senior:

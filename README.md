@@ -1,5 +1,7 @@
-# Quaddro
-# 1 . Arquivos Iniciais - Day 1 - 100  03/06
-# 2 . Arquivos Com Exercício - Day 2 - 100 10/06
-# 3 . Arquivos Com Explicacao e Exercicios - Day 3 - 100 26/06
-# 4 . Arquivos Com Exercicios Day 4, 5 - 100 18/07
+# Quaddro - Swift Módulo Core 100
+#
+# 1 . Day 1 - VarLet, Operadores, String, Tupla, Comentários 03/06
+# 2 . Day 2 - Condicionais, Dicionários, For - While, Set, Switch 10/06
+# 3 . Day 3 - Classes, Closures, Functions, Operador Costumizados 26/06
+# 4 . Day 4 - Enums, Heranca e Polimorfismo, Optionals, Structs, Subscripts 01/07
+# 5 . Day 5 - TypeCasting, Generics, Protocols, Error Handling, Extensions, ARC 11/07
