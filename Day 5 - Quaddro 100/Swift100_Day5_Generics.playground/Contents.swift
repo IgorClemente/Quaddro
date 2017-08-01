@@ -1,5 +1,4 @@
 //:Generics
-
 // Day 5 - Generics
 
 

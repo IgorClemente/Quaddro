@@ -11,7 +11,7 @@ var codigo = 5
 let soma = 4 + 5
 let subtracao = 8 - 2
 let multiplicacao = 100 * 0.3
-let divisao = 200 / 3 //Duvisao Int - Int descarta decimais
+let divisao = 200 / 3 //Divisao Int - Int descarta decimais
 
 let divisãoDecimal = 200 / 3.0 //Considera a casa decimal - Int - Double
 let resto = 7%4

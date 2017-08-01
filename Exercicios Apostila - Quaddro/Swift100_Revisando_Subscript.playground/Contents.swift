@@ -89,7 +89,7 @@ let novaEmpresa = Empresa()
 novaEmpresa.empregarFuncionario(("Igor Clemente","Suporte TI"))
 novaEmpresa.empregarFuncionario(("Joana Texeira","Suporte TI"))
 novaEmpresa.empregarFuncionario(("Thiago Henrique","Pagamento Financeiro"))
-novaEmpresa["Suporte TI"]
+novaEmpresa["Suporte TI"] 
 novaEmpresa["Pagamento Financeiro"]
 
 

@@ -81,6 +81,8 @@ var pessoas = ["Igor","João","Maria","Joana"]
 
 let constantes:[Int] = [1,2,3,5,8,13]
 let megaNumeros:Array<Int> = [12,18,46,50,53,55]
+let tamanhoCalcados:[Int] = [Int]()
+
 
 // :Array de Tuplas
 
@@ -253,7 +255,7 @@ var funcionarios:[String] = ["Igor Clemente dos Santos","Pedro Nogueira","Caio L
 var departamentos = Array<Int>()
     departamentos = [102,104,108,110]
 
-for departamento in (111...190){
+for departamento in (111...120){
     
     departamentos.append(departamento)
 }

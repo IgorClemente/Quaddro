@@ -26,6 +26,7 @@ print(rodizio)
 rodizio["SEG"] = "Nenhum"
 print(rodizio)
 
+
 rodizio["FERIADO"]      //Retorna Nulo, Porque não existe
 rodizio["DOM"] = nil    //Para remover, escrevemos nulo
 print(rodizio)

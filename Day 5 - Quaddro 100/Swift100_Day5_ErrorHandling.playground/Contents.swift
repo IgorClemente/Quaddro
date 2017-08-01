@@ -58,7 +58,6 @@ func tentaImprimir(_ texto:String) -> Bool {
     }
 }
 
-
 tentaImprimir("Oi, Igor")
 
 
