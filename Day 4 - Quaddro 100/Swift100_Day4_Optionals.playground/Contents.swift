@@ -32,7 +32,7 @@ let mengao = Time(nome: "Flamengo")
 
 // Estruturas para lidar com optionals
 // IF LET
-// O que ele faz ? verifica se um optional tem valor e, se sim, já desempacota o optional em uma nova constante/variável desempacota nos usa é chamado de 'unwrap'
+// O que ele faz ? verifica se um optional tem valor e, se sim, já desempacota o optional em uma nova constante/variável desempacota nos usamos é chamado de 'unwrap'
 
 if let seTevePenaltisFoi = mengao.golsNosPenalties {
     print("Nossam Teve! foi: \(seTevePenaltisFoi)")

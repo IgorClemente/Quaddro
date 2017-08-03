@@ -17,7 +17,7 @@ class Personagem {
     }
 }
 
-//Inimigo herda de Personagemx
+//Inimigo herda de Personagem
 class Inimigo:Personagem {
     
     let defesa:Int = 6_000

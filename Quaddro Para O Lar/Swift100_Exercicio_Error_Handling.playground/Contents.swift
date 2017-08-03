@@ -7,6 +7,7 @@
  */
 
 enum FalhaDeEstoque : Error {
+    
     case NenhumFuncionarioPresente
     case AcabaramAsPecas
 }
