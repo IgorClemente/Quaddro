@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MeuApp/TerceiroViewController.swift"
+            timestampString = "523655755.783197"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "9"
+            endingLineNumber = "9">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MeuApp.TerceiroViewController.__deallocating_deinit"
+                  moduleName = "MeuApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/swift/Desktop/MeuApp/MeuApp/TerceiroViewController.swift"
+                  timestampString = "523655756.246614"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MeuApp.TerceiroViewController.init (nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;__ObjC.Bundle&gt;) -&gt; MeuApp.TerceiroViewController"
+                  moduleName = "MeuApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/swift/Desktop/MeuApp/MeuApp/TerceiroViewController.swift"
+                  timestampString = "523655756.248781"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "11"
+                  endingLineNumber = "11"
+                  offsetFromSymbolStart = "117">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MeuApp.TerceiroViewController.__allocating_init (nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;__ObjC.Bundle&gt;) -&gt; MeuApp.TerceiroViewController"
+                  moduleName = "MeuApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/swift/Desktop/MeuApp/MeuApp/TerceiroViewController.swift"
+                  timestampString = "523655756.25072"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "26">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MeuApp.TerceiroViewController.__allocating_init (coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;MeuApp.TerceiroViewController&gt;"
+                  moduleName = "MeuApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/swift/Desktop/MeuApp/MeuApp/TerceiroViewController.swift"
+                  timestampString = "523655756.252656"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "9">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MeuApp.TerceiroViewController.init (coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;MeuApp.TerceiroViewController&gt;"
+                  moduleName = "MeuApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/swift/Desktop/MeuApp/MeuApp/TerceiroViewController.swift"
+                  timestampString = "523655756.254804"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "11"
+                  endingLineNumber = "11"
+                  offsetFromSymbolStart = "117">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
