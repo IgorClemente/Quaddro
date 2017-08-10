@@ -9,14 +9,17 @@
 import UIKit
 import Darwin
 
+
+var attemps = attemptsController()
+
+
 class ViewController: UIViewController {
 
   private var barColors:[UIColor] = [UIColor.blue,UIColor.red,UIColor.green,UIColor.purple,UIColor.yellow,UIColor.orange]
   private let passColor:[UIColor] = [UIColor.red,UIColor.purple,UIColor.orange]
-  private var attempts:Int = 0
+   
     
   override func viewDidLoad() {
-    
     super.viewDidLoad()
 
     for pos in (0...3) {
@@ -30,7 +33,6 @@ class ViewController: UIViewController {
   }
   
   func setDefault() {
-    
     for pos in (0..<3) {
       self.view.viewWithTag(pos+1)?.backgroundColor = UIColor.blue
     }
@@ -48,15 +50,11 @@ class ViewController: UIViewController {
     var senha = Array<UIColor>()
     var pass = Array<Bool>()
     
-    self.attempts += 1
-    
     for pos in (0..<3) {
         if let color = self.view.viewWithTag(pos+1)?.backgroundColor {
             senha.append(color)
         }
     }
-    print(self.getAttemps())
-    
     for (numero,cor) in senha.enumerated() {
         if cor == passColor[numero] {
             pass.append(true)
@@ -68,28 +66,21 @@ class ViewController: UIViewController {
             return
         }
         self.present(screen,animated: true,completion:nil)
-        
     }else {
+        attemps.setAtt()
         self.setDefault()
     }
   }
     
-    
   override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-    
     guard let view = touches.first?.view else {
         return
     }
-        
+    
     guard view.tag != 0 else {
         return
     }
     self.shuffleColor(view.tag)
-  }
-    
-  func getAttemps() -> Int {
-    
-    return attempts
   }
 }
 

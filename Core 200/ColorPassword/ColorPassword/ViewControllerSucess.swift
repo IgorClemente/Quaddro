@@ -2,27 +2,42 @@
 //  ViewControllerSucess.swift
 //  ColorPassword
 //
-//  Created by MACBOOK AIR on 07/08/17.
+//  Created by Igor Clemente on 08/08/17.
 //  Copyright © 2017 Swift. All rights reserved.
 //
 
 import UIKit
 
-class ViewControllerSucess: ViewController {
 
-    @IBOutlet weak var uiSucessText: UILabel?
+class attemptsController {
+
+    private var tentativas:Int = 0
     
-    override func viewDidLoad() {
-
-        super.viewDidLoad()
-        let textSucess = uiSucessText?.text ?? ""
-        uiSucessText?.text = "\(textSucess)\(89)"
-        print(super.getAttemps())
+    func setAtt() -> Void {
+        tentativas += 1
     }
     
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+    func getAtt() -> Int {
+        return tentativas
+    }
+}
+
+class ViewControllerSucess: UIViewController {
+
+    @IBOutlet weak var uiTextSucess: UILabel?
+    @IBOutlet weak var uiImageSucess: UIImageView?
+    
+    let imagemSucess = UIImage(named:"8698678.jpg")
+    
+    override func viewDidLoad() {
         
-        if let view = touches.first?.view {
+        uiImageSucess?.image = imagemSucess
+        let sucessText = (uiTextSucess?.text ?? "")
+        uiTextSucess?.text = sucessText + "\(attemps.getAtt())"
+    }
+ 
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        if touches.first?.view != nil {
             self.dismiss(animated: true, completion: nil)
         }
     }

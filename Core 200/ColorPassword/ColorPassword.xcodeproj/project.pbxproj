@@ -12,7 +12,7 @@
 		430444601F36642800AAD529 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4304445E1F36642800AAD529 /* Main.storyboard */; };
 		430444621F36642800AAD529 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 430444611F36642800AAD529 /* Assets.xcassets */; };
 		430444651F36642800AAD529 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 430444631F36642800AAD529 /* LaunchScreen.storyboard */; };
-		D04F18981F393D7C00422675 /* ViewControllerSucess.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04F18971F393D7C00422675 /* ViewControllerSucess.swift */; };
+		D0D454371F3A24DF00E36D20 /* ViewControllerSucess.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D454361F3A24DF00E36D20 /* ViewControllerSucess.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,7 +23,7 @@
 		430444611F36642800AAD529 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		430444641F36642800AAD529 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		430444661F36642800AAD529 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D04F18971F393D7C00422675 /* ViewControllerSucess.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerSucess.swift; sourceTree = "<group>"; };
+		D0D454361F3A24DF00E36D20 /* ViewControllerSucess.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerSucess.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,11 +58,11 @@
 			children = (
 				4304445A1F36642800AAD529 /* AppDelegate.swift */,
 				4304445C1F36642800AAD529 /* ViewController.swift */,
-				D04F18971F393D7C00422675 /* ViewControllerSucess.swift */,
 				4304445E1F36642800AAD529 /* Main.storyboard */,
 				430444611F36642800AAD529 /* Assets.xcassets */,
 				430444631F36642800AAD529 /* LaunchScreen.storyboard */,
 				430444661F36642800AAD529 /* Info.plist */,
+				D0D454361F3A24DF00E36D20 /* ViewControllerSucess.swift */,
 			);
 			path = ColorPassword;
 			sourceTree = "<group>";
@@ -139,7 +139,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D04F18981F393D7C00422675 /* ViewControllerSucess.swift in Sources */,
+				D0D454371F3A24DF00E36D20 /* ViewControllerSucess.swift in Sources */,
 				4304445D1F36642800AAD529 /* ViewController.swift in Sources */,
 				4304445B1F36642800AAD529 /* AppDelegate.swift in Sources */,
 			);

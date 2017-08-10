@@ -32,7 +32,6 @@ class SegundoViewController: UIViewController {
   }
   
   override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-
     guard let tela = storyboard?.instantiateViewController(withIdentifier: "terceira") else {
       return
     }
