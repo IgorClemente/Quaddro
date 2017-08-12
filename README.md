@@ -10,3 +10,5 @@
 # Swift Módulo Interface 200
 #
 # 1 . Day 1 - UIView,Interface Builder, XCode Explicação
+# 2 . Day 2 - UITextField, Blur View, Animation 
+# http://bit.ly/2vZ2OVP
