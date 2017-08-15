@@ -32,7 +32,6 @@ class ViewController: UIViewController, UITextFieldDelegate {
     }else {
        textField.resignFirstResponder()
     }
-    
     return false
   }
   
@@ -47,52 +46,34 @@ class ViewController: UIViewController, UITextFieldDelegate {
   
   @IBAction func voltar(sender:UIStoryboardSegue) {
     print("Voltei")
-    print(tudoPreenchido())
-    mostrarAviso(comErro: "Error")
   }
                   
   func tudoPreenchido() -> Bool {
-  
-    guard let nome = self.uiNomeField,
-      nome.text != "" else {
-      return false
+    guard let campos = self.uiTodosCampos else {
+        return false
     }
-    
-    guard let idade = self.uiSobrenomeField,
-      idade.text != "" else {
-      return false
+    for (_ ,campo) in campos.enumerated() {
+        if !(campo.text != "") {
+            return false
+        }
     }
-    
-    guard let email = self.uiEmailField,
-      email.text != "" else {
-      return false
-    } 
-    
-    guard let senha = self.uiSenhaField,
-      senha.text != "" else {
-      return false
-    }
-    
-    guard senha.text == "123" else {
-      return false
-    }
-    
     return true
   }
 
   
   override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
-    self.mostrarAviso(comErro: "Error")
-    return true
+    if tudoPreenchido() {
+      return true
+    }
+    self.mostrarAviso(comErro: "Não foi possível entrar")
+    return false
   }
-  
   
   func mostrarAviso(comErro erro:String) {
       print(erro)
       let alerta = Alerta(frame: self.view.frame) 
       self.view.addSubview(alerta)
   }
-  
   
   override func viewDidLoad() {
     super.viewDidLoad()

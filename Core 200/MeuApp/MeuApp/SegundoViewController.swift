@@ -23,7 +23,7 @@ class SegundoViewController: UIViewController {
     let largura =  self.view.frame.size.width/CGFloat(cores.count)
     
     for (pos,cor) in cores.enumerated() {
-      
+
       let MView = UIView()
       MView.backgroundColor = cor
       MView.frame = CGRect(x: largura * CGFloat(pos), y: 0, width: largura, height: 100)
