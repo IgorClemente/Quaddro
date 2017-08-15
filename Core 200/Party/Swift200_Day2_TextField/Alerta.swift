@@ -10,23 +10,17 @@ import UIKit
 
 class Alerta : UIView {
     
-  private var optionalOvBtn = Dictionary<String,String>()
-    
-    
-  
   override init(frame: CGRect) {
     
     super.init(frame:frame)
-    // Fundo escuro 
     self.backgroundColor = UIColor.black.withAlphaComponent(0.8)
     self.autoresizingMask = [.flexibleWidth,.flexibleHeight]
     
-    // Botão - Caixa Confirm
     let botaoConfirmError = UIButton()
     botaoConfirmError.frame = CGRect(x:10,y:20,width: 100, height:100)
-    botaoConfirmError.backgroundColor = UIColor.brown
+    botaoConfirmError.backgroundColor = UIColor.darkGray.withAlphaComponent(0.5)
+    botaoConfirmError.setTitle("OK", for: .normal)
     
-    // Fundo Branco - Caixa
     let view =  UIView()
     view.addSubview(botaoConfirmError)
     view.backgroundColor = UIColor.white

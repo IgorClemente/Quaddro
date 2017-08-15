@@ -94,6 +94,10 @@
                                     <segue destination="BAE-lY-Iar" kind="modal" id="Kvj-mv-YBp"/>
                                 </connections>
                             </button>
+                            <slider opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" id="0D6-aR-ofB">
+                                <rect key="frame" x="188" y="518" width="118" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </slider>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
@@ -110,7 +114,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="87" y="153"/>
+            <point key="canvasLocation" x="67" y="153"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="0Tk-be-adn">

@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		431149501F3F8AF600978F8E /* dancer_m_emoji.png in Resources */ = {isa = PBXBuildFile; fileRef = 4311494E1F3F8AF600978F8E /* dancer_m_emoji.png */; };
-		431149511F3F8AF600978F8E /* dancer_w_emoji.png in Resources */ = {isa = PBXBuildFile; fileRef = 4311494F1F3F8AF600978F8E /* dancer_w_emoji.png */; };
 		431149531F3F98BD00978F8E /* Alerta.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431149521F3F98BD00978F8E /* Alerta.swift */; };
 		43B67D461F3F43A90065AFB6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B67D451F3F43A90065AFB6 /* AppDelegate.swift */; };
 		43B67D481F3F43A90065AFB6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B67D471F3F43A90065AFB6 /* ViewController.swift */; };
@@ -18,8 +16,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		4311494E1F3F8AF600978F8E /* dancer_m_emoji.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = dancer_m_emoji.png; path = Assets.xcassets/Party/imagens/dancer_m_emoji.imageset/dancer_m_emoji.png; sourceTree = "<group>"; };
-		4311494F1F3F8AF600978F8E /* dancer_w_emoji.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = dancer_w_emoji.png; path = Assets.xcassets/Party/imagens/dancer_w_emoji.imageset/dancer_w_emoji.png; sourceTree = "<group>"; };
 		431149521F3F98BD00978F8E /* Alerta.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alerta.swift; sourceTree = "<group>"; };
 		43B67D421F3F43A90065AFB6 /* Swift200_Day2_TextField.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Swift200_Day2_TextField.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		43B67D451F3F43A90065AFB6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -61,8 +57,6 @@
 			isa = PBXGroup;
 			children = (
 				43B67D451F3F43A90065AFB6 /* AppDelegate.swift */,
-				4311494E1F3F8AF600978F8E /* dancer_m_emoji.png */,
-				4311494F1F3F8AF600978F8E /* dancer_w_emoji.png */,
 				43B67D471F3F43A90065AFB6 /* ViewController.swift */,
 				43B67D491F3F43A90065AFB6 /* Main.storyboard */,
 				43B67D4C1F3F43A90065AFB6 /* Assets.xcassets */,
@@ -133,8 +127,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				43B67D501F3F43A90065AFB6 /* LaunchScreen.storyboard in Resources */,
-				431149511F3F8AF600978F8E /* dancer_w_emoji.png in Resources */,
-				431149501F3F8AF600978F8E /* dancer_m_emoji.png in Resources */,
 				43B67D4D1F3F43A90065AFB6 /* Assets.xcassets in Resources */,
 				43B67D4B1F3F43A90065AFB6 /* Main.storyboard in Resources */,
 			);
