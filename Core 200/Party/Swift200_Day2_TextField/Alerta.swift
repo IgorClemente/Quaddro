@@ -16,16 +16,11 @@ class Alerta : UIView {
     self.backgroundColor = UIColor.black.withAlphaComponent(0.8)
     self.autoresizingMask = [.flexibleWidth,.flexibleHeight]
     
-    let botaoConfirmError = UIButton()
-    botaoConfirmError.frame = CGRect(x:10,y:20,width: 100, height:100)
-    botaoConfirmError.backgroundColor = UIColor.darkGray.withAlphaComponent(0.5)
-    botaoConfirmError.setTitle("OK", for: .normal)
-    
-    let view =  UIView()
-    view.addSubview(botaoConfirmError)
-    view.backgroundColor = UIColor.white
-    view.frame = CGRect(x:self.frame.size.width/5,y:self.frame.size.height/2.5,width:200,height:100)
-    self.addSubview(view)
+    let viewWhite =  UIView()
+    viewWhite.frame = CGRect(x: 0,y: 0,width: 200,height: 140)
+    viewWhite.autoresizingMask = [.flexibleLeftMargin, .flexibleRightMargin]
+    viewWhite.backgroundColor = UIColor.white
+    self.addSubview(viewWhite)
   }
 
   //Nossa classe não é utilizada via interface builder
