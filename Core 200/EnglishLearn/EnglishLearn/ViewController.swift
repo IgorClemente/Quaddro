@@ -14,19 +14,22 @@ class ViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet var uiTodosCampos: [UILabel]?
     @IBOutlet weak var uiMessageLanguage: UILabel?
     @IBOutlet weak var uiTextField: UITextField?
-
+  
+    var worlds:[String] = [""]
     var messagesField:[String:String] = [
         "Olá do Igor":"Hello from Igor",
         "Esse é um cachorro":"It's a Dog"
     ]
     var messages:[String] = ["Olá do Igor","Esse é um cachorro"]
     
+  
     override func viewDidLoad() {
-        
-        super.viewDidLoad()
-        self.prepareMessages()
-    }
     
+      super.viewDidLoad()
+      self.prepareMessages()
+    }
+  
+  
     func textFieldDidEndEditing(_ textField: UITextField) {
         print("Perdeu foco")
     }
@@ -34,11 +37,15 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     func hiddenFields(_ textTcl:String) -> Void {
         
-        guard let t = self.uiMessageLanguage.text else {
+        guard let t = self.uiMessageLanguage,
+              let textCompare = messagesField[t.text ?? ""] else {
             return
         }
-        
-        let textCompare = messagesField[t]
+      
+        let text = textCompare.components(separatedBy:" ")
+        for txt in text {
+            if txt == 
+        }
     }
     
     
@@ -47,9 +54,14 @@ class ViewController: UIViewController, UITextFieldDelegate {
             return
         }
         
+        let widthBox = self.view.frame.size.width/CGFloat(worlds.count)
+      
         var gerados:[String] = worlds
         for (_,campo) in campos.enumerated() {
             let idxShuffle = arc4random_uniform(UInt32(gerados.count))
+            let labelText = UILabel()
+            labelText.frame = CGRect(x:,y:,width:,height:)
+          
             campo.text = gerados[Int(idxShuffle)]
             gerados.remove(at:Int(idxShuffle))
         }
@@ -65,11 +77,9 @@ class ViewController: UIViewController, UITextFieldDelegate {
         fieldText.text = text
         
         if let p = messagesField[text] {
-            let palavras = p.components(separatedBy:" ")
-            self.generatorBoxesMessage(palavras)
-            for palavra in palavras {
-                print(palavra)
-            }
+            let worlds = p.components(separatedBy:" ")
+            self.generatorBoxesMessage(worlds)
+            self.worlds = worlds
         }
     }
     
