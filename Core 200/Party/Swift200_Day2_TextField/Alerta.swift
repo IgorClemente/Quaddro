@@ -16,11 +16,20 @@ class Alerta : UIView {
     self.backgroundColor = UIColor.black.withAlphaComponent(0.8)
     self.autoresizingMask = [.flexibleWidth,.flexibleHeight]
     
-    let viewWhite =  UIView()
-    viewWhite.frame = CGRect(x: 0,y: 0,width: 200,height: 140)
-    viewWhite.autoresizingMask = [.flexibleLeftMargin, .flexibleRightMargin]
-    viewWhite.backgroundColor = UIColor.white
-    self.addSubview(viewWhite)
+    let boxWhite =  UIView()
+    boxWhite.frame = CGRect(x:0,y:0,width:230,height:140)
+    boxWhite.autoresizingMask = [.flexibleLeftMargin,.flexibleRightMargin]
+    boxWhite.backgroundColor = UIColor.white
+    boxWhite.center = self.center
+    
+    let messageError = UILabel()
+    messageError.frame = CGRect(x:0,y:0,width:200,height:30)
+    messageError.textAlignment = .justified
+    messageError.numberOfLines = 1
+    messageError.text = "Preencha todos os campos"
+    
+    boxWhite.addSubview(messageError)
+    self.addSubview(boxWhite)
   }
 
   //Nossa classe não é utilizada via interface builder
