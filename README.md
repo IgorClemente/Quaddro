@@ -9,6 +9,8 @@
 
 # Swift Módulo Interface 200
 #
-# 1 . Day 1 - UIView,Interface Builder, XCode Explicação
-# 2 . Day 2 - UITextField, Blur View, Animation 
-#             -> Assets: Party,ColorPicker http://bit.ly/2vZ2OVP
+# 1 . Day 1 - UIView,Interface Builder, XCode Explicação 05/08
+# 2 . Day 2 - UITextField, Blur View, Animation         12/08
+# 3 . Day 3 - UISlider                                  19/08
+
+ -> Assets: Party,ColorPicker http://bit.ly/2vZ2OVP
