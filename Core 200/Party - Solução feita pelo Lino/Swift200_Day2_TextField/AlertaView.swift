@@ -80,7 +80,7 @@ class AlertaView : UIView {
   
     // Evitando uso errado da classe
     required init?(coder aDecoder: NSCoder) {
-        fatalError()
+        fatalError() // Aqui o compilador não prossegue e mostra o erro ocorrido
     }
     
 }

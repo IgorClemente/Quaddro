@@ -18,13 +18,12 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     var messagesAComparar = [String]()
     var messagesField:[String:String] = [
-        "Olá do Igor":"Hello From Igor",
-        "Esse é um cachorro":"It's a Dog",
-        "Meu nome é Joana":"My name is Joana",
+        "Esse é um cachorro":"This is a Dog",
+        "Meu nome é Igor":"My name is Igor",
         "Paz e Amor":"Peace and Love",
         "O café da manhã está incluso ?":"Breakfast is included"
     ]
-    var messages:[String] = ["Olá do Igor","Esse é um cachorro","Meu nome é Joana","Paz e Amor","O café da manhã está incluso ?"]
+    var messages:[String] = ["Esse é um cachorro","Meu nome é Igor","Paz e Amor","O café da manhã está incluso ?"]
     
     
     override func viewDidLoad() {

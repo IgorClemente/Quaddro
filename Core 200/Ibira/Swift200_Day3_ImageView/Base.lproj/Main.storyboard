@@ -58,14 +58,28 @@
                                 <rect key="frame" x="16" y="84" width="140" height="145"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
-                                    <segue destination="CID-Q6-vCA" kind="modal" identifier="cavalos" id="Lpq-3l-mw7"/>
+                                    <segue destination="CID-Q6-vCA" kind="modal" identifier="cavalos" modalTransitionStyle="crossDissolve" id="Lpq-3l-mw7"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="E6I-GI-Szt">
                                 <rect key="frame" x="164" y="84" width="140" height="253"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <connections>
-                                    <segue destination="CID-Q6-vCA" kind="modal" identifier="obelisco" id="IfR-CJ-OOi"/>
+                                    <segue destination="CID-Q6-vCA" kind="modal" identifier="obelisco" modalTransitionStyle="crossDissolve" id="IfR-CJ-OOi"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="rK8-CN-8SC">
+                                <rect key="frame" x="16" y="237" width="140" height="97"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <segue destination="CID-Q6-vCA" kind="modal" identifier="arvore" modalTransitionStyle="crossDissolve" id="NTX-Zz-Xmb"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="xzd-fx-4Af">
+                                <rect key="frame" x="16" y="345" width="288" height="203"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <segue destination="CID-Q6-vCA" kind="modal" identifier="pessoas" modalTransitionStyle="crossDissolve" id="Q9n-ab-u8l"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -147,6 +161,6 @@
         <simulatedScreenMetrics key="destination" type="retina4_0.fullscreen"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="Lpq-3l-mw7"/>
+        <segue reference="NTX-Zz-Xmb"/>
     </inferredMetricsTieBreakers>
 </document>

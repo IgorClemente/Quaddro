@@ -10,6 +10,11 @@ import UIKit
 
 class ViewController: UIViewController {
 
+  
+  override var preferredStatusBarStyle: UIStatusBarStyle{
+    return .lightContent
+  }
+  
   override func viewDidLoad() {
     super.viewDidLoad()
     
@@ -26,6 +31,15 @@ class ViewController: UIViewController {
     if UIApplication.shared.canOpenURL(url) { 
         UIApplication.shared.openURL(url)
     }
+  }
+  
+  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    print("Ativei a segue \(segue.identifier ?? "")")
+  
+    guard let detalhes = segue.destination as? DetalhesViewController else{
+      return
+    }
+    detalhes.opcaoEscolhida = segue.identifier
   }
 }
 
