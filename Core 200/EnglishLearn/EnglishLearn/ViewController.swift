@@ -10,32 +10,40 @@ import UIKit
 import Darwin
 
 class ViewController: UIViewController, UITextFieldDelegate {
-   
-    @IBOutlet var uiAllFields: [UILabel]?
+    
     @IBOutlet weak var uiMessageLanguage: UILabel?
     @IBOutlet weak var uiTextField: UITextField?
+    var AllFields:[UILabel] = [UILabel]()
+    let boxMessages = UIView()
     
     var messagesAComparar = [String]()
     var messagesField:[String:String] = [
         "Olá do Igor":"Hello From Igor",
-        "Esse é um cachorro":"It's a Dog"
+        "Esse é um cachorro":"It's a Dog",
+        "Meu nome é Joana":"My name is Joana",
+        "Paz e Amor":"Love and Peace"
     ]
-    var messages:[String] = ["Olá do Igor","Esse é um cachorro"]
+    var messages:[String] = ["Olá do Igor","Esse é um cachorro","Meu nome é Joana","Paz e Amor"]
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.boxMessages.frame = CGRect(x:16,y:420,width:288,height:128)
+        self.boxMessages.backgroundColor = UIColor.white.withAlphaComponent(0)
+        
         self.prepareMessages()
     }
     
     func textFieldDidEndEditing(_ textField: UITextField) {
-        guard let allFields = self.uiAllFields else {
+        guard !self.AllFields.isEmpty else {
             return
         }
+        
         if let fieldEditing = textField.text {
            let textCompared = fieldEditing.components(separatedBy:" ")
             
-           for (_,campo) in allFields.enumerated() {
+           for campo in AllFields {
               if textCompared.contains(campo.text ?? "") {
                  let indexTextCompared = textCompared.index(of: campo.text ?? "")
                  let indexTextPalavras = self.messagesAComparar.index(of: campo.text ?? "")
@@ -45,6 +53,20 @@ class ViewController: UIViewController, UITextFieldDelegate {
               }
            }
         }
+        
+        let next = AllFields.reduce(true,{ (campoAtivo,campo) in
+            if campoAtivo {
+                return campo.isHidden == true
+            } else {
+                return false
+            }
+        })
+        
+        if next {
+            self.AllFields = []
+            self.uiTextField?.text = ""
+            self.prepareMessages()
+        }
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -53,21 +75,30 @@ class ViewController: UIViewController, UITextFieldDelegate {
         return false
     }
     
-    func generatorBoxesMessage(_ worlds:[String]) -> Void {
-        guard let campos = self.uiAllFields else {
-            return
-        }
-        var gerados:[String] = worlds
-        for (_,campo) in campos.enumerated() {
+    func generatorBoxesMessage(_ words:[String]) -> Void {
+        
+        var gerados:[String] = words
+        for (pos,_) in words.enumerated() {
+            
             let idxShuffle = arc4random_uniform(UInt32(gerados.count))
-            campo.text = gerados[Int(idxShuffle)]
+            let widthBox = (self.view.frame.size.width+30)/CGFloat(words.count)
+            
+            let box = UILabel()
+            box.frame = CGRect(x:widthBox * CGFloat(pos),y:10,width:50,height:50)
+            box.backgroundColor = UIColor.white
+            box.text = gerados[Int(idxShuffle)]
+            box.textColor = UIColor.red
+            box.textAlignment = .center
+            
+            self.AllFields.append(box)
+            self.boxMessages.addSubview(box)
             gerados.remove(at:Int(idxShuffle))
         }
+        self.view.addSubview(self.boxMessages)
     }
     
     func prepareMessages() -> Void {
-        guard let fieldText = uiMessageLanguage,
-              let allFields = uiAllFields else {
+        guard let fieldText = uiMessageLanguage else {
             return
         }
         
