@@ -21,22 +21,24 @@ class ViewController: UIViewController, UITextFieldDelegate {
         "Olá do Igor":"Hello From Igor",
         "Esse é um cachorro":"It's a Dog",
         "Meu nome é Joana":"My name is Joana",
-        "Paz e Amor":"Love and Peace"
+        "Paz e Amor":"Peace and Love",
+        "O café da manhã está incluso ?":"Breakfast is included"
     ]
-    var messages:[String] = ["Olá do Igor","Esse é um cachorro","Meu nome é Joana","Paz e Amor"]
+    var messages:[String] = ["Olá do Igor","Esse é um cachorro","Meu nome é Joana","Paz e Amor","O café da manhã está incluso ?"]
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.boxMessages.frame = CGRect(x:16,y:420,width:288,height:128)
+        self.boxMessages.frame = CGRect(x:0,y:408,width:320,height:160)
         self.boxMessages.backgroundColor = UIColor.white.withAlphaComponent(0)
         
         self.prepareMessages()
     }
     
     func textFieldDidEndEditing(_ textField: UITextField) {
-        guard !self.AllFields.isEmpty else {
+        guard !self.AllFields.isEmpty,
+              let fieldInputText = self.uiTextField else {
             return
         }
         
@@ -64,7 +66,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         
         if next {
             self.AllFields = []
-            self.uiTextField?.text = ""
+            fieldInputText.text = ""
             self.prepareMessages()
         }
     }
@@ -81,10 +83,10 @@ class ViewController: UIViewController, UITextFieldDelegate {
         for (pos,_) in words.enumerated() {
             
             let idxShuffle = arc4random_uniform(UInt32(gerados.count))
-            let widthBox = (self.view.frame.size.width+30)/CGFloat(words.count)
+            let widthBox = (self.view.frame.size.width)/CGFloat(words.count)
             
             let box = UILabel()
-            box.frame = CGRect(x:widthBox * CGFloat(pos),y:10,width:50,height:50)
+            box.frame = CGRect(x:(widthBox+2)*CGFloat(pos),y:10,width:widthBox,height:50)
             box.backgroundColor = UIColor.white
             box.text = gerados[Int(idxShuffle)]
             box.textColor = UIColor.red
