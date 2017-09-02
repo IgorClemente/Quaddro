@@ -12,14 +12,36 @@ class ViewController: UIViewController {
 
   override func viewDidLoad() {
     super.viewDidLoad()
-    // Do any additional setup after loading the view, typically from a nib.
   }
+  
+  @IBOutlet var uiTodosOsFundos: [UIView]?
 
-  override func didReceiveMemoryWarning() {
-    super.didReceiveMemoryWarning()
-    // Dispose of any resources that can be recreated.
+  let stream = RadioStream()
+  
+  @IBAction func tapTocaRock() {
+    stream.change(toStation: .rock)
   }
-
-
+  
+  @IBAction func tapTocaPop() {
+    stream.change(toStation: .pop)
+  }
+  
+  @IBAction func tapTocaEcletica() {
+    stream.change(toStation: .ecletic)
+  }
+  
+  @IBAction func tapTocaDance() {
+    stream.change(toStation: .dance)
+  }
+  
+  @IBAction func tapAtualizaSelecao(_ sender:UIButton) {
+   
+    uiTodosOsFundos?.forEach {
+      $0.layer.borderColor = UIColor.clear.cgColor
+    }
+    
+    sender.superview?.layer.borderColor = UIColor.red.cgColor
+    sender.superview?.layer.borderWidth = 2
+  }
 }
 

@@ -12,6 +12,8 @@
 		43D6F4971F5B22D200C2D86D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43D6F4951F5B22D200C2D86D /* Main.storyboard */; };
 		43D6F4991F5B22D200C2D86D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43D6F4981F5B22D200C2D86D /* Assets.xcassets */; };
 		43D6F49C1F5B22D200C2D86D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43D6F49A1F5B22D200C2D86D /* LaunchScreen.storyboard */; };
+		43D6F4A81F5B48EB00C2D86D /* Arredondador.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D6F4A71F5B48EB00C2D86D /* Arredondador.swift */; };
+		43D6F4AA1F5B4EE100C2D86D /* RadioStream.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D6F4A91F5B4EE100C2D86D /* RadioStream.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		43D6F4981F5B22D200C2D86D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		43D6F49B1F5B22D200C2D86D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		43D6F49D1F5B22D200C2D86D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		43D6F4A71F5B48EB00C2D86D /* Arredondador.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Arredondador.swift; sourceTree = "<group>"; };
+		43D6F4A91F5B4EE100C2D86D /* RadioStream.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RadioStream.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +63,8 @@
 				43D6F4A41F5B232200C2D86D /* Imagem */,
 				43D6F4A31F5B231C00C2D86D /* Layout */,
 				43D6F49D1F5B22D200C2D86D /* Info.plist */,
+				43D6F4A71F5B48EB00C2D86D /* Arredondador.swift */,
+				43D6F4A91F5B4EE100C2D86D /* RadioStream.swift */,
 			);
 			path = Swift200_Day5_AutoLayout;
 			sourceTree = "<group>";
@@ -169,8 +175,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				43D6F4A81F5B48EB00C2D86D /* Arredondador.swift in Sources */,
 				43D6F4941F5B22D200C2D86D /* ViewController.swift in Sources */,
 				43D6F4921F5B22D200C2D86D /* AppDelegate.swift in Sources */,
+				43D6F4AA1F5B4EE100C2D86D /* RadioStream.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
