@@ -21,7 +21,7 @@ class ViewController: UIViewController {
   
   var diaSelecionado:DiaDaSemana{
     let dias:[DiaDaSemana] = [
-      .domingo, .segunda, .terca, .quarta, .quinta, .sexta
+      .domingo, .segunda, .terca, .quarta, .quinta, .sexta, .sabado
     ]
     return dias[uiSegmentoDiaDaSemana?.selectedSegmentIndex ?? 0]
   }
@@ -44,6 +44,12 @@ class ViewController: UIViewController {
     
   }
   
+  @IBAction func tapMostraBadge(_ sender: UISwitch) {
+      
+    App.compartilhado.deveriaMostrarBadge = sender.isOn
+    atualizarAtual()
+  }
+  
   func atualizarAtual() {
     
     let atual = App.compartilhado.recuperar(paraDia: diaSelecionado) ?? 0
@@ -58,6 +64,15 @@ class ViewController: UIViewController {
                                     width: 68, height: tamanho)
     }
     
+    //atualiza a badge
+    if App.compartilhado.deveriaMostrarBadge {
+      // recuperando drinks do dia atual e não do campo atualizado pelo segment
+      let drinksDiaAtual = App.compartilhado.recuperar(paraDia: App.compartilhado.diaAtual().nome) ?? 0
+      UIApplication.shared.applicationIconBadgeNumber = atual
+      
+    }else {
+      UIApplication.shared.applicationIconBadgeNumber = 0
+    }
   }
   
   override var preferredStatusBarStyle:UIStatusBarStyle {
@@ -84,8 +99,11 @@ class ViewController: UIViewController {
     */
    
     let atual = App.compartilhado.diaAtual()
+    
     if let segmentos = uiSegmentoDiaDaSemana {
+      
       for indice in 0..<segmentos.numberOfSegments {
+        
         if indice > atual.indice {
           segmentos.setEnabled(false, forSegmentAt: indice)
         }else {

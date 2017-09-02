@@ -54,6 +54,7 @@ class App {
     // salvando o conteúdo novo
     jaSalvo[dia.rawValue] = drinks
     ud.set(jaSalvo, forKey:"drinks")
+    ud.set(semanaDoAno(), forKey: "semana")
     
     // synchronize vai escrever no disco de maneira segura
     ud.synchronize()
@@ -62,10 +63,47 @@ class App {
   // Recuperar: le do ud valores já salvos
   func recuperar(paraDia dia:DiaDaSemana) -> Int? {
     guard let dadosSalvos = ud.value(forKey: "drinks") as? [String:Int] else {
-        return nil
+        return nil 
     }
     
     return dadosSalvos[dia.rawValue]
+  }
+  
+  // Controlando se quero ou não ver badge
+  var deveriaMostrarBadge:Bool {
+    get {
+      return ud.bool(forKey: "mostrar-badge")
+    }    
+    set {
+      ud.set(newValue, forKey: "mostrar-badge")
+      ud.synchronize()
+      // se eu precisar ver badges,
+      // preciso de autorizacao do user
+      if newValue {
+        let permissoes = UIUserNotificationSettings(types:[.badge],categories:nil)
+        UIApplication.shared.registerUserNotificationSettings(permissoes)
+      }
+    }
+  }
+  
+  func semanaDoAno() -> Int {
+    
+    let hoje = Date()
+    let calendario = Calendar(identifier: .gregorian)
+    let semanaDoAno = calendario.component(.yearForWeekOfYear, from: hoje)
+    return semanaDoAno
+  }
+  
+  // Verifica se a informação salva é dessa semana
+  // se for antiga, apaga
+  func validaSemana() {
+    
+    let semanaSalva = ud.integer(forKey: "semana")
+    if semanaSalva != semanaDoAno() {
+      ud.removeObject(forKey: "drinks")
+      ud.removeObject(forKey: "semana")
+      ud.synchronize()
+    }
   }
 
 }
