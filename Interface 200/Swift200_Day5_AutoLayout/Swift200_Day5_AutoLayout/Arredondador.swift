@@ -21,5 +21,4 @@ class Arredondador: NSObject {
     }
   }
   
-  
 }

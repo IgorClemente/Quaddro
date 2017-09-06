@@ -99,6 +99,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     }
     
     func prepareMessages() -> Void {
+        
         guard let fieldText = uiMessageLanguage else {
             return
         }

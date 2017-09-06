@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -255,12 +255,12 @@
                                     </mask>
                                     <mask key="constraints">
                                         <exclude reference="6JE-hf-yBg"/>
-                                        <exclude reference="Kam-KT-3fO"/>
-                                        <exclude reference="QeN-tN-0kq"/>
-                                        <exclude reference="b6E-cg-tTN"/>
                                         <exclude reference="5vZ-Ok-mEZ"/>
                                         <exclude reference="Eer-4F-26Y"/>
                                         <exclude reference="foK-sv-3b6"/>
+                                        <exclude reference="Kam-KT-3fO"/>
+                                        <exclude reference="QeN-tN-0kq"/>
+                                        <exclude reference="b6E-cg-tTN"/>
                                         <exclude reference="55R-FT-N7n"/>
                                         <exclude reference="QOE-dM-ISO"/>
                                         <exclude reference="ZWp-f0-chz"/>
@@ -273,12 +273,12 @@
                                     </mask>
                                     <mask key="constraints">
                                         <include reference="6JE-hf-yBg"/>
-                                        <include reference="Kam-KT-3fO"/>
-                                        <include reference="QeN-tN-0kq"/>
-                                        <include reference="b6E-cg-tTN"/>
                                         <include reference="5vZ-Ok-mEZ"/>
                                         <include reference="Eer-4F-26Y"/>
                                         <include reference="foK-sv-3b6"/>
+                                        <include reference="Kam-KT-3fO"/>
+                                        <include reference="QeN-tN-0kq"/>
+                                        <include reference="b6E-cg-tTN"/>
                                         <include reference="55R-FT-N7n"/>
                                         <include reference="QOE-dM-ISO"/>
                                         <include reference="ZWp-f0-chz"/>
@@ -452,7 +452,7 @@
                     </connections>
                 </customObject>
             </objects>
-            <point key="canvasLocation" x="140.57971014492756" y="138.58695652173915"/>
+            <point key="canvasLocation" x="104" y="139"/>
         </scene>
     </scenes>
     <resources>
