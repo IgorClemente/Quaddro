@@ -68,7 +68,7 @@ class ViewController: UIViewController {
     if App.compartilhado.deveriaMostrarBadge {
       // recuperando drinks do dia atual e não do campo atualizado pelo segment
       let drinksDiaAtual = App.compartilhado.recuperar(paraDia: App.compartilhado.diaAtual().nome) ?? 0
-      UIApplication.shared.applicationIconBadgeNumber = atual
+      UIApplication.shared.applicationIconBadgeNumber = drinksDiaAtual
       
     }else {
       UIApplication.shared.applicationIconBadgeNumber = 0

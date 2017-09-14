@@ -66,16 +66,16 @@ class ViewController: UIViewController, UITextFieldDelegate {
         }
         
         // garantir idade > 18
-        guard Int(uiIdade?.text ?? "") ?? 0 >= 18 else{
-            mostraErro(comTexto: "Poooxa, Lek, aqui não é matinê, mewww! Vaza, vai pela sombra 😎")
-            return false
-        }
+        //guard Int(uiIdade?.text ?? "") ?? 0 >= 18 else{
+          //  mostraErro(comTexto: "Poooxa, Lek, aqui não é matinê, mewww! Vaza, vai pela sombra 😎")
+            //return false
+        //}
         
         // garantir que a senha esta correta
-        guard uiSenha?.text == "123" else{
-            mostraErro(comTexto: "Não beleza, vou fingir que não vi que você nem sabe onde tá. Tchau 🙄")
-            return false
-        }
+       // guard uiSenha?.text == "123" else{
+         //   mostraErro(comTexto: "Não beleza, vou fingir que não vi que você nem sabe onde tá. Tchau 🙄")
+           // return false
+        //}
         
         return true
         

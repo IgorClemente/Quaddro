@@ -67,7 +67,7 @@ class AlertaView : UIView {
       UIView.animate(withDuration: 0.2) { self.alpha = 1.0
                                           fundo.center = centroFinal
                                           fundo.alpha = 1.0
-                                        }
+                                    }
       
     }
   

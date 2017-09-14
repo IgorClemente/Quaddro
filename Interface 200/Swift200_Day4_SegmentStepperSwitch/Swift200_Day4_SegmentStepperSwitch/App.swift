@@ -47,7 +47,7 @@ class App {
   
   func definir(paraDia dia:DiaDaSemana, drinks:Int) {
       
-      // Primeiro vou recuperar o que já tinha antes
+    // Primeiro vou recuperar o que já tinha antes
       
     var jaSalvo:[String:Int] = ud.object(forKey:"drinks") as? [String:Int] ?? [:]
     
