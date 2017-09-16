@@ -11,6 +11,10 @@ import UIKit
 class ViewController: UIViewController, UIPickerViewDataSource,
         UIPickerViewDelegate{
 
+    @IBOutlet weak var uiPao: UIImageView?
+    @IBOutlet weak var uiRecheio: UIImageView?
+    @IBOutlet weak var uiExtra: UIImageView?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -22,18 +26,44 @@ class ViewController: UIViewController, UIPickerViewDataSource,
     }
     
     // MARK: - Picker datasource
+   
+    var opcoes = [
+        ["Frances","Ciabatta","Sirio"],
+        ["Frango","H.200g"],
+        ["Cheedar","Prato","Salada"]
+    ]
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
-        return 1
+        return opcoes.count
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return 3
+        // para coluna "component", quantos itens?
+        return opcoes[component].count
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return ["Solteiro","Casado","Outros"][row]
+        return opcoes[component][row]
+        
+        // Um dos itens do picker foi selecionado
+        // coluna -> Componente
+        // linha  -> Row
+        
+        let aImagem = UIImage(named:"l\(component+1)_\(row)")
+        
+        switch component {
+            case 0:
+                uiPao?.image = aImagem
+            case 1:
+                uiRecheio?.image = aImagem
+            case 2:
+                uiExtra?.image = aImagem
+            default:
+                break
+        }
     }
+    
+
     
     // View Code: a barra de title é feita programaticamente - Visual Formating Language
     func criarBarraDeTitulo(comVFL vfl:Bool) {
