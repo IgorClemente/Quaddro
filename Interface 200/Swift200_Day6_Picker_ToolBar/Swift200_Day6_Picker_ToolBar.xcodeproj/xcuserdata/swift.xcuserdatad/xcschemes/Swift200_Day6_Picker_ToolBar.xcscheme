@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "43D6F48D1F5B22D200C2D86D"
-               BuildableName = "Swift200_Day5_AutoLayout.app"
-               BlueprintName = "Swift200_Day5_AutoLayout"
-               ReferencedContainer = "container:Swift200_Day5_AutoLayout.xcodeproj">
+               BlueprintIdentifier = "43F4F5011F6DA0F6006534B0"
+               BuildableName = "Swift200_Day6_Picker_ToolBar.app"
+               BlueprintName = "Swift200_Day6_Picker_ToolBar"
+               ReferencedContainer = "container:Swift200_Day6_Picker_ToolBar.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -32,10 +32,10 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "43D6F48D1F5B22D200C2D86D"
-            BuildableName = "Swift200_Day5_AutoLayout.app"
-            BlueprintName = "Swift200_Day5_AutoLayout"
-            ReferencedContainer = "container:Swift200_Day5_AutoLayout.xcodeproj">
+            BlueprintIdentifier = "43F4F5011F6DA0F6006534B0"
+            BuildableName = "Swift200_Day6_Picker_ToolBar.app"
+            BlueprintName = "Swift200_Day6_Picker_ToolBar"
+            ReferencedContainer = "container:Swift200_Day6_Picker_ToolBar.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -55,10 +55,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "43D6F48D1F5B22D200C2D86D"
-            BuildableName = "Swift200_Day5_AutoLayout.app"
-            BlueprintName = "Swift200_Day5_AutoLayout"
-            ReferencedContainer = "container:Swift200_Day5_AutoLayout.xcodeproj">
+            BlueprintIdentifier = "43F4F5011F6DA0F6006534B0"
+            BuildableName = "Swift200_Day6_Picker_ToolBar.app"
+            BlueprintName = "Swift200_Day6_Picker_ToolBar"
+            ReferencedContainer = "container:Swift200_Day6_Picker_ToolBar.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -74,10 +74,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "43D6F48D1F5B22D200C2D86D"
-            BuildableName = "Swift200_Day5_AutoLayout.app"
-            BlueprintName = "Swift200_Day5_AutoLayout"
-            ReferencedContainer = "container:Swift200_Day5_AutoLayout.xcodeproj">
+            BlueprintIdentifier = "43F4F5011F6DA0F6006534B0"
+            BuildableName = "Swift200_Day6_Picker_ToolBar.app"
+            BlueprintName = "Swift200_Day6_Picker_ToolBar"
+            ReferencedContainer = "container:Swift200_Day6_Picker_ToolBar.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="9jr-3z-tGc">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="HH5-Rs-RZD">
+            <objects>
+                <viewController id="9jr-3z-tGc" customClass="ViewController" customModule="Swift200_Day6_Picker_ToolBar" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="2Se-De-fob"/>
+                        <viewControllerLayoutGuide type="bottom" id="b2u-RF-p1w"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="sns-j2-o82">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OSb-S1-Mpy">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.31270260359769519" green="0.41160905214800658" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="not-LA-0BB">
+                                <rect key="frame" x="0.0" y="451" width="375" height="216"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="9jr-3z-tGc" id="vyb-3z-nmJ"/>
+                                    <outlet property="delegate" destination="9jr-3z-tGc" id="Scr-9O-0sz"/>
+                                </connections>
+                            </pickerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="not-LA-0BB" firstAttribute="leading" secondItem="sns-j2-o82" secondAttribute="leading" id="IsH-Mh-IyD"/>
+                            <constraint firstItem="b2u-RF-p1w" firstAttribute="top" secondItem="not-LA-0BB" secondAttribute="bottom" id="JOl-Jh-8HZ"/>
+                            <constraint firstAttribute="trailing" secondItem="not-LA-0BB" secondAttribute="trailing" id="tZW-Zd-pJn"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xk4-CE-Xha" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-215.19999999999999" y="-0.44977511244377816"/>
+        </scene>
+    </scenes>
+</document>

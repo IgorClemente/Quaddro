@@ -4,7 +4,7 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>Swift200_Day5_AutoLayout.xcscheme</key>
+		<key>Swift200_Day6_Picker_ToolBar.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
@@ -12,7 +12,7 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>43D6F48D1F5B22D200C2D86D</key>
+		<key>43F4F5011F6DA0F6006534B0</key>
 		<dict>
 			<key>primary</key>
 			<true/>
