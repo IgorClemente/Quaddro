@@ -24,5 +24,4 @@ class Arredondador : NSObject /* para funcionar no IB */ {
             }
         }
     }
-    
 }

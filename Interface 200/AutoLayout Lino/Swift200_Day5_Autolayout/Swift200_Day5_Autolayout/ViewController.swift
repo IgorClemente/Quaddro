@@ -78,7 +78,7 @@ class ViewController: UIViewController {
                 stream.isPlaying = false
             case .remoteControlPlay:
                 stream.isPlaying = true
-            case .remoteControlNextTrack
+            //case .remoteControlNextTrack
             // Implementar
             default:
                 return

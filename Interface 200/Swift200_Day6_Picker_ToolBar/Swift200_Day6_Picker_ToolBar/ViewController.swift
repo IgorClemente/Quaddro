@@ -43,13 +43,13 @@ class ViewController: UIViewController, UIPickerViewDataSource,
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return opcoes[component][row]
-        
         // Um dos itens do picker foi selecionado
         // coluna -> Componente
         // linha  -> Row
         
         let aImagem = UIImage(named:"l\(component+1)_\(row)")
+        
+        print("l\(component+1)_\(row)")
         
         switch component {
             case 0:
@@ -61,6 +61,7 @@ class ViewController: UIViewController, UIPickerViewDataSource,
             default:
                 break
         }
+        return opcoes[component][row]
     }
     
 
@@ -73,10 +74,10 @@ class ViewController: UIViewController, UIPickerViewDataSource,
         fundo.translatesAutoresizingMaskIntoConstraints = false
         self.view.addSubview(fundo)
         
-        let titulo       = UILabel()
-        titulo.textColor = .white
-        titulo.text      = "hamburgueria"
-        titulo.font      = UIFont.systemFont(ofSize: 22, weight: 2.0)
+        let titulo           = UILabel()
+        titulo.textColor     = .white
+        titulo.text          = "hamburgueria"
+        titulo.font          = UIFont.systemFont(ofSize: 22, weight: 2.0)
         titulo.textAlignment = .center
         titulo.translatesAutoresizingMaskIntoConstraints = false
         fundo.addSubview(titulo)
@@ -98,6 +99,7 @@ class ViewController: UIViewController, UIPickerViewDataSource,
                 limitadores.append(contentsOf:[
                    NSLayoutConstraint(item: fundo, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1.0, constant: 64)     
                 ])
+                //: MARK
                 // Se colocar nil no Item ele entende que é ele mesmo
                 limitadores.append(contentsOf:[
                    NSLayoutConstraint(item: titulo, attribute: .leading, relatedBy: .equal, toItem: fundo, attribute: .leading, multiplier: 1.0, constant: 0)
@@ -110,6 +112,7 @@ class ViewController: UIViewController, UIPickerViewDataSource,
                 limitadores.append(contentsOf:[
                    NSLayoutConstraint(item: titulo, attribute: .bottom, relatedBy: .equal, toItem: fundo, attribute: .bottom, multiplier: 1.0, constant: -10)
                 ])
+            //:MARK
             NSLayoutConstraint.activate(limitadores)    //Ativando todas as contraints
         } else {
             // Nossas regras em VFL

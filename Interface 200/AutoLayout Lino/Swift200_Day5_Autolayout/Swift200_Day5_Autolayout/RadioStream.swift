@@ -59,15 +59,15 @@ class RadioStream {
         
         if let playbackURL = URL(string:radioAddress) {
             //Confgurando para tocar em Background
-            let session = AVAudioSession.sharedInstance()
-            try? session.setCategory(AVAudioSessionCategoryPlayback)
+           let session = AVAudioSession.sharedInstance()
+           try? session.setCategory(AVAudioSessionCategoryPlayback)
             
             //Adicionando na central de controle
-            let artSize = CGSize(width:340, height:340)
-            let artWork = MPMediaItemArtwork(boundsSize: artSize,
+           let artSize = CGSize(width:340, height:340)
+           let artWork = MPMediaItemArtwork(boundsSize: artSize,
                                              requestHandler: { _ in 
                                                 return UIImage(named: "icone_original") ?? UIImage()   
-            })
+           })
             
             MPNowPlayingInfoCenter.default().nowPlayingInfo = [
                 MPMediaItemPropertyTitle: stationName,
