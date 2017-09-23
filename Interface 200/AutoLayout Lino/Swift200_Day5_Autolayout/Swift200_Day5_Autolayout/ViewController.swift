@@ -103,8 +103,9 @@ class ViewController: UIViewController {
                   let viewSelecionada = self.radioDisparadores[atual.rawValue] ?? UIButton()
                   viewSelecionada.superview?.layer.borderColor = UIColor.red.cgColor
                   viewSelecionada.superview?.layer.borderWidth = 2
-                  stream.change(toStation: proxima[atual.rawValue]!)
+                  stream.change(toStation: proxima[atual.rawValue] ?? .rock)
                 }
+                
             default:
                 return
         }

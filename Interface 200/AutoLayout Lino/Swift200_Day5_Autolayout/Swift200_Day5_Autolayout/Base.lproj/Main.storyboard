@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina3_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -97,7 +97,7 @@
                                 <rect key="frame" x="10" y="229" width="145" height="144.5"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N6t-nc-jUq">
-                                        <rect key="frame" x="22" y="7.5" width="101" height="101.5"/>
+                                        <rect key="frame" x="22" y="8" width="101" height="101"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="N6t-nc-jUq" secondAttribute="height" multiplier="1:1" id="1SS-K8-x57"/>
                                             <constraint firstAttribute="width" secondItem="N6t-nc-jUq" secondAttribute="height" multiplier="1:1" id="DGq-AK-Ili"/>
@@ -125,7 +125,7 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ECLÉTICA" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D22-K1-uWm">
-                                        <rect key="frame" x="34" y="114" width="78" height="20.5"/>
+                                        <rect key="frame" x="34.5" y="114" width="78" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
@@ -192,7 +192,7 @@
                                 <rect key="frame" x="10" y="74" width="145" height="145"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2TH-Ec-c4T">
-                                        <rect key="frame" x="22" y="8" width="101" height="101.5"/>
+                                        <rect key="frame" x="22" y="8.5" width="101" height="101"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="2TH-Ec-c4T" secondAttribute="height" multiplier="1:1" id="Ai0-SK-vAE"/>
                                             <constraint firstAttribute="width" secondItem="2TH-Ec-c4T" secondAttribute="height" multiplier="1:1" id="LDi-Qv-ApT"/>
@@ -220,7 +220,7 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ROCK" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6c3-2s-Uq7">
-                                        <rect key="frame" x="49" y="114.5" width="47" height="20.5"/>
+                                        <rect key="frame" x="49.5" y="114.5" width="47" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
@@ -287,7 +287,7 @@
                                 <rect key="frame" x="165" y="74" width="145" height="145.5"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n6c-i5-GNQ">
-                                        <rect key="frame" x="21.5" y="8" width="101.5" height="102"/>
+                                        <rect key="frame" x="21.5" y="8.5" width="101.5" height="101.5"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="n6c-i5-GNQ" secondAttribute="height" multiplier="1:1" id="EQm-A3-xbK"/>
                                             <constraint firstAttribute="width" secondItem="n6c-i5-GNQ" secondAttribute="height" multiplier="1:1" id="Pp1-9L-iHx"/>
@@ -315,7 +315,7 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="POP" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Idf-NZ-Uus">
-                                        <rect key="frame" x="55.5" y="115" width="34" height="20.5"/>
+                                        <rect key="frame" x="56" y="115" width="34" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
@@ -384,7 +384,7 @@
                                 <rect key="frame" x="165" y="229.5" width="145" height="145"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4ec-bR-ssO">
-                                        <rect key="frame" x="21.5" y="8" width="101.5" height="101.5"/>
+                                        <rect key="frame" x="21.5" y="8.5" width="101.5" height="101"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="4ec-bR-ssO" secondAttribute="height" multiplier="1:1" id="gmB-h2-WRa"/>
                                             <constraint firstAttribute="width" secondItem="4ec-bR-ssO" secondAttribute="height" multiplier="1:1" id="y88-rM-xB2"/>
@@ -412,7 +412,7 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DANCE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zHx-kq-UKq">
-                                        <rect key="frame" x="44" y="114.5" width="57" height="20.5"/>
+                                        <rect key="frame" x="44.5" y="114.5" width="57" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>

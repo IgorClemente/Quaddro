@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina3_5" orientation="landscape">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Qasino" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="320"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" image="wallpaper" translatesAutoresizingMaskIntoConstraints="NO" id="I9v-Bs-mhC">
+                                <rect key="frame" x="0.0" y="0.0" width="480" height="320"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                            <visualEffectView opaque="NO" alpha="0.65000000000000002" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uSu-n7-4dk">
+                                <rect key="frame" x="0.0" y="0.0" width="480" height="320"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="B1G-bP-2vd">
+                                    <rect key="frame" x="0.0" y="0.0" width="480" height="320"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                </view>
+                                <blurEffect style="light"/>
+                            </visualEffectView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" image="casino" translatesAutoresizingMaskIntoConstraints="NO" id="3Vh-od-rJB">
+                                <rect key="frame" x="45" y="-90" width="390" height="500"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xJW-Vz-qV2">
+                                <rect key="frame" x="45" y="240" width="390" height="80"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Cn-ph-xTQ">
+                                        <rect key="frame" x="140" y="7" width="110" height="60"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" image="btn-meio-normal"/>
+                                        <state key="disabled" image="btn-meio-disabled"/>
+                                        <state key="selected" image="btn-meio-pressed"/>
+                                        <state key="highlighted" image="btn-meio-pressed"/>
+                                        <connections>
+                                            <action selector="tapGira:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LE7-gw-cwZ"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kcj-9W-Y1B">
+                                        <rect key="frame" x="30" y="7" width="110" height="60"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" image="btn-esq-normal"/>
+                                        <state key="disabled" image="btn-esq-disabled"/>
+                                        <state key="selected" image="btn-esq-pressed"/>
+                                        <state key="highlighted" image="btn-esq-pressed"/>
+                                        <connections>
+                                            <action selector="tapGira:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Pa9-7X-G6G"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kfe-wg-QGw">
+                                        <rect key="frame" x="250" y="7" width="106" height="60"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" image="btn-dir-normal"/>
+                                        <state key="disabled" image="btn-dir-disabled"/>
+                                        <state key="selected" image="btn-dir-pressed"/>
+                                        <state key="highlighted" image="btn-dir-pressed"/>
+                                        <connections>
+                                            <action selector="tapGira:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Os6-It-hxy"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="4Xv-dn-jsD"/>
+                                    <constraint firstAttribute="width" constant="390" id="yhX-pJ-htM"/>
+                                </constraints>
+                            </view>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="toF-i7-n9u">
+                                <rect key="frame" x="140" y="95" width="200" height="130"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="Yii-71-FvU"/>
+                                    <constraint firstAttribute="height" constant="130" id="jMh-ty-Fr1"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="ElJ-uQ-QfZ"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="ExY-3k-JQM"/>
+                                </connections>
+                            </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gqB-Ce-GZc">
+                                <rect key="frame" x="380" y="60" width="100" height="200"/>
+                                <state key="normal" image="alavanca-normal"/>
+                                <state key="highlighted" image="alavanca-pressed"/>
+                                <connections>
+                                    <action selector="giraTodos:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5gM-Qd-s3P"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="gqB-Ce-GZc" firstAttribute="centerY" secondItem="3Vh-od-rJB" secondAttribute="centerY" id="1FB-n5-yGp"/>
+                            <constraint firstItem="toF-i7-n9u" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="3da-yb-ejR"/>
+                            <constraint firstItem="3Vh-od-rJB" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="B06-1Z-fCp"/>
+                            <constraint firstItem="uSu-n7-4dk" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Lj2-In-rjU"/>
+                            <constraint firstItem="uSu-n7-4dk" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="RxM-Cq-Pep"/>
+                            <constraint firstAttribute="trailing" secondItem="uSu-n7-4dk" secondAttribute="trailing" id="Ten-J6-072"/>
+                            <constraint firstItem="uSu-n7-4dk" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="V7j-DX-L45"/>
+                            <constraint firstItem="gqB-Ce-GZc" firstAttribute="centerX" secondItem="3Vh-od-rJB" secondAttribute="centerX" constant="190" id="ZfR-JR-xjF"/>
+                            <constraint firstItem="xJW-Vz-qV2" firstAttribute="centerX" secondItem="3Vh-od-rJB" secondAttribute="centerX" id="dxd-17-bOw"/>
+                            <constraint firstItem="toF-i7-n9u" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="kTl-9S-s7r"/>
+                            <constraint firstItem="3Vh-od-rJB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qtM-dD-3Lh"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="uSu-n7-4dk" secondAttribute="bottom" id="yIB-Jb-1jc"/>
+                            <constraint firstItem="uSu-n7-4dk" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="yav-4B-TfH"/>
+                            <constraint firstItem="xJW-Vz-qV2" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="120" id="zaF-XA-UzS"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="uiBtnGiraDois" destination="5Cn-ph-xTQ" id="rKX-qj-7Oa"/>
+                        <outlet property="uiBtnGiraTres" destination="kfe-wg-QGw" id="P2V-zE-1Jg"/>
+                        <outlet property="uiBtnGiraUm" destination="Kcj-9W-Y1B" id="nVe-n9-AV3"/>
+                        <outlet property="uiMeuPicker" destination="toF-i7-n9u" id="bkk-aU-7z4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="45" y="65.625"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="alavanca-normal" width="100" height="200"/>
+        <image name="alavanca-pressed" width="100" height="200"/>
+        <image name="btn-dir-disabled" width="110" height="60"/>
+        <image name="btn-dir-normal" width="110" height="60"/>
+        <image name="btn-dir-pressed" width="110" height="60"/>
+        <image name="btn-esq-disabled" width="110" height="60"/>
+        <image name="btn-esq-normal" width="110" height="60"/>
+        <image name="btn-esq-pressed" width="110" height="60"/>
+        <image name="btn-meio-disabled" width="110" height="60"/>
+        <image name="btn-meio-normal" width="110" height="60"/>
+        <image name="btn-meio-pressed" width="110" height="60"/>
+        <image name="casino" width="390" height="500"/>
+        <image name="wallpaper" width="960" height="540"/>
+    </resources>
+</document>

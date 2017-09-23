@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="EHf-IW-A2E">
+            <objects>
+                <viewController id="01J-lp-oVM" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Llm-lL-Icb"/>
+                        <viewControllerLayoutGuide type="bottom" id="xb3-aO-Qok"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" image="wallpaper" translatesAutoresizingMaskIntoConstraints="NO" id="g8g-Dc-C1R"/>
+                            <visualEffectView opaque="NO" alpha="0.80000001192092896" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9sB-F2-ZgV">
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="nv9-N0-wxg">
+                                    <frame key="frameInset"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                </view>
+                                <blurEffect style="dark"/>
+                            </visualEffectView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="9sB-F2-ZgV" secondAttribute="bottom" id="Agh-O4-tiU"/>
+                            <constraint firstItem="9sB-F2-ZgV" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="D46-KT-YB0"/>
+                            <constraint firstAttribute="trailing" secondItem="9sB-F2-ZgV" secondAttribute="trailing" id="KCH-eg-hoL"/>
+                            <constraint firstItem="g8g-Dc-C1R" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="Taw-QN-5bm"/>
+                            <constraint firstItem="g8g-Dc-C1R" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="ZOz-oC-6Iq"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="g8g-Dc-C1R" secondAttribute="bottom" id="auJ-Kr-uEl"/>
+                            <constraint firstAttribute="trailing" secondItem="g8g-Dc-C1R" secondAttribute="trailing" id="mcx-h8-aDj"/>
+                            <constraint firstItem="9sB-F2-ZgV" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="vF0-Fk-pQn"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="117" y="97"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="wallpaper" width="960" height="540"/>
+    </resources>
+</document>

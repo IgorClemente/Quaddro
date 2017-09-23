@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="9jr-3z-tGc">
-    <device id="retina4_0" orientation="portrait">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="9jr-3z-tGc">
+    <device id="retina3_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -17,26 +17,26 @@
                         <viewControllerLayoutGuide type="bottom" id="b2u-RF-p1w"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="sns-j2-o82">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OSb-S1-Mpy">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                                 <subviews>
                                     <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E1B-7G-020">
-                                        <rect key="frame" x="31" y="32" width="258" height="336"/>
+                                        <rect key="frame" x="31" y="32" width="258" height="248"/>
                                         <subviews>
                                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" image="destaque" translatesAutoresizingMaskIntoConstraints="NO" id="5DQ-Ah-A9t">
-                                                <rect key="frame" x="0.0" y="0.0" width="258" height="336"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="258" height="248"/>
                                             </imageView>
                                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" image="l1_0" translatesAutoresizingMaskIntoConstraints="NO" id="K5H-jH-cmP">
-                                                <rect key="frame" x="29" y="8" width="200" height="320"/>
+                                                <rect key="frame" x="29" y="8" width="200" height="232"/>
                                             </imageView>
                                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" image="l2_0" translatesAutoresizingMaskIntoConstraints="NO" id="xzn-Nm-3cU">
-                                                <rect key="frame" x="29" y="8" width="200" height="320"/>
+                                                <rect key="frame" x="29" y="8" width="200" height="232"/>
                                             </imageView>
                                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" image="l3_0" translatesAutoresizingMaskIntoConstraints="NO" id="cmL-uP-FE9">
-                                                <rect key="frame" x="29" y="8" width="200" height="320"/>
+                                                <rect key="frame" x="29" y="8" width="200" height="232"/>
                                             </imageView>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -65,6 +65,37 @@
                                             <constraint firstItem="K5H-jH-cmP" firstAttribute="centerX" secondItem="E1B-7G-020" secondAttribute="centerX" id="zvv-iI-KRi"/>
                                         </constraints>
                                     </view>
+                                    <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cBB-1f-H1Y">
+                                        <rect key="frame" x="0.0" y="235" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                        <items>
+                                            <barButtonItem style="plain" systemItem="flexibleSpace" id="Jev-Cc-Uef"/>
+                                            <barButtonItem image="Chicken Filled-50" id="A6N-ax-VfE">
+                                                <connections>
+                                                    <action selector="tapFrango:" destination="9jr-3z-tGc" id="Rwf-hw-28L"/>
+                                                </connections>
+                                            </barButtonItem>
+                                            <barButtonItem width="11" style="plain" systemItem="fixedSpace" id="uVG-R2-9Rk"/>
+                                            <barButtonItem image="Industrial Scales Filled-50" id="G6X-hX-Vdi">
+                                                <connections>
+                                                    <action selector="tapLight:" destination="9jr-3z-tGc" id="tvc-jO-4dw"/>
+                                                </connections>
+                                            </barButtonItem>
+                                            <barButtonItem width="10" style="plain" systemItem="fixedSpace" id="kmy-hC-V5G"/>
+                                            <barButtonItem image="Natural Food Filled-50" id="cOf-C1-kpL">
+                                                <connections>
+                                                    <action selector="tapSalada:" destination="9jr-3z-tGc" id="r8R-1C-zvO"/>
+                                                </connections>
+                                            </barButtonItem>
+                                            <barButtonItem width="10" style="plain" systemItem="fixedSpace" id="jKH-0j-4ow"/>
+                                            <barButtonItem image="Steak Medium Filled-50" id="flA-Xo-1WV">
+                                                <connections>
+                                                    <action selector="tapCarne:" destination="9jr-3z-tGc" id="VIC-h3-jhE"/>
+                                                </connections>
+                                            </barButtonItem>
+                                            <barButtonItem style="plain" systemItem="flexibleSpace" id="SA2-mZ-5My"/>
+                                        </items>
+                                    </toolbar>
                                 </subviews>
                                 <color key="backgroundColor" red="0.31270260359769519" green="0.41160905214800658" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -75,7 +106,7 @@
                                 </constraints>
                             </view>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="not-LA-0BB">
-                                <rect key="frame" x="0.0" y="352" width="320" height="216"/>
+                                <rect key="frame" x="0.0" y="264" width="320" height="216"/>
                                 <connections>
                                     <outlet property="dataSource" destination="9jr-3z-tGc" id="vyb-3z-nmJ"/>
                                     <outlet property="delegate" destination="9jr-3z-tGc" id="Scr-9O-0sz"/>
@@ -95,6 +126,7 @@
                     </view>
                     <connections>
                         <outlet property="uiExtra" destination="cmL-uP-FE9" id="2QW-cO-Xss"/>
+                        <outlet property="uiMeuPicker" destination="not-LA-0BB" id="yof-Kn-W58"/>
                         <outlet property="uiPao" destination="K5H-jH-cmP" id="NGF-bI-ZWQ"/>
                         <outlet property="uiRecheio" destination="xzn-Nm-3cU" id="cVI-g6-Ed4"/>
                     </connections>
@@ -105,6 +137,10 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Chicken Filled-50" width="25" height="25"/>
+        <image name="Industrial Scales Filled-50" width="25" height="25"/>
+        <image name="Natural Food Filled-50" width="25" height="25"/>
+        <image name="Steak Medium Filled-50" width="25" height="25"/>
         <image name="destaque" width="350" height="350"/>
         <image name="l1_0" width="200" height="200"/>
         <image name="l2_0" width="200" height="200"/>

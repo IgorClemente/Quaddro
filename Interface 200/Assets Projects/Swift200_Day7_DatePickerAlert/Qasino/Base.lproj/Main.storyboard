@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="eou-cT-m2f">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="jiggler.ttf">
+            <string>BudmoJiggler</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Idade View Controller-->
+        <scene sceneID="mmR-f0-yaw">
+            <objects>
+                <viewController id="eou-cT-m2f" customClass="IdadeViewController" customModule="Qasino" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="FrO-4o-62g"/>
+                        <viewControllerLayoutGuide type="bottom" id="SXd-ih-Efs"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ghh-d3-KaS">
+                        <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" image="wallpaper" translatesAutoresizingMaskIntoConstraints="NO" id="6Xm-LA-ioJ"/>
+                            <visualEffectView opaque="NO" alpha="0.80000000000000004" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TQh-kl-FdX">
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="j5B-p5-huT">
+                                    <frame key="frameInset"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                </view>
+                                <blurEffect style="dark"/>
+                            </visualEffectView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fSM-V5-zfF">
+                                <color key="backgroundColor" red="0.043137254901960784" green="0.37254901960784315" blue="0.99607843137254903" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="320" id="fAO-v2-kQI"/>
+                                    <constraint firstAttribute="height" constant="32" id="ucI-rM-5WW"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="BudmoJiggler" family="Budmo Jiggler" pointSize="21"/>
+                                <state key="normal" title="Entrar">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="tapEntrar:" destination="eou-cT-m2f" eventType="touchUpInside" id="dkK-D2-0K9"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KT5-7G-tP7">
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="186" id="YL4-Mn-ZzP"/>
+                                    <constraint firstAttribute="width" constant="379" id="dac-PE-Z5t"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gY5-IT-qhf">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="362" id="pG2-Fr-ngB"/>
+                                    <constraint firstAttribute="height" constant="168" id="tfe-Ox-j1f"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Qual sua data de nascimento?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u9C-Sj-ici">
+                                <fontDescription key="fontDescription" name="BudmoJiggler" family="Budmo Jiggler" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" useCurrentDate="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0be-qI-oS4">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="168" id="bJC-3o-lQf"/>
+                                    <constraint firstAttribute="width" constant="362" id="nPJ-Mq-D7Z"/>
+                                </constraints>
+                                <date key="date" timeIntervalSinceReferenceDate="-31603634.998571992">
+                                    <!--2000-01-01 05:12:45 +0000-->
+                                </date>
+                                <date key="minimumDate" timeIntervalSinceReferenceDate="-3187256012">
+                                    <!--1900-01-01 11:06:28 +0000-->
+                                </date>
+                                <date key="maximumDate" timeIntervalSinceReferenceDate="315486000">
+                                    <!--2010-12-31 11:00:00 +0000-->
+                                </date>
+                                <locale key="locale" localeIdentifier="pt_BR"/>
+                            </datePicker>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="KT5-7G-tP7" firstAttribute="centerX" secondItem="ghh-d3-KaS" secondAttribute="centerX" id="0oA-dm-Vs3"/>
+                            <constraint firstItem="6Xm-LA-ioJ" firstAttribute="top" secondItem="ghh-d3-KaS" secondAttribute="top" id="4SY-1p-0Dt"/>
+                            <constraint firstItem="6Xm-LA-ioJ" firstAttribute="leading" secondItem="ghh-d3-KaS" secondAttribute="leading" id="7i7-lh-uCJ"/>
+                            <constraint firstItem="fSM-V5-zfF" firstAttribute="centerX" secondItem="KT5-7G-tP7" secondAttribute="centerX" id="9Hf-fp-dkH"/>
+                            <constraint firstItem="fSM-V5-zfF" firstAttribute="top" secondItem="KT5-7G-tP7" secondAttribute="bottom" constant="11" id="F6h-eb-fAP"/>
+                            <constraint firstItem="0be-qI-oS4" firstAttribute="centerY" secondItem="ghh-d3-KaS" secondAttribute="centerY" id="OYz-xG-aqI"/>
+                            <constraint firstItem="SXd-ih-Efs" firstAttribute="top" secondItem="6Xm-LA-ioJ" secondAttribute="bottom" id="PYp-yB-dgU"/>
+                            <constraint firstAttribute="trailing" secondItem="TQh-kl-FdX" secondAttribute="trailing" id="Psm-qM-KPa"/>
+                            <constraint firstItem="TQh-kl-FdX" firstAttribute="leading" secondItem="ghh-d3-KaS" secondAttribute="leading" id="YMA-Jt-me7"/>
+                            <constraint firstItem="KT5-7G-tP7" firstAttribute="centerY" secondItem="ghh-d3-KaS" secondAttribute="centerY" id="Z1b-zd-W1P"/>
+                            <constraint firstItem="gY5-IT-qhf" firstAttribute="centerY" secondItem="KT5-7G-tP7" secondAttribute="centerY" id="d9b-Gp-8IJ"/>
+                            <constraint firstAttribute="trailing" secondItem="6Xm-LA-ioJ" secondAttribute="trailing" id="gTu-6I-Z7B"/>
+                            <constraint firstItem="0be-qI-oS4" firstAttribute="centerX" secondItem="ghh-d3-KaS" secondAttribute="centerX" id="iyL-OG-MiV"/>
+                            <constraint firstItem="KT5-7G-tP7" firstAttribute="top" secondItem="u9C-Sj-ici" secondAttribute="bottom" constant="25" id="kZN-t9-t4n"/>
+                            <constraint firstAttribute="bottom" secondItem="TQh-kl-FdX" secondAttribute="bottom" id="kuT-iU-SPC"/>
+                            <constraint firstItem="TQh-kl-FdX" firstAttribute="top" secondItem="ghh-d3-KaS" secondAttribute="top" id="oog-yu-f7U"/>
+                            <constraint firstItem="u9C-Sj-ici" firstAttribute="centerX" secondItem="KT5-7G-tP7" secondAttribute="centerX" id="vdH-48-V3R"/>
+                            <constraint firstItem="gY5-IT-qhf" firstAttribute="centerX" secondItem="KT5-7G-tP7" secondAttribute="centerX" id="yXM-T3-LHb"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="seletorDeData" destination="0be-qI-oS4" id="9jW-h6-zdw"/>
+                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="entrar" id="hmX-es-nib"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LQb-cS-Lue" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="TPB-Hc-uKk" customClass="Arredondador" customModule="Qasino" customModuleProvider="target">
+                    <connections>
+                        <outletCollection property="alvos" destination="KT5-7G-tP7" collectionClass="NSMutableArray" id="wqa-iK-lCz"/>
+                        <outletCollection property="alvos" destination="gY5-IT-qhf" collectionClass="NSMutableArray" id="bbV-Lg-eVg"/>
+                        <outletCollection property="alvos" destination="fSM-V5-zfF" collectionClass="NSMutableArray" id="Wpw-Ka-8ci"/>
+                    </connections>
+                </customObject>
+            </objects>
+            <point key="canvasLocation" x="134.1549295774648" y="-611.25"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Qasino" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" image="wallpaper" translatesAutoresizingMaskIntoConstraints="NO" id="BWU-6r-7d2"/>
+                            <visualEffectView opaque="NO" alpha="0.80000001192092896" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tjM-vn-awQ">
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Y94-kS-kHy">
+                                    <frame key="frameInset"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                </view>
+                                <blurEffect style="dark"/>
+                            </visualEffectView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="casino" translatesAutoresizingMaskIntoConstraints="NO" id="f2y-V7-Raf"/>
+                            <pickerView userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yrc-s2-b1t">
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="130" id="9vD-Le-gJy"/>
+                                    <constraint firstAttribute="width" constant="200" id="BbN-46-bJA"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="v0F-cs-WYq"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="g0J-CN-eco"/>
+                                </connections>
+                            </pickerView>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ArD-FP-D1z">
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" image="btn-meio-normal"/>
+                                <state key="disabled" image="btn-meio-disabled"/>
+                                <state key="highlighted" image="btn-meio-pressed"/>
+                                <connections>
+                                    <action selector="tapGira:" destination="BYZ-38-t0r" eventType="touchDown" id="CRN-OJ-6Ib"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O1S-hE-hTp">
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" image="btn-esq-normal"/>
+                                <state key="disabled" image="btn-esq-disabled"/>
+                                <state key="highlighted" image="btn-esq-pressed"/>
+                                <connections>
+                                    <action selector="tapGira:" destination="BYZ-38-t0r" eventType="touchDown" id="SWB-9i-3HY"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b8u-lZ-L8q">
+                                <frame key="frameInset" minX="338" minY="248" width="110" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" image="btn-dir-normal"/>
+                                <state key="disabled" image="btn-dir-disabled"/>
+                                <state key="highlighted" image="btn-dir-pressed"/>
+                                <connections>
+                                    <action selector="tapGira:" destination="BYZ-38-t0r" eventType="touchDown" id="5ps-KW-jIa"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rkr-Wf-irP">
+                                <frame key="frameInset" minX="426" minY="52" width="100" height="200"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="alavanca-normal"/>
+                                <state key="highlighted" image="alavanca-pressed"/>
+                                <connections>
+                                    <action selector="tapTrocaTodos:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JfO-Ts-feD"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="tjM-vn-awQ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="1MP-C5-RSV"/>
+                            <constraint firstItem="ArD-FP-D1z" firstAttribute="leading" secondItem="O1S-hE-hTp" secondAttribute="trailing" id="6Dm-iI-KkH"/>
+                            <constraint firstItem="BWU-6r-7d2" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="6dd-kH-6dm"/>
+                            <constraint firstItem="O1S-hE-hTp" firstAttribute="centerY" secondItem="ArD-FP-D1z" secondAttribute="centerY" id="BpB-xA-71K"/>
+                            <constraint firstItem="f2y-V7-Raf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Dec-rp-9ht"/>
+                            <constraint firstAttribute="trailing" secondItem="tjM-vn-awQ" secondAttribute="trailing" id="M18-IR-RUV"/>
+                            <constraint firstItem="yrc-s2-b1t" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cOA-uY-U4e"/>
+                            <constraint firstItem="f2y-V7-Raf" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="dh0-qb-fIN"/>
+                            <constraint firstItem="ArD-FP-D1z" firstAttribute="centerX" secondItem="yrc-s2-b1t" secondAttribute="centerX" id="fzY-ge-w6D"/>
+                            <constraint firstItem="BWU-6r-7d2" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="pD0-ee-66y"/>
+                            <constraint firstItem="ArD-FP-D1z" firstAttribute="top" secondItem="yrc-s2-b1t" secondAttribute="bottom" constant="23" id="u8f-KH-w23"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="BWU-6r-7d2" secondAttribute="bottom" id="vGu-Ay-lTo"/>
+                            <constraint firstAttribute="trailing" secondItem="BWU-6r-7d2" secondAttribute="trailing" id="wS1-HK-TzM"/>
+                            <constraint firstItem="yrc-s2-b1t" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="wmH-Dh-JvA"/>
+                            <constraint firstAttribute="bottom" secondItem="tjM-vn-awQ" secondAttribute="bottom" id="xzF-uY-KJE"/>
+                            <constraint firstItem="tjM-vn-awQ" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="z96-9A-hqG"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="btnGiraDois" destination="ArD-FP-D1z" id="u3o-1j-xUY"/>
+                        <outlet property="btnGiraTres" destination="b8u-lZ-L8q" id="wY0-JC-DQp"/>
+                        <outlet property="btnGiraUm" destination="O1S-hE-hTp" id="nhp-Y0-I3p"/>
+                        <outlet property="meuPicker" destination="yrc-s2-b1t" id="pXt-Lr-os0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="134" y="293"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="alavanca-normal" width="100" height="200"/>
+        <image name="alavanca-pressed" width="100" height="200"/>
+        <image name="btn-dir-disabled" width="110" height="60"/>
+        <image name="btn-dir-normal" width="110" height="60"/>
+        <image name="btn-dir-pressed" width="110" height="60"/>
+        <image name="btn-esq-disabled" width="110" height="60"/>
+        <image name="btn-esq-normal" width="110" height="60"/>
+        <image name="btn-esq-pressed" width="110" height="60"/>
+        <image name="btn-meio-disabled" width="110" height="60"/>
+        <image name="btn-meio-normal" width="110" height="60"/>
+        <image name="btn-meio-pressed" width="110" height="60"/>
+        <image name="casino" width="390" height="500"/>
+        <image name="wallpaper" width="960" height="540"/>
+    </resources>
+</document>

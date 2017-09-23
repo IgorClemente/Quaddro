@@ -14,6 +14,7 @@ class ViewController: UIViewController, UIPickerViewDataSource,
     @IBOutlet weak var uiPao: UIImageView?
     @IBOutlet weak var uiRecheio: UIImageView?
     @IBOutlet weak var uiExtra: UIImageView?
+    @IBOutlet weak var uiMeuPicker: UIPickerView?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,8 +50,6 @@ class ViewController: UIViewController, UIPickerViewDataSource,
         
         let aImagem = UIImage(named:"l\(component+1)_\(row)")
         
-        print("l\(component+1)_\(row)")
-        
         switch component {
             case 0:
                 uiPao?.image = aImagem
@@ -64,7 +63,36 @@ class ViewController: UIViewController, UIPickerViewDataSource,
         return opcoes[component][row]
     }
     
+    
+    @IBAction func tapFrango(_ sender: Any) {
+        mudaLanche(pao: 0,recheio: 0,extra: 2)
+    }
+    
+    @IBAction func tapLight(_ sender: Any) {
+        mudaLanche(pao: 2, recheio: 0, extra: 2)
+    }
+    
+    @IBAction func tapSalada(_ sender: Any) {
+        mudaLanche(pao: 0, recheio: 1, extra: 2)
+    }
+    
+    @IBAction func tapCarne(_ sender: Any) {
+        mudaLanche(pao: 1, recheio: 1, extra: 0)
+    }
 
+    
+    func mudaLanche(pao:Int, recheio:Int, extra:Int) {
+        
+        guard let picker = uiMeuPicker else {
+            return
+        }
+        
+        picker.selectRow(pao, inComponent: 0, animated: true)
+        picker.selectRow(recheio, inComponent: 1, animated: true)
+        picker.selectRow(extra, inComponent: 2, animated: true)
+        
+    }
+    
     
     // View Code: a barra de title é feita programaticamente - Visual Formating Language
     func criarBarraDeTitulo(comVFL vfl:Bool) {
@@ -84,7 +112,7 @@ class ViewController: UIViewController, UIPickerViewDataSource,
         
         if !vfl {
             var limitadores:[NSLayoutConstraint] = []
-                limitadores.append(contentsOf:[
+                limitadores.append(contentsOf:[ 
                     NSLayoutConstraint(item: fundo, attribute: .leading, relatedBy: .equal, toItem: self.view, attribute: .leading, multiplier: 1.0, constant: 0)
                 ])
                 
