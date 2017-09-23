@@ -44,7 +44,7 @@ class ViewController: UIViewController, UIPickerViewDataSource,
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         // Um dos itens do picker foi selecionado
-        // coluna -> Componente
+        // coluna -> Component
         // linha  -> Row
         
         let aImagem = UIImage(named:"l\(component+1)_\(row)")

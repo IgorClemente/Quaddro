@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina3_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -121,7 +121,7 @@
                                         </variation>
                                         <connections>
                                             <action selector="tapAtualizaSeleção:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mYA-ya-dgA"/>
-                                            <action selector="tapTocaEcletica" destination="BYZ-38-t0r" eventType="touchUpInside" id="fMX-6C-3V3"/>
+                                            <action selector="tapTocaEcletica:" destination="BYZ-38-t0r" eventType="touchUpInside" id="R4m-FG-iG0"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ECLÉTICA" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D22-K1-uWm">
@@ -216,7 +216,7 @@
                                         </variation>
                                         <connections>
                                             <action selector="tapAtualizaSeleção:" destination="BYZ-38-t0r" eventType="touchUpInside" id="o1J-DZ-GQp"/>
-                                            <action selector="tapTocaRock" destination="BYZ-38-t0r" eventType="touchUpInside" id="4VZ-d2-tsF"/>
+                                            <action selector="tapTocaRock:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IZP-3A-vXv"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ROCK" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6c3-2s-Uq7">
@@ -287,7 +287,7 @@
                                 <rect key="frame" x="165" y="74" width="145" height="145.5"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n6c-i5-GNQ">
-                                        <rect key="frame" x="22" y="8" width="101.5" height="102"/>
+                                        <rect key="frame" x="21.5" y="8" width="101.5" height="102"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="n6c-i5-GNQ" secondAttribute="height" multiplier="1:1" id="EQm-A3-xbK"/>
                                             <constraint firstAttribute="width" secondItem="n6c-i5-GNQ" secondAttribute="height" multiplier="1:1" id="Pp1-9L-iHx"/>
@@ -311,11 +311,11 @@
                                         </variation>
                                         <connections>
                                             <action selector="tapAtualizaSeleção:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IhU-fO-e8u"/>
-                                            <action selector="tapTocaPop" destination="BYZ-38-t0r" eventType="touchUpInside" id="hqe-zD-QJ5"/>
+                                            <action selector="tapTocaPop:" destination="BYZ-38-t0r" eventType="touchUpInside" id="o2u-bF-m1f"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="POP" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Idf-NZ-Uus">
-                                        <rect key="frame" x="56.5" y="115" width="34" height="20.5"/>
+                                        <rect key="frame" x="55.5" y="115" width="34" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
@@ -384,7 +384,7 @@
                                 <rect key="frame" x="165" y="229.5" width="145" height="145"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4ec-bR-ssO">
-                                        <rect key="frame" x="22" y="8.5" width="101.5" height="101"/>
+                                        <rect key="frame" x="21.5" y="8" width="101.5" height="101.5"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="4ec-bR-ssO" secondAttribute="height" multiplier="1:1" id="gmB-h2-WRa"/>
                                             <constraint firstAttribute="width" secondItem="4ec-bR-ssO" secondAttribute="height" multiplier="1:1" id="y88-rM-xB2"/>
@@ -408,7 +408,7 @@
                                         </variation>
                                         <connections>
                                             <action selector="tapAtualizaSeleção:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Hk2-go-JXx"/>
-                                            <action selector="tapTocaDance" destination="BYZ-38-t0r" eventType="touchUpInside" id="k89-vz-urj"/>
+                                            <action selector="tapTocaDance:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JxW-LU-Wlr"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DANCE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zHx-kq-UKq">

@@ -11,7 +11,7 @@ import UIKit
 class ViewController: UIViewController {
     
     @IBOutlet var uiTodosFundos:[UIView]?
-    
+    var radioDisparadores:[String:UIButton] = [:]
     let stream = RadioStream()
 
     override var preferredStatusBarStyle: UIStatusBarStyle{
@@ -34,20 +34,24 @@ class ViewController: UIViewController {
     }
     
     
-    @IBAction func tapTocaRock() {
+    @IBAction func tapTocaRock(_ sender:UIButton) {
         stream.change(toStation: .rock)
+        radioDisparadores["rock"] = sender
     }
     
-    @IBAction func tapTocaPop() {
+    @IBAction func tapTocaPop(_ sender:UIButton) {
         stream.change(toStation: .pop)
+        radioDisparadores["pop"] = sender
     }
     
-    @IBAction func tapTocaEcletica() {
+    @IBAction func tapTocaEcletica(_ sender:UIButton) {
         stream.change(toStation: .ecletic)
+        radioDisparadores["ecletic"] = sender
     }
     
-    @IBAction func tapTocaDance() {
+    @IBAction func tapTocaDance(_ sender:UIButton) {
         stream.change(toStation: .dance)
+        radioDisparadores["dance"] = sender
     }
     
     
@@ -78,8 +82,29 @@ class ViewController: UIViewController {
                 stream.isPlaying = false
             case .remoteControlPlay:
                 stream.isPlaying = true
-            //case .remoteControlNextTrack
-            // Implementar
+            case .remoteControlNextTrack:
+                var proxima:[String:Station] = [
+                    "rock": .pop,
+                    "pop": .ecletic,
+                    "ecletic": .dance,
+                    "dance": .rock
+                ]
+                
+                guard let fundos = uiTodosFundos else{
+                    return
+                }
+                
+                for fundo in fundos {
+                    fundo.layer.borderColor  = UIColor.clear.cgColor
+                }
+                
+                if let atual = stream.currentStation {
+                  
+                  let viewSelecionada = self.radioDisparadores[atual.rawValue] ?? UIButton()
+                  viewSelecionada.superview?.layer.borderColor = UIColor.red.cgColor
+                  viewSelecionada.superview?.layer.borderWidth = 2
+                  stream.change(toStation: proxima[atual.rawValue]!)
+                }
             default:
                 return
         }

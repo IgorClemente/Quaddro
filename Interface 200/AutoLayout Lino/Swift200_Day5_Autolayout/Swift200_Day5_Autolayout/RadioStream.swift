@@ -10,14 +10,14 @@ import Foundation
 import AVFoundation
 import MediaPlayer
 
+enum Station:String{
+    case rock
+    case pop
+    case ecletic
+    case dance
+}
+
 class RadioStream {
-    
-    enum Station {
-        case rock 
-        case pop
-        case ecletic
-        case dance
-    }
     
     private var player:AVPlayer?        
     var currentStation:Station?      //Station atual

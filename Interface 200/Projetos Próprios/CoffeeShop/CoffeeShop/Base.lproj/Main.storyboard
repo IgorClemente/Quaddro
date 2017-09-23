@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina3_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CoffeeShop" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ac7-7q-JUj">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="71"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Coffees" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s70-nO-ZNa">
+                                        <rect key="frame" x="0.0" y="40" width="320" height="21"/>
+                                        <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="25"/>
+                                        <color key="textColor" red="0.098039217289999994" green="0.098039217289999994" blue="0.098039217289999994" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.5787474513053894" green="0.47603912988637148" blue="0.26083158813942431" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="s70-nO-ZNa" secondAttribute="trailing" id="EhC-ym-wYu"/>
+                                    <constraint firstAttribute="bottom" secondItem="s70-nO-ZNa" secondAttribute="bottom" constant="10" id="IaR-8e-p60"/>
+                                    <constraint firstItem="s70-nO-ZNa" firstAttribute="top" secondItem="Ac7-7q-JUj" secondAttribute="top" constant="40" id="WBv-Zz-ccN"/>
+                                    <constraint firstAttribute="height" constant="71" id="X4R-pQ-RWM"/>
+                                    <constraint firstItem="s70-nO-ZNa" firstAttribute="leading" secondItem="Ac7-7q-JUj" secondAttribute="leading" id="dWX-7g-yBt"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dkc-Iy-HzC">
+                                <rect key="frame" x="15" y="86" width="142.5" height="185"/>
+                                <state key="normal" image="coffeecapuccinno"/>
+                                <connections>
+                                    <segue destination="uYt-Sw-rhy" kind="modal" id="1ue-N6-lW5"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D71-Lj-mgC">
+                                <rect key="frame" x="15" y="286" width="142.5" height="186"/>
+                                <state key="normal" image="coffeedescafeinado"/>
+                                <connections>
+                                    <segue destination="uYt-Sw-rhy" kind="modal" id="2uM-Zl-viW"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EmB-hs-8Oe">
+                                <rect key="frame" x="162.5" y="86" width="142.5" height="185"/>
+                                <state key="normal" image="coffeecomcacau"/>
+                                <connections>
+                                    <segue destination="uYt-Sw-rhy" kind="modal" id="5Nw-8j-YvG"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hxe-Ww-MFr">
+                                <rect key="frame" x="162.5" y="286" width="142.5" height="185"/>
+                                <state key="normal" image="coffeeexpresso"/>
+                                <connections>
+                                    <segue destination="uYt-Sw-rhy" kind="modal" id="raC-ki-Tsv"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.098039217289999994" green="0.098039217289999994" blue="0.098039217289999994" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="hxe-Ww-MFr" firstAttribute="centerX" secondItem="EmB-hs-8Oe" secondAttribute="centerX" id="1Nf-W3-sdr"/>
+                            <constraint firstItem="Dkc-Iy-HzC" firstAttribute="width" secondItem="EmB-hs-8Oe" secondAttribute="width" id="4wH-Co-S7g"/>
+                            <constraint firstAttribute="trailing" secondItem="hxe-Ww-MFr" secondAttribute="trailing" constant="15" id="Ije-wz-U7h"/>
+                            <constraint firstItem="D71-Lj-mgC" firstAttribute="centerX" secondItem="Dkc-Iy-HzC" secondAttribute="centerX" id="Mv7-Ks-7bY"/>
+                            <constraint firstAttribute="trailing" secondItem="EmB-hs-8Oe" secondAttribute="trailing" constant="15" id="SIm-3V-5DU"/>
+                            <constraint firstItem="Ac7-7q-JUj" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="TId-UM-Fyj"/>
+                            <constraint firstItem="D71-Lj-mgC" firstAttribute="top" secondItem="Dkc-Iy-HzC" secondAttribute="bottom" constant="15" id="UOc-yr-u8y"/>
+                            <constraint firstItem="D71-Lj-mgC" firstAttribute="width" secondItem="hxe-Ww-MFr" secondAttribute="width" id="WDg-Cn-njM"/>
+                            <constraint firstItem="EmB-hs-8Oe" firstAttribute="top" secondItem="Ac7-7q-JUj" secondAttribute="bottom" constant="15" id="Zlc-eM-Iui"/>
+                            <constraint firstItem="Dkc-Iy-HzC" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="15" id="beC-NJ-0JK"/>
+                            <constraint firstItem="EmB-hs-8Oe" firstAttribute="leading" secondItem="Dkc-Iy-HzC" secondAttribute="trailing" constant="5" id="dUq-tw-61a"/>
+                            <constraint firstItem="hxe-Ww-MFr" firstAttribute="top" secondItem="EmB-hs-8Oe" secondAttribute="bottom" constant="15" id="idB-PD-hng"/>
+                            <constraint firstItem="Ac7-7q-JUj" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="reh-tK-hIE"/>
+                            <constraint firstAttribute="trailing" secondItem="Ac7-7q-JUj" secondAttribute="trailing" id="uR7-GJ-LQX"/>
+                            <constraint firstItem="Dkc-Iy-HzC" firstAttribute="top" secondItem="Ac7-7q-JUj" secondAttribute="bottom" constant="15" id="uWE-M9-bUB"/>
+                            <constraint firstItem="hxe-Ww-MFr" firstAttribute="leading" secondItem="D71-Lj-mgC" secondAttribute="trailing" constant="5" id="wRA-iN-c6Q"/>
+                            <constraint firstItem="D71-Lj-mgC" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="15" id="zJf-en-Ign"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-80.625" y="138.75"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="tYB-UA-tjX">
+            <objects>
+                <viewController id="uYt-Sw-rhy" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="hMg-Ja-3Xf"/>
+                        <viewControllerLayoutGuide type="bottom" id="fdD-8O-Cm8"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="mCg-CM-HJk">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cafe-expresso-image" translatesAutoresizingMaskIntoConstraints="NO" id="Alv-u2-BzX">
+                                <rect key="frame" x="64" y="49" width="192" height="192"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Alv-u2-BzX" secondAttribute="height" multiplier="1:1" id="xHy-bf-QYV"/>
+                                </constraints>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="WYt-qq-rz4">
+                                <rect key="frame" x="16" y="210" width="288" height="250"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="yFS-GD-cfy"/>
+                                </constraints>
+                                <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
+                                <color key="textColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Expresso" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7JY-sM-S1M">
+                                <rect key="frame" x="0.0" y="20" width="320" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="h6N-sG-nZj"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.23918269230769229" green="0.16005128974826291" blue="0.0088639029458570367" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Alv-u2-BzX" firstAttribute="width" secondItem="mCg-CM-HJk" secondAttribute="width" multiplier="0.6" id="3Dy-A3-Lih"/>
+                            <constraint firstItem="Alv-u2-BzX" firstAttribute="centerX" secondItem="mCg-CM-HJk" secondAttribute="centerX" id="BlV-DV-FtK"/>
+                            <constraint firstAttribute="trailing" secondItem="7JY-sM-S1M" secondAttribute="trailing" id="LGf-Av-DdP"/>
+                            <constraint firstItem="WYt-qq-rz4" firstAttribute="leading" secondItem="mCg-CM-HJk" secondAttribute="leading" constant="16" id="O2L-zf-aUk"/>
+                            <constraint firstItem="7JY-sM-S1M" firstAttribute="top" secondItem="hMg-Ja-3Xf" secondAttribute="bottom" id="QfH-03-q6S"/>
+                            <constraint firstItem="Alv-u2-BzX" firstAttribute="top" secondItem="7JY-sM-S1M" secondAttribute="bottom" constant="8" symbolic="YES" id="Qjj-nx-tym"/>
+                            <constraint firstItem="7JY-sM-S1M" firstAttribute="leading" secondItem="mCg-CM-HJk" secondAttribute="leading" id="day-eh-EjC"/>
+                            <constraint firstAttribute="trailing" secondItem="WYt-qq-rz4" secondAttribute="trailing" constant="16" id="ksh-5x-55J"/>
+                            <constraint firstItem="fdD-8O-Cm8" firstAttribute="top" secondItem="WYt-qq-rz4" secondAttribute="bottom" constant="20" id="qpS-lJ-Edb"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Qal-9k-QlT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="697.5" y="138.75"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="cafe-expresso-image" width="500" height="332"/>
+        <image name="coffeecapuccinno" width="124" height="185"/>
+        <image name="coffeecomcacau" width="124" height="185"/>
+        <image name="coffeedescafeinado" width="124" height="186"/>
+        <image name="coffeeexpresso" width="124" height="185"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="1ue-N6-lW5"/>
+    </inferredMetricsTieBreakers>
+</document>
