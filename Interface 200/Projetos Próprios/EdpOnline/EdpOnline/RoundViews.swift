@@ -10,9 +10,5 @@ import UIKit
 
 class RoundViews : NSObject{
     
-    @IBInspectable var raddi: CGFloat = 2.0 {
-        didSet{
-            self.layer.cornerRadius = self.cornerRadius
-        }
-    }
+    @IBInspectable var raddi: CGFloat = 2.0
 }
