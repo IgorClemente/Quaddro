@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D0B187501F79C4CA00DC1D5B /* TelaPremio.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0B1874F1F79C4CA00DC1D5B /* TelaPremio.xib */; };
+		D0B187531F79D5D700DC1D5B /* TelaSettings.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0B187521F79D5D700DC1D5B /* TelaSettings.xib */; };
 		D0BFBF061F756A92009B1F11 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0BFBF051F756A92009B1F11 /* AppDelegate.swift */; };
 		D0BFBF081F756A92009B1F11 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0BFBF071F756A92009B1F11 /* ViewController.swift */; };
 		D0BFBF0B1F756A92009B1F11 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0BFBF091F756A92009B1F11 /* Main.storyboard */; };
@@ -17,6 +19,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D0B1874F1F79C4CA00DC1D5B /* TelaPremio.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TelaPremio.xib; sourceTree = "<group>"; };
+		D0B187521F79D5D700DC1D5B /* TelaSettings.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TelaSettings.xib; sourceTree = "<group>"; };
 		D0BFBF021F756A92009B1F11 /* EdpOnline.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EdpOnline.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0BFBF051F756A92009B1F11 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D0BFBF071F756A92009B1F11 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -39,11 +43,63 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D0B1874A1F79C3EF00DC1D5B /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D0BFBF071F756A92009B1F11 /* ViewController.swift */,
+				D0BFBF051F756A92009B1F11 /* AppDelegate.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		D0B1874B1F79C40C00DC1D5B /* Layout */ = {
+			isa = PBXGroup;
+			children = (
+				D0B187511F79D59D00DC1D5B /* TelaSettings */,
+				D0B1874E1F79C43A00DC1D5B /* TelaPremios */,
+				D0BFBF091F756A92009B1F11 /* Main.storyboard */,
+				D0BFBF0E1F756A92009B1F11 /* LaunchScreen.storyboard */,
+			);
+			name = Layout;
+			sourceTree = "<group>";
+		};
+		D0B1874C1F79C41700DC1D5B /* Imagem */ = {
+			isa = PBXGroup;
+			children = (
+				D0BFBF0C1F756A92009B1F11 /* Assets.xcassets */,
+			);
+			name = Imagem;
+			sourceTree = "<group>";
+		};
+		D0B1874D1F79C42400DC1D5B /* Suporte */ = {
+			isa = PBXGroup;
+			children = (
+				D0BFBF031F756A92009B1F11 /* Products */,
+				D0BFBF111F756A92009B1F11 /* Info.plist */,
+			);
+			name = Suporte;
+			sourceTree = "<group>";
+		};
+		D0B1874E1F79C43A00DC1D5B /* TelaPremios */ = {
+			isa = PBXGroup;
+			children = (
+				D0B1874F1F79C4CA00DC1D5B /* TelaPremio.xib */,
+			);
+			name = TelaPremios;
+			sourceTree = "<group>";
+		};
+		D0B187511F79D59D00DC1D5B /* TelaSettings */ = {
+			isa = PBXGroup;
+			children = (
+				D0B187521F79D5D700DC1D5B /* TelaSettings.xib */,
+			);
+			name = TelaSettings;
+			sourceTree = "<group>";
+		};
 		D0BFBEF91F756A92009B1F11 = {
 			isa = PBXGroup;
 			children = (
 				D0BFBF041F756A92009B1F11 /* EdpOnline */,
-				D0BFBF031F756A92009B1F11 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
@@ -53,17 +109,16 @@
 				D0BFBF021F756A92009B1F11 /* EdpOnline.app */,
 			);
 			name = Products;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		D0BFBF041F756A92009B1F11 /* EdpOnline */ = {
 			isa = PBXGroup;
 			children = (
-				D0BFBF051F756A92009B1F11 /* AppDelegate.swift */,
-				D0BFBF071F756A92009B1F11 /* ViewController.swift */,
-				D0BFBF091F756A92009B1F11 /* Main.storyboard */,
-				D0BFBF0C1F756A92009B1F11 /* Assets.xcassets */,
-				D0BFBF0E1F756A92009B1F11 /* LaunchScreen.storyboard */,
-				D0BFBF111F756A92009B1F11 /* Info.plist */,
+				D0B1874D1F79C42400DC1D5B /* Suporte */,
+				D0B1874C1F79C41700DC1D5B /* Imagem */,
+				D0B1874B1F79C40C00DC1D5B /* Layout */,
+				D0B1874A1F79C3EF00DC1D5B /* Controller */,
 				D0F88F8F1F784DFD003424BA /* RoundViewsCustom.swift */,
 				D0F88F931F7861F2003424BA /* LateralMenuView.swift */,
 			);
@@ -102,7 +157,7 @@
 				TargetAttributes = {
 					D0BFBF011F756A92009B1F11 = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = 27WRPNL87W;
+						DevelopmentTeam = FTTTE86G2H;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -131,7 +186,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				D0BFBF101F756A92009B1F11 /* LaunchScreen.storyboard in Resources */,
+				D0B187531F79D5D700DC1D5B /* TelaSettings.xib in Resources */,
 				D0BFBF0D1F756A92009B1F11 /* Assets.xcassets in Resources */,
+				D0B187501F79C4CA00DC1D5B /* TelaPremio.xib in Resources */,
 				D0BFBF0B1F756A92009B1F11 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -271,11 +328,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 27WRPNL87W;
+				DEVELOPMENT_TEAM = FTTTE86G2H;
 				INFOPLIST_FILE = EdpOnline/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = testProject.EdpOnline;
+				PRODUCT_BUNDLE_IDENTIFIER = projectEdp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -286,11 +343,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 27WRPNL87W;
+				DEVELOPMENT_TEAM = FTTTE86G2H;
 				INFOPLIST_FILE = EdpOnline/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = testProject.EdpOnline;
+				PRODUCT_BUNDLE_IDENTIFIER = projectEdp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;

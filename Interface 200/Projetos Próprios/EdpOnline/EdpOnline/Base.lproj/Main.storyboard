@@ -70,10 +70,10 @@
                                 <rect key="frame" x="0.0" y="89" width="320" height="73"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bah-U7-3jB">
-                                        <rect key="frame" x="89" y="7" width="231" height="60"/>
+                                        <rect key="frame" x="88" y="7" width="232" height="60"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1950" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ISX-0H-3xC">
-                                                <rect key="frame" x="156" y="12" width="75" height="25"/>
+                                                <rect key="frame" x="156.5" y="12" width="75.5" height="25"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="25" id="pwm-In-Q8v"/>
                                                 </constraints>
@@ -82,7 +82,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Igor Clemente" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fch-XO-HsQ">
-                                                <rect key="frame" x="0.0" y="5" width="156" height="27"/>
+                                                <rect key="frame" x="0.0" y="5" width="156.5" height="27"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="27" id="yOI-Wh-TG5"/>
                                                 </constraints>
@@ -91,7 +91,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="São Paulo, SP" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5UI-vp-Skq">
-                                                <rect key="frame" x="21" y="32" width="135" height="17"/>
+                                                <rect key="frame" x="21" y="32" width="135.5" height="17"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="17" id="CZV-lp-Xaf"/>
                                                 </constraints>
@@ -107,7 +107,7 @@
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pontos" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Gw-91-mzW">
-                                                <rect key="frame" x="175" y="36" width="37" height="14"/>
+                                                <rect key="frame" x="175.5" y="36" width="37" height="14"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="37" id="iU4-a9-mEB"/>
                                                     <constraint firstAttribute="height" constant="14" id="zHF-Qj-Fpz"/>
@@ -117,7 +117,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zVX-RG-wCn">
-                                                <rect key="frame" x="155" y="12" width="1" height="36"/>
+                                                <rect key="frame" x="155.5" y="12" width="1" height="36"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="1" id="KIx-hz-awm"/>

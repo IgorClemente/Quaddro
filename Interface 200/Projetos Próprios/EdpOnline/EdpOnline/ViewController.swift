@@ -12,8 +12,7 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        let menu = LateralMenuView(frame: self.view.frame)
-        self.view.addSubview(menu)
+        
     }
     
     @IBAction func uiTapAbreMenuPrincipal() {
