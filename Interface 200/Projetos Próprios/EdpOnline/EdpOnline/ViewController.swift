@@ -8,15 +8,20 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+protocol telaControlavel {
 
+    var invocouControle:UIViewController? {get set}
+}
+
+class ViewController: UIViewController {
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
     }
     
     @IBAction func uiTapAbreMenuPrincipal() {
         let menu = LateralMenuView(frame: self.view.frame)
+        menu.invocouControle = self
         self.view.addSubview(menu)
     }
     
