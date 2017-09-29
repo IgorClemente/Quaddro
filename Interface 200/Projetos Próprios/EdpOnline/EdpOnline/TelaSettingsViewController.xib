@@ -35,7 +35,7 @@
                             </constraints>
                             <state key="normal" image="menu-2"/>
                             <connections>
-                                <action selector="tapFecharMenuPrincipal:" destination="-1" eventType="touchUpInside" id="McM-kY-kME"/>
+                                <action selector="tapAbrirMenuPrincipal:" destination="-1" eventType="touchUpInside" id="A7e-1O-3iX"/>
                             </connections>
                         </button>
                     </subviews>

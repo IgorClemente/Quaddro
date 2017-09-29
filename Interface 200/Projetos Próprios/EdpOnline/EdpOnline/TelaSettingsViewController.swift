@@ -18,8 +18,7 @@ class TelaSettingsViewController : UIViewController {
         return .lightContent
     }
     
-    @IBAction func tapFecharMenuPrincipal(_ sender: UIButton) {
-        let menu  = LateralMenuView(frame:self.view.frame)
-        self.view.addSubview(menu)
+    @IBAction func tapAbrirMenuPrincipal(_ sender: UIButton) {
+        ControllerLateralMenu.controller.criarMenuPrincipal(self)
     }
 }

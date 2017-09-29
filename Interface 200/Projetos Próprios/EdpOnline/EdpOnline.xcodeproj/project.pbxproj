@@ -50,8 +50,8 @@
 		D0B1874A1F79C3EF00DC1D5B /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				D0BFBF071F756A92009B1F11 /* ViewController.swift */,
 				D0BFBF051F756A92009B1F11 /* AppDelegate.swift */,
+				D0BFBF071F756A92009B1F11 /* ViewController.swift */,
 				D00EC05C1F7BCF9000198884 /* LateralMenuController.swift */,
 			);
 			name = Controller;
@@ -64,7 +64,6 @@
 				D0B1874E1F79C43A00DC1D5B /* TelaPremios */,
 				D0BFBF091F756A92009B1F11 /* Main.storyboard */,
 				D0BFBF0E1F756A92009B1F11 /* LaunchScreen.storyboard */,
-				D0B1874A1F79C3EF00DC1D5B /* Controller */,
 			);
 			name = Layout;
 			sourceTree = "<group>";
@@ -124,9 +123,10 @@
 			children = (
 				D0B1874D1F79C42400DC1D5B /* Suporte */,
 				D0B1874C1F79C41700DC1D5B /* Imagem */,
+				D0B1874A1F79C3EF00DC1D5B /* Controller */,
 				D0B1874B1F79C40C00DC1D5B /* Layout */,
-				D0F88F8F1F784DFD003424BA /* RoundViewsCustom.swift */,
 				D0F88F931F7861F2003424BA /* LateralMenuView.swift */,
+				D0F88F8F1F784DFD003424BA /* RoundViewsCustom.swift */,
 			);
 			path = EdpOnline;
 			sourceTree = "<group>";

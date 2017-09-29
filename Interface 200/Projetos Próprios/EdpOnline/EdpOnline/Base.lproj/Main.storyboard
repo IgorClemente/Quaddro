@@ -45,7 +45,7 @@
                                             <barButtonItem width="19" style="plain" systemItem="fixedSpace" id="6Xt-a1-phE"/>
                                             <barButtonItem style="plain" id="ab5-zN-nJb">
                                                 <view key="customView" alpha="0.34999999999999998" contentMode="scaleToFill" id="ECg-QK-BBJ">
-                                                    <rect key="frame" x="159.5" y="7" width="1" height="30"/>
+                                                    <rect key="frame" x="160" y="22" width="0.0" height="0.0"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <constraints>

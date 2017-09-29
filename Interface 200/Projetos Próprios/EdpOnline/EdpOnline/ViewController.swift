@@ -8,10 +8,6 @@
 
 import UIKit
 
-protocol telaControlavel {
-
-    var invocouControle:UIViewController? {get set}
-}
 
 class ViewController: UIViewController {
     
@@ -20,9 +16,8 @@ class ViewController: UIViewController {
     }
     
     @IBAction func uiTapAbreMenuPrincipal() {
-        let menu = LateralMenuView(frame: self.view.frame)
-        menu.invocouControle = self
-        self.view.addSubview(menu)
+        ControllerLateralMenu.controller.criarMenuPrincipal(self)
+        ControllerLateralMenu.controller.viewControllerAtiva = self
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {

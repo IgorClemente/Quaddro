@@ -9,17 +9,13 @@
 import UIKit
 
 
-protocol controleDeMenu {
-    var menuPrincipalControle:UIView? {get set}
-}
-
-class LateralMenuView : UIView, telaControlavel {
-
-    var invocouControle: UIViewController?
+class LateralMenuView : UIView {
     
     override init(frame: CGRect) {
         
         super.init(frame: frame)
+        
+        let controladorMenu = ControllerLateralMenu.controller
         
         let fundoModal   = UIView()
             fundoModal.frame = CGRect(x:0,y:0,width:self.frame.width,height:self.frame.height)
@@ -42,13 +38,15 @@ class LateralMenuView : UIView, telaControlavel {
             botaoSettings.setImage(UIImage(named:"settings"), for: .normal)
             botaoSettings.contentMode = .scaleAspectFill
             botaoSettings.translatesAutoresizingMaskIntoConstraints = false
-            botaoSettings.addTarget(self, action: #selector(tapSettingsCreateMenu), for: .touchUpInside)
+            botaoSettings.addTarget(controladorMenu, action: #selector(controladorMenu.tapSettingsCreateMenu), for: .touchUpInside)
         
         let botaoHomeRetorno = UIButton()
             botaoHomeRetorno.clipsToBounds = true
             botaoHomeRetorno.setImage(UIImage(named:"home"), for: .normal)
             botaoHomeRetorno.layer.cornerRadius = botaoHomeRetorno.frame.width/2
             botaoHomeRetorno.translatesAutoresizingMaskIntoConstraints = false
+            botaoHomeRetorno.addTarget(self, action: #selector(fecharMenuPrincipal), for: .touchUpInside)
+            botaoHomeRetorno.addTarget(controladorMenu, action: #selector(controladorMenu.tapRetornoHome), for: .touchUpInside)
         
         let botaoRanking = UIButton()
             botaoRanking.clipsToBounds = true
@@ -142,14 +140,12 @@ class LateralMenuView : UIView, telaControlavel {
         }
     }
     
-    @objc func tapSettingsCreateMenu() {
-        
-        let settingsTela = TelaSettingsViewController(nibName:"TelaSettingsViewController",bundle:nil)
-        
-        settingsTela.modalTransitionStyle = .crossDissolve
-        settingsTela.modalPresentationStyle = .currentContext
-        let tela = UIApplication.shared.keyWindow?.rootViewController
-        tela?.present(settingsTela,animated: true, completion: nil)
+    @objc func fecharMenuPrincipal() {
+        UIView.animate(withDuration: 0.4, animations: {
+            self.alpha = 0.0
+        }){ _ in
+            self.removeFromSuperview()
+        }
     }
     
     required init?(coder aDecoder: NSCoder) {
