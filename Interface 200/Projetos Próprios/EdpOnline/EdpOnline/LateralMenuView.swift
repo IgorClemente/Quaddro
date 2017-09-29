@@ -14,7 +14,6 @@ class LateralMenuView : UIView {
     override init(frame: CGRect) {
         
         super.init(frame: frame)
-        
         let controladorMenu = ControllerLateralMenu.controller
         
         let fundoModal   = UIView()
@@ -45,7 +44,6 @@ class LateralMenuView : UIView {
             botaoHomeRetorno.setImage(UIImage(named:"home"), for: .normal)
             botaoHomeRetorno.layer.cornerRadius = botaoHomeRetorno.frame.width/2
             botaoHomeRetorno.translatesAutoresizingMaskIntoConstraints = false
-            botaoHomeRetorno.addTarget(self, action: #selector(fecharMenuPrincipal), for: .touchUpInside)
             botaoHomeRetorno.addTarget(controladorMenu, action: #selector(controladorMenu.tapRetornoHome), for: .touchUpInside)
         
         let botaoRanking = UIButton()
@@ -137,14 +135,6 @@ class LateralMenuView : UIView {
                     self.removeFromSuperview()
                 }
             }
-        }
-    }
-    
-    @objc func fecharMenuPrincipal() {
-        UIView.animate(withDuration: 0.4, animations: {
-            self.alpha = 0.0
-        }){ _ in
-            self.removeFromSuperview()
         }
     }
     

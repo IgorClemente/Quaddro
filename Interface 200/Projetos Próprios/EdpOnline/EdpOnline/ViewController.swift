@@ -17,7 +17,6 @@ class ViewController: UIViewController {
     
     @IBAction func uiTapAbreMenuPrincipal() {
         ControllerLateralMenu.controller.criarMenuPrincipal(self)
-        ControllerLateralMenu.controller.viewControllerAtiva = self
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
