@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AudioToolbox
 
 class ViewController: UIViewController,
                 UIPickerViewDelegate, UIPickerViewDataSource {
@@ -69,6 +70,7 @@ class ViewController: UIViewController,
             uiBtnGiraDois?.isEnabled = false
             uiBtnGiraTres?.isEnabled = false
         }
+        validaTodosIguais()
     }
     
     @IBAction func tapGiraTodos() {
@@ -82,6 +84,7 @@ class ViewController: UIViewController,
             uiBtnGiraDois?.isEnabled = true
             uiBtnGiraTres?.isEnabled = true
         }
+        validaTodosIguais()
     }
     
     
@@ -104,6 +107,21 @@ class ViewController: UIViewController,
         
         picker.selectRow(novo, inComponent: rodinha, animated: true)
     }
-
+    
+    func validaTodosIguais() {
+        
+        guard let picker = uiMeuPicker else {
+            return
+        }
+        
+        let primeiro = picker.selectedRow(inComponent: 0)%10
+        let segundo  = picker.selectedRow(inComponent: 1)%10
+        let terceiro = picker.selectedRow(inComponent: 2)%10 
+        
+        if primeiro == segundo && segundo == terceiro {
+            print("Acertou")
+            AudioServicesPlaySystemSound(SystemSoundID(kSystemSoundID_Vibrate))
+        }
+    }
 }
 

@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="bAU-R6-lJW">
     <device id="retina3_5" orientation="landscape">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
-        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -30,9 +29,9 @@
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" image="wallpaper" translatesAutoresizingMaskIntoConstraints="NO" id="9Hr-3P-5ar">
                                 <rect key="frame" x="0.0" y="0.0" width="480" height="320"/>
                             </imageView>
-                            <visualEffectView opaque="NO" alpha="0.75" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U3J-S6-zY2">
+                            <visualEffectView opaque="NO" alpha="0.65000000000000002" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fug-3c-S6j">
                                 <rect key="frame" x="0.0" y="0.0" width="480" height="320"/>
-                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="xdg-vc-3Zf">
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="hjH-RE-TaK">
                                     <rect key="frame" x="0.0" y="0.0" width="480" height="320"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 </view>
@@ -46,15 +45,23 @@
                                     <constraint firstAttribute="width" constant="330" id="aXs-9Z-vFb"/>
                                 </constraints>
                             </view>
-                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="oaK-i7-trl">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8xo-Cp-1ej">
+                                <rect key="frame" x="80" y="87.5" width="320" height="145"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" useCurrentDate="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oaK-i7-trl">
                                 <rect key="frame" x="80" y="87.5" width="320" height="145"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="145" id="xby-Jt-VEk"/>
                                 </constraints>
-                                <date key="date" timeIntervalSinceReferenceDate="527889604.54999202">
-                                    <!--2017-09-23 20:00:04 +0000-->
+                                <date key="date" timeIntervalSinceReferenceDate="-31532399.450007975">
+                                    <!--2000-01-02 01:00:00 +0000-->
                                 </date>
+                                <date key="minimumDate" timeIntervalSinceReferenceDate="-3187256012">
+                                    <!--1900-01-01 11:06:28 +0000-->
+                                </date>
+                                <locale key="locale" localeIdentifier="pt_BR"/>
                             </datePicker>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y30-y2-ZUq">
                                 <rect key="frame" x="165" y="253.5" width="150" height="35"/>
@@ -84,31 +91,37 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="oaK-i7-trl" firstAttribute="centerX" secondItem="Fmr-FC-EEP" secondAttribute="centerX" id="3h0-hJ-k7s"/>
+                            <constraint firstItem="8xo-Cp-1ej" firstAttribute="centerX" secondItem="oaK-i7-trl" secondAttribute="centerX" id="5FN-oe-rRt"/>
                             <constraint firstItem="oaK-i7-trl" firstAttribute="centerY" secondItem="Fmr-FC-EEP" secondAttribute="centerY" id="7af-E1-Afm"/>
                             <constraint firstItem="y30-y2-ZUq" firstAttribute="centerX" secondItem="oaK-i7-trl" secondAttribute="centerX" id="91K-xS-WAq"/>
+                            <constraint firstItem="8xo-Cp-1ej" firstAttribute="centerY" secondItem="oaK-i7-trl" secondAttribute="centerY" id="EIa-6k-yY0"/>
                             <constraint firstAttribute="trailing" secondItem="jYQ-cm-Ck1" secondAttribute="trailing" id="EeI-Vk-z7D"/>
-                            <constraint firstItem="ZGd-Rh-4qt" firstAttribute="width" secondItem="xdg-vc-3Zf" secondAttribute="width" multiplier="0.8" id="IWU-fq-ZhD"/>
-                            <constraint firstItem="oaK-i7-trl" firstAttribute="width" secondItem="xdg-vc-3Zf" secondAttribute="width" multiplier="0.8" id="Iae-Tf-PxU"/>
+                            <constraint firstItem="8xo-Cp-1ej" firstAttribute="height" secondItem="oaK-i7-trl" secondAttribute="height" id="F2z-BC-7Fa"/>
+                            <constraint firstAttribute="bottom" secondItem="fug-3c-S6j" secondAttribute="bottom" id="F89-om-SRP"/>
+                            <constraint firstAttribute="trailing" secondItem="fug-3c-S6j" secondAttribute="trailing" id="Fpd-O4-8xf"/>
+                            <constraint firstItem="fug-3c-S6j" firstAttribute="top" secondItem="Fmr-FC-EEP" secondAttribute="top" id="KwI-FL-rxq"/>
                             <constraint firstItem="9Hr-3P-5ar" firstAttribute="top" secondItem="Fmr-FC-EEP" secondAttribute="top" id="LB0-Lm-unR"/>
                             <constraint firstItem="jYQ-cm-Ck1" firstAttribute="centerX" secondItem="oaK-i7-trl" secondAttribute="centerX" id="NpI-Jx-nVf"/>
-                            <constraint firstItem="npO-WV-hpe" firstAttribute="top" secondItem="U3J-S6-zY2" secondAttribute="bottom" id="Pph-5E-sRD"/>
                             <constraint firstItem="npO-WV-hpe" firstAttribute="top" secondItem="9Hr-3P-5ar" secondAttribute="bottom" id="Sgw-OJ-mJe"/>
                             <constraint firstItem="ZGd-Rh-4qt" firstAttribute="centerX" secondItem="Fmr-FC-EEP" secondAttribute="centerX" id="V7w-x1-kKd"/>
                             <constraint firstItem="jYQ-cm-Ck1" firstAttribute="top" secondItem="aIB-WO-0JE" secondAttribute="bottom" constant="20" id="WGq-u8-dlW"/>
-                            <constraint firstItem="U3J-S6-zY2" firstAttribute="top" secondItem="Fmr-FC-EEP" secondAttribute="top" id="WUD-qC-wig"/>
                             <constraint firstItem="ZGd-Rh-4qt" firstAttribute="centerY" secondItem="Fmr-FC-EEP" secondAttribute="centerY" id="cRQ-QH-GRO"/>
-                            <constraint firstItem="U3J-S6-zY2" firstAttribute="leading" secondItem="Fmr-FC-EEP" secondAttribute="leading" id="eCR-JO-ovc"/>
                             <constraint firstItem="jYQ-cm-Ck1" firstAttribute="leading" secondItem="Fmr-FC-EEP" secondAttribute="leading" id="hkn-Eb-Gad"/>
+                            <constraint firstItem="8xo-Cp-1ej" firstAttribute="width" secondItem="oaK-i7-trl" secondAttribute="width" id="jvO-Ng-6iC"/>
                             <constraint firstItem="y30-y2-ZUq" firstAttribute="top" secondItem="oaK-i7-trl" secondAttribute="bottom" constant="21" id="o6T-cg-7xb"/>
                             <constraint firstItem="9Hr-3P-5ar" firstAttribute="leading" secondItem="Fmr-FC-EEP" secondAttribute="leading" id="oyM-dH-eLr"/>
-                            <constraint firstAttribute="trailing" secondItem="U3J-S6-zY2" secondAttribute="trailing" id="rsv-K4-jyK"/>
+                            <constraint firstItem="fug-3c-S6j" firstAttribute="leading" secondItem="Fmr-FC-EEP" secondAttribute="leading" id="sK8-A6-BJp"/>
                             <constraint firstAttribute="trailing" secondItem="9Hr-3P-5ar" secondAttribute="trailing" id="z0t-CA-pa0"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="pickerDateIdade" destination="oaK-i7-trl" id="ON8-Tb-AyN"/>
+                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="entrar" id="Z9L-Gv-td2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5IQ-ar-bxR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-700" y="276"/>
+            <point key="canvasLocation" x="-738" y="276"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
