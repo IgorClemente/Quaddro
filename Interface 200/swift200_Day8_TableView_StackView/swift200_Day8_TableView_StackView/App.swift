@@ -25,8 +25,33 @@ class App {
         ("Rio de Janeiro","rj","by Rosino","Rio,br"),
         ("Brasilia","br","by Fabio Luiz","Brasilia,br"),
         ("Guarulhos","gr","by WWF","Guarulhos,br"),
-        ("Londrina","ln","by Wilson Vieira","Londrina,pr")
+        ("Londrina","ln","by Wilson Vieira","Londrina,br")
     ]
-
+    var usarCelsius = true
+    
+    
+    // Controler de cidade favorita
+    var favorita = "São Paulo"
+    
+    func salvarFavorita(comNome nome:String) {
+        // Antes de salvar a nova favorita, vamos confirmar que sabemos de quem se trata
+        for cidade in cidades {
+            if cidade.nome == nome {
+                favorita = nome
+                return 
+            }
+        }
+    }
+    
+    func dadosDaFavorita() -> Cidade {
+        // Quando preciso das informações
+        // Busco a favorita na lista de cidade
+        for cidade in cidades {
+            if cidade.nome == favorita {
+                return cidade 
+            }
+        }
+        fatalError("Cidade não encontrada")
+    }
 }
 
