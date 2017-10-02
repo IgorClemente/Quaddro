@@ -15,6 +15,7 @@ class ControllerLateralMenu {
     static let controller = ControllerLateralMenu()
     
     var viewControllerAtiva:UIViewController?
+    var viewControllerTransition:UIViewController?  = nil
     var menu:UIView?
     
     func criarMenuPrincipal(_ viewEndPoint:UIViewController) -> Void {
@@ -30,14 +31,40 @@ class ControllerLateralMenu {
         }
     }
     
-    @objc func tapSettingsCreateMenu() {
+    @objc func tapSettingsCreateTela() {
         self.fecharMenuPrincipal()
         let settingsTela = TelaSettingsViewController(nibName:"TelaSettingsViewController",bundle:nil)
-        
         settingsTela.modalTransitionStyle = .crossDissolve
         settingsTela.modalPresentationStyle = .currentContext
+        
+        self.viewControllerTransition?.dismiss(animated: false, completion: nil)
         let tela = UIApplication.shared.keyWindow?.rootViewController
         tela?.present(settingsTela,animated: true, completion: nil)
+        self.viewControllerTransition = settingsTela
+    }
+    
+    @objc func tapRankingCreateTela() {
+        self.fecharMenuPrincipal()
+        let rankingTela = TelaRankingController(nibName:"TelaRankingController",bundle:nil)
+        rankingTela.modalTransitionStyle = .crossDissolve
+        rankingTela.modalPresentationStyle = .currentContext
+        
+        self.viewControllerTransition?.dismiss(animated: false, completion: nil)
+        let tela = UIApplication.shared.keyWindow?.rootViewController
+        tela?.present(rankingTela, animated: true, completion:nil)
+        self.viewControllerTransition = rankingTela
+    }
+    
+    @objc func tapPremiosCreateTela() {
+        self.fecharMenuPrincipal()
+        let premiosTela = TelaPremiosController(nibName:"TelaPremiosController",bundle:nil)
+        premiosTela.modalTransitionStyle = .crossDissolve
+        premiosTela.modalPresentationStyle = .currentContext
+        
+        self.viewControllerTransition?.dismiss(animated: false, completion: nil)
+        let tela = UIApplication.shared.keyWindow?.rootViewController
+        tela?.present(premiosTela,animated:true,completion:nil)
+        self.viewControllerTransition = premiosTela
     }
     
     @objc func fecharMenuPrincipal() {

@@ -37,7 +37,7 @@ class LateralMenuView : UIView {
             botaoSettings.setImage(UIImage(named:"settings"), for: .normal)
             botaoSettings.contentMode = .scaleAspectFill
             botaoSettings.translatesAutoresizingMaskIntoConstraints = false
-            botaoSettings.addTarget(controladorMenu, action: #selector(controladorMenu.tapSettingsCreateMenu), for: .touchUpInside)
+            botaoSettings.addTarget(controladorMenu, action: #selector(controladorMenu.tapSettingsCreateTela), for: .touchUpInside)
         
         let botaoHomeRetorno = UIButton()
             botaoHomeRetorno.clipsToBounds = true
@@ -51,12 +51,15 @@ class LateralMenuView : UIView {
             botaoRanking.setImage(UIImage(named:"ranking"), for: .normal)
             botaoRanking.layer.cornerRadius = botaoHomeRetorno.frame.width/2
             botaoRanking.translatesAutoresizingMaskIntoConstraints = false
+            botaoRanking.addTarget(controladorMenu, action: #selector(controladorMenu.tapRankingCreateTela), for: .touchUpInside)
         
         let botaoPremios = UIButton()
             botaoPremios.clipsToBounds = true
             botaoPremios.setImage(UIImage(named:"favorite"), for: .normal)
             botaoPremios.layer.cornerRadius = botaoHomeRetorno.frame.width/2
             botaoPremios.translatesAutoresizingMaskIntoConstraints = false
+            botaoPremios.addTarget(controladorMenu,action:
+            #selector(controladorMenu.tapPremiosCreateTela),for:.touchUpInside)
         
         menuPrincipal.addSubview(botaoHomeRetorno)
         menuPrincipal.addSubview(botaoRanking)

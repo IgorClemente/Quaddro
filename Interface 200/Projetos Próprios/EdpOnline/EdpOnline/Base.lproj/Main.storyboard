@@ -180,10 +180,10 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="69"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ist-PV-5j7">
-                                        <rect key="frame" x="16" y="28" width="25" height="25"/>
+                                        <rect key="frame" x="16" y="26.5" width="30" height="30"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="25" id="1cS-KV-GXZ"/>
-                                            <constraint firstAttribute="width" constant="25" id="KAh-xh-fwh"/>
+                                            <constraint firstAttribute="height" constant="30" id="1cS-KV-GXZ"/>
+                                            <constraint firstAttribute="width" constant="30" id="KAh-xh-fwh"/>
                                         </constraints>
                                         <state key="normal" image="menu-2"/>
                                         <connections>
@@ -191,7 +191,7 @@
                                         </connections>
                                     </button>
                                     <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" insetsLayoutMarginsFromSafeArea="NO" image="vedp" translatesAutoresizingMaskIntoConstraints="NO" id="gXZ-c8-T6R">
-                                        <rect key="frame" x="120" y="15.5" width="80" height="50"/>
+                                        <rect key="frame" x="120" y="16.5" width="80" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="a0D-Or-OW2"/>
                                             <constraint firstAttribute="width" constant="80" id="eQs-sT-kXI"/>
@@ -200,9 +200,9 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.84267109632492065" green="0.24512416124343872" blue="0.16414961218833923" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstItem="ist-PV-5j7" firstAttribute="centerY" secondItem="rjc-VS-Mhh" secondAttribute="centerY" constant="6" id="LdH-0E-dC4"/>
+                                    <constraint firstItem="ist-PV-5j7" firstAttribute="centerY" secondItem="rjc-VS-Mhh" secondAttribute="centerY" constant="7" id="LdH-0E-dC4"/>
                                     <constraint firstItem="ist-PV-5j7" firstAttribute="leading" secondItem="rjc-VS-Mhh" secondAttribute="leading" constant="16" id="W5G-It-oi4"/>
-                                    <constraint firstItem="gXZ-c8-T6R" firstAttribute="centerY" secondItem="rjc-VS-Mhh" secondAttribute="centerY" constant="6" id="nFS-ks-SNs"/>
+                                    <constraint firstItem="gXZ-c8-T6R" firstAttribute="centerY" secondItem="rjc-VS-Mhh" secondAttribute="centerY" constant="7" id="nFS-ks-SNs"/>
                                     <constraint firstItem="gXZ-c8-T6R" firstAttribute="centerX" secondItem="rjc-VS-Mhh" secondAttribute="centerX" id="ozo-DV-WVP"/>
                                     <constraint firstAttribute="height" constant="69" id="r0d-cg-Gko"/>
                                 </constraints>

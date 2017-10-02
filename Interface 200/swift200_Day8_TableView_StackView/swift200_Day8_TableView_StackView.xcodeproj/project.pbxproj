@@ -14,8 +14,8 @@
 		43BBFE291F7FE29700005AD8 /* Arredondador.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43BBFE271F7FE29700005AD8 /* Arredondador.swift */; };
 		43BBFE2A1F7FE29700005AD8 /* QuaddroForecaster.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43BBFE281F7FE29700005AD8 /* QuaddroForecaster.swift */; };
 		43BBFE2C1F7FFC3B00005AD8 /* TempoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43BBFE2B1F7FFC3B00005AD8 /* TempoViewController.swift */; };
-		43BBFE2E1F7FFC8D00005AD8 /* AjustesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43BBFE2D1F7FFC8D00005AD8 /* AjustesViewController.swift */; };
 		43BBFE301F80145300005AD8 /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43BBFE2F1F80145300005AD8 /* App.swift */; };
+		D02DB6B51F805AE400F815E0 /* AjustesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02DB6B41F805AE400F815E0 /* AjustesViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,8 +28,8 @@
 		43BBFE271F7FE29700005AD8 /* Arredondador.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Arredondador.swift; sourceTree = "<group>"; };
 		43BBFE281F7FE29700005AD8 /* QuaddroForecaster.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuaddroForecaster.swift; sourceTree = "<group>"; };
 		43BBFE2B1F7FFC3B00005AD8 /* TempoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TempoViewController.swift; sourceTree = "<group>"; };
-		43BBFE2D1F7FFC8D00005AD8 /* AjustesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AjustesViewController.swift; sourceTree = "<group>"; };
 		43BBFE2F1F80145300005AD8 /* App.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
+		D02DB6B41F805AE400F815E0 /* AjustesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AjustesViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,8 +92,8 @@
 			isa = PBXGroup;
 			children = (
 				43BBFE2B1F7FFC3B00005AD8 /* TempoViewController.swift */,
-				43BBFE2D1F7FFC8D00005AD8 /* AjustesViewController.swift */,
 				43BBFE111F7FE1EA00005AD8 /* AppDelegate.swift */,
+				D02DB6B41F805AE400F815E0 /* AjustesViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -136,11 +136,12 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0830;
-				LastUpgradeCheck = 0830;
+				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = Swift;
 				TargetAttributes = {
 					43BBFE0D1F7FE1EA00005AD8 = {
 						CreatedOnToolsVersion = 8.3;
+						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -182,10 +183,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				43BBFE2C1F7FFC3B00005AD8 /* TempoViewController.swift in Sources */,
-				43BBFE2E1F7FFC8D00005AD8 /* AjustesViewController.swift in Sources */,
 				43BBFE2A1F7FE29700005AD8 /* QuaddroForecaster.swift in Sources */,
 				43BBFE301F80145300005AD8 /* App.swift in Sources */,
 				43BBFE291F7FE29700005AD8 /* Arredondador.swift in Sources */,
+				D02DB6B51F805AE400F815E0 /* AjustesViewController.swift in Sources */,
 				43BBFE121F7FE1EA00005AD8 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -222,7 +223,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -230,7 +233,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -273,7 +280,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -281,7 +290,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -315,7 +328,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "br.com.swift.swift200-Day8-TableView-StackView";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -327,7 +341,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "br.com.swift.swift200-Day8-TableView-StackView";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};
@@ -350,6 +365,7 @@
 				43BBFE221F7FE1EA00005AD8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
