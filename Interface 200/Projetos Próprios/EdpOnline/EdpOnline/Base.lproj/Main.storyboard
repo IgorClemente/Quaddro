@@ -68,6 +68,9 @@
                                         <state key="normal" title="Tirar Foto">
                                             <color key="titleColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="tapTiraFoto" destination="BYZ-38-t0r" eventType="touchUpInside" id="VfV-2O-0zm"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.79304064417177911" colorSpace="calibratedRGB"/>

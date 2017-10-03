@@ -10,6 +10,9 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <array key="Avenir.ttc">
+            <string>Avenir-Medium</string>
+        </array>
         <array key="AvenirNext.ttc">
             <string>AvenirNext-Regular</string>
         </array>
@@ -31,11 +34,11 @@
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cmf-nP-ERc">
                             <rect key="frame" x="0.0" y="0.0" width="320" height="820"/>
                             <subviews>
-                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="KDg-iC-EtH">
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="KDg-iC-EtH">
                                     <rect key="frame" x="0.0" y="70" width="320" height="750"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4KU-TO-ApT">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="240"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="237.5"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="smart-tv" translatesAutoresizingMaskIntoConstraints="NO" id="yQV-oz-jSZ">
                                                     <rect key="frame" x="0.0" y="0.0" width="320" height="190"/>
@@ -66,7 +69,7 @@
                                             </constraints>
                                         </view>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B6t-43-WeF">
-                                            <rect key="frame" x="0.0" y="255" width="320" height="240"/>
+                                            <rect key="frame" x="0.0" y="256.5" width="320" height="237"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="apple-ipad" translatesAutoresizingMaskIntoConstraints="NO" id="ozG-3h-V2y">
                                                     <rect key="frame" x="0.0" y="0.0" width="320" height="190"/>
@@ -74,14 +77,14 @@
                                                         <constraint firstAttribute="height" constant="190" id="ZKU-yf-lXQ"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="TV LED" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jqk-tJ-gbq">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="IPAD 3" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jqk-tJ-gbq">
                                                     <rect key="frame" x="39" y="195" width="281" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1° Lugar" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2xe-MA-KUP">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="2° Lugar" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2xe-MA-KUP">
                                                     <rect key="frame" x="39" y="215" width="97" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" weight="light" pointSize="13"/>
@@ -97,7 +100,7 @@
                                             </constraints>
                                         </view>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="alm-Xn-nUN">
-                                            <rect key="frame" x="0.0" y="510" width="320" height="240"/>
+                                            <rect key="frame" x="0.0" y="512.5" width="320" height="237.5"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="jbl-charger" translatesAutoresizingMaskIntoConstraints="NO" id="JiQ-bX-5sz">
                                                     <rect key="frame" x="0.0" y="0.0" width="320" height="190"/>
@@ -105,14 +108,14 @@
                                                         <constraint firstAttribute="height" constant="190" id="pke-qk-McC"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="TV LED" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7b0-3Y-NRu">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="CAIXA DE SOM" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7b0-3Y-NRu">
                                                     <rect key="frame" x="39" y="195" width="281" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1° Lugar" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4rt-iI-uBJ">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="3° Lugar" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4rt-iI-uBJ">
                                                     <rect key="frame" x="39" y="215" width="97" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" weight="light" pointSize="13"/>
@@ -161,20 +164,19 @@
                                 <action selector="tapAbrirMenuPrincipal" destination="-1" eventType="touchUpInside" id="5jR-Dw-RQN"/>
                             </connections>
                         </button>
-                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" insetsLayoutMarginsFromSafeArea="NO" image="vedp" translatesAutoresizingMaskIntoConstraints="NO" id="QUO-8g-I0G">
-                            <rect key="frame" x="119.5" y="16.5" width="80" height="50"/>
-                            <constraints>
-                                <constraint firstAttribute="width" constant="80" id="1t6-DF-BOM"/>
-                                <constraint firstAttribute="height" constant="50" id="Fhf-ku-OMo"/>
-                            </constraints>
-                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Premios" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OGf-c1-XJz">
+                            <rect key="frame" x="123.5" y="28" width="73" height="27.5"/>
+                            <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="20"/>
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
                     </subviews>
                     <color key="backgroundColor" red="0.84267109630000003" green="0.2451241612" blue="0.16414961219999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstItem="tLN-gD-P7L" firstAttribute="centerY" secondItem="wfq-vL-9ae" secondAttribute="centerY" constant="7" id="8uJ-PH-YSt"/>
-                        <constraint firstItem="QUO-8g-I0G" firstAttribute="centerY" secondItem="wfq-vL-9ae" secondAttribute="centerY" constant="7" id="EwH-pg-h6S"/>
                         <constraint firstItem="tLN-gD-P7L" firstAttribute="leading" secondItem="wfq-vL-9ae" secondAttribute="leading" constant="16" id="QLt-2U-wU6"/>
-                        <constraint firstItem="QUO-8g-I0G" firstAttribute="centerX" secondItem="wfq-vL-9ae" secondAttribute="centerX" id="b2V-kG-d0u"/>
+                        <constraint firstItem="OGf-c1-XJz" firstAttribute="centerY" secondItem="wfq-vL-9ae" secondAttribute="centerY" constant="7" id="kK0-Gx-9eh"/>
+                        <constraint firstItem="OGf-c1-XJz" firstAttribute="centerX" secondItem="wfq-vL-9ae" secondAttribute="centerX" id="tUX-I0-AOy"/>
                         <constraint firstAttribute="height" constant="69" id="uQb-sg-Qvp"/>
                     </constraints>
                 </view>
@@ -199,6 +201,5 @@
         <image name="jbl-charger" width="395" height="215"/>
         <image name="menu-2" width="64" height="64"/>
         <image name="smart-tv" width="405" height="295"/>
-        <image name="vedp" width="500" height="500"/>
     </resources>
 </document>

@@ -39,6 +39,7 @@ class TempoViewController: UIViewController {
         let favorita    = App.compartilhado.dadosDaFavorita()
         // Busca os dados da internet
         guard let dados = forecast(forCity: favorita.code) else {
+            print("FALHOU CARA")
             return
         }
         

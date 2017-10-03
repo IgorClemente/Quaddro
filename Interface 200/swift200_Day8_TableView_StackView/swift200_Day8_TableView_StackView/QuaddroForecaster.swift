@@ -10,6 +10,7 @@ import Foundation
 
 func forecast(forCity city:String) -> (temp:Int, icon:String)? {
     
+    print("Cidade: =>",city)
     let apikey  = "3c11dc2f82d273949cf81fd6889fa559"
     let base    = "https://api.openweathermap.org/data/2.5"
     let address = "\(base)/weather?q=\(city)&appid=\(apikey)&units=metric"
@@ -23,6 +24,7 @@ func forecast(forCity city:String) -> (temp:Int, icon:String)? {
         let temp      = weather["temp"] as? Int,
         let icons     = info["weather"] as? [[String:Any]],
         let iconCode  = icons.first?["main"] as? String else {
+            print("Falhou Busca")
             return nil
     }
     
@@ -35,6 +37,7 @@ func forecast(forCity city:String) -> (temp:Int, icon:String)? {
     case "clear": icon = "☀️"
     default: icon = "🌞"
     }
-    
+    print("\(temp)\(icon)")
     return (temp, icon)
 }
+

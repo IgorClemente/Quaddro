@@ -11,6 +11,7 @@
     <customFonts key="customFonts">
         <array key="Avenir.ttc">
             <string>Avenir-Book</string>
+            <string>Avenir-Medium</string>
         </array>
         <array key="AvenirNext.ttc">
             <string>AvenirNext-Medium</string>
@@ -47,8 +48,8 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Igor Clemente" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qPM-6u-BgA">
-                                                    <rect key="frame" x="92" y="30.5" width="109.5" height="23.5"/>
-                                                    <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
+                                                    <rect key="frame" x="92" y="28" width="129" height="27.5"/>
+                                                    <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="20"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -59,7 +60,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1°" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xIp-nl-my1">
-                                                    <rect key="frame" x="277" y="26" width="30" height="41"/>
+                                                    <rect key="frame" x="275" y="26" width="30" height="41"/>
                                                     <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="30"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -71,7 +72,7 @@
                                                 <constraint firstItem="xIp-nl-my1" firstAttribute="centerY" secondItem="amn-7o-9z9" secondAttribute="centerY" id="IM7-aY-Umk"/>
                                                 <constraint firstItem="qPM-6u-BgA" firstAttribute="centerY" secondItem="amn-7o-9z9" secondAttribute="centerY" constant="-5" id="KZq-Zb-lLy"/>
                                                 <constraint firstItem="2nQ-Fm-Y3e" firstAttribute="leading" secondItem="irm-N4-wAf" secondAttribute="trailing" constant="16" id="Uvg-k3-4c0"/>
-                                                <constraint firstAttribute="trailing" secondItem="xIp-nl-my1" secondAttribute="trailing" constant="13" id="eJh-Te-qgK"/>
+                                                <constraint firstAttribute="trailing" secondItem="xIp-nl-my1" secondAttribute="trailing" constant="15" id="eJh-Te-qgK"/>
                                                 <constraint firstItem="2nQ-Fm-Y3e" firstAttribute="centerY" secondItem="amn-7o-9z9" secondAttribute="centerY" constant="13" id="n5O-IT-X16"/>
                                                 <constraint firstItem="irm-N4-wAf" firstAttribute="leading" secondItem="amn-7o-9z9" secondAttribute="leading" constant="16" id="n9d-Ko-Zol"/>
                                                 <constraint firstItem="irm-N4-wAf" firstAttribute="centerY" secondItem="amn-7o-9z9" secondAttribute="centerY" id="wIK-AV-3z9"/>
@@ -88,8 +89,8 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Igor Clemente" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="typ-4N-C3L">
-                                                    <rect key="frame" x="92" y="29.5" width="109.5" height="23.5"/>
-                                                    <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
+                                                    <rect key="frame" x="92" y="28" width="129" height="27.5"/>
+                                                    <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="20"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -99,8 +100,8 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1°" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1kX-63-gbc">
-                                                    <rect key="frame" x="277" y="26" width="30" height="41"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2°" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1kX-63-gbc">
+                                                    <rect key="frame" x="275" y="26" width="30" height="41"/>
                                                     <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="30"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -112,7 +113,7 @@
                                                 <constraint firstItem="1kX-63-gbc" firstAttribute="centerY" secondItem="5sp-qh-n41" secondAttribute="centerY" id="6vQ-4K-6pe"/>
                                                 <constraint firstItem="RhF-J1-enF" firstAttribute="centerY" secondItem="5sp-qh-n41" secondAttribute="centerY" constant="13" id="9FD-oY-ZeJ"/>
                                                 <constraint firstItem="WOc-UQ-kj9" firstAttribute="leading" secondItem="5sp-qh-n41" secondAttribute="leading" constant="16" id="E9d-oS-S3B"/>
-                                                <constraint firstAttribute="trailing" secondItem="1kX-63-gbc" secondAttribute="trailing" constant="13" id="Faz-71-BLb"/>
+                                                <constraint firstAttribute="trailing" secondItem="1kX-63-gbc" secondAttribute="trailing" constant="15" id="Faz-71-BLb"/>
                                                 <constraint firstItem="RhF-J1-enF" firstAttribute="leading" secondItem="WOc-UQ-kj9" secondAttribute="trailing" constant="16" id="c78-bw-JYv"/>
                                                 <constraint firstItem="typ-4N-C3L" firstAttribute="centerY" secondItem="5sp-qh-n41" secondAttribute="centerY" constant="-5" id="ex4-aW-VwM"/>
                                                 <constraint firstItem="WOc-UQ-kj9" firstAttribute="centerY" secondItem="5sp-qh-n41" secondAttribute="centerY" id="wI0-bA-a4r"/>
@@ -129,8 +130,8 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Igor Clemente" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qwb-If-eOe">
-                                                    <rect key="frame" x="92" y="30.5" width="109.5" height="23.5"/>
-                                                    <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
+                                                    <rect key="frame" x="92" y="28" width="129" height="27.5"/>
+                                                    <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="20"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -140,8 +141,8 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1°" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mvs-F7-8mi">
-                                                    <rect key="frame" x="277" y="26" width="30" height="41"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3°" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mvs-F7-8mi">
+                                                    <rect key="frame" x="275" y="26" width="30" height="41"/>
                                                     <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="30"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -156,7 +157,7 @@
                                                 <constraint firstItem="qwb-If-eOe" firstAttribute="leading" secondItem="UnZ-zh-pSO" secondAttribute="trailing" constant="16" id="v4g-vZ-KkM"/>
                                                 <constraint firstItem="mvs-F7-8mi" firstAttribute="centerY" secondItem="Ad1-ao-1uX" secondAttribute="centerY" id="vsP-fa-Fe9"/>
                                                 <constraint firstItem="qLe-49-Alp" firstAttribute="leading" secondItem="UnZ-zh-pSO" secondAttribute="trailing" constant="16" id="w4D-gG-YZ9"/>
-                                                <constraint firstAttribute="trailing" secondItem="mvs-F7-8mi" secondAttribute="trailing" constant="13" id="zzC-jv-wH7"/>
+                                                <constraint firstAttribute="trailing" secondItem="mvs-F7-8mi" secondAttribute="trailing" constant="15" id="zzC-jv-wH7"/>
                                             </constraints>
                                         </view>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HFJ-K5-QcW">
@@ -170,8 +171,8 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Igor Clemente" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kSG-Bf-n6C">
-                                                    <rect key="frame" x="92" y="30.5" width="109.5" height="23.5"/>
-                                                    <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
+                                                    <rect key="frame" x="92" y="28" width="129" height="27.5"/>
+                                                    <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="20"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -181,8 +182,8 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1°" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n1h-KG-flg">
-                                                    <rect key="frame" x="277" y="26" width="30" height="41"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4°" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n1h-KG-flg">
+                                                    <rect key="frame" x="275" y="26" width="30" height="41"/>
                                                     <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="30"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -195,7 +196,7 @@
                                                 <constraint firstItem="n1h-KG-flg" firstAttribute="centerY" secondItem="HFJ-K5-QcW" secondAttribute="centerY" id="Ceq-Z0-g7V"/>
                                                 <constraint firstItem="F93-Hg-eWK" firstAttribute="centerY" secondItem="HFJ-K5-QcW" secondAttribute="centerY" constant="13" id="SKA-z3-PuC"/>
                                                 <constraint firstItem="F93-Hg-eWK" firstAttribute="leading" secondItem="5sE-Fj-lCn" secondAttribute="trailing" constant="16" id="haN-5w-BMa"/>
-                                                <constraint firstAttribute="trailing" secondItem="n1h-KG-flg" secondAttribute="trailing" constant="13" id="jNt-hl-UgL"/>
+                                                <constraint firstAttribute="trailing" secondItem="n1h-KG-flg" secondAttribute="trailing" constant="15" id="jNt-hl-UgL"/>
                                                 <constraint firstItem="5sE-Fj-lCn" firstAttribute="leading" secondItem="HFJ-K5-QcW" secondAttribute="leading" constant="16" id="nW2-1k-6V9"/>
                                                 <constraint firstItem="kSG-Bf-n6C" firstAttribute="leading" secondItem="5sE-Fj-lCn" secondAttribute="trailing" constant="16" id="oEE-xv-ER9"/>
                                             </constraints>
@@ -211,8 +212,8 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Igor Clemente" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Czz-a2-Ocf">
-                                                    <rect key="frame" x="92" y="30.5" width="109.5" height="23.5"/>
-                                                    <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
+                                                    <rect key="frame" x="92" y="28" width="129" height="27.5"/>
+                                                    <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="20"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -222,8 +223,8 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1°" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lLi-YY-ObA">
-                                                    <rect key="frame" x="277" y="26" width="30" height="41"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5°" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lLi-YY-ObA">
+                                                    <rect key="frame" x="275" y="26" width="30" height="41"/>
                                                     <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="30"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -235,7 +236,7 @@
                                                 <constraint firstItem="Z8t-x8-K4K" firstAttribute="centerY" secondItem="9vt-8a-Jwa" secondAttribute="centerY" constant="13" id="EBn-tA-BX4"/>
                                                 <constraint firstItem="RLS-tZ-Yh7" firstAttribute="centerY" secondItem="9vt-8a-Jwa" secondAttribute="centerY" id="Q3p-wA-AYJ"/>
                                                 <constraint firstItem="lLi-YY-ObA" firstAttribute="centerY" secondItem="9vt-8a-Jwa" secondAttribute="centerY" id="RqU-PM-On1"/>
-                                                <constraint firstAttribute="trailing" secondItem="lLi-YY-ObA" secondAttribute="trailing" constant="13" id="SIF-WW-M81"/>
+                                                <constraint firstAttribute="trailing" secondItem="lLi-YY-ObA" secondAttribute="trailing" constant="15" id="SIF-WW-M81"/>
                                                 <constraint firstItem="Czz-a2-Ocf" firstAttribute="centerY" secondItem="9vt-8a-Jwa" secondAttribute="centerY" constant="-5" id="bSw-iS-ShJ"/>
                                                 <constraint firstItem="Z8t-x8-K4K" firstAttribute="leading" secondItem="RLS-tZ-Yh7" secondAttribute="trailing" constant="16" id="mht-gN-vn8"/>
                                                 <constraint firstItem="Czz-a2-Ocf" firstAttribute="leading" secondItem="RLS-tZ-Yh7" secondAttribute="trailing" constant="16" id="vGm-JZ-bcr"/>
@@ -252,8 +253,8 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Igor Clemente" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ary-ai-5G3">
-                                                    <rect key="frame" x="92" y="30.5" width="109.5" height="23.5"/>
-                                                    <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
+                                                    <rect key="frame" x="92" y="28" width="129" height="27.5"/>
+                                                    <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="20"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -263,8 +264,8 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1°" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RBh-jv-7bw">
-                                                    <rect key="frame" x="277" y="26" width="30" height="41"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="6°" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RBh-jv-7bw">
+                                                    <rect key="frame" x="275" y="26" width="30" height="41"/>
                                                     <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="30"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -272,7 +273,7 @@
                                             </subviews>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <constraints>
-                                                <constraint firstAttribute="trailing" secondItem="RBh-jv-7bw" secondAttribute="trailing" constant="13" id="4GT-Qh-rvJ"/>
+                                                <constraint firstAttribute="trailing" secondItem="RBh-jv-7bw" secondAttribute="trailing" constant="15" id="4GT-Qh-rvJ"/>
                                                 <constraint firstItem="Ary-ai-5G3" firstAttribute="centerY" secondItem="KsM-mZ-v7o" secondAttribute="centerY" constant="-5" id="AxW-Ya-iIf"/>
                                                 <constraint firstItem="YJW-zl-g02" firstAttribute="centerY" secondItem="KsM-mZ-v7o" secondAttribute="centerY" constant="13" id="DGT-sW-IJ0"/>
                                                 <constraint firstItem="RBh-jv-7bw" firstAttribute="centerY" secondItem="KsM-mZ-v7o" secondAttribute="centerY" id="EhO-WG-nhX"/>
@@ -293,8 +294,8 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Igor Clemente" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hCo-7R-2Fj">
-                                                    <rect key="frame" x="92" y="30.5" width="109.5" height="23.5"/>
-                                                    <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
+                                                    <rect key="frame" x="92" y="28" width="129" height="27.5"/>
+                                                    <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="20"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -304,7 +305,7 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1°" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UH3-z4-VzD">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="7°" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UH3-z4-VzD">
                                                     <rect key="frame" x="277" y="26" width="30" height="41"/>
                                                     <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="30"/>
                                                     <nil key="textColor"/>
@@ -334,8 +335,8 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Igor Clemente" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rrR-FS-HOk">
-                                                    <rect key="frame" x="92" y="30.5" width="109.5" height="23.5"/>
-                                                    <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
+                                                    <rect key="frame" x="92" y="28" width="129" height="27.5"/>
+                                                    <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="20"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -345,8 +346,8 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1°" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n6E-RW-WY8">
-                                                    <rect key="frame" x="277" y="26" width="30" height="41"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="8°" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n6E-RW-WY8">
+                                                    <rect key="frame" x="275" y="26" width="30" height="41"/>
                                                     <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="30"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -355,7 +356,7 @@
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <constraints>
                                                 <constraint firstItem="n6E-RW-WY8" firstAttribute="centerY" secondItem="N8p-fb-tSR" secondAttribute="centerY" id="0m9-hG-C8h"/>
-                                                <constraint firstAttribute="trailing" secondItem="n6E-RW-WY8" secondAttribute="trailing" constant="13" id="Ljq-yH-feC"/>
+                                                <constraint firstAttribute="trailing" secondItem="n6E-RW-WY8" secondAttribute="trailing" constant="15" id="Ljq-yH-feC"/>
                                                 <constraint firstItem="SYU-Op-cwO" firstAttribute="leading" secondItem="N8p-fb-tSR" secondAttribute="leading" constant="16" id="RAV-FC-UCi"/>
                                                 <constraint firstItem="rrR-FS-HOk" firstAttribute="leading" secondItem="SYU-Op-cwO" secondAttribute="trailing" constant="16" id="RCk-Ew-wce"/>
                                                 <constraint firstItem="LzW-Pi-kpl" firstAttribute="leading" secondItem="SYU-Op-cwO" secondAttribute="trailing" constant="16" id="dV4-eT-sYc"/>
@@ -375,8 +376,8 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Igor Clemente" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tuk-Zb-v7B">
-                                                    <rect key="frame" x="92" y="30.5" width="109.5" height="23.5"/>
-                                                    <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
+                                                    <rect key="frame" x="92" y="28" width="129" height="27.5"/>
+                                                    <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="20"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -386,8 +387,8 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1°" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="59N-oE-k4G">
-                                                    <rect key="frame" x="277" y="26" width="30" height="41"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="9°" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="59N-oE-k4G">
+                                                    <rect key="frame" x="275" y="26" width="30" height="41"/>
                                                     <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="30"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -401,7 +402,7 @@
                                                 <constraint firstItem="59N-oE-k4G" firstAttribute="centerY" secondItem="Me9-K4-9qM" secondAttribute="centerY" id="for-TC-EYL"/>
                                                 <constraint firstItem="fJK-Qj-rge" firstAttribute="centerY" secondItem="Me9-K4-9qM" secondAttribute="centerY" id="idj-JC-Ntv"/>
                                                 <constraint firstItem="t5d-yT-aw1" firstAttribute="centerY" secondItem="Me9-K4-9qM" secondAttribute="centerY" constant="13" id="muG-EF-Htu"/>
-                                                <constraint firstAttribute="trailing" secondItem="59N-oE-k4G" secondAttribute="trailing" constant="13" id="pJX-nB-bp8"/>
+                                                <constraint firstAttribute="trailing" secondItem="59N-oE-k4G" secondAttribute="trailing" constant="15" id="pJX-nB-bp8"/>
                                                 <constraint firstItem="fJK-Qj-rge" firstAttribute="leading" secondItem="Me9-K4-9qM" secondAttribute="leading" constant="16" id="tX9-ej-UOE"/>
                                             </constraints>
                                         </view>
@@ -416,8 +417,8 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Igor Clemente" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hQu-yI-m8g">
-                                                    <rect key="frame" x="92" y="30" width="109.5" height="23.5"/>
-                                                    <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
+                                                    <rect key="frame" x="92" y="28.5" width="129" height="27.5"/>
+                                                    <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="20"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -427,8 +428,8 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1°" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n8p-Id-Hoz">
-                                                    <rect key="frame" x="277" y="26.5" width="30" height="41"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10°" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n8p-Id-Hoz">
+                                                    <rect key="frame" x="257" y="26.5" width="48" height="41"/>
                                                     <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="30"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -437,7 +438,7 @@
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <constraints>
                                                 <constraint firstItem="MPd-ET-HHC" firstAttribute="centerY" secondItem="QoO-Om-nOW" secondAttribute="centerY" id="1E5-0c-f4x"/>
-                                                <constraint firstAttribute="trailing" secondItem="n8p-Id-Hoz" secondAttribute="trailing" constant="13" id="6VG-Az-Xlj"/>
+                                                <constraint firstAttribute="trailing" secondItem="n8p-Id-Hoz" secondAttribute="trailing" constant="15" id="6VG-Az-Xlj"/>
                                                 <constraint firstItem="MPd-ET-HHC" firstAttribute="leading" secondItem="QoO-Om-nOW" secondAttribute="leading" constant="16" id="7cZ-3C-6FJ"/>
                                                 <constraint firstItem="w8c-Ah-1DG" firstAttribute="centerY" secondItem="QoO-Om-nOW" secondAttribute="centerY" constant="13" id="XUj-LS-oGq"/>
                                                 <constraint firstItem="hQu-yI-m8g" firstAttribute="leading" secondItem="MPd-ET-HHC" secondAttribute="trailing" constant="16" id="eiw-NE-CMd"/>
@@ -469,13 +470,6 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wZI-KO-0ol">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="69"/>
                     <subviews>
-                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" insetsLayoutMarginsFromSafeArea="NO" image="vedp" translatesAutoresizingMaskIntoConstraints="NO" id="kwf-Zr-OXC">
-                            <rect key="frame" x="120" y="16.5" width="80" height="50"/>
-                            <constraints>
-                                <constraint firstAttribute="width" constant="80" id="EUT-ln-FkH"/>
-                                <constraint firstAttribute="height" constant="50" id="hPz-kK-rvB"/>
-                            </constraints>
-                        </imageView>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ytG-q9-xdq">
                             <rect key="frame" x="16" y="25.5" width="30" height="30"/>
                             <constraints>
@@ -487,14 +481,20 @@
                                 <action selector="tapCriarMenuPrincipal" destination="-1" eventType="touchUpInside" id="XlL-IB-kVT"/>
                             </connections>
                         </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ranking" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WaQ-Wb-BUA">
+                            <rect key="frame" x="124" y="28" width="72.5" height="27.5"/>
+                            <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="20"/>
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
                     </subviews>
                     <color key="backgroundColor" red="0.84267109630000003" green="0.2451241612" blue="0.16414961219999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstItem="ytG-q9-xdq" firstAttribute="leading" secondItem="wZI-KO-0ol" secondAttribute="leading" constant="16" id="ABt-ug-opo"/>
-                        <constraint firstItem="kwf-Zr-OXC" firstAttribute="centerX" secondItem="wZI-KO-0ol" secondAttribute="centerX" id="C9d-VV-2k6"/>
-                        <constraint firstItem="kwf-Zr-OXC" firstAttribute="centerY" secondItem="wZI-KO-0ol" secondAttribute="centerY" constant="7" id="Wfq-sV-pVg"/>
+                        <constraint firstItem="WaQ-Wb-BUA" firstAttribute="centerX" secondItem="wZI-KO-0ol" secondAttribute="centerX" id="anV-vr-eEJ"/>
                         <constraint firstItem="ytG-q9-xdq" firstAttribute="centerY" secondItem="wZI-KO-0ol" secondAttribute="centerY" constant="6" id="fbU-fF-UPg"/>
                         <constraint firstAttribute="height" constant="69" id="iAo-0G-V6B"/>
+                        <constraint firstItem="WaQ-Wb-BUA" firstAttribute="centerY" secondItem="wZI-KO-0ol" secondAttribute="centerY" constant="7" id="oC6-Wi-rwK"/>
                     </constraints>
                 </view>
             </subviews>
@@ -530,6 +530,5 @@
     <resources>
         <image name="menu-2" width="64" height="64"/>
         <image name="perfil-amostra" width="300" height="254"/>
-        <image name="vedp" width="500" height="500"/>
     </resources>
 </document>

@@ -27,11 +27,11 @@ class App {
         ("Guarulhos","gr","by WWF","Guarulhos,br"),
         ("Londrina","ln","by Wilson Vieira","Londrina,br")
     ]
+    
     var usarCelsius = true
     
-    
     // Controler de cidade favorita
-    var favorita = "São Paulo"
+    var favorita = "Rio de Janeiro"
     
     func salvarFavorita(comNome nome:String) {
         // Antes de salvar a nova favorita, vamos confirmar que sabemos de quem se trata
