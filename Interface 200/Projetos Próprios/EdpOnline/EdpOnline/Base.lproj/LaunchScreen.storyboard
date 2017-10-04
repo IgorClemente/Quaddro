@@ -34,6 +34,7 @@
                             <constraint firstAttribute="trailing" secondItem="vMn-Gy-YVd" secondAttribute="trailing" id="Ovq-NR-5bW"/>
                         </constraints>
                     </view>
+                    <nil key="simulatedTopBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

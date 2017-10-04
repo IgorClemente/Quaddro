@@ -20,8 +20,18 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TelaRankingController" customModule="EdpOnline" customModuleProvider="target">
             <connections>
+                <outlet property="uiSpinnerActivity" destination="yGH-QY-Rxb" id="Mt4-uv-h8e"/>
                 <outlet property="view" destination="GuX-h6-v4r" id="VEI-mP-xuq"/>
                 <outletCollection property="posicoesDoRanking" destination="amn-7o-9z9" collectionClass="NSMutableArray" id="GFj-vh-hGO"/>
+                <outletCollection property="posicoesDoRanking" destination="5sp-qh-n41" collectionClass="NSMutableArray" id="Eey-17-XNx"/>
+                <outletCollection property="posicoesDoRanking" destination="Ad1-ao-1uX" collectionClass="NSMutableArray" id="l2w-Zt-S56"/>
+                <outletCollection property="posicoesDoRanking" destination="HFJ-K5-QcW" collectionClass="NSMutableArray" id="2CI-hM-lh6"/>
+                <outletCollection property="posicoesDoRanking" destination="9vt-8a-Jwa" collectionClass="NSMutableArray" id="6qg-ec-EP8"/>
+                <outletCollection property="posicoesDoRanking" destination="KsM-mZ-v7o" collectionClass="NSMutableArray" id="FhX-Fh-1XP"/>
+                <outletCollection property="posicoesDoRanking" destination="jWP-ec-nBp" collectionClass="NSMutableArray" id="un6-Cp-URK"/>
+                <outletCollection property="posicoesDoRanking" destination="N8p-fb-tSR" collectionClass="NSMutableArray" id="XHf-51-HOd"/>
+                <outletCollection property="posicoesDoRanking" destination="Me9-K4-9qM" collectionClass="NSMutableArray" id="f2W-Ne-3FO"/>
+                <outletCollection property="posicoesDoRanking" destination="QoO-Om-nOW" collectionClass="NSMutableArray" id="uY1-yC-lsk"/>
             </connections>
         </placeholder>
         <view contentMode="scaleToFill" id="GuX-h6-v4r">
@@ -37,7 +47,7 @@
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="aju-bL-AC3">
                                     <rect key="frame" x="0.0" y="70" width="320" height="930"/>
                                     <subviews>
-                                        <view contentMode="scaleToFill" restorationIdentifier="viewboladona" translatesAutoresizingMaskIntoConstraints="NO" id="amn-7o-9z9">
+                                        <view contentMode="scaleToFill" restorationIdentifier="1" translatesAutoresizingMaskIntoConstraints="NO" id="amn-7o-9z9">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="93"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="perfil-amostra" translatesAutoresizingMaskIntoConstraints="NO" id="irm-N4-wAf">
@@ -47,13 +57,13 @@
                                                         <constraint firstAttribute="height" constant="60" id="mIo-71-LYd"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Igor Clemente" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qPM-6u-BgA">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="1_nome" text="Igor Clemente" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qPM-6u-BgA">
                                                     <rect key="frame" x="92" y="28" width="129" height="27.5"/>
                                                     <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="20"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10.000 pontos" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2nQ-Fm-Y3e">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="1_pontos" text="10.000 pontos" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2nQ-Fm-Y3e">
                                                     <rect key="frame" x="92" y="53.5" width="75" height="13.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                                     <nil key="textColor"/>
@@ -78,7 +88,7 @@
                                                 <constraint firstItem="irm-N4-wAf" firstAttribute="centerY" secondItem="amn-7o-9z9" secondAttribute="centerY" id="wIK-AV-3z9"/>
                                             </constraints>
                                         </view>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5sp-qh-n41">
+                                        <view contentMode="scaleToFill" restorationIdentifier="2" translatesAutoresizingMaskIntoConstraints="NO" id="5sp-qh-n41">
                                             <rect key="frame" x="0.0" y="93" width="320" height="93"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="perfil-amostra" translatesAutoresizingMaskIntoConstraints="NO" id="WOc-UQ-kj9">
@@ -88,13 +98,13 @@
                                                         <constraint firstAttribute="width" constant="60" id="eRV-tS-bPX"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Igor Clemente" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="typ-4N-C3L">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="2_nome" text="Igor Clemente" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="typ-4N-C3L">
                                                     <rect key="frame" x="92" y="28" width="129" height="27.5"/>
                                                     <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="20"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10.000 pontos" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RhF-J1-enF">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="2_pontos" text="10.000 pontos" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RhF-J1-enF">
                                                     <rect key="frame" x="92" y="52.5" width="75" height="13.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                                     <nil key="textColor"/>
@@ -119,7 +129,7 @@
                                                 <constraint firstItem="WOc-UQ-kj9" firstAttribute="centerY" secondItem="5sp-qh-n41" secondAttribute="centerY" id="wI0-bA-a4r"/>
                                             </constraints>
                                         </view>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ad1-ao-1uX">
+                                        <view contentMode="scaleToFill" restorationIdentifier="3" translatesAutoresizingMaskIntoConstraints="NO" id="Ad1-ao-1uX">
                                             <rect key="frame" x="0.0" y="186" width="320" height="93"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="perfil-amostra" translatesAutoresizingMaskIntoConstraints="NO" id="UnZ-zh-pSO">
@@ -129,13 +139,13 @@
                                                         <constraint firstAttribute="width" constant="60" id="vtd-0E-OXT"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Igor Clemente" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qwb-If-eOe">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="3_nome" text="Igor Clemente" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qwb-If-eOe">
                                                     <rect key="frame" x="92" y="28" width="129" height="27.5"/>
                                                     <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="20"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10.000 pontos" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qLe-49-Alp">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="3_pontos" text="10.000 pontos" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qLe-49-Alp">
                                                     <rect key="frame" x="92" y="53.5" width="75" height="13.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                                     <nil key="textColor"/>
@@ -160,7 +170,7 @@
                                                 <constraint firstAttribute="trailing" secondItem="mvs-F7-8mi" secondAttribute="trailing" constant="15" id="zzC-jv-wH7"/>
                                             </constraints>
                                         </view>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HFJ-K5-QcW">
+                                        <view contentMode="scaleToFill" restorationIdentifier="4" translatesAutoresizingMaskIntoConstraints="NO" id="HFJ-K5-QcW">
                                             <rect key="frame" x="0.0" y="279" width="320" height="93"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="perfil-amostra" translatesAutoresizingMaskIntoConstraints="NO" id="5sE-Fj-lCn">
@@ -170,13 +180,13 @@
                                                         <constraint firstAttribute="width" constant="60" id="oUz-Ac-LFw"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Igor Clemente" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kSG-Bf-n6C">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="4_nome" text="Igor Clemente" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kSG-Bf-n6C">
                                                     <rect key="frame" x="92" y="28" width="129" height="27.5"/>
                                                     <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="20"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10.000 pontos" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F93-Hg-eWK">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="4_pontos" text="10.000 pontos" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F93-Hg-eWK">
                                                     <rect key="frame" x="92" y="53.5" width="75" height="13.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                                     <nil key="textColor"/>
@@ -201,7 +211,7 @@
                                                 <constraint firstItem="kSG-Bf-n6C" firstAttribute="leading" secondItem="5sE-Fj-lCn" secondAttribute="trailing" constant="16" id="oEE-xv-ER9"/>
                                             </constraints>
                                         </view>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9vt-8a-Jwa">
+                                        <view contentMode="scaleToFill" restorationIdentifier="5" translatesAutoresizingMaskIntoConstraints="NO" id="9vt-8a-Jwa">
                                             <rect key="frame" x="0.0" y="372" width="320" height="93"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="perfil-amostra" translatesAutoresizingMaskIntoConstraints="NO" id="RLS-tZ-Yh7">
@@ -211,13 +221,13 @@
                                                         <constraint firstAttribute="width" constant="60" id="Ast-lJ-VvT"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Igor Clemente" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Czz-a2-Ocf">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="5_nome" text="Igor Clemente" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Czz-a2-Ocf">
                                                     <rect key="frame" x="92" y="28" width="129" height="27.5"/>
                                                     <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="20"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10.000 pontos" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z8t-x8-K4K">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="5_pontos" text="10.000 pontos" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z8t-x8-K4K">
                                                     <rect key="frame" x="92" y="53.5" width="75" height="13.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                                     <nil key="textColor"/>
@@ -242,7 +252,7 @@
                                                 <constraint firstItem="Czz-a2-Ocf" firstAttribute="leading" secondItem="RLS-tZ-Yh7" secondAttribute="trailing" constant="16" id="vGm-JZ-bcr"/>
                                             </constraints>
                                         </view>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KsM-mZ-v7o">
+                                        <view contentMode="scaleToFill" restorationIdentifier="6" translatesAutoresizingMaskIntoConstraints="NO" id="KsM-mZ-v7o">
                                             <rect key="frame" x="0.0" y="465" width="320" height="93"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="perfil-amostra" translatesAutoresizingMaskIntoConstraints="NO" id="PcY-u4-JQD">
@@ -252,13 +262,13 @@
                                                         <constraint firstAttribute="width" constant="60" id="vaV-2a-dMG"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Igor Clemente" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ary-ai-5G3">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="6_nome" text="Igor Clemente" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ary-ai-5G3">
                                                     <rect key="frame" x="92" y="28" width="129" height="27.5"/>
                                                     <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="20"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10.000 pontos" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YJW-zl-g02">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="6_pontos" text="10.000 pontos" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YJW-zl-g02">
                                                     <rect key="frame" x="92" y="53.5" width="75" height="13.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                                     <nil key="textColor"/>
@@ -283,7 +293,7 @@
                                                 <constraint firstItem="YJW-zl-g02" firstAttribute="leading" secondItem="PcY-u4-JQD" secondAttribute="trailing" constant="16" id="oF5-dR-ORE"/>
                                             </constraints>
                                         </view>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jWP-ec-nBp">
+                                        <view contentMode="scaleToFill" restorationIdentifier="7" translatesAutoresizingMaskIntoConstraints="NO" id="jWP-ec-nBp">
                                             <rect key="frame" x="0.0" y="558" width="320" height="93"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="perfil-amostra" translatesAutoresizingMaskIntoConstraints="NO" id="k6R-36-ESg">
@@ -293,13 +303,13 @@
                                                         <constraint firstAttribute="height" constant="60" id="fBc-8X-K5l"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Igor Clemente" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hCo-7R-2Fj">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="7_nome" text="Igor Clemente" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hCo-7R-2Fj">
                                                     <rect key="frame" x="92" y="28" width="129" height="27.5"/>
                                                     <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="20"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10.000 pontos" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AaV-qd-xn6">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="7_pontos" text="10.000 pontos" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AaV-qd-xn6">
                                                     <rect key="frame" x="92" y="53.5" width="75" height="13.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                                     <nil key="textColor"/>
@@ -324,7 +334,7 @@
                                                 <constraint firstItem="AaV-qd-xn6" firstAttribute="leading" secondItem="k6R-36-ESg" secondAttribute="trailing" constant="16" id="uBQ-Lw-iiN"/>
                                             </constraints>
                                         </view>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="N8p-fb-tSR">
+                                        <view contentMode="scaleToFill" restorationIdentifier="8" translatesAutoresizingMaskIntoConstraints="NO" id="N8p-fb-tSR">
                                             <rect key="frame" x="0.0" y="651" width="320" height="93"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="perfil-amostra" translatesAutoresizingMaskIntoConstraints="NO" id="SYU-Op-cwO">
@@ -334,13 +344,13 @@
                                                         <constraint firstAttribute="width" constant="60" id="arG-IW-Nfr"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Igor Clemente" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rrR-FS-HOk">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="8_nome" text="Igor Clemente" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rrR-FS-HOk">
                                                     <rect key="frame" x="92" y="28" width="129" height="27.5"/>
                                                     <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="20"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10.000 pontos" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LzW-Pi-kpl">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="8_pontos" text="10.000 pontos" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LzW-Pi-kpl">
                                                     <rect key="frame" x="92" y="53.5" width="75" height="13.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                                     <nil key="textColor"/>
@@ -365,7 +375,7 @@
                                                 <constraint firstItem="rrR-FS-HOk" firstAttribute="centerY" secondItem="N8p-fb-tSR" secondAttribute="centerY" constant="-5" id="oue-u1-Sws"/>
                                             </constraints>
                                         </view>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Me9-K4-9qM">
+                                        <view contentMode="scaleToFill" restorationIdentifier="9" translatesAutoresizingMaskIntoConstraints="NO" id="Me9-K4-9qM">
                                             <rect key="frame" x="0.0" y="744" width="320" height="93"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="perfil-amostra" translatesAutoresizingMaskIntoConstraints="NO" id="fJK-Qj-rge">
@@ -375,13 +385,13 @@
                                                         <constraint firstAttribute="width" constant="60" id="hIi-4T-Fcs"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Igor Clemente" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tuk-Zb-v7B">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="9_nome" text="Igor Clemente" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tuk-Zb-v7B">
                                                     <rect key="frame" x="92" y="28" width="129" height="27.5"/>
                                                     <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="20"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10.000 pontos" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t5d-yT-aw1">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="9_pontos" text="10.000 pontos" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t5d-yT-aw1">
                                                     <rect key="frame" x="92" y="53.5" width="75" height="13.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                                     <nil key="textColor"/>
@@ -406,7 +416,7 @@
                                                 <constraint firstItem="fJK-Qj-rge" firstAttribute="leading" secondItem="Me9-K4-9qM" secondAttribute="leading" constant="16" id="tX9-ej-UOE"/>
                                             </constraints>
                                         </view>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QoO-Om-nOW">
+                                        <view contentMode="scaleToFill" restorationIdentifier="10" translatesAutoresizingMaskIntoConstraints="NO" id="QoO-Om-nOW">
                                             <rect key="frame" x="0.0" y="837" width="320" height="93"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="perfil-amostra" translatesAutoresizingMaskIntoConstraints="NO" id="MPd-ET-HHC">
@@ -416,13 +426,13 @@
                                                         <constraint firstAttribute="height" constant="60" id="UEQ-nb-01O"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Igor Clemente" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hQu-yI-m8g">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="10_nome" text="Igor Clemente" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hQu-yI-m8g">
                                                     <rect key="frame" x="92" y="28.5" width="129" height="27.5"/>
                                                     <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="20"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10.000 pontos" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w8c-Ah-1DG">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="10_pontos" text="10.000 pontos" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w8c-Ah-1DG">
                                                     <rect key="frame" x="92" y="53" width="75" height="13.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                                     <nil key="textColor"/>
@@ -497,6 +507,9 @@
                         <constraint firstItem="WaQ-Wb-BUA" firstAttribute="centerY" secondItem="wZI-KO-0ol" secondAttribute="centerY" constant="7" id="oC6-Wi-rwK"/>
                     </constraints>
                 </view>
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="yGH-QY-Rxb">
+                    <rect key="frame" x="150" y="230" width="20" height="20"/>
+                </activityIndicatorView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
@@ -504,6 +517,8 @@
                 <constraint firstAttribute="bottom" secondItem="iKb-u4-Byl" secondAttribute="bottom" id="LCL-9h-vYf"/>
                 <constraint firstItem="wZI-KO-0ol" firstAttribute="leading" secondItem="GuX-h6-v4r" secondAttribute="leading" id="OtB-hM-oIm"/>
                 <constraint firstItem="wZI-KO-0ol" firstAttribute="top" secondItem="GuX-h6-v4r" secondAttribute="top" id="aQ8-ZZ-0nU"/>
+                <constraint firstItem="yGH-QY-Rxb" firstAttribute="centerX" secondItem="GuX-h6-v4r" secondAttribute="centerX" id="asx-Tc-bbG"/>
+                <constraint firstItem="yGH-QY-Rxb" firstAttribute="centerY" secondItem="GuX-h6-v4r" secondAttribute="centerY" id="bFB-Ki-1bC"/>
                 <constraint firstItem="iKb-u4-Byl" firstAttribute="leading" secondItem="GuX-h6-v4r" secondAttribute="leading" id="gC8-fC-89s"/>
                 <constraint firstAttribute="trailing" secondItem="iKb-u4-Byl" secondAttribute="trailing" id="mPW-o3-WDA"/>
                 <constraint firstItem="jPD-Xw-X3q" firstAttribute="width" secondItem="GuX-h6-v4r" secondAttribute="width" id="pvm-og-wbl"/>
