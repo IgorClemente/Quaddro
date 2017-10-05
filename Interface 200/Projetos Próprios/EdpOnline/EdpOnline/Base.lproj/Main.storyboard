@@ -40,7 +40,11 @@
                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <items>
                                             <barButtonItem style="plain" systemItem="flexibleSpace" id="BRz-OT-OLT"/>
-                                            <barButtonItem image="menu" id="yG0-UU-1Ab"/>
+                                            <barButtonItem title="submenuArvores" image="menu" id="yG0-UU-1Ab">
+                                                <connections>
+                                                    <action selector="tapSubMenu:" destination="BYZ-38-t0r" id="Cm9-iV-dGc"/>
+                                                </connections>
+                                            </barButtonItem>
                                             <barButtonItem style="plain" systemItem="flexibleSpace" id="oMH-7c-awr"/>
                                             <barButtonItem width="19" style="plain" systemItem="fixedSpace" id="6Xt-a1-phE"/>
                                             <barButtonItem style="plain" id="ab5-zN-nJb">
@@ -56,7 +60,11 @@
                                             </barButtonItem>
                                             <barButtonItem width="19" style="plain" systemItem="fixedSpace" id="RZQ-Vn-pod"/>
                                             <barButtonItem style="plain" systemItem="flexibleSpace" id="4CY-U1-eyd"/>
-                                            <barButtonItem image="map" id="UTA-cZ-jWD"/>
+                                            <barButtonItem title="submenuMapa" image="map" id="UTA-cZ-jWD">
+                                                <connections>
+                                                    <action selector="tapSubMenu:" destination="BYZ-38-t0r" id="iqU-wQ-V6U"/>
+                                                </connections>
+                                            </barButtonItem>
                                             <barButtonItem style="plain" systemItem="flexibleSpace" id="Vis-f7-hsa"/>
                                         </items>
                                         <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -86,7 +94,7 @@
                                         <rect key="frame" x="88" y="7" width="232" height="60"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1950" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ISX-0H-3xC">
-                                                <rect key="frame" x="157" y="12" width="75" height="25"/>
+                                                <rect key="frame" x="156.5" y="12" width="75.5" height="25"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="25" id="pwm-In-Q8v"/>
                                                 </constraints>
@@ -95,7 +103,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Igor Clemente" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fch-XO-HsQ">
-                                                <rect key="frame" x="0.0" y="5" width="157" height="27"/>
+                                                <rect key="frame" x="0.0" y="5" width="156.5" height="27"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="27" id="yOI-Wh-TG5"/>
                                                 </constraints>
@@ -104,7 +112,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="São Paulo, SP" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5UI-vp-Skq">
-                                                <rect key="frame" x="21" y="32" width="136" height="17"/>
+                                                <rect key="frame" x="21" y="32" width="135.5" height="17"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="17" id="CZV-lp-Xaf"/>
                                                 </constraints>
@@ -121,17 +129,17 @@
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pontos" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Gw-91-mzW">
-                                                <rect key="frame" x="176" y="36" width="37" height="14"/>
+                                                <rect key="frame" x="173" y="36" width="42" height="14"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="37" id="iU4-a9-mEB"/>
+                                                    <constraint firstAttribute="width" constant="42" id="iU4-a9-mEB"/>
                                                     <constraint firstAttribute="height" constant="14" id="zHF-Qj-Fpz"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="11"/>
+                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="12"/>
                                                 <color key="textColor" red="0.7019608021" green="0.7019608021" blue="0.7019608021" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zVX-RG-wCn">
-                                                <rect key="frame" x="156" y="12" width="1" height="36"/>
+                                                <rect key="frame" x="155.5" y="12" width="1" height="36"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="1" id="KIx-hz-awm"/>
@@ -183,10 +191,10 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="69"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ist-PV-5j7">
-                                        <rect key="frame" x="16" y="26.5" width="30" height="30"/>
+                                        <rect key="frame" x="16" y="24" width="35" height="35"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="30" id="1cS-KV-GXZ"/>
-                                            <constraint firstAttribute="width" constant="30" id="KAh-xh-fwh"/>
+                                            <constraint firstAttribute="height" constant="35" id="1cS-KV-GXZ"/>
+                                            <constraint firstAttribute="width" constant="35" id="KAh-xh-fwh"/>
                                         </constraints>
                                         <state key="normal" image="menu-2"/>
                                         <connections>
@@ -274,6 +282,10 @@
                             <constraint firstAttribute="trailing" secondItem="8H7-Ld-CD9" secondAttribute="trailing" id="vwv-ky-VRT"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outletCollection property="botoesSubMenu" destination="UTA-cZ-jWD" collectionClass="NSMutableArray" id="ppB-Ca-w7H"/>
+                        <outletCollection property="botoesSubMenu" destination="yG0-UU-1Ab" collectionClass="NSMutableArray" id="K6K-hO-fvl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <customObject id="xjz-Oz-87L" customClass="RoundViewCustom" customModule="EdpOnline" customModuleProvider="target">

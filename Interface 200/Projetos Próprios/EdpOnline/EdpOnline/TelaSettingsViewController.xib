@@ -35,10 +35,10 @@
                     <rect key="frame" x="0.0" y="0.0" width="320" height="69"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6aN-zU-J52">
-                            <rect key="frame" x="16" y="26.5" width="30" height="30"/>
+                            <rect key="frame" x="16" y="24" width="35" height="35"/>
                             <constraints>
-                                <constraint firstAttribute="width" constant="30" id="W62-cF-tgl"/>
-                                <constraint firstAttribute="height" constant="30" id="xDG-ms-r8B"/>
+                                <constraint firstAttribute="width" constant="35" id="W62-cF-tgl"/>
+                                <constraint firstAttribute="height" constant="35" id="xDG-ms-r8B"/>
                             </constraints>
                             <state key="normal" image="menu-2"/>
                             <connections>
@@ -70,28 +70,28 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xG4-AY-4tQ">
                     <rect key="frame" x="0.0" y="195" width="320" height="164"/>
                     <subviews>
-                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" placeholder="WebSite" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8q7-94-MvZ">
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" placeholder="WebSite" textAlignment="center" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8q7-94-MvZ">
                             <rect key="frame" x="7" y="51" width="306" height="32.5"/>
                             <color key="backgroundColor" red="0.94727436740000004" green="0.95223391909999999" blue="0.95223391909999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <nil key="textColor"/>
                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences" autocorrectionType="no" spellCheckingType="no" keyboardType="alphabet" keyboardAppearance="light" returnKeyType="continue" enablesReturnKeyAutomatically="YES" textContentType="url"/>
                         </textField>
-                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" placeholder="Número de Telefone" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0xM-zb-tO1">
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" placeholder="Número de Telefone" textAlignment="center" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0xM-zb-tO1">
                             <rect key="frame" x="7" y="126.5" width="306" height="33"/>
                             <color key="backgroundColor" red="0.94727436740000004" green="0.95223391909999999" blue="0.95223391909999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <nil key="textColor"/>
                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
                             <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="phonePad" keyboardAppearance="light" returnKeyType="continue" enablesReturnKeyAutomatically="YES" textContentType="tel"/>
                         </textField>
-                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" placeholder="Nome Completo" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vcH-56-8xU">
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" placeholder="Nome Completo" textAlignment="center" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vcH-56-8xU">
                             <rect key="frame" x="7" y="13" width="306" height="33"/>
                             <color key="backgroundColor" red="0.94727436740000004" green="0.95223391909999999" blue="0.95223391909999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <nil key="textColor"/>
                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
                             <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" spellCheckingType="no" keyboardType="alphabet" keyboardAppearance="light" returnKeyType="continue" enablesReturnKeyAutomatically="YES" textContentType="name"/>
                         </textField>
-                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" placeholder="Senha" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZVL-0P-EZ3">
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" placeholder="Senha" textAlignment="center" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZVL-0P-EZ3">
                             <rect key="frame" x="7" y="88.5" width="306" height="33"/>
                             <color key="backgroundColor" red="0.94727436740000004" green="0.95223391909999999" blue="0.95223391909999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <nil key="textColor"/>

@@ -11,6 +11,8 @@ import UIKit
 
 class ViewController: UIViewController,UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
+    @IBOutlet var botoesSubMenu: [UIBarButtonItem]?
+    
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }
@@ -21,6 +23,34 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate, UINaviga
     
     @IBAction func uiTapAbreMenuPrincipal() {
         ControllerLateralMenu.controller.criarMenuPrincipal(self)
+    }
+    
+    @IBAction func tapSubMenu(_ sender: UIBarButtonItem) {
+        guard let botoes = botoesSubMenu else {
+            return
+        }
+        if let titulo = sender.title {
+           switch titulo {
+             case "submenuMapa":
+                botoes.forEach {
+                    if $0.title == "submenuArvores" {
+                       $0.tintColor = UIColor.gray
+                    } else {
+                        $0.tintColor = UIColor.white
+                    }
+                }
+             case "submenuArvores":
+                botoes.forEach {
+                    if $0.title == "submenuMapa" {
+                       $0.tintColor = UIColor.gray
+                    } else {
+                        $0.tintColor = UIColor.white
+                    }
+                }
+             default:
+                break
+           }
+        }
     }
     
     @IBAction func tapTiraFoto() {

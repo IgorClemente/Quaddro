@@ -11,8 +11,17 @@ import UIKit
 
 class TelaPremiosController:UIViewController {
     
+    @IBOutlet var viewsPremios: [UIView]?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        guard let views = viewsPremios else {
+            return
+        }
+        views.forEach { v in
+            v.layer.borderColor = UIColor.darkGray.cgColor
+            v.layer.borderWidth = 0.8
+        }
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {

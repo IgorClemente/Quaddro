@@ -10,12 +10,14 @@ import UIKit
 
 class TelaRankingController:UIViewController {
     
+    @IBOutlet weak var uiViewFundoRanking: UIView?
     @IBOutlet var posicoesDoRanking: [UIView]?
     @IBOutlet weak var uiSpinnerActivity: UIActivityIndicatorView?
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         
+        uiViewFundoRanking?.backgroundColor = UIColor.white
         guard let posicoes = posicoesDoRanking else {
             return
         }
@@ -26,12 +28,16 @@ class TelaRankingController:UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
+        
+        uiViewFundoRanking?.backgroundColor = UIColor.lightGray
         guard let posicoes = posicoesDoRanking,
               let usuarios = RankingInfo() else {
             return
         }
         for (index,posicao) in posicoes.enumerated() {
             posicao.isHidden = false
+            posicao.layer.borderColor = UIColor.black.cgColor
+            
             var count = 0
             posicao.subviews.enumerated().forEach { (i,p) in
                 if let identificador = p.restorationIdentifier, let campo = p as? UILabel{
