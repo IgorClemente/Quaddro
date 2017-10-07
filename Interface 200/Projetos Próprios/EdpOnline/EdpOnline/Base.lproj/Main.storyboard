@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina3_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -52,10 +51,6 @@
                                                     <rect key="frame" x="160" y="22" width="0.0" height="0.0"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="1" id="2XK-vt-VOA"/>
-                                                        <constraint firstAttribute="height" constant="36" id="8eA-dR-L97"/>
-                                                    </constraints>
                                                 </view>
                                             </barButtonItem>
                                             <barButtonItem width="19" style="plain" systemItem="fixedSpace" id="RZQ-Vn-pod"/>
@@ -201,7 +196,7 @@
                                             <action selector="uiTapAbreMenuPrincipal" destination="BYZ-38-t0r" eventType="touchUpInside" id="f8U-6l-9Ra"/>
                                         </connections>
                                     </button>
-                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" insetsLayoutMarginsFromSafeArea="NO" image="vedp" translatesAutoresizingMaskIntoConstraints="NO" id="gXZ-c8-T6R">
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" image="vedp" translatesAutoresizingMaskIntoConstraints="NO" id="gXZ-c8-T6R">
                                         <rect key="frame" x="120" y="16.5" width="80" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="a0D-Or-OW2"/>
@@ -251,7 +246,7 @@
                                     <constraint firstItem="HaB-L9-d7V" firstAttribute="centerY" secondItem="GGN-Y0-5H0" secondAttribute="centerY" id="vbu-zi-n2w"/>
                                 </constraints>
                             </view>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" insetsLayoutMarginsFromSafeArea="NO" image="map-view-image" translatesAutoresizingMaskIntoConstraints="NO" id="8H7-Ld-CD9">
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" image="map-view-image" translatesAutoresizingMaskIntoConstraints="NO" id="8H7-Ld-CD9">
                                 <rect key="frame" x="0.0" y="281" width="320" height="124"/>
                             </imageView>
                         </subviews>
@@ -301,7 +296,7 @@
                     </connections>
                 </customObject>
             </objects>
-            <point key="canvasLocation" x="91.875" y="156.25"/>
+            <point key="canvasLocation" x="98" y="154"/>
         </scene>
     </scenes>
     <resources>

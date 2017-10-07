@@ -24,7 +24,6 @@ func forecast(forCity city:String) -> (temp:Int, icon:String)? {
         let temp      = weather["temp"] as? Int,
         let icons     = info["weather"] as? [[String:Any]],
         let iconCode  = icons.first?["main"] as? String else {
-            print("Falhou Busca")
             return nil
     }
     
