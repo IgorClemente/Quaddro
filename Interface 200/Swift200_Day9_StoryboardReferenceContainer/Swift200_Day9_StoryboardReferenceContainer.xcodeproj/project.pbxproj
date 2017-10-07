@@ -13,6 +13,7 @@
 		43574C891F8944E7006886B8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43574C881F8944E7006886B8 /* Assets.xcassets */; };
 		43574C8C1F8944E7006886B8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43574C8A1F8944E7006886B8 /* LaunchScreen.storyboard */; };
 		43574C9E1F895199006886B8 /* TabNovidades.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43574C9C1F895199006886B8 /* TabNovidades.storyboard */; };
+		43574CA01F8951D3006886B8 /* TabRecents.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43574C9F1F8951D3006886B8 /* TabRecents.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		43574C8B1F8944E7006886B8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		43574C8D1F8944E7006886B8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		43574C9D1F895199006886B8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/TabNovidades.storyboard; sourceTree = "<group>"; };
+		43574C9F1F8951D3006886B8 /* TabRecents.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TabRecents.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +70,7 @@
 			isa = PBXGroup;
 			children = (
 				43574C851F8944E7006886B8 /* Main.storyboard */,
+				43574C9F1F8951D3006886B8 /* TabRecents.storyboard */,
 				43574C9C1F895199006886B8 /* TabNovidades.storyboard */,
 				43574C8A1F8944E7006886B8 /* LaunchScreen.storyboard */,
 			);
@@ -159,6 +162,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				43574CA01F8951D3006886B8 /* TabRecents.storyboard in Resources */,
 				43574C8C1F8944E7006886B8 /* LaunchScreen.storyboard in Resources */,
 				43574C891F8944E7006886B8 /* Assets.xcassets in Resources */,
 				43574C9E1F895199006886B8 /* TabNovidades.storyboard in Resources */,

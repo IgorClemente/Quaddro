@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="FdG-iR-ezN">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Recentes-->
+        <scene sceneID="Hr3-1F-pct">
+            <objects>
+                <viewController id="KIT-0x-FM0" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="iaX-WA-2at"/>
+                        <viewControllerLayoutGuide type="bottom" id="wGv-3P-erk"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="JLP-0b-PB0">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e9K-is-TOC">
+                                <rect key="frame" x="102" y="302" width="170" height="63"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Apagar Histórico"/>
+                                <connections>
+                                    <segue destination="zfg-sg-OFK" kind="show" id="Fsm-fb-nN3"/>
+                                </connections>
+                            </button>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lF0-kB-6vn">
+                                <rect key="frame" x="0.0" y="522" width="375" height="88"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="88" id="O2u-ZP-gZj"/>
+                                    <constraint firstAttribute="width" constant="375" id="QN8-sD-Bup"/>
+                                </constraints>
+                                <connections>
+                                    <segue destination="jRM-Zv-aWv" kind="embed" id="usL-Gf-YTg"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="lF0-kB-6vn" firstAttribute="leading" secondItem="JLP-0b-PB0" secondAttribute="leading" id="2Rq-qa-aCJ"/>
+                            <constraint firstItem="wGv-3P-erk" firstAttribute="top" secondItem="lF0-kB-6vn" secondAttribute="bottom" constant="8" symbolic="YES" id="4aa-t6-2hm"/>
+                            <constraint firstAttribute="trailing" secondItem="lF0-kB-6vn" secondAttribute="trailing" id="gal-qr-T83"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Recentes" id="Tgd-iD-uTn"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XBC-0D-Yrr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2786" y="506"/>
+        </scene>
+        <!--login-->
+        <scene sceneID="8DU-jX-VK3">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="login" storyboardName="Main" referencedIdentifier="login" id="jRM-Zv-aWv" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5ed-78-Dzc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3035" y="954"/>
+        </scene>
+        <!--Histórico-->
+        <scene sceneID="AW5-OX-U8b">
+            <objects>
+                <viewController id="zfg-sg-OFK" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="hF4-P4-e5f"/>
+                        <viewControllerLayoutGuide type="bottom" id="A9Q-a9-QXc"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Ain-vi-OYr">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Histórico" id="FV9-Jk-fmQ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pj2-cB-vI1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3546" y="506"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Hlc-eQ-bjB">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="FdG-iR-ezN" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" systemItem="recents" id="m8r-86-rey"/>
+                    <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="6P6-3d-s5H">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="KIT-0x-FM0" kind="relationship" relationship="rootViewController" id="Qcc-F5-uss"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zyz-IQ-ghz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2017" y="506"/>
+        </scene>
+    </scenes>
+</document>

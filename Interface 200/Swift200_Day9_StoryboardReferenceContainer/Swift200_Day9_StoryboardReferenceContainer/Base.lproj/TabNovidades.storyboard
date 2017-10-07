@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="L3d-71-9GA">
+    <device id="retina3_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -14,11 +18,11 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q2l-yC-zdt">
-                                <rect key="frame" x="164" y="318" width="46" height="30"/>
+                                <rect key="frame" x="137" y="225" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <state key="normal" title="Lojas"/>
@@ -26,14 +30,37 @@
                                     <segue destination="wUe-cZ-xAe" kind="show" id="pJ0-aw-XD0"/>
                                 </connections>
                             </button>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yKw-u8-yyp">
+                                <rect key="frame" x="0.0" y="343" width="320" height="88"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="320" id="Guk-S4-dSE"/>
+                                    <constraint firstAttribute="height" constant="88" id="z0o-Vm-M1t"/>
+                                </constraints>
+                                <connections>
+                                    <segue destination="hAh-gT-bNJ" kind="embed" id="xbA-Qk-jRW"/>
+                                </connections>
+                            </containerView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="yKw-u8-yyp" secondAttribute="trailing" id="02M-nR-Ckq"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="yKw-u8-yyp" secondAttribute="bottom" id="rCW-sM-HZe"/>
+                            <constraint firstItem="yKw-u8-yyp" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="wnh-aM-bq2"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Novidades" id="98D-3a-Sz9"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2856.8000000000002" y="-160.56971514242881"/>
+        </scene>
+        <!--login-->
+        <scene sceneID="vUP-3l-BtZ">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Main" referencedIdentifier="login" id="hAh-gT-bNJ" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="r8I-J0-qSH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3098" y="345"/>
         </scene>
         <!--Lojas-->
         <scene sceneID="E4E-wM-7pl">
@@ -44,7 +71,7 @@
                         <viewControllerLayoutGuide type="bottom" id="kvD-sa-AE8"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="4r3-X7-zgo">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bxL-Xd-0iy">
@@ -74,7 +101,7 @@
                         <viewControllerLayoutGuide type="bottom" id="asd-en-R6Y"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="AiG-lw-ffK">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uNx-Uj-kvW">
@@ -111,7 +138,7 @@
                         <viewControllerLayoutGuide type="bottom" id="WWo-va-ftm"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="6tg-39-aEB">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -130,7 +157,7 @@
                         <viewControllerLayoutGuide type="bottom" id="LYt-zP-aYz"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="i7N-lt-uTE">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -147,7 +174,6 @@
                     <tabBarItem key="tabBarItem" badgeValue="8" systemItem="favorites" id="cxq-aE-jV1"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4_7.fullscreen"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="dnP-4a-1fC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
