@@ -1,17 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina3_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="DevanagariSangamMN.ttc">
-            <string>DevanagariSangamMN</string>
+        <array key="HelveticaNeueLights.ttc">
+            <string>HelveticaNeue-Light</string>
         </array>
     </customFonts>
     <scenes>
@@ -46,9 +47,20 @@
                                             </barButtonItem>
                                             <barButtonItem style="plain" systemItem="flexibleSpace" id="oMH-7c-awr"/>
                                             <barButtonItem width="19" style="plain" systemItem="fixedSpace" id="6Xt-a1-phE"/>
+                                            <barButtonItem style="plain" id="qdN-mz-JqP">
+                                                <view key="customView" alpha="0.20000000000000001" contentMode="scaleToFill" id="K1B-G3-1CE">
+                                                    <rect key="frame" x="159.5" y="8" width="1" height="28"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="1" id="8HH-aW-eW0"/>
+                                                        <constraint firstAttribute="height" constant="36" id="gzv-a2-yKy"/>
+                                                    </constraints>
+                                                </view>
+                                            </barButtonItem>
                                             <barButtonItem style="plain" id="ab5-zN-nJb">
                                                 <view key="customView" alpha="0.34999999999999998" contentMode="scaleToFill" id="ECg-QK-BBJ">
-                                                    <rect key="frame" x="160" y="22" width="0.0" height="0.0"/>
+                                                    <rect key="frame" x="160.5" y="22" width="0.0" height="0.0"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </view>
@@ -224,17 +236,46 @@
                                             <constraint firstAttribute="width" constant="55" id="xeg-TO-o0c"/>
                                         </constraints>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Guarulhos" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1jW-Xj-bcd">
-                                        <rect key="frame" x="75" y="10" width="108" height="21"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="19"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Guarulhos" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1jW-Xj-bcd">
+                                        <rect key="frame" x="82" y="10" width="104.5" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="21" id="8Gn-g0-iA2"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="24"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="150 Pontos" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I6M-TU-9wT">
-                                        <rect key="frame" x="229" y="26" width="83" height="23"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES"/>
-                                        <fontDescription key="fontDescription" name="DevanagariSangamMN" family="Devanagari Sangam MN" pointSize="17"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fJV-kR-nUg">
+                                        <rect key="frame" x="82" y="43" width="111" height="21"/>
+                                        <color key="backgroundColor" red="1" green="0.80000001190000003" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="111" id="esw-eW-VRI"/>
+                                            <constraint firstAttribute="height" constant="21" id="yck-NF-bju"/>
+                                        </constraints>
+                                    </view>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="-2" translatesAutoresizingMaskIntoConstraints="NO" id="uCB-p9-hhI">
+                                        <rect key="frame" x="81" y="41" width="112" height="24"/>
+                                        <subviews>
+                                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" image="estrela_edp" translatesAutoresizingMaskIntoConstraints="NO" id="KNU-mm-ahR">
+                                                <rect key="frame" x="0.0" y="0.0" width="24" height="24"/>
+                                            </imageView>
+                                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" image="estrela_edp" translatesAutoresizingMaskIntoConstraints="NO" id="6rL-TC-tLe">
+                                                <rect key="frame" x="22" y="0.0" width="24" height="24"/>
+                                            </imageView>
+                                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" image="estrela_edp" translatesAutoresizingMaskIntoConstraints="NO" id="KSB-it-VZl">
+                                                <rect key="frame" x="44" y="0.0" width="24" height="24"/>
+                                            </imageView>
+                                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" image="estrela_edp" translatesAutoresizingMaskIntoConstraints="NO" id="4vA-nk-qO5">
+                                                <rect key="frame" x="66" y="0.0" width="24" height="24"/>
+                                            </imageView>
+                                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" image="estrela_edp" translatesAutoresizingMaskIntoConstraints="NO" id="Rko-RK-cRY">
+                                                <rect key="frame" x="88" y="0.0" width="24" height="24"/>
+                                            </imageView>
+                                        </subviews>
+                                    </stackView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="150 Pontos" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I6M-TU-9wT">
+                                        <rect key="frame" x="209.5" y="26" width="100.5" height="24"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="20"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -242,7 +283,15 @@
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="HaB-L9-d7V" firstAttribute="leading" secondItem="GGN-Y0-5H0" secondAttribute="leading" constant="10" id="4YI-Su-bAX"/>
+                                    <constraint firstAttribute="trailing" secondItem="I6M-TU-9wT" secondAttribute="trailing" constant="10" id="5N8-YD-jjz"/>
+                                    <constraint firstAttribute="bottom" secondItem="fJV-kR-nUg" secondAttribute="bottom" constant="11" id="9w2-84-6Sl"/>
+                                    <constraint firstAttribute="bottom" secondItem="uCB-p9-hhI" secondAttribute="bottom" constant="10" id="Ds8-YB-tXn"/>
+                                    <constraint firstItem="1jW-Xj-bcd" firstAttribute="leading" secondItem="HaB-L9-d7V" secondAttribute="trailing" constant="17" id="F0r-cp-dTS"/>
+                                    <constraint firstItem="uCB-p9-hhI" firstAttribute="top" secondItem="1jW-Xj-bcd" secondAttribute="bottom" constant="10" id="ODf-bS-khj"/>
                                     <constraint firstAttribute="height" constant="75" id="QUW-Ym-ejb"/>
+                                    <constraint firstItem="I6M-TU-9wT" firstAttribute="centerY" secondItem="GGN-Y0-5H0" secondAttribute="centerY" id="Uh6-cm-tlQ"/>
+                                    <constraint firstItem="uCB-p9-hhI" firstAttribute="leading" secondItem="HaB-L9-d7V" secondAttribute="trailing" constant="16" id="ald-Vt-GkW"/>
+                                    <constraint firstItem="fJV-kR-nUg" firstAttribute="leading" secondItem="HaB-L9-d7V" secondAttribute="trailing" constant="17" id="pXv-dL-C3G"/>
                                     <constraint firstItem="HaB-L9-d7V" firstAttribute="centerY" secondItem="GGN-Y0-5H0" secondAttribute="centerY" id="vbu-zi-n2w"/>
                                 </constraints>
                             </view>
@@ -296,12 +345,13 @@
                     </connections>
                 </customObject>
             </objects>
-            <point key="canvasLocation" x="98" y="154"/>
+            <point key="canvasLocation" x="97.5" y="153.75"/>
         </scene>
     </scenes>
     <resources>
         <image name="Vagas-de-Emprego-em-Guarulhos-SP-600x450" width="300" height="225"/>
         <image name="c337f7af69df35c605cab3615f3f2165" width="1024" height="768"/>
+        <image name="estrela_edp" width="24" height="24"/>
         <image name="map" width="21" height="21"/>
         <image name="map-pin-silhouette-3" width="64" height="64"/>
         <image name="map-view-image" width="315" height="198"/>

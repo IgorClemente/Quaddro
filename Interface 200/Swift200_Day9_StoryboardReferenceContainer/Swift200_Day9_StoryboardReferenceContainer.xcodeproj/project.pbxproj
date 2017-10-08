@@ -135,6 +135,7 @@
 				TargetAttributes = {
 					43574C7D1F8944E7006886B8 = {
 						CreatedOnToolsVersion = 8.3;
+						DevelopmentTeam = 6M52ZTU4DG;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -311,6 +312,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 6M52ZTU4DG;
 				INFOPLIST_FILE = Swift200_Day9_StoryboardReferenceContainer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "br.com.swift.Swift200-Day9-StoryboardReferenceContainer";
@@ -323,6 +325,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 6M52ZTU4DG;
 				INFOPLIST_FILE = Swift200_Day9_StoryboardReferenceContainer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "br.com.swift.Swift200-Day9-StoryboardReferenceContainer";

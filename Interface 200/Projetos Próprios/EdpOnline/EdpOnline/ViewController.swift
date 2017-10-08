@@ -19,6 +19,7 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate, UINaviga
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        botoesSubMenu?[0].tintColor = UIColor.gray
     }
     
     @IBAction func uiTapAbreMenuPrincipal() {
