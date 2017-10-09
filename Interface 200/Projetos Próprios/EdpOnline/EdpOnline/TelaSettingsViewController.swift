@@ -21,10 +21,14 @@ class TelaSettingsViewController : UIViewController {
             guard let identificadorCampo = campo.restorationIdentifier else {
                 return
             }
-            let fieldImagem   = UIImageView(frame: CGRect(x:5,y:0,width:20, height:20))
+            let fieldImagem   = UIImageView(frame: CGRect(x:10,y:0,width:20, height:20))
             fieldImagem.image = UIImage(named:"field\(identificadorCampo)")
+            
             let view   = UIView()
-            view.frame = CGRect(x:0,y:0,width:25,height:20)
+            view.frame = CGRect(x:0,y:0,width:40,height:20)
+            view.layer.borderColor = UIColor.clear.cgColor
+            view.layer.borderWidth = 10
+            
             view.addSubview(fieldImagem)
             campo.leftView     = view
             campo.leftViewMode = .always

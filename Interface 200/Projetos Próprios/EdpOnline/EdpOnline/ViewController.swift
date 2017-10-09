@@ -103,7 +103,7 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate, UINaviga
             arvoreItem.backgroundColor = UIColor(white:0.9,alpha:0.7)
             
             let  fotoArvore   = UIImageView()
-            fotoArvore.frame  = CGRect(x:20,y:25,width:50,height:50)
+            fotoArvore.frame  = CGRect(x:20,y:20,width:60,height:60)
             fotoArvore.image  = UIImage(named:"arvore-fio-demo")
             fotoArvore.contentMode = .scaleAspectFill
             fotoArvore.layer.cornerRadius = fotoArvore.frame.width/2

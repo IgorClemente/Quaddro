@@ -98,9 +98,9 @@ class LateralMenuView : UIView {
         
         limitadores.append(contentsOf:[NSLayoutConstraint(item: botaoPremios,attribute: .centerX,relatedBy: .equal,toItem: menuPrincipal, attribute: .centerX, multiplier: 1.0, constant: 0)])
         
-        limitadores.append(contentsOf:[NSLayoutConstraint(item: botaoPremios, attribute: .width,relatedBy: .equal,toItem: menuPrincipal,attribute: .width,multiplier: 0.3,constant: 0)])
+        limitadores.append(contentsOf:[NSLayoutConstraint(item: botaoPremios, attribute: .width,relatedBy: .equal,toItem: menuPrincipal,attribute: .width,multiplier: 0.4,constant: 0)])
         
-        limitadores.append(contentsOf:[NSLayoutConstraint(item: botaoPremios, attribute: .height,relatedBy: .equal,toItem: nil,attribute: .notAnAttribute, multiplier: 1.0, constant: 40)])
+        limitadores.append(contentsOf:[NSLayoutConstraint(item: botaoPremios, attribute: .height,relatedBy: .equal,toItem: nil,attribute: .notAnAttribute, multiplier: 1.0, constant: 49)])
         
         limitadores.append(contentsOf:
             [NSLayoutConstraint(item: botaoSettings,attribute: .bottom, relatedBy: .equal,toItem:
