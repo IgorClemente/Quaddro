@@ -35,31 +35,41 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate, UINaviga
             return
         }
         if let titulo = sender.title {
-           switch titulo {
-             case "submenuMapa":
-               viewSubMapa.isHidden = false
-               botoes.forEach {
-                if $0.title == "submenuArvores" {
-                   UIView.animate(withDuration: 0.6) {
-                     $0.tintColor = UIColor.gray
-                     viewSubArvore.isHidden = true
-                   }
+          switch titulo {
+            case "submenuMapa":
+               UIView.animate(withDuration: 0.3,animations: {
+                    viewSubMapa.alpha    = 1.0
+               }){ _ in viewSubMapa.isHidden = false }
+               for botao in botoes {
+                 if botao.title == "submenuArvores" {
+                    UIView.animate(withDuration: 0.3, animations: {
+                      viewSubArvore.alpha = 0.0
+                    }){ _ in
+                      botao.tintColor = UIColor.gray
+                      viewSubArvore.isHidden = true
+                    }
                  } else {
-                        $0.tintColor = UIColor.white
+                        botao.tintColor = UIColor.white
                  }
                }
-             case "submenuArvores":
-               viewSubArvore.isHidden = false
-               botoes.forEach {
-                if $0.title == "submenuMapa" {
-                   $0.tintColor = UIColor.gray
-                   viewSubMapa.isHidden = true
+            case "submenuArvores":
+               UIView.animate(withDuration: 0.3, animations: {
+                 viewSubArvore.alpha    = 1.0
+               }){ _ in viewSubArvore.isHidden = false }
+               for botao in botoes {
+                 if botao.title == "submenuMapa" {
+                    UIView.animate(withDuration: 0.3, animations: {
+                      viewSubMapa.alpha = 0.0
+                    }){ _ in
+                      botao.tintColor = UIColor.gray
+                      viewSubMapa.isHidden = true
+                    }
                  } else {
-                        $0.tintColor = UIColor.white
+                        botao.tintColor = UIColor.white
                  }
                }
-             default:
-                break
+            default:
+               break
            }
         }
     }
