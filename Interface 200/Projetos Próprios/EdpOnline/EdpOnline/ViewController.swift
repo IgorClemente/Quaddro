@@ -50,7 +50,7 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate, UINaviga
         if let titulo = sender.title {
           switch titulo {
             case "submenuMapa":
-               UIView.animate(withDuration: 0.3,animations: {
+               UIView.animate(withDuration: 0.2,animations: {
                     viewSubMapa.alpha    = 1.0
                }){ _ in viewSubMapa.isHidden = false }
                for botao in botoes {
@@ -66,7 +66,7 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate, UINaviga
                  }
                }
             case "submenuArvores":
-               UIView.animate(withDuration: 0.3, animations: {
+               UIView.animate(withDuration: 0.2, animations: {
                  viewSubArvore.alpha    = 1.0
                }){ _ in viewSubArvore.isHidden = false }
                for botao in botoes {
@@ -100,7 +100,7 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate, UINaviga
         for arvore in 0...10 {
             let arvoreItem    = UIView()
             arvoreItem.frame  = CGRect(x:0,y:CGFloat(arvore*102),width:comprimentoViewArvores,height:100)
-            arvoreItem.backgroundColor = UIColor.gray
+            arvoreItem.backgroundColor = UIColor(white:0.9,alpha:0.7)
             
             let  fotoArvore   = UIImageView()
             fotoArvore.frame  = CGRect(x:20,y:25,width:50,height:50)

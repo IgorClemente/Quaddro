@@ -19,6 +19,10 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TelaSettingsViewController" customModule="EdpOnline" customModuleProvider="target">
             <connections>
                 <outlet property="view" destination="Q1j-1K-qjm" id="aYE-zx-SAv"/>
+                <outletCollection property="uiTextFieldsSettings" destination="TKx-Wd-y34" collectionClass="NSMutableArray" id="8Aq-cw-FLh"/>
+                <outletCollection property="uiTextFieldsSettings" destination="2YU-0H-uN1" collectionClass="NSMutableArray" id="ZNx-DC-Fku"/>
+                <outletCollection property="uiTextFieldsSettings" destination="MvH-5s-Aqd" collectionClass="NSMutableArray" id="7XA-Og-kEe"/>
+                <outletCollection property="uiTextFieldsSettings" destination="2VW-UV-Lei" collectionClass="NSMutableArray" id="AD3-XD-7XQ"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -141,28 +145,28 @@
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="CEa-zZ-AHy">
                     <rect key="frame" x="16" y="204" width="288" height="192.5"/>
                     <subviews>
-                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Nome Completo" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TKx-Wd-y34">
+                        <textField opaque="NO" contentMode="scaleToFill" restorationIdentifier="NomeCompleto" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Nome Completo" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TKx-Wd-y34">
                             <rect key="frame" x="0.0" y="0.0" width="288" height="41"/>
                             <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="textColor"/>
                             <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
                             <textInputTraits key="textInputTraits"/>
                         </textField>
-                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="E-mail" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2YU-0H-uN1">
+                        <textField opaque="NO" contentMode="scaleToFill" restorationIdentifier="Email" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="E-mail" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2YU-0H-uN1">
                             <rect key="frame" x="0.0" y="51" width="288" height="40.5"/>
                             <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="textColor"/>
                             <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
                             <textInputTraits key="textInputTraits"/>
                         </textField>
-                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Senha" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MvH-5s-Aqd">
+                        <textField opaque="NO" contentMode="scaleToFill" restorationIdentifier="Senha" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Senha" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MvH-5s-Aqd">
                             <rect key="frame" x="0.0" y="101.5" width="288" height="40.5"/>
                             <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="textColor"/>
                             <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
                             <textInputTraits key="textInputTraits"/>
                         </textField>
-                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Número de Telefone" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2VW-UV-Lei">
+                        <textField opaque="NO" contentMode="scaleToFill" restorationIdentifier="NumeroTelefone" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Número de Telefone" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2VW-UV-Lei">
                             <rect key="frame" x="0.0" y="152" width="288" height="40.5"/>
                             <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="textColor"/>
