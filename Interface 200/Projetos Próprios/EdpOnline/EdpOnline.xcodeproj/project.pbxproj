@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		D00983CA1F7B21E2002EF018 /* TelaSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00983C91F7B21E2002EF018 /* TelaSettingsViewController.swift */; };
 		D00EC05D1F7BCF9000198884 /* LateralMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00EC05C1F7BCF9000198884 /* LateralMenuController.swift */; };
+		D01F91131F8B0B50006EAC9B /* SubMenuArvores.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01F91121F8B0B50006EAC9B /* SubMenuArvores.swift */; };
 		D01FBF921F81B2C800908931 /* TelaPremiosController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D01FBF911F81B2C800908931 /* TelaPremiosController.xib */; };
 		D01FBF941F81B2E400908931 /* TelaPremiosController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01FBF931F81B2E400908931 /* TelaPremiosController.swift */; };
 		D06B22861F8459B100FD0EAE /* InfoRankingForacaster.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06B22851F8459B100FD0EAE /* InfoRankingForacaster.swift */; };
@@ -27,6 +28,7 @@
 /* Begin PBXFileReference section */
 		D00983C91F7B21E2002EF018 /* TelaSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TelaSettingsViewController.swift; sourceTree = "<group>"; };
 		D00EC05C1F7BCF9000198884 /* LateralMenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LateralMenuController.swift; sourceTree = "<group>"; };
+		D01F91121F8B0B50006EAC9B /* SubMenuArvores.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubMenuArvores.swift; sourceTree = "<group>"; };
 		D01FBF911F81B2C800908931 /* TelaPremiosController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TelaPremiosController.xib; sourceTree = "<group>"; };
 		D01FBF931F81B2E400908931 /* TelaPremiosController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TelaPremiosController.swift; sourceTree = "<group>"; };
 		D06B22851F8459B100FD0EAE /* InfoRankingForacaster.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoRankingForacaster.swift; sourceTree = "<group>"; };
@@ -55,11 +57,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D01F91111F8B03FA006EAC9B /* Layout */ = {
+			isa = PBXGroup;
+			children = (
+				D01FBF931F81B2E400908931 /* TelaPremiosController.swift */,
+				D00983C91F7B21E2002EF018 /* TelaSettingsViewController.swift */,
+				D0F8282A1F814B3A00AB9688 /* TelaRankingController.swift */,
+				D01F91121F8B0B50006EAC9B /* SubMenuArvores.swift */,
+			);
+			name = Layout;
+			sourceTree = "<group>";
+		};
 		D01FBF901F81B1E200908931 /* TelaPremiosController */ = {
 			isa = PBXGroup;
 			children = (
 				D01FBF911F81B2C800908931 /* TelaPremiosController.xib */,
-				D01FBF931F81B2E400908931 /* TelaPremiosController.swift */,
 			);
 			name = TelaPremiosController;
 			sourceTree = "<group>";
@@ -67,6 +79,7 @@
 		D0B1874A1F79C3EF00DC1D5B /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				D01F91111F8B03FA006EAC9B /* Layout */,
 				D0BFBF051F756A92009B1F11 /* AppDelegate.swift */,
 				D0BFBF071F756A92009B1F11 /* ViewController.swift */,
 				D00EC05C1F7BCF9000198884 /* LateralMenuController.swift */,
@@ -108,7 +121,6 @@
 			isa = PBXGroup;
 			children = (
 				D0B1874F1F79C4CA00DC1D5B /* TelaRankingController.xib */,
-				D0F8282A1F814B3A00AB9688 /* TelaRankingController.swift */,
 			);
 			name = TelaRankingController;
 			sourceTree = "<group>";
@@ -117,7 +129,6 @@
 			isa = PBXGroup;
 			children = (
 				D0B187521F79D5D700DC1D5B /* TelaSettingsViewController.xib */,
-				D00983C91F7B21E2002EF018 /* TelaSettingsViewController.swift */,
 			);
 			name = TelaSettingsViewController;
 			sourceTree = "<group>";
@@ -230,6 +241,7 @@
 			files = (
 				D00EC05D1F7BCF9000198884 /* LateralMenuController.swift in Sources */,
 				D00983CA1F7B21E2002EF018 /* TelaSettingsViewController.swift in Sources */,
+				D01F91131F8B0B50006EAC9B /* SubMenuArvores.swift in Sources */,
 				D0BFBF081F756A92009B1F11 /* ViewController.swift in Sources */,
 				D0F88F941F7861F2003424BA /* LateralMenuView.swift in Sources */,
 				D06B22861F8459B100FD0EAE /* InfoRankingForacaster.swift in Sources */,

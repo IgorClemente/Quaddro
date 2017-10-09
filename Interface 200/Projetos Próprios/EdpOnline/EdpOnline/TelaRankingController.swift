@@ -28,12 +28,11 @@ class TelaRankingController:UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        
-        uiViewFundoRanking?.backgroundColor = UIColor.lightGray
         guard let posicoes = posicoesDoRanking,
               let usuarios = RankingInfo() else {
             return
         }
+        uiViewFundoRanking?.backgroundColor = UIColor.lightGray
         for (index,posicao) in posicoes.enumerated() {
             posicao.isHidden = false
             posicao.layer.borderColor = UIColor.black.cgColor

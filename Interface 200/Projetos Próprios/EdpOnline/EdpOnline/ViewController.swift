@@ -11,6 +11,8 @@ import UIKit
 
 class ViewController: UIViewController,UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
+    @IBOutlet weak var viewSubMenuArvores: UIView?
+    @IBOutlet weak var viewSubMenuMapa: UIView?
     @IBOutlet var botoesSubMenu: [UIBarButtonItem]?
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
@@ -27,27 +29,35 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate, UINaviga
     }
     
     @IBAction func tapSubMenu(_ sender: UIBarButtonItem) {
-        guard let botoes = botoesSubMenu else {
+        guard let botoes  = botoesSubMenu,
+              let viewSubMapa = viewSubMenuMapa,
+              let viewSubArvore = viewSubMenuArvores else {
             return
         }
         if let titulo = sender.title {
            switch titulo {
              case "submenuMapa":
-                botoes.forEach {
-                    if $0.title == "submenuArvores" {
-                       $0.tintColor = UIColor.gray
-                    } else {
+               viewSubMapa.isHidden = false
+               botoes.forEach {
+                if $0.title == "submenuArvores" {
+                   UIView.animate(withDuration: 0.6) {
+                     $0.tintColor = UIColor.gray
+                     viewSubArvore.isHidden = true
+                   }
+                 } else {
                         $0.tintColor = UIColor.white
-                    }
-                }
+                 }
+               }
              case "submenuArvores":
-                botoes.forEach {
-                    if $0.title == "submenuMapa" {
-                       $0.tintColor = UIColor.gray
-                    } else {
+               viewSubArvore.isHidden = false
+               botoes.forEach {
+                if $0.title == "submenuMapa" {
+                   $0.tintColor = UIColor.gray
+                   viewSubMapa.isHidden = true
+                 } else {
                         $0.tintColor = UIColor.white
-                    }
-                }
+                 }
+               }
              default:
                 break
            }
@@ -74,7 +84,7 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate, UINaviga
             let imagemData = UIImagePNGRepresentation(imagemCapturada)
             let imagemComprimida = UIImage(data: imagemData ?? Data())
             UIImageWriteToSavedPhotosAlbum(imagemComprimida ?? UIImage(), nil, nil, nil)
-            
+
             picker.dismiss(animated: true, completion: nil)
             let alerta = UIAlertController(title:"Salvo", message:"Imagem Salva com Sucesso !", preferredStyle: .alert)
             let confirmaAction = UIAlertAction(title: "Ok", style: .default, handler: nil)
