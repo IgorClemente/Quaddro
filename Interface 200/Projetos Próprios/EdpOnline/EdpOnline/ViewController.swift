@@ -11,6 +11,7 @@ import UIKit
 
 class ViewController: UIViewController,UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
+    @IBOutlet weak var uiStackViewArvores: UIStackView?
     @IBOutlet weak var viewSubMenuArvores: UIView?
     @IBOutlet weak var viewSubMenuMapa: UIView?
     @IBOutlet var botoesSubMenu: [UIBarButtonItem]?
@@ -21,7 +22,19 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate, UINaviga
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        botoesSubMenu?[0].tintColor = UIColor.gray
+        guard let botoes = botoesSubMenu,
+              let subArvores = viewSubMenuArvores,
+              let subMapa = viewSubMenuMapa else {
+            return
+        }
+        for (index,botao) in botoes.enumerated() {
+            if index == 0 {
+                botao.tintColor = UIColor.gray
+                subArvores.isHidden = false
+                subMapa.isHidden = true
+            }
+        }
+        createMenuArvores()
     }
     
     @IBAction func uiTapAbreMenuPrincipal() {
@@ -76,6 +89,29 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate, UINaviga
     
     @IBAction func tapTiraFoto() {
         self.tirarFoto()
+    }
+
+    func createMenuArvores() {
+        guard let stackArvores = self.uiStackViewArvores,
+              let viewMenuArvores = self.viewSubMenuArvores else {
+            return
+        }
+        let comprimentoViewArvores = self.view.frame.width
+        for arvore in 0...10 {
+            let arvoreItem    = UIView()
+            arvoreItem.frame  = CGRect(x:0,y:CGFloat(arvore*102),width:comprimentoViewArvores,height:100)
+            arvoreItem.backgroundColor = UIColor.gray
+            
+            let  fotoArvore   = UIImageView()
+            fotoArvore.frame  = CGRect(x:20,y:25,width:50,height:50)
+            fotoArvore.image  = UIImage(named:"arvore-fio-demo")
+            fotoArvore.contentMode = .scaleAspectFill
+            fotoArvore.layer.cornerRadius = fotoArvore.frame.width/2
+            fotoArvore.clipsToBounds = true
+          
+            arvoreItem.addSubview(fotoArvore)
+            stackArvores.addSubview(arvoreItem)
+        }
     }
     
     func tirarFoto() {
