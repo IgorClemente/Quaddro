@@ -59,13 +59,13 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="1_nome" text="Igor Clemente" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qPM-6u-BgA">
-                                                    <rect key="frame" x="92" y="30.5" width="129" height="27.5"/>
+                                                    <rect key="frame" x="92" y="28" width="129" height="27.5"/>
                                                     <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="20"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="1_pontos" text="10.000 pontos" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2nQ-Fm-Y3e">
-                                                    <rect key="frame" x="92" y="59.5" width="87" height="16"/>
+                                                    <rect key="frame" x="92" y="56.5" width="87" height="16"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                     <color key="textColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -81,10 +81,10 @@
                                             <constraints>
                                                 <constraint firstItem="qPM-6u-BgA" firstAttribute="leading" secondItem="irm-N4-wAf" secondAttribute="trailing" constant="16" id="8pX-5Q-9QC"/>
                                                 <constraint firstItem="xIp-nl-my1" firstAttribute="centerY" secondItem="amn-7o-9z9" secondAttribute="centerY" id="IM7-aY-Umk"/>
-                                                <constraint firstItem="qPM-6u-BgA" firstAttribute="centerY" secondItem="amn-7o-9z9" secondAttribute="centerY" constant="-5" id="KZq-Zb-lLy"/>
+                                                <constraint firstItem="qPM-6u-BgA" firstAttribute="centerY" secondItem="amn-7o-9z9" secondAttribute="centerY" constant="-8" id="KZq-Zb-lLy"/>
                                                 <constraint firstItem="2nQ-Fm-Y3e" firstAttribute="leading" secondItem="irm-N4-wAf" secondAttribute="trailing" constant="16" id="Uvg-k3-4c0"/>
                                                 <constraint firstAttribute="trailing" secondItem="xIp-nl-my1" secondAttribute="trailing" constant="15" id="eJh-Te-qgK"/>
-                                                <constraint firstItem="2nQ-Fm-Y3e" firstAttribute="centerY" secondItem="amn-7o-9z9" secondAttribute="centerY" constant="18" id="n5O-IT-X16"/>
+                                                <constraint firstItem="2nQ-Fm-Y3e" firstAttribute="centerY" secondItem="amn-7o-9z9" secondAttribute="centerY" constant="15" id="n5O-IT-X16"/>
                                                 <constraint firstItem="irm-N4-wAf" firstAttribute="leading" secondItem="amn-7o-9z9" secondAttribute="leading" constant="16" id="n9d-Ko-Zol"/>
                                                 <constraint firstItem="irm-N4-wAf" firstAttribute="centerY" secondItem="amn-7o-9z9" secondAttribute="centerY" id="wIK-AV-3z9"/>
                                             </constraints>
@@ -100,13 +100,13 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="2_nome" text="Igor Clemente" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="typ-4N-C3L">
-                                                    <rect key="frame" x="92" y="31" width="129" height="27.5"/>
+                                                    <rect key="frame" x="92" y="28" width="129" height="27.5"/>
                                                     <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="20"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="2_pontos" text="10.000 pontos" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RhF-J1-enF">
-                                                    <rect key="frame" x="92" y="59" width="87" height="16"/>
+                                                    <rect key="frame" x="92" y="56.5" width="87" height="16"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                     <color key="textColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -122,11 +122,11 @@
                                             <constraints>
                                                 <constraint firstItem="typ-4N-C3L" firstAttribute="leading" secondItem="WOc-UQ-kj9" secondAttribute="trailing" constant="16" id="1Do-fL-a9A"/>
                                                 <constraint firstItem="1kX-63-gbc" firstAttribute="centerY" secondItem="5sp-qh-n41" secondAttribute="centerY" id="6vQ-4K-6pe"/>
-                                                <constraint firstItem="RhF-J1-enF" firstAttribute="centerY" secondItem="5sp-qh-n41" secondAttribute="centerY" constant="18" id="9FD-oY-ZeJ"/>
+                                                <constraint firstItem="RhF-J1-enF" firstAttribute="centerY" secondItem="5sp-qh-n41" secondAttribute="centerY" constant="15" id="9FD-oY-ZeJ"/>
                                                 <constraint firstItem="WOc-UQ-kj9" firstAttribute="leading" secondItem="5sp-qh-n41" secondAttribute="leading" constant="16" id="E9d-oS-S3B"/>
                                                 <constraint firstAttribute="trailing" secondItem="1kX-63-gbc" secondAttribute="trailing" constant="15" id="Faz-71-BLb"/>
                                                 <constraint firstItem="RhF-J1-enF" firstAttribute="leading" secondItem="WOc-UQ-kj9" secondAttribute="trailing" constant="16" id="c78-bw-JYv"/>
-                                                <constraint firstItem="typ-4N-C3L" firstAttribute="centerY" secondItem="5sp-qh-n41" secondAttribute="centerY" constant="-5" id="ex4-aW-VwM"/>
+                                                <constraint firstItem="typ-4N-C3L" firstAttribute="centerY" secondItem="5sp-qh-n41" secondAttribute="centerY" constant="-8" id="ex4-aW-VwM"/>
                                                 <constraint firstItem="WOc-UQ-kj9" firstAttribute="centerY" secondItem="5sp-qh-n41" secondAttribute="centerY" id="wI0-bA-a4r"/>
                                             </constraints>
                                         </view>
@@ -141,13 +141,13 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="3_nome" text="Igor Clemente" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qwb-If-eOe">
-                                                    <rect key="frame" x="92" y="31" width="129" height="27.5"/>
+                                                    <rect key="frame" x="92" y="28" width="129" height="27.5"/>
                                                     <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="20"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="3_pontos" text="10.000 pontos" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qLe-49-Alp">
-                                                    <rect key="frame" x="92" y="59" width="87" height="16"/>
+                                                    <rect key="frame" x="92" y="57" width="87" height="16"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                     <color key="textColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -161,8 +161,8 @@
                                             </subviews>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <constraints>
-                                                <constraint firstItem="qLe-49-Alp" firstAttribute="centerY" secondItem="Ad1-ao-1uX" secondAttribute="centerY" constant="18" id="K2b-vA-26a"/>
-                                                <constraint firstItem="qwb-If-eOe" firstAttribute="centerY" secondItem="Ad1-ao-1uX" secondAttribute="centerY" constant="-5" id="YUv-VF-Lkw"/>
+                                                <constraint firstItem="qLe-49-Alp" firstAttribute="centerY" secondItem="Ad1-ao-1uX" secondAttribute="centerY" constant="15" id="K2b-vA-26a"/>
+                                                <constraint firstItem="qwb-If-eOe" firstAttribute="centerY" secondItem="Ad1-ao-1uX" secondAttribute="centerY" constant="-8" id="YUv-VF-Lkw"/>
                                                 <constraint firstItem="UnZ-zh-pSO" firstAttribute="centerY" secondItem="Ad1-ao-1uX" secondAttribute="centerY" id="c92-HR-DZ5"/>
                                                 <constraint firstItem="UnZ-zh-pSO" firstAttribute="leading" secondItem="Ad1-ao-1uX" secondAttribute="leading" constant="16" id="riu-0d-dfQ"/>
                                                 <constraint firstItem="qwb-If-eOe" firstAttribute="leading" secondItem="UnZ-zh-pSO" secondAttribute="trailing" constant="16" id="v4g-vZ-KkM"/>
@@ -182,13 +182,13 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="4_nome" text="Igor Clemente" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kSG-Bf-n6C">
-                                                    <rect key="frame" x="92" y="31" width="129" height="27.5"/>
+                                                    <rect key="frame" x="92" y="27.5" width="129" height="27.5"/>
                                                     <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="20"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="4_pontos" text="10.000 pontos" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F93-Hg-eWK">
-                                                    <rect key="frame" x="92" y="59.5" width="87" height="16"/>
+                                                    <rect key="frame" x="92" y="56.5" width="87" height="16"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                     <color key="textColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -202,10 +202,10 @@
                                             </subviews>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <constraints>
-                                                <constraint firstItem="kSG-Bf-n6C" firstAttribute="centerY" secondItem="HFJ-K5-QcW" secondAttribute="centerY" constant="-5" id="0cw-6m-CpM"/>
+                                                <constraint firstItem="kSG-Bf-n6C" firstAttribute="centerY" secondItem="HFJ-K5-QcW" secondAttribute="centerY" constant="-8" id="0cw-6m-CpM"/>
                                                 <constraint firstItem="5sE-Fj-lCn" firstAttribute="centerY" secondItem="HFJ-K5-QcW" secondAttribute="centerY" id="BeH-an-uW7"/>
                                                 <constraint firstItem="n1h-KG-flg" firstAttribute="centerY" secondItem="HFJ-K5-QcW" secondAttribute="centerY" id="Ceq-Z0-g7V"/>
-                                                <constraint firstItem="F93-Hg-eWK" firstAttribute="centerY" secondItem="HFJ-K5-QcW" secondAttribute="centerY" constant="18" id="SKA-z3-PuC"/>
+                                                <constraint firstItem="F93-Hg-eWK" firstAttribute="centerY" secondItem="HFJ-K5-QcW" secondAttribute="centerY" constant="15" id="SKA-z3-PuC"/>
                                                 <constraint firstItem="F93-Hg-eWK" firstAttribute="leading" secondItem="5sE-Fj-lCn" secondAttribute="trailing" constant="16" id="haN-5w-BMa"/>
                                                 <constraint firstAttribute="trailing" secondItem="n1h-KG-flg" secondAttribute="trailing" constant="15" id="jNt-hl-UgL"/>
                                                 <constraint firstItem="5sE-Fj-lCn" firstAttribute="leading" secondItem="HFJ-K5-QcW" secondAttribute="leading" constant="16" id="nW2-1k-6V9"/>
@@ -223,13 +223,13 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="5_nome" text="Igor Clemente" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Czz-a2-Ocf">
-                                                    <rect key="frame" x="92" y="30.5" width="129" height="27.5"/>
+                                                    <rect key="frame" x="92" y="27.5" width="129" height="27.5"/>
                                                     <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="20"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="5_pontos" text="10.000 pontos" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z8t-x8-K4K">
-                                                    <rect key="frame" x="92" y="59.5" width="87" height="16"/>
+                                                    <rect key="frame" x="92" y="56.5" width="87" height="16"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                     <color key="textColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -244,11 +244,11 @@
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <constraints>
                                                 <constraint firstItem="RLS-tZ-Yh7" firstAttribute="leading" secondItem="9vt-8a-Jwa" secondAttribute="leading" constant="16" id="3t9-8e-xlz"/>
-                                                <constraint firstItem="Z8t-x8-K4K" firstAttribute="centerY" secondItem="9vt-8a-Jwa" secondAttribute="centerY" constant="18" id="EBn-tA-BX4"/>
+                                                <constraint firstItem="Z8t-x8-K4K" firstAttribute="centerY" secondItem="9vt-8a-Jwa" secondAttribute="centerY" constant="15" id="EBn-tA-BX4"/>
                                                 <constraint firstItem="RLS-tZ-Yh7" firstAttribute="centerY" secondItem="9vt-8a-Jwa" secondAttribute="centerY" id="Q3p-wA-AYJ"/>
                                                 <constraint firstItem="lLi-YY-ObA" firstAttribute="centerY" secondItem="9vt-8a-Jwa" secondAttribute="centerY" id="RqU-PM-On1"/>
                                                 <constraint firstAttribute="trailing" secondItem="lLi-YY-ObA" secondAttribute="trailing" constant="15" id="SIF-WW-M81"/>
-                                                <constraint firstItem="Czz-a2-Ocf" firstAttribute="centerY" secondItem="9vt-8a-Jwa" secondAttribute="centerY" constant="-5" id="bSw-iS-ShJ"/>
+                                                <constraint firstItem="Czz-a2-Ocf" firstAttribute="centerY" secondItem="9vt-8a-Jwa" secondAttribute="centerY" constant="-8" id="bSw-iS-ShJ"/>
                                                 <constraint firstItem="Z8t-x8-K4K" firstAttribute="leading" secondItem="RLS-tZ-Yh7" secondAttribute="trailing" constant="16" id="mht-gN-vn8"/>
                                                 <constraint firstItem="Czz-a2-Ocf" firstAttribute="leading" secondItem="RLS-tZ-Yh7" secondAttribute="trailing" constant="16" id="vGm-JZ-bcr"/>
                                             </constraints>
@@ -264,13 +264,13 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="6_nome" text="Igor Clemente" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ary-ai-5G3">
-                                                    <rect key="frame" x="92" y="30.5" width="129" height="27.5"/>
+                                                    <rect key="frame" x="92" y="28" width="129" height="27.5"/>
                                                     <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="20"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="6_pontos" text="10.000 pontos" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YJW-zl-g02">
-                                                    <rect key="frame" x="92" y="59.5" width="87" height="16"/>
+                                                    <rect key="frame" x="92" y="56.5" width="87" height="16"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                     <color key="textColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -285,8 +285,8 @@
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <constraints>
                                                 <constraint firstAttribute="trailing" secondItem="RBh-jv-7bw" secondAttribute="trailing" constant="15" id="4GT-Qh-rvJ"/>
-                                                <constraint firstItem="Ary-ai-5G3" firstAttribute="centerY" secondItem="KsM-mZ-v7o" secondAttribute="centerY" constant="-5" id="AxW-Ya-iIf"/>
-                                                <constraint firstItem="YJW-zl-g02" firstAttribute="centerY" secondItem="KsM-mZ-v7o" secondAttribute="centerY" constant="18" id="DGT-sW-IJ0"/>
+                                                <constraint firstItem="Ary-ai-5G3" firstAttribute="centerY" secondItem="KsM-mZ-v7o" secondAttribute="centerY" constant="-8" id="AxW-Ya-iIf"/>
+                                                <constraint firstItem="YJW-zl-g02" firstAttribute="centerY" secondItem="KsM-mZ-v7o" secondAttribute="centerY" constant="15" id="DGT-sW-IJ0"/>
                                                 <constraint firstItem="RBh-jv-7bw" firstAttribute="centerY" secondItem="KsM-mZ-v7o" secondAttribute="centerY" id="EhO-WG-nhX"/>
                                                 <constraint firstItem="PcY-u4-JQD" firstAttribute="centerY" secondItem="KsM-mZ-v7o" secondAttribute="centerY" id="NLl-EZ-iLg"/>
                                                 <constraint firstItem="Ary-ai-5G3" firstAttribute="leading" secondItem="PcY-u4-JQD" secondAttribute="trailing" constant="16" id="f9h-6w-fDI"/>
@@ -305,13 +305,13 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="7_nome" text="Igor Clemente" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hCo-7R-2Fj">
-                                                    <rect key="frame" x="92" y="31" width="129" height="27.5"/>
+                                                    <rect key="frame" x="92" y="28" width="129" height="27.5"/>
                                                     <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="20"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="7_pontos" text="10.000 pontos" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AaV-qd-xn6">
-                                                    <rect key="frame" x="92" y="59" width="87" height="16"/>
+                                                    <rect key="frame" x="92" y="56.5" width="87" height="16"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                     <color key="textColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -325,11 +325,11 @@
                                             </subviews>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <constraints>
-                                                <constraint firstItem="AaV-qd-xn6" firstAttribute="centerY" secondItem="jWP-ec-nBp" secondAttribute="centerY" constant="18" id="1Pj-wU-LSO"/>
+                                                <constraint firstItem="AaV-qd-xn6" firstAttribute="centerY" secondItem="jWP-ec-nBp" secondAttribute="centerY" constant="15" id="1Pj-wU-LSO"/>
                                                 <constraint firstItem="UH3-z4-VzD" firstAttribute="centerY" secondItem="jWP-ec-nBp" secondAttribute="centerY" id="7C0-3o-6ji"/>
                                                 <constraint firstItem="k6R-36-ESg" firstAttribute="leading" secondItem="jWP-ec-nBp" secondAttribute="leading" constant="16" id="7Fz-Zf-Zaw"/>
                                                 <constraint firstItem="k6R-36-ESg" firstAttribute="centerY" secondItem="jWP-ec-nBp" secondAttribute="centerY" id="8Zl-Xo-dl3"/>
-                                                <constraint firstItem="hCo-7R-2Fj" firstAttribute="centerY" secondItem="jWP-ec-nBp" secondAttribute="centerY" constant="-5" id="9gg-xj-MUz"/>
+                                                <constraint firstItem="hCo-7R-2Fj" firstAttribute="centerY" secondItem="jWP-ec-nBp" secondAttribute="centerY" constant="-8" id="9gg-xj-MUz"/>
                                                 <constraint firstAttribute="trailing" secondItem="UH3-z4-VzD" secondAttribute="trailing" constant="13" id="k5q-Ty-apd"/>
                                                 <constraint firstItem="hCo-7R-2Fj" firstAttribute="leading" secondItem="k6R-36-ESg" secondAttribute="trailing" constant="16" id="rQs-IP-4El"/>
                                                 <constraint firstItem="AaV-qd-xn6" firstAttribute="leading" secondItem="k6R-36-ESg" secondAttribute="trailing" constant="16" id="uBQ-Lw-iiN"/>
@@ -346,13 +346,13 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="8_nome" text="Igor Clemente" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rrR-FS-HOk">
-                                                    <rect key="frame" x="92" y="31" width="129" height="27.5"/>
+                                                    <rect key="frame" x="92" y="28" width="129" height="27.5"/>
                                                     <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="20"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="8_pontos" text="10.000 pontos" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LzW-Pi-kpl">
-                                                    <rect key="frame" x="92" y="59" width="87" height="16"/>
+                                                    <rect key="frame" x="92" y="57" width="87" height="16"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                     <color key="textColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -371,9 +371,9 @@
                                                 <constraint firstItem="SYU-Op-cwO" firstAttribute="leading" secondItem="N8p-fb-tSR" secondAttribute="leading" constant="16" id="RAV-FC-UCi"/>
                                                 <constraint firstItem="rrR-FS-HOk" firstAttribute="leading" secondItem="SYU-Op-cwO" secondAttribute="trailing" constant="16" id="RCk-Ew-wce"/>
                                                 <constraint firstItem="LzW-Pi-kpl" firstAttribute="leading" secondItem="SYU-Op-cwO" secondAttribute="trailing" constant="16" id="dV4-eT-sYc"/>
-                                                <constraint firstItem="LzW-Pi-kpl" firstAttribute="centerY" secondItem="N8p-fb-tSR" secondAttribute="centerY" constant="18" id="dq0-mq-gaM"/>
+                                                <constraint firstItem="LzW-Pi-kpl" firstAttribute="centerY" secondItem="N8p-fb-tSR" secondAttribute="centerY" constant="15" id="dq0-mq-gaM"/>
                                                 <constraint firstItem="SYU-Op-cwO" firstAttribute="centerY" secondItem="N8p-fb-tSR" secondAttribute="centerY" id="oly-vV-dYQ"/>
-                                                <constraint firstItem="rrR-FS-HOk" firstAttribute="centerY" secondItem="N8p-fb-tSR" secondAttribute="centerY" constant="-5" id="oue-u1-Sws"/>
+                                                <constraint firstItem="rrR-FS-HOk" firstAttribute="centerY" secondItem="N8p-fb-tSR" secondAttribute="centerY" constant="-8" id="oue-u1-Sws"/>
                                             </constraints>
                                         </view>
                                         <view contentMode="scaleToFill" restorationIdentifier="9" translatesAutoresizingMaskIntoConstraints="NO" id="Me9-K4-9qM">
@@ -387,13 +387,13 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="9_nome" text="Igor Clemente" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tuk-Zb-v7B">
-                                                    <rect key="frame" x="92" y="31" width="129" height="27.5"/>
+                                                    <rect key="frame" x="92" y="27.5" width="129" height="27.5"/>
                                                     <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="20"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="9_pontos" text="10.000 pontos" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t5d-yT-aw1">
-                                                    <rect key="frame" x="92" y="59.5" width="87" height="16"/>
+                                                    <rect key="frame" x="92" y="56.5" width="87" height="16"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                     <color key="textColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -408,11 +408,11 @@
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <constraints>
                                                 <constraint firstItem="Tuk-Zb-v7B" firstAttribute="leading" secondItem="fJK-Qj-rge" secondAttribute="trailing" constant="16" id="0C7-HK-uIH"/>
-                                                <constraint firstItem="Tuk-Zb-v7B" firstAttribute="centerY" secondItem="Me9-K4-9qM" secondAttribute="centerY" constant="-5" id="KKF-UT-gKL"/>
+                                                <constraint firstItem="Tuk-Zb-v7B" firstAttribute="centerY" secondItem="Me9-K4-9qM" secondAttribute="centerY" constant="-8" id="KKF-UT-gKL"/>
                                                 <constraint firstItem="t5d-yT-aw1" firstAttribute="leading" secondItem="fJK-Qj-rge" secondAttribute="trailing" constant="16" id="M6l-ce-b4x"/>
                                                 <constraint firstItem="59N-oE-k4G" firstAttribute="centerY" secondItem="Me9-K4-9qM" secondAttribute="centerY" id="for-TC-EYL"/>
                                                 <constraint firstItem="fJK-Qj-rge" firstAttribute="centerY" secondItem="Me9-K4-9qM" secondAttribute="centerY" id="idj-JC-Ntv"/>
-                                                <constraint firstItem="t5d-yT-aw1" firstAttribute="centerY" secondItem="Me9-K4-9qM" secondAttribute="centerY" constant="18" id="muG-EF-Htu"/>
+                                                <constraint firstItem="t5d-yT-aw1" firstAttribute="centerY" secondItem="Me9-K4-9qM" secondAttribute="centerY" constant="15" id="muG-EF-Htu"/>
                                                 <constraint firstAttribute="trailing" secondItem="59N-oE-k4G" secondAttribute="trailing" constant="15" id="pJX-nB-bp8"/>
                                                 <constraint firstItem="fJK-Qj-rge" firstAttribute="leading" secondItem="Me9-K4-9qM" secondAttribute="leading" constant="16" id="tX9-ej-UOE"/>
                                             </constraints>
@@ -428,13 +428,13 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="10_nome" text="Igor Clemente" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hQu-yI-m8g">
-                                                    <rect key="frame" x="92" y="31" width="129" height="27.5"/>
+                                                    <rect key="frame" x="92" y="27.5" width="129" height="27.5"/>
                                                     <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="20"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="10_pontos" text="10.000 pontos" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w8c-Ah-1DG">
-                                                    <rect key="frame" x="92" y="59.5" width="87" height="16"/>
+                                                    <rect key="frame" x="92" y="56.5" width="87" height="16"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                     <color key="textColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -451,10 +451,10 @@
                                                 <constraint firstItem="MPd-ET-HHC" firstAttribute="centerY" secondItem="QoO-Om-nOW" secondAttribute="centerY" id="1E5-0c-f4x"/>
                                                 <constraint firstAttribute="trailing" secondItem="n8p-Id-Hoz" secondAttribute="trailing" constant="15" id="6VG-Az-Xlj"/>
                                                 <constraint firstItem="MPd-ET-HHC" firstAttribute="leading" secondItem="QoO-Om-nOW" secondAttribute="leading" constant="16" id="7cZ-3C-6FJ"/>
-                                                <constraint firstItem="w8c-Ah-1DG" firstAttribute="centerY" secondItem="QoO-Om-nOW" secondAttribute="centerY" constant="18" id="XUj-LS-oGq"/>
+                                                <constraint firstItem="w8c-Ah-1DG" firstAttribute="centerY" secondItem="QoO-Om-nOW" secondAttribute="centerY" constant="15" id="XUj-LS-oGq"/>
                                                 <constraint firstItem="hQu-yI-m8g" firstAttribute="leading" secondItem="MPd-ET-HHC" secondAttribute="trailing" constant="16" id="eiw-NE-CMd"/>
                                                 <constraint firstItem="n8p-Id-Hoz" firstAttribute="centerY" secondItem="QoO-Om-nOW" secondAttribute="centerY" id="f11-6i-0jr"/>
-                                                <constraint firstItem="hQu-yI-m8g" firstAttribute="centerY" secondItem="QoO-Om-nOW" secondAttribute="centerY" constant="-5" id="iJJ-Io-FIc"/>
+                                                <constraint firstItem="hQu-yI-m8g" firstAttribute="centerY" secondItem="QoO-Om-nOW" secondAttribute="centerY" constant="-8" id="iJJ-Io-FIc"/>
                                                 <constraint firstItem="w8c-Ah-1DG" firstAttribute="leading" secondItem="MPd-ET-HHC" secondAttribute="trailing" constant="16" id="uph-En-B96"/>
                                             </constraints>
                                         </view>

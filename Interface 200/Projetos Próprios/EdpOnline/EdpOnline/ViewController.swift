@@ -96,43 +96,57 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate, UINaviga
             return
         }
         var limitadoresRegras = [NSLayoutConstraint]()
-        let comprimentoViewArvores = self.view.frame.width
+        let comprimentoArvore = self.view.frame.width
         
         for arvore in 0...10 {
             let arvoreItem   = UIView()
-            arvoreItem.frame = CGRect(x:0,y:CGFloat(arvore*101),width:comprimentoViewArvores,height:100)
+            arvoreItem.frame = CGRect(x:0,y:CGFloat(arvore*101),width:comprimentoArvore,height:100)
             arvoreItem.backgroundColor = UIColor(white:1,alpha:0.9)
             
             let  fotoArvore   = UIImageView()
-            fotoArvore.frame  = CGRect(x:0,y:0,width:60,height:60)
+            fotoArvore.frame  = CGRect(x:0,y:0,width:50,height:50)
             fotoArvore.image  = UIImage(named:"arvore-fio-demo")
             fotoArvore.contentMode = .scaleAspectFill
             fotoArvore.layer.cornerRadius = fotoArvore.frame.width/2
             fotoArvore.clipsToBounds = true
+            fotoArvore.translatesAutoresizingMaskIntoConstraints = false
           
             let tituloArvore   = UILabel()
-            tituloArvore.frame = CGRect(x:105,y:23,width:100,height:30)
+            tituloArvore.frame = CGRect(x:90,y:23,width:100,height:30)
             tituloArvore.font  = UIFont.systemFont(ofSize: 18)
             tituloArvore.textColor = UIColor.black
-            tituloArvore.text = "Arvore"
+            tituloArvore.text = "Arvore \(arvore+1)"
             
             let regiaoArvore   = UILabel()
-            regiaoArvore.frame = CGRect(x:105,y:45,width:100,height:30)
+            regiaoArvore.frame = CGRect(x:90,y:45,width:100,height:30)
             regiaoArvore.font  = UIFont.preferredFont(forTextStyle: UIFontTextStyle("light"))
             regiaoArvore.font  = UIFont.systemFont(ofSize: 15)
             regiaoArvore.textColor = UIColor.gray
             regiaoArvore.text = "Guarulhos, SP"
             
             let pontuacaoArvore   = UILabel()
-            pontuacaoArvore.frame = CGRect(x:270,y:37,width:100,height:30)
+            pontuacaoArvore.frame = CGRect(x:0,y:0,width:100,height:30)
             pontuacaoArvore.font  = UIFont.preferredFont(forTextStyle: UIFontTextStyle("light"))
             pontuacaoArvore.font  = UIFont.systemFont(ofSize: 16)
             pontuacaoArvore.textColor = UIColor.black
             pontuacaoArvore.text  = "150 Pontos"
+            pontuacaoArvore.translatesAutoresizingMaskIntoConstraints = false
             
-            limitadoresRegras.append(contentsOf:[NSLayoutConstraint(item:fotoArvore, attribute:.leading, relatedBy:.equal, toItem:arvoreItem, attribute:.leading, multiplier:1.0, constant:20)])
+            limitadoresRegras.append(contentsOf:[NSLayoutConstraint(item:fotoArvore, attribute:.leading, relatedBy:.equal, toItem:arvoreItem, attribute:.leading, multiplier:1.0, constant:15)])
             
             limitadoresRegras.append(contentsOf:[NSLayoutConstraint(item:fotoArvore, attribute:.centerY, relatedBy:.equal, toItem:arvoreItem, attribute:.centerY, multiplier:1.0, constant:0)])
+            
+            limitadoresRegras.append(contentsOf:[NSLayoutConstraint(item:fotoArvore, attribute:.width, relatedBy:.equal, toItem:nil, attribute: .notAnAttribute, multiplier:1.0, constant:50)])
+            
+            limitadoresRegras.append(contentsOf:[NSLayoutConstraint(item:fotoArvore, attribute:.height, relatedBy:.equal, toItem:nil, attribute:.notAnAttribute, multiplier:1.0, constant:50)])
+            
+            limitadoresRegras.append(contentsOf:[NSLayoutConstraint(item:pontuacaoArvore, attribute:.leading, relatedBy:.equal, toItem:arvoreItem, attribute:.trailing, multiplier:1.0, constant:0)])
+            
+            limitadoresRegras.append(contentsOf:[NSLayoutConstraint(item:pontuacaoArvore, attribute:.centerY, relatedBy:.equal, toItem:arvoreItem, attribute:.centerY, multiplier:1.0, constant:0)])
+            
+            limitadoresRegras.append(contentsOf:[NSLayoutConstraint(item:pontuacaoArvore, attribute:.height, relatedBy:.equal, toItem:nil, attribute:.notAnAttribute, multiplier:1.0, constant:30)])
+            
+            limitadoresRegras.append(contentsOf:[NSLayoutConstraint(item:pontuacaoArvore, attribute:.width, relatedBy:.equal, toItem:nil, attribute:.notAnAttribute, multiplier:1.0, constant:100)])
             
             arvoreItem.addSubview(pontuacaoArvore)
             arvoreItem.addSubview(tituloArvore)
@@ -140,7 +154,6 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate, UINaviga
             arvoreItem.addSubview(fotoArvore)
             stackArvores.addSubview(arvoreItem)
         }
-        
         NSLayoutConstraint.activate(limitadoresRegras)
     }
     

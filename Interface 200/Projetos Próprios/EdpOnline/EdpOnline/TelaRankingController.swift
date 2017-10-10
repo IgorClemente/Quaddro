@@ -15,8 +15,9 @@ class TelaRankingController:UIViewController {
     @IBOutlet weak var uiSpinnerActivity: UIActivityIndicatorView?
     
     override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(true)
         
+        super.viewWillAppear(true)
+    
         uiViewFundoRanking?.backgroundColor = UIColor.white
         guard let posicoes = posicoesDoRanking else {
             return
@@ -32,27 +33,29 @@ class TelaRankingController:UIViewController {
               let usuarios = RankingInfo() else {
             return
         }
+        
         uiViewFundoRanking?.backgroundColor = UIColor.lightGray
+        
         for (index,posicao) in posicoes.enumerated() {
             posicao.isHidden = false
             posicao.layer.borderColor = UIColor.black.cgColor
             
             var count = 0
             posicao.subviews.enumerated().forEach { (i,p) in
-                if let identificador = p.restorationIdentifier, let campo = p as? UILabel{
-                    switch identificador {
-                        case "\(index+1)_nome":
-                            campo.text  = usuarios[index].nome
-                        case "\(index+1)_pontos":
-                            campo.text = "\(usuarios[index].pontos) pontos"
-                    default:
-                        break
-                    }
-                    count += 1
+             if let identificador = p.restorationIdentifier, let campo = p as? UILabel {
+                switch identificador {
+                 case "\(index+1)_nome":
+                    campo.text  = usuarios[index].nome
+                 case "\(index+1)_pontos":
+                    campo.text = "\(usuarios[index].pontos) pontos"
+                 default:
+                    break
                 }
+                count += 1
+              }
             }
-        }
-        uiSpinnerActivity?.stopAnimating()
+         }
+         uiSpinnerActivity?.stopAnimating()
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {

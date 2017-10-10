@@ -79,10 +79,9 @@
 			isa = PBXGroup;
 			children = (
 				D01F91111F8B03FA006EAC9B /* Layout */,
-				D0BFBF051F756A92009B1F11 /* AppDelegate.swift */,
 				D0BFBF071F756A92009B1F11 /* ViewController.swift */,
 				D00EC05C1F7BCF9000198884 /* LateralMenuController.swift */,
-				D06B22851F8459B100FD0EAE /* InfoRankingForacaster.swift */,
+				D0BFBF051F756A92009B1F11 /* AppDelegate.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -112,6 +111,10 @@
 			children = (
 				D0BFBF031F756A92009B1F11 /* Products */,
 				D0BFBF111F756A92009B1F11 /* Info.plist */,
+				D01F91141F8BA4F1006EAC9B /* App.swift */,
+				D0F88F8F1F784DFD003424BA /* RoundViewsCustom.swift */,
+				D0F88F931F7861F2003424BA /* LateralMenuView.swift */,
+				D06B22851F8459B100FD0EAE /* InfoRankingForacaster.swift */,
 			);
 			name = Suporte;
 			sourceTree = "<group>";
@@ -155,9 +158,6 @@
 				D0B1874C1F79C41700DC1D5B /* Imagem */,
 				D0B1874A1F79C3EF00DC1D5B /* Controller */,
 				D0B1874B1F79C40C00DC1D5B /* Layout */,
-				D0F88F931F7861F2003424BA /* LateralMenuView.swift */,
-				D0F88F8F1F784DFD003424BA /* RoundViewsCustom.swift */,
-				D01F91141F8BA4F1006EAC9B /* App.swift */,
 			);
 			path = EdpOnline;
 			sourceTree = "<group>";
@@ -194,7 +194,7 @@
 				TargetAttributes = {
 					D0BFBF011F756A92009B1F11 = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = 6M52ZTU4DG;
+						DevelopmentTeam = 62SLG68Y9S;
 						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 					};
@@ -385,11 +385,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 6M52ZTU4DG;
+				DEVELOPMENT_TEAM = 62SLG68Y9S;
 				INFOPLIST_FILE = EdpOnline/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = edponlineproject;
+				PRODUCT_BUNDLE_IDENTIFIER = edponlinehouse;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
 				SWIFT_VERSION = 4.0;
@@ -401,11 +401,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 6M52ZTU4DG;
+				DEVELOPMENT_TEAM = 62SLG68Y9S;
 				INFOPLIST_FILE = EdpOnline/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = edponlineproject;
+				PRODUCT_BUNDLE_IDENTIFIER = edponlinehouse;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
 				SWIFT_VERSION = 4.0;
