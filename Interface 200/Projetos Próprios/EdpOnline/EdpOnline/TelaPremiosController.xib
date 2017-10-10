@@ -135,7 +135,7 @@
                                 <constraint firstAttribute="height" constant="30" id="iQH-22-IQd"/>
                                 <constraint firstAttribute="width" constant="30" id="tAX-sP-jTK"/>
                             </constraints>
-                            <state key="normal" image="menu-2"/>
+                            <state key="normal" image="menu"/>
                             <connections>
                                 <action selector="tapAbrirMenuPrincipal" destination="-1" eventType="touchUpInside" id="5jR-Dw-RQN"/>
                             </connections>
@@ -185,6 +185,6 @@
         <image name="0008114_custom-fit-360-case-stylus-for-ipad-mini-123" width="1800" height="1038"/>
         <image name="beats-pill-lateral" width="445" height="250"/>
         <image name="l_10160823_001" width="600" height="532"/>
-        <image name="menu-2" width="64" height="64"/>
+        <image name="menu" width="64" height="64"/>
     </resources>
 </document>

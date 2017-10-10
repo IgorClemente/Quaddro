@@ -488,7 +488,7 @@
                                 <constraint firstAttribute="width" constant="30" id="dvu-Qo-njX"/>
                                 <constraint firstAttribute="height" constant="30" id="kY8-La-q9w"/>
                             </constraints>
-                            <state key="normal" image="menu-2"/>
+                            <state key="normal" image="menu"/>
                             <connections>
                                 <action selector="tapCriarMenuPrincipal" destination="-1" eventType="touchUpInside" id="XlL-IB-kVT"/>
                             </connections>
@@ -549,7 +549,7 @@
         </customObject>
     </objects>
     <resources>
-        <image name="menu-2" width="64" height="64"/>
+        <image name="menu" width="64" height="64"/>
         <image name="perfil-amostra" width="300" height="254"/>
     </resources>
 </document>
