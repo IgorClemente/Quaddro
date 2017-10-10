@@ -44,8 +44,8 @@
                                             <barButtonItem width="19" style="plain" systemItem="fixedSpace" id="6Xt-a1-phE"/>
                                             <barButtonItem style="plain" id="cfi-k6-tAO">
                                                 <view key="customView" alpha="0.5" contentMode="scaleToFill" id="ptd-nJ-Xl8">
-                                                    <rect key="frame" x="159.5" y="7" width="1" height="30"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <rect key="frame" x="159.5" y="7.5" width="1" height="29"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" heightSizable="YES"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </view>
                                             </barButtonItem>
@@ -181,10 +181,10 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="69"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ist-PV-5j7">
-                                        <rect key="frame" x="16" y="24" width="35" height="35"/>
+                                        <rect key="frame" x="16" y="26.5" width="30" height="30"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="35" id="1cS-KV-GXZ"/>
-                                            <constraint firstAttribute="width" constant="35" id="KAh-xh-fwh"/>
+                                            <constraint firstAttribute="height" constant="30" id="1cS-KV-GXZ"/>
+                                            <constraint firstAttribute="width" constant="30" id="KAh-xh-fwh"/>
                                         </constraints>
                                         <state key="normal" image="menu-2"/>
                                         <connections>

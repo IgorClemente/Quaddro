@@ -483,10 +483,10 @@
                     <rect key="frame" x="0.0" y="0.0" width="320" height="69"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ytG-q9-xdq">
-                            <rect key="frame" x="16" y="24" width="35" height="35"/>
+                            <rect key="frame" x="16" y="26.5" width="30" height="30"/>
                             <constraints>
-                                <constraint firstAttribute="width" constant="35" id="dvu-Qo-njX"/>
-                                <constraint firstAttribute="height" constant="35" id="kY8-La-q9w"/>
+                                <constraint firstAttribute="width" constant="30" id="dvu-Qo-njX"/>
+                                <constraint firstAttribute="height" constant="30" id="kY8-La-q9w"/>
                             </constraints>
                             <state key="normal" image="menu-2"/>
                             <connections>
