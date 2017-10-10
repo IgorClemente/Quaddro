@@ -2,11 +2,11 @@
   "images" : [
     {
       "idiom" : "universal",
+      "filename" : "beats-pill-lateral.jpg",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "apple-ipad-2017-16.jpg",
       "scale" : "2x"
     },
     {

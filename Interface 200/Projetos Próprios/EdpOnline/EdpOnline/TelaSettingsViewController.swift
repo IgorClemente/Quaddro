@@ -25,7 +25,7 @@ class TelaSettingsViewController : UIViewController {
             fieldImagem.image = UIImage(named:"field\(identificadorCampo)")
             
             let view   = UIView()
-            view.frame = CGRect(x:0,y:0,width:40,height:20)
+            view.frame = CGRect(x:0,y:0,width:45,height:20)
             view.layer.borderColor = UIColor.clear.cgColor
             view.layer.borderWidth = 10
             

@@ -26,7 +26,7 @@ class LateralMenuView : UIView {
             menuPrincipal.backgroundColor = UIColor.white
         
         let imagemPerfil = UIImageView()
-            imagemPerfil.frame = CGRect(x:19,y:40,width:80,height:80)
+            imagemPerfil.frame = CGRect(x:20,y:30,width:90,height:90)
             imagemPerfil.clipsToBounds = true
             imagemPerfil.image = UIImage(named:"perfil-amostra")
             imagemPerfil.contentMode = .scaleAspectFill
@@ -72,13 +72,13 @@ class LateralMenuView : UIView {
         
         var limitadores = [NSLayoutConstraint]()
         limitadores.append(contentsOf:[NSLayoutConstraint(item: botaoHomeRetorno, attribute: .bottom,relatedBy: .equal
-            ,toItem: botaoRanking,attribute: .top,multiplier: 1.0,constant: -50)])
+            ,toItem: botaoRanking,attribute: .top,multiplier: 1.0,constant: -55)])
         
         limitadores.append(contentsOf:[NSLayoutConstraint(item: botaoHomeRetorno, attribute: .centerX,relatedBy: .equal,toItem: menuPrincipal,attribute: .centerX, multiplier: 1.0,constant: 0)])
         
-        limitadores.append(contentsOf:[NSLayoutConstraint(item: botaoHomeRetorno, attribute: .width,relatedBy: .equal,toItem: menuPrincipal,attribute: .width, multiplier: 0.3,constant: 0)])
+        limitadores.append(contentsOf:[NSLayoutConstraint(item: botaoHomeRetorno, attribute: .width,relatedBy: .equal,toItem: menuPrincipal,attribute: .width, multiplier: 0.4,constant: 0)])
         
-        limitadores.append(contentsOf:[NSLayoutConstraint(item: botaoHomeRetorno, attribute: .height,relatedBy: .equal,toItem: nil,attribute: .notAnAttribute, multiplier: 1.0,constant:40)])
+        limitadores.append(contentsOf:[NSLayoutConstraint(item: botaoHomeRetorno, attribute: .height,relatedBy: .equal,toItem: nil,attribute: .notAnAttribute, multiplier: 1,constant:47)])
         
         limitadores.append(contentsOf:
             [NSLayoutConstraint(item: botaoRanking,attribute: .centerY, relatedBy: .equal,toItem:
@@ -89,7 +89,7 @@ class LateralMenuView : UIView {
         
         limitadores.append(contentsOf:[NSLayoutConstraint(item: botaoRanking, attribute: .width,relatedBy: .equal,toItem: menuPrincipal,attribute: .width,multiplier: 0.4,constant: 0)])
         
-        limitadores.append(contentsOf:[NSLayoutConstraint(item:botaoRanking, attribute:.height,relatedBy:.equal,toItem:nil,attribute:.notAnAttribute, multiplier: 1.0, constant:48)])
+        limitadores.append(contentsOf:[NSLayoutConstraint(item:botaoRanking, attribute:.height,relatedBy:.equal,toItem:nil,attribute:.notAnAttribute, multiplier: 1.0, constant:50)])
         
         limitadores.append(contentsOf:
             [NSLayoutConstraint(item: botaoPremios,attribute: .top, relatedBy: .equal,toItem:
@@ -100,7 +100,7 @@ class LateralMenuView : UIView {
         
         limitadores.append(contentsOf:[NSLayoutConstraint(item: botaoPremios, attribute: .width,relatedBy: .equal,toItem: menuPrincipal,attribute: .width,multiplier: 0.4,constant: 0)])
         
-        limitadores.append(contentsOf:[NSLayoutConstraint(item: botaoPremios, attribute: .height,relatedBy: .equal,toItem: nil,attribute: .notAnAttribute, multiplier: 1.0, constant: 49)])
+        limitadores.append(contentsOf:[NSLayoutConstraint(item: botaoPremios, attribute: .height,relatedBy: .equal,toItem: nil,attribute: .notAnAttribute, multiplier: 1.0, constant: 50)])
         
         limitadores.append(contentsOf:
             [NSLayoutConstraint(item: botaoSettings,attribute: .bottom, relatedBy: .equal,toItem:
@@ -109,9 +109,9 @@ class LateralMenuView : UIView {
         
         limitadores.append(contentsOf:[NSLayoutConstraint(item: botaoSettings,attribute: .centerX,relatedBy: .equal,toItem: menuPrincipal, attribute: .centerX, multiplier: 1.0, constant: 0)])
         
-        limitadores.append(contentsOf:[NSLayoutConstraint(item: botaoSettings, attribute: .width,relatedBy: .equal,toItem: menuPrincipal,attribute: .width,multiplier: 0.3,constant: 1)])
+        limitadores.append(contentsOf:[NSLayoutConstraint(item: botaoSettings, attribute: .width,relatedBy: .equal,toItem: menuPrincipal,attribute: .width,multiplier: 0.8,constant: 5)])
         
-        limitadores.append(contentsOf:[NSLayoutConstraint(item: botaoSettings, attribute: .height,relatedBy: .equal,toItem: nil,attribute: .notAnAttribute, multiplier: 1.0, constant: 39)])
+        limitadores.append(contentsOf:[NSLayoutConstraint(item: botaoSettings, attribute: .height,relatedBy: .equal,toItem: nil,attribute: .notAnAttribute, multiplier: 0.8, constant: 60)])
         
         NSLayoutConstraint.activate(limitadores)
         
