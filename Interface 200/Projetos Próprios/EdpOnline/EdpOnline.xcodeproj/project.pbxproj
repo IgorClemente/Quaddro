@@ -7,11 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7BF36EA486B788E3A2CD4269 /* Pods_EdpOnline.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF0B71E0B51B7B27ECBF4881 /* Pods_EdpOnline.framework */; };
 		D00983CA1F7B21E2002EF018 /* TelaSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00983C91F7B21E2002EF018 /* TelaSettingsViewController.swift */; };
 		D00EC05D1F7BCF9000198884 /* ControllerMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00EC05C1F7BCF9000198884 /* ControllerMenuController.swift */; };
+		D01C215B1F8E8E53008BEF98 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01C215A1F8E8E53008BEF98 /* LoginController.swift */; };
 		D01F91151F8BA4F1006EAC9B /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01F91141F8BA4F1006EAC9B /* App.swift */; };
 		D01FBF921F81B2C800908931 /* TelaPremiosController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D01FBF911F81B2C800908931 /* TelaPremiosController.xib */; };
 		D01FBF941F81B2E400908931 /* TelaPremiosController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01FBF931F81B2E400908931 /* TelaPremiosController.swift */; };
+		D02011C21F93DF9C00772A62 /* ImagemDownload.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02011C11F93DF9C00772A62 /* ImagemDownload.swift */; };
 		D06B22861F8459B100FD0EAE /* InfoRankingForacaster.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06B22851F8459B100FD0EAE /* InfoRankingForacaster.swift */; };
 		D0B187501F79C4CA00DC1D5B /* TelaRankingController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0B1874F1F79C4CA00DC1D5B /* TelaRankingController.xib */; };
 		D0B187531F79D5D700DC1D5B /* TelaSettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0B187521F79D5D700DC1D5B /* TelaSettingsViewController.xib */; };
@@ -20,17 +23,21 @@
 		D0BFBF0B1F756A92009B1F11 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0BFBF091F756A92009B1F11 /* Main.storyboard */; };
 		D0BFBF0D1F756A92009B1F11 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0BFBF0C1F756A92009B1F11 /* Assets.xcassets */; };
 		D0BFBF101F756A92009B1F11 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0BFBF0E1F756A92009B1F11 /* LaunchScreen.storyboard */; };
+		D0E896731F8E4312004079AE /* LoginViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0E896721F8E4312004079AE /* LoginViewController.storyboard */; };
 		D0F8282B1F814B3B00AB9688 /* TelaRankingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F8282A1F814B3A00AB9688 /* TelaRankingController.swift */; };
 		D0F88F901F784DFD003424BA /* RoundViewsCustom.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F88F8F1F784DFD003424BA /* RoundViewsCustom.swift */; };
 		D0F88F941F7861F2003424BA /* LateralMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F88F931F7861F2003424BA /* LateralMenuView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6B3D99D1166E75AAEA618182 /* Pods-EdpOnline.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EdpOnline.release.xcconfig"; path = "Pods/Target Support Files/Pods-EdpOnline/Pods-EdpOnline.release.xcconfig"; sourceTree = "<group>"; };
 		D00983C91F7B21E2002EF018 /* TelaSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TelaSettingsViewController.swift; sourceTree = "<group>"; };
 		D00EC05C1F7BCF9000198884 /* ControllerMenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControllerMenuController.swift; sourceTree = "<group>"; };
+		D01C215A1F8E8E53008BEF98 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		D01F91141F8BA4F1006EAC9B /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
 		D01FBF911F81B2C800908931 /* TelaPremiosController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TelaPremiosController.xib; sourceTree = "<group>"; };
 		D01FBF931F81B2E400908931 /* TelaPremiosController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TelaPremiosController.swift; sourceTree = "<group>"; };
+		D02011C11F93DF9C00772A62 /* ImagemDownload.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagemDownload.swift; sourceTree = "<group>"; };
 		D06B22851F8459B100FD0EAE /* InfoRankingForacaster.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoRankingForacaster.swift; sourceTree = "<group>"; };
 		D0B1874F1F79C4CA00DC1D5B /* TelaRankingController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TelaRankingController.xib; sourceTree = "<group>"; };
 		D0B187521F79D5D700DC1D5B /* TelaSettingsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TelaSettingsViewController.xib; sourceTree = "<group>"; };
@@ -41,9 +48,12 @@
 		D0BFBF0C1F756A92009B1F11 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D0BFBF0F1F756A92009B1F11 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D0BFBF111F756A92009B1F11 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D0E896721F8E4312004079AE /* LoginViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LoginViewController.storyboard; sourceTree = "<group>"; };
 		D0F8282A1F814B3A00AB9688 /* TelaRankingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TelaRankingController.swift; sourceTree = "<group>"; };
 		D0F88F8F1F784DFD003424BA /* RoundViewsCustom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundViewsCustom.swift; sourceTree = "<group>"; };
 		D0F88F931F7861F2003424BA /* LateralMenuView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LateralMenuView.swift; sourceTree = "<group>"; };
+		DF0B71E0B51B7B27ECBF4881 /* Pods_EdpOnline.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EdpOnline.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F8CED7ACB602A6BDE070AD16 /* Pods-EdpOnline.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EdpOnline.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EdpOnline/Pods-EdpOnline.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,12 +61,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7BF36EA486B788E3A2CD4269 /* Pods_EdpOnline.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1293A648BDF11597A64B397C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F8CED7ACB602A6BDE070AD16 /* Pods-EdpOnline.debug.xcconfig */,
+				6B3D99D1166E75AAEA618182 /* Pods-EdpOnline.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		229B579A8F225EE46370D2A5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DF0B71E0B51B7B27ECBF4881 /* Pods_EdpOnline.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		D01F91111F8B03FA006EAC9B /* Layout */ = {
 			isa = PBXGroup;
 			children = (
@@ -94,6 +122,7 @@
 				D0B1874E1F79C43A00DC1D5B /* TelaRankingController */,
 				D0BFBF091F756A92009B1F11 /* Main.storyboard */,
 				D0BFBF0E1F756A92009B1F11 /* LaunchScreen.storyboard */,
+				D0E896721F8E4312004079AE /* LoginViewController.storyboard */,
 			);
 			name = Layout;
 			sourceTree = "<group>";
@@ -115,6 +144,7 @@
 				D0F88F8F1F784DFD003424BA /* RoundViewsCustom.swift */,
 				D0F88F931F7861F2003424BA /* LateralMenuView.swift */,
 				D06B22851F8459B100FD0EAE /* InfoRankingForacaster.swift */,
+				D02011C11F93DF9C00772A62 /* ImagemDownload.swift */,
 			);
 			name = Suporte;
 			sourceTree = "<group>";
@@ -139,6 +169,8 @@
 			isa = PBXGroup;
 			children = (
 				D0BFBF041F756A92009B1F11 /* EdpOnline */,
+				1293A648BDF11597A64B397C /* Pods */,
+				229B579A8F225EE46370D2A5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -158,6 +190,7 @@
 				D0B1874C1F79C41700DC1D5B /* Imagem */,
 				D0B1874A1F79C3EF00DC1D5B /* Controller */,
 				D0B1874B1F79C40C00DC1D5B /* Layout */,
+				D01C215A1F8E8E53008BEF98 /* LoginController.swift */,
 			);
 			path = EdpOnline;
 			sourceTree = "<group>";
@@ -169,9 +202,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D0BFBF141F756A92009B1F11 /* Build configuration list for PBXNativeTarget "EdpOnline" */;
 			buildPhases = (
+				AB6DAD533E63CF4AF1C027D9 /* [CP] Check Pods Manifest.lock */,
 				D0BFBEFE1F756A92009B1F11 /* Sources */,
 				D0BFBEFF1F756A92009B1F11 /* Frameworks */,
 				D0BFBF001F756A92009B1F11 /* Resources */,
+				E1C022BAB271733BC743390B /* [CP] Embed Pods Frameworks */,
+				42400990C28C8757E4541E2C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -228,22 +264,81 @@
 				D0B187531F79D5D700DC1D5B /* TelaSettingsViewController.xib in Resources */,
 				D0BFBF0D1F756A92009B1F11 /* Assets.xcassets in Resources */,
 				D0B187501F79C4CA00DC1D5B /* TelaRankingController.xib in Resources */,
+				D0E896731F8E4312004079AE /* LoginViewController.storyboard in Resources */,
 				D0BFBF0B1F756A92009B1F11 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		42400990C28C8757E4541E2C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EdpOnline/Pods-EdpOnline-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AB6DAD533E63CF4AF1C027D9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-EdpOnline-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E1C022BAB271733BC743390B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-EdpOnline/Pods-EdpOnline-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EdpOnline/Pods-EdpOnline-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		D0BFBEFE1F756A92009B1F11 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D01C215B1F8E8E53008BEF98 /* LoginController.swift in Sources */,
 				D00EC05D1F7BCF9000198884 /* ControllerMenuController.swift in Sources */,
 				D00983CA1F7B21E2002EF018 /* TelaSettingsViewController.swift in Sources */,
 				D0BFBF081F756A92009B1F11 /* ViewController.swift in Sources */,
 				D01F91151F8BA4F1006EAC9B /* App.swift in Sources */,
 				D0F88F941F7861F2003424BA /* LateralMenuView.swift in Sources */,
+				D02011C21F93DF9C00772A62 /* ImagemDownload.swift in Sources */,
 				D06B22861F8459B100FD0EAE /* InfoRankingForacaster.swift in Sources */,
 				D0F88F901F784DFD003424BA /* RoundViewsCustom.swift in Sources */,
 				D0F8282B1F814B3B00AB9688 /* TelaRankingController.swift in Sources */,
@@ -383,6 +478,7 @@
 		};
 		D0BFBF151F756A92009B1F11 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F8CED7ACB602A6BDE070AD16 /* Pods-EdpOnline.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 62SLG68Y9S;
@@ -399,6 +495,7 @@
 		};
 		D0BFBF161F756A92009B1F11 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6B3D99D1166E75AAEA618182 /* Pods-EdpOnline.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 62SLG68Y9S;

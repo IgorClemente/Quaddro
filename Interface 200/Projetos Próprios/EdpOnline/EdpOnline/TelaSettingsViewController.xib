@@ -18,6 +18,10 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TelaSettingsViewController" customModule="EdpOnline" customModuleProvider="target">
             <connections>
+                <outlet property="uiTextFieldEmail" destination="2YU-0H-uN1" id="37B-hK-fYe"/>
+                <outlet property="uiTextFieldNumeroTelefone" destination="2VW-UV-Lei" id="uK9-cN-Gc6"/>
+                <outlet property="uiTextFieldSenha" destination="MvH-5s-Aqd" id="yMr-yB-eFB"/>
+                <outlet property="uiTextNomeCompleto" destination="TKx-Wd-y34" id="GHb-tY-W9u"/>
                 <outlet property="view" destination="Q1j-1K-qjm" id="aYE-zx-SAv"/>
                 <outletCollection property="uiTextFieldsSettings" destination="TKx-Wd-y34" collectionClass="NSMutableArray" id="8Aq-cw-FLh"/>
                 <outletCollection property="uiTextFieldsSettings" destination="2YU-0H-uN1" collectionClass="NSMutableArray" id="ZNx-DC-Fku"/>
@@ -150,28 +154,40 @@
                             <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="textColor"/>
                             <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
-                            <textInputTraits key="textInputTraits"/>
+                            <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" spellCheckingType="no" keyboardType="alphabet" keyboardAppearance="light" returnKeyType="continue" enablesReturnKeyAutomatically="YES" textContentType="name"/>
+                            <connections>
+                                <outlet property="delegate" destination="-1" id="733-6T-JjR"/>
+                            </connections>
                         </textField>
                         <textField opaque="NO" contentMode="scaleToFill" restorationIdentifier="Email" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="E-mail" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2YU-0H-uN1">
                             <rect key="frame" x="0.0" y="51" width="288" height="40.5"/>
                             <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="textColor"/>
                             <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
-                            <textInputTraits key="textInputTraits"/>
+                            <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="alphabet" keyboardAppearance="light" returnKeyType="continue" enablesReturnKeyAutomatically="YES" textContentType="email"/>
+                            <connections>
+                                <outlet property="delegate" destination="-1" id="fF3-d5-X32"/>
+                            </connections>
                         </textField>
                         <textField opaque="NO" contentMode="scaleToFill" restorationIdentifier="Senha" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Senha" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MvH-5s-Aqd">
                             <rect key="frame" x="0.0" y="101.5" width="288" height="40.5"/>
                             <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="textColor"/>
                             <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
-                            <textInputTraits key="textInputTraits"/>
+                            <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters" autocorrectionType="no" spellCheckingType="no" keyboardType="alphabet" keyboardAppearance="light" returnKeyType="continue" enablesReturnKeyAutomatically="YES" secureTextEntry="YES" textContentType="password"/>
+                            <connections>
+                                <outlet property="delegate" destination="-1" id="wji-hY-IwG"/>
+                            </connections>
                         </textField>
                         <textField opaque="NO" contentMode="scaleToFill" restorationIdentifier="NumeroTelefone" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Número de Telefone" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2VW-UV-Lei">
                             <rect key="frame" x="0.0" y="152" width="288" height="40.5"/>
                             <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="textColor"/>
                             <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
-                            <textInputTraits key="textInputTraits"/>
+                            <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad" keyboardAppearance="light" returnKeyType="continue" enablesReturnKeyAutomatically="YES" textContentType="tel"/>
+                            <connections>
+                                <outlet property="delegate" destination="-1" id="YBE-Ho-GdX"/>
+                            </connections>
                         </textField>
                     </subviews>
                 </stackView>

@@ -129,6 +129,7 @@
 				TargetAttributes = {
 					43574CA91F89578D006886B8 = {
 						CreatedOnToolsVersion = 8.3;
+						DevelopmentTeam = 6M52ZTU4DG;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -295,6 +296,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 6M52ZTU4DG;
 				INFOPLIST_FILE = Swift200_Day9_ScrollView/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -308,6 +310,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 6M52ZTU4DG;
 				INFOPLIST_FILE = Swift200_Day9_ScrollView/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

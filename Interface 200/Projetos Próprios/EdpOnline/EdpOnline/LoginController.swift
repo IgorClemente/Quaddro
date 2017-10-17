@@ -6,4 +6,11 @@
 //  Copyright © 2017 MACBOOK AIR. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+
+class LoginController:UIViewController {
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+}

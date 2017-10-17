@@ -8,9 +8,14 @@
 
 import UIKit
 
-class TelaSettingsViewController : UIViewController {
+class TelaSettingsViewController : UIViewController, UITextFieldDelegate {
     
     @IBOutlet var uiTextFieldsSettings: [UITextField]?
+    
+    @IBOutlet weak var uiTextNomeCompleto: UITextField?
+    @IBOutlet weak var uiTextFieldEmail: UITextField?
+    @IBOutlet weak var uiTextFieldSenha: UITextField?
+    @IBOutlet weak var uiTextFieldNumeroTelefone: UITextField?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,6 +42,31 @@ class TelaSettingsViewController : UIViewController {
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        
+        print("FUN")
+        guard let campoNome  = uiTextNomeCompleto,
+              let campoEmail = uiTextFieldEmail,
+              let campoSenha = uiTextFieldSenha,
+              let campoTelefone = uiTextFieldNumeroTelefone else {
+            return true
+        }
+        let mapaCamposContinue:[UITextField:UITextField?] = [
+            campoNome : campoEmail,
+            campoEmail : campoSenha,
+            campoSenha : campoTelefone,
+            campoTelefone : nil
+        ]
+        
+        if let proximoCampo = mapaCamposContinue[textField],
+           let destino = proximoCampo {
+           destino.becomeFirstResponder()
+        }else {
+           textField.resignFirstResponder()
+        }
+        return false
     }
     
     @IBAction func tapAbrirMenuPrincipal(_ sender: UIButton) {
