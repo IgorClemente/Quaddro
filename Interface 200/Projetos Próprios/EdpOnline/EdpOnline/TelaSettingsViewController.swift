@@ -38,6 +38,14 @@ class TelaSettingsViewController : UIViewController, UITextFieldDelegate {
             campo.leftView     = view
             campo.leftViewMode = .always
         }
+    
+        guard let u = App.shared.getUserLogged() else {
+            return
+        }
+        self.uiTextNomeCompleto?.text = (((u["nome"] as? String) ?? "") + " " + ((u["sobrenome"] as? String) ?? ""))
+        self.uiTextFieldEmail?.text   = ((u["email"] as? String) ?? "")
+        self.uiTextFieldSenha?.text   = "12345678"
+        self.uiTextFieldNumeroTelefone?.text = ((u["numeroTelefone"] as? String) ?? "") 
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
@@ -45,8 +53,6 @@ class TelaSettingsViewController : UIViewController, UITextFieldDelegate {
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        
-        print("FUN")
         guard let campoNome  = uiTextNomeCompleto,
               let campoEmail = uiTextFieldEmail,
               let campoSenha = uiTextFieldSenha,

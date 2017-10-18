@@ -37,7 +37,7 @@ class App {
             return
         }
         self.userLoggedInfos = user
-        let salvo = ud.object(forKey: "userLogged") as? [String:Any] ?? [:]
+        var salvo = ud.object(forKey: "userLogged") as? [String:Any] ?? [:]
         salvo["nome"] = nome
         salvo["sobrenome"] = sobrenome
         salvo["localidade"] = localidade
@@ -47,10 +47,11 @@ class App {
         salvo["email"]   = email
         salvo["pontos"]  = pontos
         ud.set(salvo, forKey:"userLogged")
-        ud.sincronize
+        ud.synchronize()
+        print(user)
     }
     
-    func getUserLogged() -> [String:Int] {
-        return self.userLoggedInfos
+    func getUserLogged() -> [String:Any]? {
+        return ud.object(forKey: "userLogged") as? [String:Any] ?? [:]
     }
 }

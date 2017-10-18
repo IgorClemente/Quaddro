@@ -61,7 +61,6 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate, UINaviga
                     usuarioLogged["numeroTelefone"] = numeroTelefone
                     usuarioLogged["email"]  = email
                     usuarioLogged["pontos"] = pontos
-                    print(ids_arvore)
                     
                     App.shared.idTrees = ids_arvore
                     App.shared.amountOfTrees = quantidade
@@ -71,10 +70,11 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate, UINaviga
               }
         
         let idArvores = App.shared.idTrees
-        
+        print("IDSSS\(idArvores)")
         for (idx,imagem) in idArvores.enumerated() {
             guard let id_arvore = imagem["arvore_id"], let remoteImageURL = URL(string:"https://inovatend.mybluemix.net/imagens/\(id_arvore)"),
                 let remoteInfoURL = URL(string:"https://inovatend.mybluemix.net/imagens/arvore/\(id_arvore)") else {
+                print("CAIU")
                 return
             }
             Alamofire.request(remoteImageURL).responseData { (response) in
@@ -89,7 +89,6 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate, UINaviga
                                 let arvore = info["arvore"] as? [String:Any] else {
                                 return
                               }
-                              print(arvore)
                               self.createMenuArvores(arvoreImagem:UIImage(data: data) ?? UIImage(),arvoreId:idx,arvore)
                               self.uiSpinnerSubMenu?.stopAnimating()
                                     
@@ -187,6 +186,38 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate, UINaviga
         self.uiPontuacao?.text    = "\(pontos)"
     }
     
+    func uploadImagemServer() {
+        let parameters = ["user":"Sol", "password":"secret1234"]
+        // Image to upload:
+        let imageToUploadURL = Bundle.main.url(forResource: "tree", withExtension: "png")
+        // Server address (replace this with the address of your own server):
+        let url = "https://inovatend.mybluemix.net/imagens/arvore/salvar"
+        // Use Alamofire to upload the image
+        Alamofire.upload(
+            multipartFormData: { multipartFormData in
+                // On the PHP side you can retrive the image using $_FILES["image"]["tmp_name"]
+                multipartFormData.append(imageToUploadURL!, withName: "image")
+                for (key, val) in parameters {
+                    multipartFormData.append(val.data(using: String.Encoding.utf8)!, withName: key)
+                }
+        },
+            to: url,
+            encodingCompletion: { encodingResult in
+                switch encodingResult {
+                case .success(let upload, _, _):
+                    upload.responseJSON { response in
+                        if let jsonResponse = response.result.value as? [String: Any] {
+                            print(jsonResponse)
+                        }
+                    }
+                case .failure(let encodingError):
+                    print(encodingError)
+                }
+        }
+        )
+    }
+    
+    
     func createMenuArvores(arvoreImagem:UIImage, arvoreId:Int,_ arvoreInfo:[String:Any]) {
         guard let fundoCinza = self.viewFundoCinza,
               let titulo = arvoreInfo["titulo"] as? String,
@@ -271,7 +302,7 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate, UINaviga
             let imagemData = UIImagePNGRepresentation(imagemCapturada)
             let imagemComprimida = UIImage(data: imagemData ?? Data())
             UIImageWriteToSavedPhotosAlbum(imagemComprimida ?? UIImage(), nil, nil, nil)
-
+            
             picker.dismiss(animated: true, completion: nil)
             let alerta = UIAlertController(title:"Imagem", message:"Imagem Salva com Sucesso !", preferredStyle: .alert)
             let confirmaAction = UIAlertAction(title: "Ok", style: .default, handler: nil)
