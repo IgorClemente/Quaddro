@@ -32,6 +32,7 @@
 /* Begin PBXFileReference section */
 		6B3D99D1166E75AAEA618182 /* Pods-EdpOnline.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EdpOnline.release.xcconfig"; path = "Pods/Target Support Files/Pods-EdpOnline/Pods-EdpOnline.release.xcconfig"; sourceTree = "<group>"; };
 		D00983C91F7B21E2002EF018 /* TelaSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TelaSettingsViewController.swift; sourceTree = "<group>"; };
+		D00A408C1F98CA7C00359492 /* TESTE.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TESTE.png; sourceTree = "<group>"; };
 		D00EC05C1F7BCF9000198884 /* ControllerMenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControllerMenuController.swift; sourceTree = "<group>"; };
 		D01C215A1F8E8E53008BEF98 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		D01F91141F8BA4F1006EAC9B /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
@@ -130,6 +131,7 @@
 		D0B1874C1F79C41700DC1D5B /* Imagem */ = {
 			isa = PBXGroup;
 			children = (
+				D00A408C1F98CA7C00359492 /* TESTE.png */,
 				D0BFBF0C1F756A92009B1F11 /* Assets.xcassets */,
 			);
 			name = Imagem;
@@ -485,7 +487,7 @@
 				INFOPLIST_FILE = EdpOnline/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = edponlinehouse3;
+				PRODUCT_BUNDLE_IDENTIFIER = edponlinehouse4;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
 				SWIFT_VERSION = 4.0;
@@ -502,7 +504,7 @@
 				INFOPLIST_FILE = EdpOnline/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = edponlinehouse3;
+				PRODUCT_BUNDLE_IDENTIFIER = edponlinehouse4;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
 				SWIFT_VERSION = 4.0;

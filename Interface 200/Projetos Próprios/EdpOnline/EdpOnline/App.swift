@@ -24,6 +24,18 @@ class App {
     
     private var userLoggedInfos:[String:Any] = [:]
     
+    func setPhotoTakePath(_ caminho:String) {
+        var salvo = ud.object(forKey: "pathImages") as? [String:Any]  ?? [:]
+        salvo["path"]  = caminho
+        ud.set(salvo, forKey: "pathImages")
+        ud.synchronize()
+    }
+    
+    func getPhotoTake() -> UIImage? {
+        var salvo = ud.object(forKey: "pathImages") as? [String:Any]  ?? [:]
+        return salvo["path"] as? UIImage
+    }
+    
     func setUserLogged(_ user:[String:Any]) -> Void {
         guard let nome       = user["nome"] as? String,
               let sobrenome  = user["sobrenome"] as? String,

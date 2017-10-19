@@ -70,11 +70,9 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate, UINaviga
               }
         
         let idArvores = App.shared.idTrees
-        print("IDSSS\(idArvores)")
         for (idx,imagem) in idArvores.enumerated() {
             guard let id_arvore = imagem["arvore_id"], let remoteImageURL = URL(string:"https://inovatend.mybluemix.net/imagens/\(id_arvore)"),
                 let remoteInfoURL = URL(string:"https://inovatend.mybluemix.net/imagens/arvore/\(id_arvore)") else {
-                print("CAIU")
                 return
             }
             Alamofire.request(remoteImageURL).responseData { (response) in
@@ -186,37 +184,29 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate, UINaviga
         self.uiPontuacao?.text    = "\(pontos)"
     }
     
-    func uploadImagemServer() {
-        let parameters = ["user":"Sol", "password":"secret1234"]
-        // Image to upload:
-        let imageToUploadURL = Bundle.main.url(forResource: "tree", withExtension: "png")
-        // Server address (replace this with the address of your own server):
-        let url = "https://inovatend.mybluemix.net/imagens/arvore/salvar"
-        // Use Alamofire to upload the image
+    func uploadImage(_ pathImage:String) {
+        
+        let url = "https://inovatend.mybluemix.net/upload"
+        
         Alamofire.upload(
             multipartFormData: { multipartFormData in
-                // On the PHP side you can retrive the image using $_FILES["image"]["tmp_name"]
-                multipartFormData.append(imageToUploadURL!, withName: "image")
-                for (key, val) in parameters {
-                    multipartFormData.append(val.data(using: String.Encoding.utf8)!, withName: key)
-                }
+                multipartFormData.append(pathImage, withName: "sampleFile")
         },
-            to: url,
-            encodingCompletion: { encodingResult in
-                switch encodingResult {
-                case .success(let upload, _, _):
-                    upload.responseJSON { response in
-                        if let jsonResponse = response.result.value as? [String: Any] {
-                            print(jsonResponse)
-                        }
+        to: url,
+        encodingCompletion: { encodingResult in
+            switch encodingResult {
+            case .success(let upload, _, _):
+                upload.responseJSON { response in
+                    if let jsonResponse = response.result.value as? [String: Any] {
+                        print(jsonResponse)
                     }
-                case .failure(let encodingError):
-                    print(encodingError)
                 }
+            case .failure(let encodingError):
+                    print(encodingError)
+            }
         }
         )
     }
-    
     
     func createMenuArvores(arvoreImagem:UIImage, arvoreId:Int,_ arvoreInfo:[String:Any]) {
         guard let fundoCinza = self.viewFundoCinza,
@@ -298,10 +288,13 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate, UINaviga
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        
         if let imagemCapturada = info[UIImagePickerControllerOriginalImage] as? UIImage {
             let imagemData = UIImagePNGRepresentation(imagemCapturada)
             let imagemComprimida = UIImage(data: imagemData ?? Data())
             UIImageWriteToSavedPhotosAlbum(imagemComprimida ?? UIImage(), nil, nil, nil)
+            
+            salvarImagemTake(imagemCapturada)
             
             picker.dismiss(animated: true, completion: nil)
             let alerta = UIAlertController(title:"Imagem", message:"Imagem Salva com Sucesso !", preferredStyle: .alert)
@@ -310,5 +303,20 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate, UINaviga
             self.present(alerta, animated: true, completion: nil)
         }
     }
-}
+    
+    func salvarImagemTake(_ image:UIImage) {
+    
+        guard let imageData = UIImagePNGRepresentation(image),
+              let docDir = try? FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: true),
+              let imageURL = docDir.appendingPathComponent("tmp.png") else {
+            return
+        }
+        
+        try? imageData.write(to: imageURL)
+        
+        if UIImage(contentsOfFile: (imageURL?.path)!) != nil {
+            print(imageURL?.path)
+        }
+    }
 
+}
