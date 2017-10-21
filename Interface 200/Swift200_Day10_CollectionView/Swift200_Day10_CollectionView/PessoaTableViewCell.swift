@@ -12,4 +12,14 @@ class PessoaTableViewCell: UITableViewCell {
 
     @IBOutlet weak var uiNome:UILabel?
     @IBOutlet weak var uiFotinho:WebImageView?
+    
+    @IBOutlet var uiRostinhos:[RostinhoButton]?
+    
+    var pessoa:Person? {
+        didSet {
+            uiRostinhos?.forEach {
+                $0.pessoa = pessoa
+            }
+        }
+    }
 }

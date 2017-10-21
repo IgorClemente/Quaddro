@@ -57,6 +57,7 @@ class PessoasViewController: UIViewController,UITableViewDelegate, UITableViewDa
         if let dataImagem = try? Data(contentsOf: person.pic) {
             celulaPeople.uiFotinho?.image  = UIImage(data: dataImagem)
             celulaPeople.uiNome?.text      = person.name
+            celulaPeople.pessoa = person
         
             switch kinds[indexPath.section].rawValue {
             case "family":
@@ -71,6 +72,26 @@ class PessoasViewController: UIViewController,UITableViewDelegate, UITableViewDa
         }
         return UITableViewCell()
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let kinds            = PeopleStorage.shared.kinds
+        let peoplesOfSection = PeopleStorage.shared.everybody(ofKind: kinds[indexPath.section])
+        let person           = peoplesOfSection[indexPath.row]
+        
+        performSegue(withIdentifier: "detalhes", sender: person)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let detalhes = segue.destination as? DetalhesViewController,
+              let pessoa   = sender as? Person else {
+            return
+        }
+        
+        // Pego a pessoa da segue e passo para a tela
+        detalhes.person = pessoa 
+    }
+    
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 80

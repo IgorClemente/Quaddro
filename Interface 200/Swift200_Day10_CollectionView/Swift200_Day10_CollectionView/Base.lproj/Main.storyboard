@@ -38,51 +38,82 @@
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="60" id="b2j-UW-X4b"/>
                                                     </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
+                                                    </userDefinedRuntimeAttributes>
                                                 </imageView>
                                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="k4W-bM-3yt">
                                                     <rect key="frame" x="80" y="40.5" width="146" height="29"/>
                                                     <subviews>
-                                                        <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c5D-5Y-knO">
+                                                        <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c5D-5Y-knO" customClass="RostinhoButton" customModule="Swift200_Day10_CollectionView" customModuleProvider="target">
                                                             <rect key="frame" x="0.0" y="0.0" width="29" height="29"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="29" id="N58-US-VbL"/>
                                                                 <constraint firstAttribute="width" secondItem="c5D-5Y-knO" secondAttribute="height" multiplier="1:1" id="eHn-as-q41"/>
                                                                 <constraint firstAttribute="height" constant="29" id="o4F-te-cSd"/>
                                                             </constraints>
-                                                            <state key="normal" title="B" image="happy"/>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="string" keyPath="tipo" value="happy"/>
+                                                            </userDefinedRuntimeAttributes>
+                                                            <connections>
+                                                                <outletCollection property="dosLados" destination="sBc-D9-pbC" collectionClass="NSMutableArray" id="mQp-Rk-izR"/>
+                                                                <outletCollection property="dosLados" destination="rmq-Vm-ah1" collectionClass="NSMutableArray" id="DHT-1M-qTV"/>
+                                                                <outletCollection property="dosLados" destination="75Y-jr-PNQ" collectionClass="NSMutableArray" id="doi-iK-Um3"/>
+                                                            </connections>
                                                         </button>
-                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sBc-D9-pbC">
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sBc-D9-pbC" customClass="RostinhoButton" customModule="Swift200_Day10_CollectionView" customModuleProvider="target">
                                                             <rect key="frame" x="39" y="0.0" width="29" height="29"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" secondItem="sBc-D9-pbC" secondAttribute="height" multiplier="1:1" id="dwv-Ct-k7E"/>
                                                                 <constraint firstAttribute="width" constant="29" id="qtA-l7-mxe"/>
                                                                 <constraint firstAttribute="height" constant="29" id="sJY-Fg-K5W"/>
                                                             </constraints>
-                                                            <state key="normal" title="B" image="ok"/>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="string" keyPath="tipo" value="ok"/>
+                                                            </userDefinedRuntimeAttributes>
+                                                            <connections>
+                                                                <outletCollection property="dosLados" destination="c5D-5Y-knO" collectionClass="NSMutableArray" id="cRS-Dv-G5N"/>
+                                                                <outletCollection property="dosLados" destination="rmq-Vm-ah1" collectionClass="NSMutableArray" id="2sR-SY-NeM"/>
+                                                                <outletCollection property="dosLados" destination="75Y-jr-PNQ" collectionClass="NSMutableArray" id="k8b-pD-BuH"/>
+                                                            </connections>
                                                         </button>
-                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rmq-Vm-ah1">
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rmq-Vm-ah1" customClass="RostinhoButton" customModule="Swift200_Day10_CollectionView" customModuleProvider="target">
                                                             <rect key="frame" x="78" y="0.0" width="29" height="29"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="29" id="Fhi-3c-rFl"/>
                                                                 <constraint firstAttribute="width" constant="29" id="hOA-oW-Sr7"/>
                                                                 <constraint firstAttribute="width" secondItem="rmq-Vm-ah1" secondAttribute="height" multiplier="1:1" id="qJ0-OL-QTG"/>
                                                             </constraints>
-                                                            <state key="normal" title="B" image="unhappy"/>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="string" keyPath="tipo" value="unhappy"/>
+                                                            </userDefinedRuntimeAttributes>
+                                                            <connections>
+                                                                <outletCollection property="dosLados" destination="c5D-5Y-knO" collectionClass="NSMutableArray" id="fSK-SM-eff"/>
+                                                                <outletCollection property="dosLados" destination="sBc-D9-pbC" collectionClass="NSMutableArray" id="aZO-CL-AUa"/>
+                                                                <outletCollection property="dosLados" destination="75Y-jr-PNQ" collectionClass="NSMutableArray" id="OvF-CT-M2P"/>
+                                                            </connections>
                                                         </button>
-                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="75Y-jr-PNQ">
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="75Y-jr-PNQ" customClass="RostinhoButton" customModule="Swift200_Day10_CollectionView" customModuleProvider="target">
                                                             <rect key="frame" x="117" y="0.0" width="29" height="29"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="29" id="M4b-uI-fbQ"/>
                                                                 <constraint firstAttribute="height" constant="29" id="eA2-iX-M1U"/>
                                                                 <constraint firstAttribute="width" secondItem="75Y-jr-PNQ" secondAttribute="height" multiplier="1:1" id="qo5-wE-hfL"/>
                                                             </constraints>
-                                                            <state key="normal" title="B" image="sad"/>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="string" keyPath="tipo" value="sad"/>
+                                                            </userDefinedRuntimeAttributes>
+                                                            <connections>
+                                                                <outletCollection property="dosLados" destination="c5D-5Y-knO" collectionClass="NSMutableArray" id="cM0-AT-l0z"/>
+                                                                <outletCollection property="dosLados" destination="sBc-D9-pbC" collectionClass="NSMutableArray" id="8Fv-3u-kbV"/>
+                                                                <outletCollection property="dosLados" destination="rmq-Vm-ah1" collectionClass="NSMutableArray" id="km4-ND-SwC"/>
+                                                            </connections>
                                                         </button>
                                                     </subviews>
                                                 </stackView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Igor Clemente" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lkf-28-S2m">
                                                     <rect key="frame" x="80" y="10" width="197" height="20.5"/>
-                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                                     <color key="textColor" red="0.013989434429999999" green="0.74440831220000003" blue="0.0056006810949999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -102,6 +133,10 @@
                                         <connections>
                                             <outlet property="uiFotinho" destination="9es-X1-4Zr" id="fG1-sJ-jdy"/>
                                             <outlet property="uiNome" destination="lkf-28-S2m" id="HL8-G9-64C"/>
+                                            <outletCollection property="uiRostinhos" destination="c5D-5Y-knO" collectionClass="NSMutableArray" id="XCa-BG-k3q"/>
+                                            <outletCollection property="uiRostinhos" destination="sBc-D9-pbC" collectionClass="NSMutableArray" id="FyD-1O-EEu"/>
+                                            <outletCollection property="uiRostinhos" destination="rmq-Vm-ah1" collectionClass="NSMutableArray" id="4gg-op-ds3"/>
+                                            <outletCollection property="uiRostinhos" destination="75Y-jr-PNQ" collectionClass="NSMutableArray" id="YVL-Aa-2cc"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -120,6 +155,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Importante para mim" id="Beu-ur-SGp">
+                        <barButtonItem key="backBarButtonItem" title=" " id="DDY-60-ufm"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="Kvr-pF-DRq">
                             <connections>
                                 <segue destination="v0t-R2-zEe" kind="show" id="c2k-K3-HKB"/>
@@ -128,9 +164,11 @@
                     </navigationItem>
                     <connections>
                         <outlet property="uiTabela" destination="Rgs-UV-1HX" id="btP-Sf-SN6"/>
+                        <segue destination="z4B-b9-Y9x" kind="show" identifier="detalhes" id="3fd-oS-vI0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Olg-Pq-Wdf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="SHe-f4-7sn" customClass="Arredondador" customModule="Swift200_Day10_CollectionView" customModuleProvider="target"/>
             </objects>
             <point key="canvasLocation" x="63.75" y="140"/>
         </scene>
@@ -140,7 +178,164 @@
                 <viewControllerPlaceholder storyboardName="FaceFriendsFinder" referencedIdentifier="finder" id="v0t-R2-zEe" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Juc-HZ-xAR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="646" y="-143"/>
+            <point key="canvasLocation" x="987" y="170"/>
+        </scene>
+        <!--Detalhes View Controller-->
+        <scene sceneID="ijt-Sf-Wqq">
+            <objects>
+                <viewController hidesBottomBarWhenPushed="YES" id="z4B-b9-Y9x" customClass="DetalhesViewController" customModule="Swift200_Day10_CollectionView" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="oga-0A-Tei"/>
+                        <viewControllerLayoutGuide type="bottom" id="b7D-yC-o66"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="KVH-Fu-tdU">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cOb-TZ-jbb" customClass="WebImageView" customModule="Swift200_Day10_CollectionView" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="64" width="320" height="192"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="cOb-TZ-jbb" secondAttribute="height" multiplier="5:3" id="05U-17-TL6"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="NO"/>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="QD0-rU-FnY">
+                                <rect key="frame" x="87" y="271" width="146" height="29"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleAspectFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6RA-Mx-zr3" customClass="RostinhoButton" customModule="Swift200_Day10_CollectionView" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="29" height="29"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="29" id="TjH-EI-YG9"/>
+                                            <constraint firstAttribute="width" constant="29" id="jw7-2y-ymp"/>
+                                            <constraint firstAttribute="width" secondItem="6RA-Mx-zr3" secondAttribute="height" multiplier="1:1" id="vkf-gf-AR6"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="tipo" value="happy"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <outletCollection property="dosLados" destination="V53-bZ-L0d" collectionClass="NSMutableArray" id="WQO-wu-O1c"/>
+                                            <outletCollection property="dosLados" destination="GIc-ag-F1u" collectionClass="NSMutableArray" id="Afp-up-BPg"/>
+                                            <outletCollection property="dosLados" destination="tep-gi-AcF" collectionClass="NSMutableArray" id="iU6-oi-98d"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V53-bZ-L0d" customClass="RostinhoButton" customModule="Swift200_Day10_CollectionView" customModuleProvider="target">
+                                        <rect key="frame" x="39" y="0.0" width="29" height="29"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="29" id="RdI-K8-pJX"/>
+                                            <constraint firstAttribute="height" constant="29" id="Viw-yk-akJ"/>
+                                            <constraint firstAttribute="width" secondItem="V53-bZ-L0d" secondAttribute="height" multiplier="1:1" id="ag3-Xd-tdg"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="tipo" value="ok"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <outletCollection property="dosLados" destination="6RA-Mx-zr3" collectionClass="NSMutableArray" id="gIC-Ug-lJd"/>
+                                            <outletCollection property="dosLados" destination="GIc-ag-F1u" collectionClass="NSMutableArray" id="CPO-vi-9dy"/>
+                                            <outletCollection property="dosLados" destination="tep-gi-AcF" collectionClass="NSMutableArray" id="YpW-bS-YdK"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GIc-ag-F1u" customClass="RostinhoButton" customModule="Swift200_Day10_CollectionView" customModuleProvider="target">
+                                        <rect key="frame" x="78" y="0.0" width="29" height="29"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="GIc-ag-F1u" secondAttribute="height" multiplier="1:1" id="0gE-lF-68B"/>
+                                            <constraint firstAttribute="height" constant="29" id="IP2-8Y-86o"/>
+                                            <constraint firstAttribute="width" constant="29" id="xbs-L5-Hge"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="tipo" value="unhappy"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <outletCollection property="dosLados" destination="6RA-Mx-zr3" collectionClass="NSMutableArray" id="52a-4e-5iJ"/>
+                                            <outletCollection property="dosLados" destination="V53-bZ-L0d" collectionClass="NSMutableArray" id="wrh-CY-oAo"/>
+                                            <outletCollection property="dosLados" destination="tep-gi-AcF" collectionClass="NSMutableArray" id="OVb-d1-Kgi"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tep-gi-AcF" customClass="RostinhoButton" customModule="Swift200_Day10_CollectionView" customModuleProvider="target">
+                                        <rect key="frame" x="117" y="0.0" width="29" height="29"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="tep-gi-AcF" secondAttribute="height" multiplier="1:1" id="KDH-y4-Wdo"/>
+                                            <constraint firstAttribute="height" constant="29" id="LTW-h2-lXW"/>
+                                            <constraint firstAttribute="width" constant="29" id="n0u-fL-fGr"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="tipo" value="sad"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <outletCollection property="dosLados" destination="6RA-Mx-zr3" collectionClass="NSMutableArray" id="gmS-Q6-5jh"/>
+                                            <outletCollection property="dosLados" destination="V53-bZ-L0d" collectionClass="NSMutableArray" id="NDE-I9-YuX"/>
+                                            <outletCollection property="dosLados" destination="GIc-ag-F1u" collectionClass="NSMutableArray" id="dqk-jV-z8j"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nMV-bH-xOy">
+                                <rect key="frame" x="58" y="381" width="204" height="40"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="204" id="3fV-5D-HWh"/>
+                                    <constraint firstAttribute="height" constant="40" id="QNL-HY-6BW"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                <state key="normal" title="Apagar">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="tapApagar:" destination="z4B-b9-Y9x" eventType="touchUpInside" id="pzr-44-vjl"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NFF-jb-Iqc">
+                                <rect key="frame" x="58" y="312" width="204" height="64"/>
+                                <color key="backgroundColor" red="0.013989434429999999" green="0.74440831220000003" blue="0.0056006810949999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="204" id="N0Y-bu-fvB"/>
+                                    <constraint firstAttribute="height" constant="64" id="hZF-ln-daZ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="22"/>
+                                <state key="normal" title="Visitar">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="tapVisitar:" destination="z4B-b9-Y9x" eventType="touchUpInside" id="aEZ-QS-miE"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="cOb-TZ-jbb" firstAttribute="top" secondItem="oga-0A-Tei" secondAttribute="bottom" id="9Os-Gf-e5s"/>
+                            <constraint firstItem="QD0-rU-FnY" firstAttribute="top" secondItem="cOb-TZ-jbb" secondAttribute="bottom" constant="15" id="Anv-BF-Obx"/>
+                            <constraint firstItem="nMV-bH-xOy" firstAttribute="top" secondItem="NFF-jb-Iqc" secondAttribute="bottom" constant="5" id="LZz-Rg-9iR"/>
+                            <constraint firstAttribute="trailing" secondItem="cOb-TZ-jbb" secondAttribute="trailing" id="QO2-Fy-pRs"/>
+                            <constraint firstItem="nMV-bH-xOy" firstAttribute="centerX" secondItem="KVH-Fu-tdU" secondAttribute="centerX" id="QqY-bj-eyH"/>
+                            <constraint firstItem="NFF-jb-Iqc" firstAttribute="centerX" secondItem="KVH-Fu-tdU" secondAttribute="centerX" id="SLU-lW-KNE"/>
+                            <constraint firstItem="b7D-yC-o66" firstAttribute="top" secondItem="nMV-bH-xOy" secondAttribute="bottom" constant="10" id="eVu-dD-8a6"/>
+                            <constraint firstItem="cOb-TZ-jbb" firstAttribute="leading" secondItem="KVH-Fu-tdU" secondAttribute="leading" id="flY-Wl-ciH"/>
+                            <constraint firstItem="QD0-rU-FnY" firstAttribute="centerX" secondItem="cOb-TZ-jbb" secondAttribute="centerX" id="gCm-qJ-Thr"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="uiFotinha" destination="cOb-TZ-jbb" id="gzR-uX-TXi"/>
+                        <outletCollection property="uiRostinhos" destination="6RA-Mx-zr3" collectionClass="NSMutableArray" id="vat-zI-c11"/>
+                        <outletCollection property="uiRostinhos" destination="V53-bZ-L0d" collectionClass="NSMutableArray" id="h3r-yZ-kee"/>
+                        <outletCollection property="uiRostinhos" destination="GIc-ag-F1u" collectionClass="NSMutableArray" id="iQg-hP-xgm"/>
+                        <outletCollection property="uiRostinhos" destination="tep-gi-AcF" collectionClass="NSMutableArray" id="gc0-wM-j18"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tly-Ih-nh9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="pAH-Iz-QzR" customClass="Arredondador" customModule="Swift200_Day10_CollectionView" customModuleProvider="target">
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="radii">
+                            <real key="value" value="20"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <outletCollection property="uiAlvos" destination="NFF-jb-Iqc" collectionClass="NSMutableArray" id="Z9m-X5-FgZ"/>
+                        <outletCollection property="uiAlvos" destination="nMV-bH-xOy" collectionClass="NSMutableArray" id="ZgJ-ur-Zlz"/>
+                    </connections>
+                </customObject>
+            </objects>
+            <point key="canvasLocation" x="881.25" y="-205"/>
         </scene>
         <!--Precisando de atenção-->
         <scene sceneID="dEq-I5-mEa">
@@ -153,9 +348,83 @@
                     <view key="view" contentMode="scaleToFill" id="bpY-if-8ZX">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="5ZK-7C-nSI">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="431"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="CDm-C1-22e">
+                                    <size key="itemSize" width="80" height="80"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="10" minY="10" maxX="10" maxY="10"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ops" id="Nk8-kE-Sn3" customClass="OpsCollectionViewCell" customModule="Swift200_Day10_CollectionView" customModuleProvider="target">
+                                        <rect key="frame" x="10" y="10" width="80" height="80"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" image="alguem" translatesAutoresizingMaskIntoConstraints="NO" id="Bdj-e7-tmn" customClass="WebImageView" customModule="Swift200_Day10_CollectionView" customModuleProvider="target">
+                                                    <rect key="frame" x="4" y="4" width="72" height="72"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
+                                                    </userDefinedRuntimeAttributes>
+                                                </imageView>
+                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="unhappy" translatesAutoresizingMaskIntoConstraints="NO" id="pyQ-Di-2x8">
+                                                    <rect key="frame" x="50" y="50" width="30" height="30"/>
+                                                </imageView>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="Bdj-e7-tmn" secondAttribute="bottom" constant="4" id="68P-N0-2gg"/>
+                                            <constraint firstItem="Bdj-e7-tmn" firstAttribute="top" secondItem="Nk8-kE-Sn3" secondAttribute="top" constant="4" id="BVW-6C-4GV"/>
+                                            <constraint firstAttribute="bottom" secondItem="pyQ-Di-2x8" secondAttribute="bottom" id="Gwg-xx-fXy"/>
+                                            <constraint firstItem="Bdj-e7-tmn" firstAttribute="leading" secondItem="Nk8-kE-Sn3" secondAttribute="leading" constant="4" id="Khp-v0-DYw"/>
+                                            <constraint firstAttribute="trailing" secondItem="Bdj-e7-tmn" secondAttribute="trailing" constant="4" id="gor-NY-EIL"/>
+                                            <constraint firstAttribute="trailing" secondItem="pyQ-Di-2x8" secondAttribute="trailing" id="nls-fo-vDj"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="uiFotinho" destination="Bdj-e7-tmn" id="D3I-bv-eP0"/>
+                                            <outlet property="uiRostinho" destination="pyQ-Di-2x8" id="OAn-1l-xJn"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="LRQ-WC-Anj" id="4S4-ng-fno"/>
+                                    <outlet property="delegate" destination="LRQ-WC-Anj" id="h1v-wO-Qyv"/>
+                                </connections>
+                            </collectionView>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WJq-cW-fMD">
+                                <rect key="frame" x="60" y="140" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="Jh5-0h-B8b"/>
+                                    <constraint firstAttribute="width" constant="200" id="Wa8-8J-jzu"/>
+                                </constraints>
+                                <connections>
+                                    <segue destination="3kb-Pg-WaQ" kind="embed" id="Kek-sG-iGZ"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="5ZK-7C-nSI" secondAttribute="trailing" id="Nwj-xX-quI"/>
+                            <constraint firstItem="cZH-10-cmP" firstAttribute="top" secondItem="5ZK-7C-nSI" secondAttribute="bottom" id="Oie-XU-WvC"/>
+                            <constraint firstItem="5ZK-7C-nSI" firstAttribute="top" secondItem="bpY-if-8ZX" secondAttribute="top" id="aG1-xb-Wbq"/>
+                            <constraint firstItem="WJq-cW-fMD" firstAttribute="centerY" secondItem="bpY-if-8ZX" secondAttribute="centerY" id="gQL-ce-qoT"/>
+                            <constraint firstItem="WJq-cW-fMD" firstAttribute="centerX" secondItem="bpY-if-8ZX" secondAttribute="centerX" id="qwq-Mb-IKr"/>
+                            <constraint firstItem="5ZK-7C-nSI" firstAttribute="leading" secondItem="bpY-if-8ZX" secondAttribute="leading" id="rJc-OL-fLJ"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Precisando de atenção" id="wX8-7X-egk"/>
+                    <navigationItem key="navigationItem" title="Precisando de atenção" id="wX8-7X-egk">
+                        <barButtonItem key="backBarButtonItem" title=" " id="0Av-EP-L2c"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="uiOps" destination="5ZK-7C-nSI" id="ajv-kw-0oX"/>
+                        <outlet property="uiVazio" destination="WJq-cW-fMD" id="TmD-gE-WQm"/>
+                        <segue destination="z4B-b9-Y9x" kind="show" identifier="detalhes" id="z9Q-sE-47X"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xr2-BU-q2Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -217,15 +486,45 @@
             </objects>
             <point key="canvasLocation" x="-933.75" y="140"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="kDg-tc-rp5">
+            <objects>
+                <viewController id="3kb-Pg-WaQ" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zgM-7w-VOz">
+                        <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="tudobem" translatesAutoresizingMaskIntoConstraints="NO" id="Rtt-R0-8s8">
+                                <rect key="frame" x="50" y="20" width="100" height="100"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tá tudo bem com todo mundo" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mX2-Ck-Mlc">
+                                <rect key="frame" x="23" y="131" width="154" height="52"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <color key="textColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="200" height="200"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YSd-Lt-ozl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="769" y="-759"/>
+        </scene>
     </scenes>
     <resources>
         <image name="alguem" width="130" height="130"/>
         <image name="galera" width="30" height="30"/>
-        <image name="happy" width="30" height="30"/>
-        <image name="ok" width="30" height="30"/>
         <image name="ops" width="30" height="30"/>
-        <image name="sad" width="30" height="30"/>
+        <image name="tudobem" width="100" height="100"/>
         <image name="unhappy" width="30" height="30"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="z9Q-sE-47X"/>
+    </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.013989434432768053" green="0.74440831218274117" blue="0.0056006810954877615" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>

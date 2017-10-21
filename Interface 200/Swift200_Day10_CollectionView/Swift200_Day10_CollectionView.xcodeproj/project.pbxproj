@@ -20,6 +20,8 @@
 		432938F81F9B794D008EABE1 /* PessoasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432938F71F9B794D008EABE1 /* PessoasViewController.swift */; };
 		432938FA1F9BA2BE008EABE1 /* PessoaTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432938F91F9BA2BE008EABE1 /* PessoaTableViewCell.swift */; };
 		432938FC1F9BBD13008EABE1 /* RostinhoButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432938FB1F9BBD13008EABE1 /* RostinhoButton.swift */; };
+		432938FE1F9BCC9C008EABE1 /* OpsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432938FD1F9BCC9C008EABE1 /* OpsCollectionViewCell.swift */; };
+		432939001F9BD738008EABE1 /* DetalhesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432938FF1F9BD738008EABE1 /* DetalhesViewController.swift */; };
 		432D05851F9B67A500EFF276 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432D05841F9B67A500EFF276 /* AppDelegate.swift */; };
 		432D058A1F9B67A500EFF276 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 432D05881F9B67A500EFF276 /* Main.storyboard */; };
 		432D058C1F9B67A500EFF276 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 432D058B1F9B67A500EFF276 /* Assets.xcassets */; };
@@ -40,6 +42,8 @@
 		432938F71F9B794D008EABE1 /* PessoasViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PessoasViewController.swift; sourceTree = "<group>"; };
 		432938F91F9BA2BE008EABE1 /* PessoaTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PessoaTableViewCell.swift; sourceTree = "<group>"; };
 		432938FB1F9BBD13008EABE1 /* RostinhoButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RostinhoButton.swift; sourceTree = "<group>"; };
+		432938FD1F9BCC9C008EABE1 /* OpsCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpsCollectionViewCell.swift; sourceTree = "<group>"; };
+		432938FF1F9BD738008EABE1 /* DetalhesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetalhesViewController.swift; sourceTree = "<group>"; };
 		432D05811F9B67A500EFF276 /* Swift200_Day10_CollectionView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Swift200_Day10_CollectionView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		432D05841F9B67A500EFF276 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		432D05891F9B67A500EFF276 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -98,6 +102,8 @@
 				432938F71F9B794D008EABE1 /* PessoasViewController.swift */,
 				432938F91F9BA2BE008EABE1 /* PessoaTableViewCell.swift */,
 				432938FB1F9BBD13008EABE1 /* RostinhoButton.swift */,
+				432938FD1F9BCC9C008EABE1 /* OpsCollectionViewCell.swift */,
+				432938FF1F9BD738008EABE1 /* DetalhesViewController.swift */,
 			);
 			path = Swift200_Day10_CollectionView;
 			sourceTree = "<group>";
@@ -216,12 +222,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				432938F21F9B6943008EABE1 /* PeopleStorage.swift in Sources */,
+				432938FE1F9BCC9C008EABE1 /* OpsCollectionViewCell.swift in Sources */,
 				432938EC1F9B6943008EABE1 /* Arredondador.swift in Sources */,
 				432938EF1F9B6943008EABE1 /* FriendsRequester.swift in Sources */,
 				432938FC1F9BBD13008EABE1 /* RostinhoButton.swift in Sources */,
 				432938F41F9B6943008EABE1 /* WebImageView.swift in Sources */,
 				432938EE1F9B6943008EABE1 /* FaceFriendsFInderViewController.swift in Sources */,
 				432938F01F9B6943008EABE1 /* FriendTableViewCell.swift in Sources */,
+				432939001F9BD738008EABE1 /* DetalhesViewController.swift in Sources */,
 				432938F31F9B6943008EABE1 /* Person.swift in Sources */,
 				432938F81F9B794D008EABE1 /* PessoasViewController.swift in Sources */,
 				432938F11F9B6943008EABE1 /* KeyboardContraint.swift in Sources */,
