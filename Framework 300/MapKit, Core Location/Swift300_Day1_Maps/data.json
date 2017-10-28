@@ -1,0 +1,1397 @@
+{
+    "results": [
+        {
+            "geometry": {
+                "location": {
+                    "lat": -23.5626711,
+                    "lng": -46.66519659999999
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": -23.5613723697085,
+                        "lng": -46.66379001970849
+                    },
+                    "southwest": {
+                        "lat": -23.5640703302915,
+                        "lng": -46.66648798029149
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/shopping-71.png",
+            "id": "0623c7a76f848c91dc2a0f9588ccb090a54c0d8e",
+            "name": "Farmácia Onofre",
+            "opening_hours": {
+                "open_now": true,
+                "weekday_text": []
+            },
+            "place_id": "ChIJ7_DJ8dNZzpQR9Pq75PTRnJM",
+            "rating": 3,
+            "reference": "CmRSAAAAJ9RL5Feb4tVpaJAlGqhWZe53k18HtV6Rky3KN6deLrUc70Y8yBRRfF_EpA3LN-vspHZQEhoXBowr9mD6kQHSC4zFv-pBKIHW6zjo28YRkc76Z8Sooejvs2QxskBbR7oSEhDlV7GWQIjbB-BYwRbeKg6GGhR1QjTnu07umoxO2LIx2wyxYrs2RQ",
+            "scope": "GOOGLE",
+            "types": [
+                "pharmacy",
+                "health",
+                "store",
+                "point_of_interest",
+                "establishment"
+            ],
+            "vicinity": "Rua Augusta, 2444 - Cerqueira César, São Paulo"
+        },
+        {
+            "geometry": {
+                "location": {
+                    "lat": -23.5598915,
+                    "lng": -46.6380721
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": -23.5585516197085,
+                        "lng": -46.63670326970851
+                    },
+                    "southwest": {
+                        "lat": -23.5612495802915,
+                        "lng": -46.6394012302915
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/shopping-71.png",
+            "id": "34cc3ff17b7fe49ad090d213eaa4e3e4e65400e7",
+            "name": "Farmácia São Paulo",
+            "photos": [
+                {
+                    "height": 3264,
+                    "html_attributions": [
+                        "<a href=\"https://maps.google.com/maps/contrib/102416682742017882754/photos\">Fernando Batocchio</a>"
+                    ],
+                    "photo_reference": "CoQBdwAAALHVuqUblpqWI1pai00a1xjLk-u9CORrxx9WZbSAwmEMxSkAONVjDECo_7pq5l_mtDE0_cKwyUjSx3TOVAeW3ZeYzMjU5syCvaxmLllZA-Bcb9FVQ6HnY_kQBOHJ61WwU-Hozl1NkS-uIizrWNAMIAa70MyCyu7M2w6XfqxJAwJFEhDVd-iexCXD4tkUnVLxp864GhSCVVVJt94Da2pXztdsL3_kZDefyA",
+                    "width": 1836
+                }
+            ],
+            "place_id": "ChIJFbimvqVZzpQR1PXjMEuBn1g",
+            "rating": 3.6,
+            "reference": "CmRRAAAAj6xKXKACcsBA_K3F5DMQEREhDz43LenvvtjBqxADNNOZp1UX9L2Drx2C3w0xkG6B_b7B2HCcrLAaN4X9iScMb7bTqr_Pr-xhDYQKub_Ea3OnV-mbfUzzs6IVvkfpYoa3EhArXznShrHkB8TkikWWkJI5GhS_7I-4mqTojoc8Ka4gKQVTLbcUcQ",
+            "scope": "GOOGLE",
+            "types": [
+                "pharmacy",
+                "health",
+                "store",
+                "point_of_interest",
+                "establishment"
+            ],
+            "vicinity": "Avenida da Liberdade, 834 - Liberdade, São Paulo"
+        },
+        {
+            "geometry": {
+                "location": {
+                    "lat": -23.525394,
+                    "lng": -46.71218099999999
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": -23.5241240697085,
+                        "lng": -46.71081471970849
+                    },
+                    "southwest": {
+                        "lat": -23.52682203029151,
+                        "lng": -46.71351268029149
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/shopping-71.png",
+            "id": "74b37ec1ac6dd4af3473e1b9d91531e8685d2241",
+            "name": "Unipharmus Farmácia de Manipulação",
+            "opening_hours": {
+                "open_now": true,
+                "weekday_text": []
+            },
+            "place_id": "ChIJb8dA5Yj4zpQRvrLTVBWglGY",
+            "rating": 2.8,
+            "reference": "CmRRAAAApYwA7wiLmK7XUnNl7yeokm2uWqwbVYpmnTq3bwDrtg-thORhc1jkKS6A4SP-5sa0brOCJjClHM0wg65hNzAUCye2-g2GbHfC4r6rwPu98uf14cgw8kxX3tmMFEMjtDlbEhAE9-4bNR7XQZkoRI8TkTxAGhSBxXOR8uDECAx-UCfect5srLcj9Q",
+            "scope": "GOOGLE",
+            "types": [
+                "pharmacy",
+                "health",
+                "store",
+                "point_of_interest",
+                "establishment"
+            ],
+            "vicinity": "Rua Brigadeiro Gavião Peixoto, 216, São Paulo"
+        },
+        {
+            "geometry": {
+                "location": {
+                    "lat": -23.5499451,
+                    "lng": -46.65983230000001
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": -23.5485907197085,
+                        "lng": -46.65849651970849
+                    },
+                    "southwest": {
+                        "lat": -23.5512886802915,
+                        "lng": -46.66119448029149
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/shopping-71.png",
+            "id": "75b76ea3dae84ccbf23849a8f7b21e506ecc2b74",
+            "name": "Unipharmus Farmácia de Manipulação",
+            "opening_hours": {
+                "open_now": true,
+                "weekday_text": []
+            },
+            "place_id": "ChIJ4XYByzFYzpQRb4RvyZqcVaw",
+            "rating": 4,
+            "reference": "CmRSAAAAeP9zSKOH7OigT_C0DOdtuTO_QfnDYASk8CbreaainbWzESG0ZsLHyUfKw6fEFtyDj7iJ-X44oUHAM6rsoT3TPgfNYowgj6_bnp9xjfqSOvVtrk4ofeweS6u9OL3QvGRLEhCYgUX7BolDdLtKQae4ZDfIGhS7DK9hJISvNnHWIMI8Bt7yhv3ZBg",
+            "scope": "GOOGLE",
+            "types": [
+                "pharmacy",
+                "health",
+                "store",
+                "point_of_interest",
+                "establishment"
+            ],
+            "vicinity": "Avenida Angélica, 2000 - Consolação, São Paulo"
+        },
+        {
+            "geometry": {
+                "location": {
+                    "lat": -23.583104,
+                    "lng": -46.637747
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": -23.5817884697085,
+                        "lng": -46.6365106197085
+                    },
+                    "southwest": {
+                        "lat": -23.5844864302915,
+                        "lng": -46.6392085802915
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png",
+            "id": "6c00c827425b8bba49753506db31eb6b11ef12ae",
+            "name": "Unipharmus Farmácia de Manipilação",
+            "opening_hours": {
+                "open_now": true,
+                "weekday_text": []
+            },
+            "place_id": "ChIJixFgooZZzpQRW1LV9Rb43-Y",
+            "rating": 2.5,
+            "reference": "CmRSAAAAX3mvGvoHAytsxnZL-tjwXynKq_NcxeQeclADNKWeqGB47CxqEMf3uFz2pQuVTJ2nNf_KE3QA4nFU6-RH885_K9LaWg0qKgu7kBwinFmsmb27G5HdWMFoc661h5ZtmCCoEhDZe-J6kHgrzmP3a35ww-8hGhTck8CdoGMHZ0qOutW4Ah81H-tURQ",
+            "scope": "GOOGLE",
+            "types": [
+                "pharmacy",
+                "health",
+                "store",
+                "point_of_interest",
+                "establishment"
+            ],
+            "vicinity": "Rua Domingos de Morais, 743 - Vila Mariana, São Paulo"
+        },
+        {
+            "geometry": {
+                "location": {
+                    "lat": -23.5491874,
+                    "lng": -46.65527
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": -23.5478309697085,
+                        "lng": -46.6539077197085
+                    },
+                    "southwest": {
+                        "lat": -23.5505289302915,
+                        "lng": -46.6566056802915
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/shopping-71.png",
+            "id": "2707924c81013cd7cd1510149a94832b7430f572",
+            "name": "Farmácia Buenos Aires",
+            "place_id": "ChIJEwhYELxZzpQRpRcdxm-xhdA",
+            "rating": 1,
+            "reference": "CmRSAAAAVdrO5miIxks4tG4uAs1pNeBYCjBZenATPRatj817UvGa55kVtdAOFbDbqOfM5SgKsWf_XEu_5PypMqEbbQZSftXUlPmB1pMfKovYzEePq7b0etCkpzemB4Ltf8JrNXtlEhAbQjjgvACTrFt-PlPh6FTdGhRZ8YU_vBvXD5UwFRDhYD0B3OyLZg",
+            "scope": "GOOGLE",
+            "types": [
+                "pharmacy",
+                "health",
+                "store",
+                "point_of_interest",
+                "establishment"
+            ],
+            "vicinity": "Rua Sergipe, 120 - Consolação, São Paulo"
+        },
+        {
+            "geometry": {
+                "location": {
+                    "lat": -23.5818795,
+                    "lng": -46.7127269
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": -23.5806125697085,
+                        "lng": -46.7113080197085
+                    },
+                    "southwest": {
+                        "lat": -23.5833105302915,
+                        "lng": -46.7140059802915
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/shopping-71.png",
+            "id": "9a971eb88a16ccb9206ab6b836413b74b4a9a3a8",
+            "name": "Grupo Manifarma",
+            "opening_hours": {
+                "open_now": false,
+                "weekday_text": []
+            },
+            "place_id": "ChIJKQNFXPxWzpQRLHg3KE5JtL0",
+            "rating": 2.3,
+            "reference": "CmRSAAAArnBpI4gePDtmzLlE1B9jM8oy0qBkNKJVxw0yVPArlDz1EGsqD2ipqU-YSiC6Cwr3Wr3J3i0JeU_cgFoaHeFZVnRRjmzSviCu22iu9c-IUt-ymxieFCis4_Grt8HIiOODEhAjdll_YWWDCSL8gQaqzI1lGhQj4jLzm8aHxuXTjunOHsTrd5vA8A",
+            "scope": "GOOGLE",
+            "types": [
+                "pharmacy",
+                "health",
+                "store",
+                "point_of_interest",
+                "establishment"
+            ],
+            "vicinity": "Avenida Professor Francisco Morato, 1368 - Butantã, São Paulo"
+        },
+        {
+            "geometry": {
+                "location": {
+                    "lat": -23.58947999999999,
+                    "lng": -46.6767871
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": -23.5880635697085,
+                        "lng": -46.6754599197085
+                    },
+                    "southwest": {
+                        "lat": -23.5907615302915,
+                        "lng": -46.6781578802915
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/shopping-71.png",
+            "id": "b42afc62580502be7249f6b01a6cb13f347976f7",
+            "name": "Pharmapele",
+            "photos": [
+                {
+                    "height": 1836,
+                    "html_attributions": [
+                        "<a href=\"https://maps.google.com/maps/contrib/101050835579783798103/photos\">Franklin Joffily</a>"
+                    ],
+                    "photo_reference": "CoQBdwAAAJY7vCQx1ojMJGYqOs-gOgwSuKsr1dM2xuYPP83YuKxAOKNbjvUPe_cgi9URWFyoRiA19jYWB5n7PQa3V2QgwYiQSbCTWo5rDRo2TqDpCGcvvprxZeQVQn9DskWq3nwUqCh4pb_L_B_xKZL-ZYZvvUJKsWxGPO2nB9tEq6ESPyq8EhCElcAK-6OWfAL597w9pH87GhT3ww1CqPcu7QZqS17FhIjyBXAjEw",
+                    "width": 3264
+                }
+            ],
+            "place_id": "ChIJV6QQTFpXzpQRmTANCHneCbQ",
+            "rating": 5,
+            "reference": "CmRSAAAAFY2p1SXtLfdA3ySQsUJo_jRVNxurtE11whlrjdLJsGuF0FYlPtY1uYAiiGxDO3ocXVDszWK06NZQWSsV7xGKVmx5bVUd4iWdSsYdRDcT5KX1UwOoMpWzV_NYWTXPWhOYEhDuyqOi0c63kWg9nRosmCqUGhTWT99jpv4iy7X5oSnYufo35tb43g",
+            "scope": "GOOGLE",
+            "types": [
+                "pharmacy",
+                "health",
+                "store",
+                "point_of_interest",
+                "establishment"
+            ],
+            "vicinity": "Avenida Presidente Juscelino Kubitschek, 773 - Itaim Bibi, São Paulo"
+        },
+        {
+            "geometry": {
+                "location": {
+                    "lat": -23.575482,
+                    "lng": -46.622138
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": -23.57408956970849,
+                        "lng": -46.6207789697085
+                    },
+                    "southwest": {
+                        "lat": -23.5767875302915,
+                        "lng": -46.6234769302915
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/shopping-71.png",
+            "id": "548d522597b162254409c97cbb347dca0990cba4",
+            "name": "Homeoterápica Farmácia de Manipulação",
+            "opening_hours": {
+                "open_now": true,
+                "weekday_text": []
+            },
+            "photos": [
+                {
+                    "height": 946,
+                    "html_attributions": [
+                        "<a href=\"https://maps.google.com/maps/contrib/107592418257694723304/photos\">Homeoterápica Farmácia de Manipulação</a>"
+                    ],
+                    "photo_reference": "CoQBdwAAAHkKj0dMMjKxlf1hr3G9NzgXbnde_IMj4OPsi-7mDOv1oTNNHbK-xBds0aWxy1WIJNksdyFP-PcF6329FVxpWOYoHIL5GgIDagmYovkCkXvEj59rrktEXvnhcYPeGAn_6PiCn9OpevAfysjFqnsua9JMqvtC0Q6f8hVBW4nUu3acEhB0k7hh8ypYwAPAaZCeSrERGhRShiwBFIbAco2961Reu9AsmPBXOw",
+                    "width": 948
+                }
+            ],
+            "place_id": "ChIJJ2ub0mRZzpQR_bzyVq82N0Y",
+            "rating": 3.7,
+            "reference": "CmRRAAAAgJf8WIQ5HWjPk2O8FLpHoSCzxAAObVThph_gqHN0-dNWf5pg5B1hY2GwLOYGt6gU2GyH5SZ_SsJdNGxb8ZV06rIMY8Xs6l0jVqXXyvGHBt1sFWRIm51OeLWkOAXHjJysEhAE1j95hdD3VH0VK88tOFxLGhTGumL7s65X1D9F_vhut2zcNuLmAQ",
+            "scope": "GOOGLE",
+            "types": [
+                "pharmacy",
+                "health",
+                "store",
+                "point_of_interest",
+                "establishment"
+            ],
+            "vicinity": "Rua Heitor Peixoto, 530 - Cambuci, São Paulo"
+        },
+        {
+            "geometry": {
+                "location": {
+                    "lat": -23.5504048,
+                    "lng": -46.63446560000001
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": -23.5490959697085,
+                        "lng": -46.63303491970851
+                    },
+                    "southwest": {
+                        "lat": -23.5517939302915,
+                        "lng": -46.6357328802915
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/shopping-71.png",
+            "id": "1cee125fdb67a24ac6f407711e9d4c124a6012b5",
+            "name": "Drogaria Onofre",
+            "opening_hours": {
+                "open_now": true,
+                "weekday_text": []
+            },
+            "photos": [
+                {
+                    "height": 2432,
+                    "html_attributions": [
+                        "<a href=\"https://maps.google.com/maps/contrib/114790511849106486411/photos\">Arquiteto Boina</a>"
+                    ],
+                    "photo_reference": "CoQBdwAAAIx48mu-BWTlO16oa5tzNiOLT6J7j__d7RNfZPZzc1kS6B0A0_-VCi8udxKo74GrDOsxNM1ow0NVTEtcNY7Pv1B7gXRgqkRyowINbXhi7ggI0jtahg2SflBo6MOa8pBfk8WESaS1-XE3tWCcom0sFmZZc9B2DoPO8m_VHvxKqCKDEhBpyt27TDupekOwXGij4AMCGhSD5T4VuP7HeOLLRYrGgA5P-VaRlg",
+                    "width": 4320
+                }
+            ],
+            "place_id": "ChIJQ7nU5KpZzpQR3dGnCPwVJxQ",
+            "rating": 4.5,
+            "reference": "CmRRAAAAGT6yg3NWP-3aVnUJ7Y0kA8s-oizZJe2Jc-WAiTZOaO7rCWkN4YNDA78wOBMFr5857-oQ35jDGC5If_feE4LYiF_qmCSxsX4_N5jqXgcu__O9_tJbD4CuMzcd8CtVzqj-EhCIP4RMswp1MVbPlfB1LTKMGhRTzmS5XdFyg8pfuhpFyROub6pWmg",
+            "scope": "GOOGLE",
+            "types": [
+                "pharmacy",
+                "health",
+                "store",
+                "point_of_interest",
+                "establishment"
+            ],
+            "vicinity": "Praça da Sé - Sé, São Paulo"
+        },
+        {
+            "geometry": {
+                "location": {
+                    "lat": -23.58385969999999,
+                    "lng": -46.6857513
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": -23.58253076970849,
+                        "lng": -46.6844424197085
+                    },
+                    "southwest": {
+                        "lat": -23.5852287302915,
+                        "lng": -46.6871403802915
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/shopping-71.png",
+            "id": "05f20d673fec905442e5a2cc025e2a6e1e3fb1d3",
+            "name": "Matéria Prima - Farmácia de Manipulação",
+            "opening_hours": {
+                "open_now": true,
+                "weekday_text": []
+            },
+            "photos": [
+                {
+                    "height": 922,
+                    "html_attributions": [
+                        "<a href=\"https://maps.google.com/maps/contrib/108303068137671439083/photos\">Matéria Prima - Farmácia de Manipulação</a>"
+                    ],
+                    "photo_reference": "CoQBdwAAAJn35q-nZ8H7PctsJR7LFQDcUm9bVHtbteSGCbZchaRjSGeycAzzHsz5S6xSlDNYz-sH9UOjQuGCuN8nOnRTmlt0U86tKJbeuQI42KbHItTkOObIw3DOQu2LCbBqIH0ck-1EoNViNa6ZoJEo8peZRqzKK6jvHEscq7RGNIcj0ODNEhBaH7EcmVxmsomAXaldIOYYGhQfl-nV8AGeARGRyC4KywW5Shb0JQ",
+                    "width": 956
+                }
+            ],
+            "place_id": "ChIJdarHF2pXzpQRcbUN0-YHIcE",
+            "rating": 4.6,
+            "reference": "CmRSAAAAUrC_Z8YFcuGCXrXqukIanvBj9PufCGMsVlGbkSAErpeQdqT5_uWrMpUrPZ7ofcC_Gyq60VE6IF9h75TwK2ZqX9xYi5rPLneyMmyunK-NUBIvvMfWIru3v0dMX9NQlQVEEhCdJIepDBLUkWlIegwApg2OGhSgv5s8_Us0bDYveT32NhKcNEq84g",
+            "scope": "GOOGLE",
+            "types": [
+                "pharmacy",
+                "health",
+                "store",
+                "point_of_interest",
+                "establishment"
+            ],
+            "vicinity": "Rua Doutor Mario Ferraz, 391 - Itaim Bibi, São Paulo"
+        },
+        {
+            "geometry": {
+                "location": {
+                    "lat": -23.5259964,
+                    "lng": -46.69136109999999
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": -23.5246703197085,
+                        "lng": -46.6900122697085
+                    },
+                    "southwest": {
+                        "lat": -23.5273682802915,
+                        "lng": -46.6927102302915
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/shopping-71.png",
+            "id": "c105b0cc65e86a4b4bd2e907656a59b3ac8e0fad",
+            "name": "Biogalenus Farmácia de Manipulação",
+            "opening_hours": {
+                "open_now": true,
+                "weekday_text": []
+            },
+            "place_id": "ChIJ_deBlHT4zpQRu07535yPCAk",
+            "rating": 3.5,
+            "reference": "CmRRAAAAT75-LBIVlaOPvsmQNrJI2KffGHPK-ZShadscClQMkyBPyZFzmxKB-b_v_LRx7EpUUYQWoK318qDza9CVeoHuSa_WRknAxHQMWjDROTh6UK1HvKSwOp1WKKpADQ_HBuuBEhCQLk3QEuwkbA1CLBWREcXPGhSzivG2i78k3jRs-IGCcvaSzfu06g",
+            "scope": "GOOGLE",
+            "types": [
+                "pharmacy",
+                "health",
+                "store",
+                "point_of_interest",
+                "establishment"
+            ],
+            "vicinity": "Rua Coriolano, 610 - Vila Romana, São Paulo"
+        },
+        {
+            "geometry": {
+                "location": {
+                    "lat": -23.5739441,
+                    "lng": -46.6886078
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": -23.5726420697085,
+                        "lng": -46.6873485697085
+                    },
+                    "southwest": {
+                        "lat": -23.5753400302915,
+                        "lng": -46.6900465302915
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/shopping-71.png",
+            "id": "a788ba0f07ae0c9de0a036fadbf1db5d253c3e8c",
+            "name": "Galenica",
+            "opening_hours": {
+                "open_now": true,
+                "weekday_text": []
+            },
+            "place_id": "ChIJUdSZIXNXzpQRwK6WAibr2ss",
+            "rating": 4.2,
+            "reference": "CmRSAAAAbbjudExnz61YzLiI-XZV7Tw9YryddjKFxJzXuwYW4Eu5gawUMg303ZhbpBGWaWqAQhd_K09GFXs7Z41_ooNQOlR_9KRl45rRKjYYAmjgjZFfj9o6mp10VnCBXv_6acN8EhCgmiqZS_qacGuPWFit2ZQ6GhSRfmfkQHf1EPFTG1nNFTElI1aqyQ",
+            "scope": "GOOGLE",
+            "types": [
+                "pharmacy",
+                "health",
+                "store",
+                "point_of_interest",
+                "establishment"
+            ],
+            "vicinity": "Avenida Brigadeiro Faria Lima, 1919 - Jardim Paulistano, São Paulo"
+        },
+        {
+            "geometry": {
+                "location": {
+                    "lat": -23.5734659,
+                    "lng": -46.69037669999999
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": -23.5720962697085,
+                        "lng": -46.6890411197085
+                    },
+                    "southwest": {
+                        "lat": -23.5747942302915,
+                        "lng": -46.6917390802915
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/shopping-71.png",
+            "id": "69a81550dc6c9745719de003ec95db6a18dad10c",
+            "name": "Farmacias Galenica",
+            "place_id": "ChIJ1XCVI3NXzpQRZW59A4nRk00",
+            "reference": "CmRRAAAASreVsvwnQiS9skVBaRR3vtDV2-sK6yZCSR_8KCg4XK3jgYmoD9yn7HCKflEE9cIei822ckNF_aWe60kOtOq99a8YFKxzEIIygs4velN1CirE1PliOKi3WBKKQSxGQFkeEhBp35ll2FaGQOkHkRVl0ffOGhTSCj20j499hqkFEBHqtLOeGgohCw",
+            "scope": "GOOGLE",
+            "types": [
+                "pharmacy",
+                "health",
+                "store",
+                "point_of_interest",
+                "establishment"
+            ],
+            "vicinity": "Rua Iraci, 116 - Jardim Paulistano, São Paulo"
+        },
+        {
+            "geometry": {
+                "location": {
+                    "lat": -23.545731,
+                    "lng": -46.639702
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": -23.5443820197085,
+                        "lng": -46.6383530197085
+                    },
+                    "southwest": {
+                        "lat": -23.5470799802915,
+                        "lng": -46.6410509802915
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/shopping-71.png",
+            "id": "28b1d4af7329b629b5175bd773a3d5e8cf90dd19",
+            "name": "Farmácia Natrium Filial Centro",
+            "opening_hours": {
+                "open_now": true,
+                "weekday_text": []
+            },
+            "photos": [
+                {
+                    "height": 720,
+                    "html_attributions": [
+                        "<a href=\"https://maps.google.com/maps/contrib/117643590176394343321/photos\">Farmácia Natrium Filial Centro</a>"
+                    ],
+                    "photo_reference": "CoQBdwAAAGe7bmeA2AeWFHiwht6ut1zRrifiRgsNzTD8ocao921dzh-XWLWIss4cxBXN3cQeiYP9V-4s7Xdp1KbfvbL_ItQLbz38BmkrUAWHcyWwOf5RqauSK4KJ0-YyGa_hqcGpy0YSgX_VQ-RxXX8DXRmkGcBlF09INJ1pv0-NdVVmhiE5EhDSWO_sCXT8-VXd0RlF2la9GhSI4GK61bxjcPB-ddyOl-kc59lq7Q",
+                    "width": 960
+                }
+            ],
+            "place_id": "ChIJ27cuL1JYzpQRIK7Fu3LnBUY",
+            "rating": 5,
+            "reference": "CmRRAAAALQ7Cbh-5heHAuoALnLiIMC1E4ZJ1V3JKNiuEBXwxNaZgeelSNeNBuSounkLD4ZRdFUqug9F-UDLpmxkuj8BJEKTUduNVA8-sChl71C8KDWPGpyhMts26LFoqALTk-LCKEhBhOKmmTPlJLcHbrPuneFraGhTkhjYuc_B5LCiRJqb-DsEaDekpzQ",
+            "scope": "GOOGLE",
+            "types": [
+                "pharmacy",
+                "health",
+                "store",
+                "point_of_interest",
+                "establishment"
+            ],
+            "vicinity": "Rua Barao de Itapetininga 37 - Loja51 Galeria Nova Barão - República, São Paulo"
+        },
+        {
+            "geometry": {
+                "location": {
+                    "lat": -23.5681265,
+                    "lng": -46.6582136
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": -23.5667090197085,
+                        "lng": -46.6567931697085
+                    },
+                    "southwest": {
+                        "lat": -23.5694069802915,
+                        "lng": -46.65949113029149
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/shopping-71.png",
+            "id": "abbd5a1f8ceb52ec0e82f083e99c21202e3e04a1",
+            "name": "Raia & Cia",
+            "opening_hours": {
+                "open_now": true,
+                "weekday_text": []
+            },
+            "photos": [
+                {
+                    "height": 2432,
+                    "html_attributions": [
+                        "<a href=\"https://maps.google.com/maps/contrib/102644621820847277767/photos\">Felipe Casseb de Jesus</a>"
+                    ],
+                    "photo_reference": "CoQBdwAAAJcNiIaaoMvX6r4Sm6qvAmcM6t_DZaAz15Et4roOi0Brg14t47YvC-w6ljmm-QNiuxm9DN4F5JcdFDxdPdGDJVD1VOeLuez2t9MiBUJW4kjHVCfRb3cMatFqIUky83wTFrWGXKkWnK6oC6LYlBprf-WkJ62NFQ1wPl907azQ2litEhCdWEnvUuuYE3F8VnDD6vSGGhSOVmPQZ4o5YslyZw4EsXPbETTMGw",
+                    "width": 4320
+                }
+            ],
+            "place_id": "ChIJw3pyrMVZzpQRl6ZALA2u4sA",
+            "rating": 3.9,
+            "reference": "CmRSAAAAUvzxRKz14yYRJ3Tq67J9p9SdrLaC-H6FT_cDFx3A_nhc34_-KM_6oDB1gVTiIYPz0h8p_bcT10ifLC7mlxff5Y6dttq0NWblCPaGUNXdmhKwMmI93BK0x9nlvVXa1f7YEhB6ZS__91YbiLkqjWtNMU1cGhT5apHwKFr35-SAWgLEywBQXJcROA",
+            "scope": "GOOGLE",
+            "types": [
+                "pharmacy",
+                "health",
+                "store",
+                "point_of_interest",
+                "establishment"
+            ],
+            "vicinity": "Rua José Maria Lisboa, 645 - Jardim Paulista, São Paulo"
+        },
+        {
+            "geometry": {
+                "location": {
+                    "lat": -23.5608007,
+                    "lng": -46.6607728
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": -23.5593731197085,
+                        "lng": -46.6595113697085
+                    },
+                    "southwest": {
+                        "lat": -23.5620710802915,
+                        "lng": -46.6622093302915
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/shopping-71.png",
+            "id": "bc060b1f2f0e9264168cce382770c3d55926dacb",
+            "name": "Droga Raia",
+            "opening_hours": {
+                "open_now": true,
+                "weekday_text": []
+            },
+            "photos": [
+                {
+                    "height": 690,
+                    "html_attributions": [
+                        "<a href=\"https://maps.google.com/maps/contrib/115091637720122568177/photos\">Droga Raia</a>"
+                    ],
+                    "photo_reference": "CoQBdwAAAGkmrJ39SnONkua_Q8CmMs7mCj-wF21gb9CB3T2EMbmRd1xV9o8nNLgAVWvEQJ-y6D4ZDKzGRns6aIAyOnbzv94bOCX5qKx37gQ89SrRMiR8Wqn6_XYQPLRV_--SDmIZjkHTwTzYWbdxS1FgLeB6yujVeoWJFyHObtplW1U2ZyuuEhDFwKgJNOXW5eoqkYQ7A_FCGhQJj071iVn5SWW0-wWqJc3709U9xQ",
+                    "width": 690
+                }
+            ],
+            "place_id": "ChIJ13mbddJZzpQRK0RC_rD25Es",
+            "rating": 4,
+            "reference": "CmRRAAAAgDNRPEdSFm0VuunX8u6RnBGv_rEFzijMiCkqu4_9ZVU_qzQPGh01kkVToe2dqI3hCUPteFidoKHBc3IegFbVC0_Pcwc-cqKUV6_1hSaoV9UOFA_xee1-RQE7T1hVt8VAEhB8w-iXfgQ9YBIQGzjTjMLXGhTpgSukkpELWkI99rdWEAytVOQROQ",
+            "scope": "GOOGLE",
+            "types": [
+                "pharmacy",
+                "health",
+                "store",
+                "point_of_interest",
+                "establishment"
+            ],
+            "vicinity": "Rua Padre João Manuel, 241 - Cerqueira César, São Paulo"
+        },
+        {
+            "geometry": {
+                "location": {
+                    "lat": -23.5998074,
+                    "lng": -46.638237
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": -23.5984565697085,
+                        "lng": -46.6369686197085
+                    },
+                    "southwest": {
+                        "lat": -23.6011545302915,
+                        "lng": -46.6396665802915
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/shopping-71.png",
+            "id": "cdd13e3d146e36936d6ca87eb86ef124f49da288",
+            "name": "Athenas Farmácia de Manipulação",
+            "opening_hours": {
+                "open_now": true,
+                "weekday_text": []
+            },
+            "place_id": "ChIJ-4FoDjFazpQR1RCrBn29CcM",
+            "reference": "CmRSAAAAE8edxvDQJblDaXN_atWQtKYL8h-HRKMoTImZZ2mdv5afs_F72TOsczVvFFcoI62cebDL2LgZ6ThVtCLSfkmrZVdzX1QWC7LNb1DIOQYKdnWENe_yWs6mYdVAXVjibSyxEhBg6lPpSo2ibmGBwjuoIJ_iGhQYAuNW9vLXAiW8h5fwblMgjfhwxg",
+            "scope": "GOOGLE",
+            "types": [
+                "pharmacy",
+                "health",
+                "store",
+                "point_of_interest",
+                "establishment"
+            ],
+            "vicinity": "Rua Machado Bitencourt, 295 - Saúde, São Paulo"
+        },
+        {
+            "geometry": {
+                "location": {
+                    "lat": -23.5829048,
+                    "lng": -46.6683773
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": -23.5816178197085,
+                        "lng": -46.6669857697085
+                    },
+                    "southwest": {
+                        "lat": -23.5843157802915,
+                        "lng": -46.6696837302915
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/shopping-71.png",
+            "id": "feaf415ef21f0fd1cf9aad98be2b2df6e8837674",
+            "name": "Drogaderma",
+            "opening_hours": {
+                "open_now": true,
+                "weekday_text": []
+            },
+            "photos": [
+                {
+                    "height": 4008,
+                    "html_attributions": [
+                        "<a href=\"https://maps.google.com/maps/contrib/112607823173063691890/photos\">Paulo Oliveira</a>"
+                    ],
+                    "photo_reference": "CoQBdwAAAJEdTQwWoRv2W7wezqusEll3XG6EFMYEKd_GUtykpjd0YQ5GCu41Pu8MURwX2zFbbz92yzn_7CLYTxVPP3LqQO6Kv81u9PZPMhKsLCCjhgS_iz7SC25r2ZUi_7vYDns7ptWAv_HruteV5e71AfgzGVASfDoJxdSB2n-W6XvjfCBTEhDAxACmx6J5Hi1rauuN68uYGhSyrUihJ9Ynkk3--epH4mYkE0irYw",
+                    "width": 5344
+                }
+            ],
+            "place_id": "ChIJ3WBzneFZzpQRbQq3Hco9hR4",
+            "rating": 4.2,
+            "reference": "CmRRAAAAFLX1enNMvObi_Rq3sonOdp5reUcyomRRHoFhqLw3KCxmDjVntw1mqBuFCeX-5O-JMfnWuY-Z4NOpI9gPO7a8ad4GUB0KoTqd6X467Hnnk2wmYqrA7OnztYtCv_dQUsy7EhC-SqVhMSTlool9lqFS6MgMGhTylLbie0FRBFtVe2XvBYrpGbO9RA",
+            "scope": "GOOGLE",
+            "types": [
+                "pharmacy",
+                "health",
+                "store",
+                "point_of_interest",
+                "establishment"
+            ],
+            "vicinity": "Avenida Brigadeiro Luís Antônio, 4882 - Jardim Paulista, São Paulo"
+        },
+        {
+            "geometry": {
+                "location": {
+                    "lat": -23.54569739999999,
+                    "lng": -46.63974529999999
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": -23.54423801970849,
+                        "lng": -46.6383292697085
+                    },
+                    "southwest": {
+                        "lat": -23.5469359802915,
+                        "lng": -46.6410272302915
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/shopping-71.png",
+            "id": "f90ca7e7f3d60f6084ba27dd55446e2b78e7ee65",
+            "name": "Drogaderma",
+            "opening_hours": {
+                "open_now": true,
+                "weekday_text": []
+            },
+            "place_id": "ChIJ09zoKFJYzpQRJ03kUQS8xqU",
+            "reference": "CmRSAAAArpdbVkarFBlh_vMjndGQRq4tCzHzpxeZFN5gY-97wK8ncS0iqRCR_iI6_ob3Rf9dOTrp3fB_P0xb1kFiURyOUEXL57SX3mNi82vidHeUqn-eeuRtluMhGmgm6x-3P-SREhB7kLpO-28RrziaGkp0uOoZGhS8Y5kT8-tYT5ITyUU_DSuYhEPPdg",
+            "scope": "GOOGLE",
+            "types": [
+                "pharmacy",
+                "health",
+                "store",
+                "point_of_interest",
+                "establishment"
+            ],
+            "vicinity": "Cond. Empresarial Nova Barão, Loja 71, Rua Barão de Itapetininga, 37 - República, São Paulo"
+        },
+        {
+            "geometry": {
+                "location": {
+                    "lat": -23.6126142,
+                    "lng": -46.6648009
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": -23.6113055697085,
+                        "lng": -46.6634003197085
+                    },
+                    "southwest": {
+                        "lat": -23.6140035302915,
+                        "lng": -46.6660982802915
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/shopping-71.png",
+            "id": "e3f0a6933a073ac26c6bbbc10e3c051130d63579",
+            "name": "Unipharmus",
+            "opening_hours": {
+                "open_now": true,
+                "weekday_text": []
+            },
+            "place_id": "ChIJ7wRcaQxazpQRfTCpKXTJ4ik",
+            "rating": 3.2,
+            "reference": "CmRRAAAAVUiwvP5zLFx_5JOMe5tvHp_nNmintCV113DzSu_EFEGXnaUUlmoLrcXUSJk7_tQ5zki-m80OYh4yKsecOkWq0OPrUsr5537AeSM6zbNaoVbFfYho9io7DlEPbMB9wcwkEhAu4QhuGKT3-w9hRTZFnrDaGhTYgJJk2lJXZcVrKjqCkaTJyqnT0w",
+            "scope": "GOOGLE",
+            "types": [
+                "pharmacy",
+                "health",
+                "store",
+                "point_of_interest",
+                "establishment"
+            ],
+            "vicinity": "Alameda dos Nhambiquaras, 1734 - Moema, São Paulo"
+        },
+        {
+            "geometry": {
+                "location": {
+                    "lat": -23.5674354,
+                    "lng": -46.686795
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": -23.5660316197085,
+                        "lng": -46.6854744697085
+                    },
+                    "southwest": {
+                        "lat": -23.56872958029151,
+                        "lng": -46.6881724302915
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/shopping-71.png",
+            "id": "7ca0bf028403ec43514cc1d9c2d06913f03f0b29",
+            "name": "Pharmácia Arte Fórmulas",
+            "opening_hours": {
+                "open_now": true,
+                "weekday_text": []
+            },
+            "photos": [
+                {
+                    "height": 3264,
+                    "html_attributions": [
+                        "<a href=\"https://maps.google.com/maps/contrib/118315942735211437454/photos\">Irinete Morais</a>"
+                    ],
+                    "photo_reference": "CoQBdwAAAD7F2O8HTHyOXbBoxZq0QQiP_b5sT__aJihrG69fdhxTF3D053BO-s1k7z1m96JVVZFZ_PVIwht-a2sJvsgW9lPOPRTp2QFsfcNce5DF_9zF7alod1Tjk_uhYZVTuvrLHhpOC7p2D6DKICRWU5tx2bwtZ0-9KcX35TUOPg8sbD7eEhC60T8av4mfDJgGOOaRmywaGhRRhYJ8Lc0aITbfPvjBUQ70Tm5sdw",
+                    "width": 1836
+                }
+            ],
+            "place_id": "ChIJudcjmXVXzpQRa3d-H9KLNcc",
+            "rating": 4,
+            "reference": "CmRSAAAAe-HsWAgzne4oTZCqcGi7P9lZYLAk5JsufAsBgjh_W9ugXy2vEsCBopnrF2LfYY4u8i0YzWV4cfgQC5lxp7Ly2TfcllMXPGsDZPdN1xsjVlAAJpJb5oefn8Z4TPVZjNjnEhDHVvr-ipmeyijnmXzg5qnWGhSfX73pbMAAIUQReoKUc8LTh5KtuA",
+            "scope": "GOOGLE",
+            "types": [
+                "pharmacy",
+                "health",
+                "store",
+                "point_of_interest",
+                "establishment"
+            ],
+            "vicinity": "Rua dos Pinheiros, 947 - Pinheiros"
+        },
+        {
+            "geometry": {
+                "location": {
+                    "lat": -23.5674278,
+                    "lng": -46.6868129
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": -23.5660303197085,
+                        "lng": -46.68548911970849
+                    },
+                    "southwest": {
+                        "lat": -23.5687282802915,
+                        "lng": -46.68818708029149
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/shopping-71.png",
+            "id": "39bcffd7f296f188fae2486e89282fe5ddc8ec60",
+            "name": "Grupo Manifarma",
+            "place_id": "ChIJ7zXxl3VXzpQReSIhsvo6bdc",
+            "reference": "CmRSAAAAWBfLqzyb5jPOBnN1LRGbcVlOgHEwN1ld8h2ys7xfRQnFodR4eaKerNktPmZ5HFDco0wG2css5O71HYLypZ60hzU_OhwBh3Tw7R0VwO1jM-EkVrj6GMigrb4o98LlMeGOEhB0nipcEbCVoTyPyyocXczlGhRUwo80qi4KHnEuBNC3vZWTUHwg8A",
+            "scope": "GOOGLE",
+            "types": [
+                "pharmacy",
+                "health",
+                "store",
+                "point_of_interest",
+                "establishment"
+            ],
+            "vicinity": "Rua dos Pinheiros, 947 - Pinheiros, São Paulo"
+        },
+        {
+            "geometry": {
+                "location": {
+                    "lat": -23.525836,
+                    "lng": -46.706856
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": -23.52443186970849,
+                        "lng": -46.7055550197085
+                    },
+                    "southwest": {
+                        "lat": -23.5271298302915,
+                        "lng": -46.7082529802915
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/shopping-71.png",
+            "id": "96e4678407d4ef66170ba65aff6d27dae14daae9",
+            "name": "Grupo Manifarma",
+            "opening_hours": {
+                "open_now": true,
+                "weekday_text": []
+            },
+            "place_id": "ChIJx2SPKX34zpQRBzGYhxS9YU8",
+            "rating": 3.5,
+            "reference": "CmRRAAAAULB6DkGlRjDXW1117EPFPo-XACpJ3U2OE5HTpSA2N14vg-uCGlBIkl5JC-7CBusnn9IcP7zz2soUtDDPV7I-6866jaomd1yDtbWAMTLWPO8BRNsqvayPjRwies13s07cEhDd00BTPVcNvKpqo81PEMdGGhTPG1N_TvK-Mughk8KHZdyyTwuU6g",
+            "scope": "GOOGLE",
+            "types": [
+                "pharmacy",
+                "health",
+                "store",
+                "point_of_interest",
+                "establishment"
+            ],
+            "vicinity": "Rua Pio XI, 23 - Lapa, São Paulo"
+        },
+        {
+            "geometry": {
+                "location": {
+                    "lat": -23.555581,
+                    "lng": -46.67194910000001
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": -23.5542561197085,
+                        "lng": -46.6706120197085
+                    },
+                    "southwest": {
+                        "lat": -23.5569540802915,
+                        "lng": -46.6733099802915
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/shopping-71.png",
+            "id": "427dfe29988324035aed2c12d0c48ae8475eceae",
+            "name": "Farmácia Dose Certa",
+            "opening_hours": {
+                "open_now": true,
+                "weekday_text": []
+            },
+            "place_id": "ChIJ1wf7O4dXzpQRL9TJBlrK5RE",
+            "reference": "CmRRAAAAAZD-4u47WvgRq0sw12Nv37HuWL7TJ1u-za1zfKEP1okUqocNNSKfKXPecDnJXjFdo0PWNXmiqthNmw1eTGy8U7JIILE3_-39XXoHiyJ_78fRIXdgqfzRpGQqvheiDUTzEhC8GTlbk-sOnM4RQMDsmMz_GhS9OJ51w0zwx8OY7rc1JbFv6ps4BA",
+            "scope": "GOOGLE",
+            "types": [
+                "pharmacy",
+                "health",
+                "store",
+                "point_of_interest",
+                "establishment"
+            ],
+            "vicinity": "Avenida Doutor Enéas de Carvalho Aguiar, 560 - Jardim Paulista, São Paulo"
+        },
+        {
+            "geometry": {
+                "location": {
+                    "lat": -23.580418,
+                    "lng": -46.63971899999999
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": -23.5790752197085,
+                        "lng": -46.6383786197085
+                    },
+                    "southwest": {
+                        "lat": -23.5817731802915,
+                        "lng": -46.6410765802915
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/shopping-71.png",
+            "id": "d8b69c77c726d59fc67f2bc04a5758c46b8149b1",
+            "name": "Pague Menos",
+            "opening_hours": {
+                "open_now": true,
+                "weekday_text": []
+            },
+            "place_id": "ChIJ8zY4BYVZzpQR_9R8DJQhoRk",
+            "rating": 3.9,
+            "reference": "CmRRAAAA0rO0am-RumPSsZqtOQN9BNl0iVhfFuQMgzsZoqjkt3g94Eqkofz3YYlBy1TlpXci7P10J_j8AzqqZGHrCLn36AD1NKj-3aLT-F4MoWWVvTweUUqMtDpGF2CDZJzOrA5eEhA5jH4QcLUX3ZN-4yOYs8ulGhRGK7kEqSuruqZXww6LlncIoPyHog",
+            "scope": "GOOGLE",
+            "types": [
+                "pharmacy",
+                "health",
+                "store",
+                "point_of_interest",
+                "establishment"
+            ],
+            "vicinity": "Rua Domingos de Morais, 397 - Vila Mariana, São Paulo"
+        },
+        {
+            "geometry": {
+                "location": {
+                    "lat": -23.5715774,
+                    "lng": -46.70708459999999
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": -23.5702669197085,
+                        "lng": -46.7057502197085
+                    },
+                    "southwest": {
+                        "lat": -23.5729648802915,
+                        "lng": -46.7084481802915
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/shopping-71.png",
+            "id": "1651d5f10213eb94cf086ea86819c3a991e07b3a",
+            "name": "Center Fórmula",
+            "opening_hours": {
+                "open_now": true,
+                "weekday_text": []
+            },
+            "photos": [
+                {
+                    "height": 706,
+                    "html_attributions": [
+                        "<a href=\"https://maps.google.com/maps/contrib/106853211712840076831/photos\">Center Fórmula</a>"
+                    ],
+                    "photo_reference": "CoQBdwAAADEXDK3VL_asTfNDuCGDyBJVNoJRlkRRXn9Dxb8o6kF_2wMscyJjuNWLrQyddqybzfn0h8DNySkGsDwgoLj6pNutSlajhLeyf9suIjbaA6jWCsovTdjwGiAsEO-qk27Fjjo8aUAuQhLGxXLPEVrKbI6_XlmjJ_JOrEN-2G_XYJiwEhDWG4wGrhjq0laScGvExFAKGhR-k7xT6KaDzyvAktnpq3VPKGZ49A",
+                    "width": 706
+                }
+            ],
+            "place_id": "ChIJeQ6V8KpXzpQR-uE3HvJYPZQ",
+            "rating": 4.5,
+            "reference": "CmRSAAAAo1JA40-JhzCXn8KhIsB3-1VBBGeRHBM8v5LfFTTApuHUOH3V1hZ7ASN4GDDvePHGVYdAP3IgkDUPgg4UsyOZIZ5mIzfuFqe-w0a0KmUNFc_0Xj3PY3pzWP667LDiBtQQEhAzgcUhi2LN5xxSrjqb59c6GhSINTuDtoV4NEyTgE0Z_kJpiout7Q",
+            "scope": "GOOGLE",
+            "types": [
+                "pharmacy",
+                "health",
+                "store",
+                "point_of_interest",
+                "establishment"
+            ],
+            "vicinity": "Avenida Vital Brasil, 294 - Butantã"
+        },
+        {
+            "geometry": {
+                "location": {
+                    "lat": -23.591071,
+                    "lng": -46.6755103
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": -23.5896608197085,
+                        "lng": -46.6741818697085
+                    },
+                    "southwest": {
+                        "lat": -23.5923587802915,
+                        "lng": -46.67687983029149
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/shopping-71.png",
+            "id": "92940d09af6ebfc950837c1480e3010b5a2658bb",
+            "name": "Center Fórmula",
+            "opening_hours": {
+                "open_now": true,
+                "weekday_text": []
+            },
+            "photos": [
+                {
+                    "height": 2592,
+                    "html_attributions": [
+                        "<a href=\"https://maps.google.com/maps/contrib/105043606242391628126/photos\">Alexandre T. Oliveira</a>"
+                    ],
+                    "photo_reference": "CoQBdwAAAAvDWpVMmJznGgzXZ1nlTBi3xI4b79ePNvibCD1zhyq5awYhYdQWmotvZ0u4MsRXsl7NSpuDrj5I_Q90ESpDwY1U3y_tkbaTG16LMj-0ae2fRBC9Qek5Jq3moK-I3M5kLvBXR7y2pCiSg1lYjynazOT0x3M3uK8HNNk00GiEixNcEhAmvVV9uCMEBmra2vSi0RDeGhTv-TdYL0c6CXmcEbWHTAD_xH9qKw",
+                    "width": 4608
+                }
+            ],
+            "place_id": "ChIJxeSG31lXzpQRnyw8RzO7r6A",
+            "rating": 5,
+            "reference": "CmRSAAAAUtzzjpit5L6CwmVxoXT0YqjEJYMtm8ICh7zAlpn_g6UGh048c9_zA44Xsr28f8w1Tq7RcXMD1TVKEsWHKoNcqTlDP8mALN-4QZDNoHROr9ZCNkuMsdKrcLyzqntp3oBVEhC7fdE0G3K4AtspYnuSyEPuGhTkSBmN_wLgen76RE039mhpZNsE6w",
+            "scope": "GOOGLE",
+            "types": [
+                "pharmacy",
+                "health",
+                "store",
+                "point_of_interest",
+                "establishment"
+            ],
+            "vicinity": "Rua Doutor Alceu de Campos Rodrigues, 329, São Paulo"
+        },
+        {
+            "geometry": {
+                "location": {
+                    "lat": -23.588117,
+                    "lng": -46.647032
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": -23.5868107697085,
+                        "lng": -46.6456658197085
+                    },
+                    "southwest": {
+                        "lat": -23.58950873029151,
+                        "lng": -46.6483637802915
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/shopping-71.png",
+            "id": "1f3ebd79b36026b10d871aa534368d27063268ae",
+            "name": "Farmácia Sensitiva",
+            "opening_hours": {
+                "open_now": true,
+                "weekday_text": []
+            },
+            "photos": [
+                {
+                    "height": 2340,
+                    "html_attributions": [
+                        "<a href=\"https://maps.google.com/maps/contrib/104786399599994991939/photos\">Ricardo Kazuo Okuda</a>"
+                    ],
+                    "photo_reference": "CoQBdwAAAOS_FrE0L3xx_7aEag7ks08Wj0hVLuSDor1a3lCnKCjQ0ggnMkxWNkuGuVTVCdN_-YVFtn4NSdN3RVSrlUpSMTYexcs6yqECqLZJ1n2-ba0hdcfksbKx2-063TG8YctnTQV8781j-KWEe8Mpn4uzknFxrfbWEsjSgcD6kpjNJeRtEhAIABngRgieqxV4Pim6TQboGhSHG0DHN068IvKL6ZSuGsIkc_nofg",
+                    "width": 4160
+                }
+            ],
+            "place_id": "ChIJD_iDzYtZzpQRy1hy7lNfnSo",
+            "rating": 4.4,
+            "reference": "CmRRAAAAwxJafILzvGsWnvxGAfcd08GvPSoUSQ8dl8XjHowSsdzPT5MdZkEuVCOPV2wnwihB6dqrcsprkVgQlMRso667L7PyQETuD0N0TjdKZEVBG6TebR3IjcbdPXGF_MZjtW9rEhDCxZ7QGmS-53XD_enibvzfGhSIrJ5LKxMvd2jdPENKiBti7QxWgA",
+            "scope": "GOOGLE",
+            "types": [
+                "pharmacy",
+                "health",
+                "store",
+                "point_of_interest",
+                "establishment"
+            ],
+            "vicinity": "Rua Joaquim Távora, 1524 - Vila Mariana, São Paulo"
+        },
+        {
+            "geometry": {
+                "location": {
+                    "lat": -23.551995,
+                    "lng": -46.649901
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": -23.5506926697085,
+                        "lng": -46.64854271970851
+                    },
+                    "southwest": {
+                        "lat": -23.5533906302915,
+                        "lng": -46.6512406802915
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/shopping-71.png",
+            "id": "c5fdc30afa03ba03800a73db074ee2c4bf55fe7f",
+            "name": "Órion Farmácia de Manipulação Esportiva",
+            "opening_hours": {
+                "open_now": true,
+                "weekday_text": []
+            },
+            "photos": [
+                {
+                    "height": 1365,
+                    "html_attributions": [
+                        "<a href=\"https://maps.google.com/maps/contrib/114623681005429208145/photos\">Órion Farmácia de Manipulação Esportiva</a>"
+                    ],
+                    "photo_reference": "CoQBdwAAABpyDssBKQHDjm6CzoSYyYrgN3DMaHRLm4_x4iNn9BtAhP7DlgMSTKQqeScyBSHTc1tnkMYX5s4dZr3B4oZ3QpCyMVlmPIjZLk21OvT6NMt-mhYdaJGmsqFcgK8fNALURumP3BGzuZxWuggRzix8x5I3yN2upj8UjI-gFCz8BReoEhAk5yOuB_IN4F-Ex09_Bfu6GhReZ5K0SN3G6n6gzBHvqFqD8CPGpQ",
+                    "width": 2048
+                }
+            ],
+            "place_id": "ChIJt5bD7EpYzpQRpe-3W2YVjQA",
+            "rating": 5,
+            "reference": "ClRQAAAAcfMHcQTGfzq96Poo9T4BatQ8YxJF4V_zdCLZNgE_4Y48jzdWcUvwMXY-HIh3lHGmgEAEJJ8aOtyms6hrwRH3fSBHLITwWlgmggM4blYe6ckSEFZRB6Z1DsJxVoWoX3Cc8IoaFDUaxed1yQlGmNhY8aObfYwzXOBU",
+            "scope": "GOOGLE",
+            "types": [
+                "pharmacy",
+                "health",
+                "store",
+                "point_of_interest",
+                "establishment"
+            ],
+            "vicinity": "Rua Frei Caneca, 226 - Consolação, São Paulo"
+        },
+        {
+            "geometry": {
+                "location": {
+                    "lat": -23.5420402,
+                    "lng": -46.641254
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": -23.5406801697085,
+                        "lng": -46.6399152697085
+                    },
+                    "southwest": {
+                        "lat": -23.5433781302915,
+                        "lng": -46.6426132302915
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/shopping-71.png",
+            "id": "c65e27709ce405763f920e879a2b1f7cd3193482",
+            "name": "Galo de Ouro Farmácia de Manipulação",
+            "opening_hours": {
+                "open_now": true,
+                "weekday_text": []
+            },
+            "place_id": "ChIJByPVHlBYzpQRycMKZtJc9OI",
+            "rating": 5,
+            "reference": "CmRSAAAAQg8Grux2rOg9H2Dn3Q0BZC5blBjvEDCHLLZXL8-bdgecgRMlrBaZxKiImuV7BQrkX-f1u46mk7Rw4ZHWibxsPaBH0e3at45Af6BChkxIMOIQKQmodbIOoQfovIgcY1tcEhBdzCph7uTtF1gfsnEAudx_GhT0EcmAG7XIAQTIW7QzW4HnVjVaAA",
+            "scope": "GOOGLE",
+            "types": [
+                "pharmacy",
+                "health",
+                "store",
+                "point_of_interest",
+                "establishment"
+            ],
+            "vicinity": "Rua dos Timbiras, 601 - República"
+        },
+        {
+            "geometry": {
+                "location": {
+                    "lat": -23.5643769,
+                    "lng": -46.691214
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": -23.56298911970849,
+                        "lng": -46.6897976697085
+                    },
+                    "southwest": {
+                        "lat": -23.5656870802915,
+                        "lng": -46.6924956302915
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/shopping-71.png",
+            "id": "582ed205de50f263215094559aca528769b10e06",
+            "name": "Farmácia Rhamus",
+            "opening_hours": {
+                "open_now": true,
+                "weekday_text": []
+            },
+            "photos": [
+                {
+                    "height": 3264,
+                    "html_attributions": [
+                        "<a href=\"https://maps.google.com/maps/contrib/118315942735211437454/photos\">Irinete Morais</a>"
+                    ],
+                    "photo_reference": "CoQBdwAAAM19zvLN66r6CXXQ30LoSxJXb94qXqWNIctdwF8IZEmd4dePekN8wgj28PxqncEEs-2_lAp4gHp1mXUGqxIfQNkakcc3EdD8jk9cgMPvtyqEHX6ENWLE9R5cLR8xCaiBCJ7libXtkw1ZaHR-lrGv42Qmqv_aP1OccMIv_2MLO_W9EhD8As9EWJn5OwyXimwujbkrGhQAizlVYLl0X9fPry9rzChhm32UVg",
+                    "width": 1836
+                }
+            ],
+            "place_id": "ChIJS0V1v6FXzpQRpIaC2rfIqBQ",
+            "rating": 5,
+            "reference": "CmRRAAAAgMJLCfQeuGstSYaX71ModOI7ErIlUlrYuMb6uQJHtL41Q_8GhJwn4z_Q1_8R9ZNKmAinqZbzm4MdZvuLRlBRE8y66LyA5E7hvsQiWcFhNOcuEOMKP_kk-iKfD3D74GThEhDc3-qy4ETiZQnwKnVgq5yNGhQ4W4POzkUSs_hhtQqlyv-gOPY-6w",
+            "scope": "GOOGLE",
+            "types": [
+                "pharmacy",
+                "health",
+                "store",
+                "point_of_interest",
+                "establishment"
+            ],
+            "vicinity": "Avenida Pedroso de Morais, 669 - Pinheiros, São Paulo"
+        },
+        {
+            "geometry": {
+                "location": {
+                    "lat": -23.5464002,
+                    "lng": -46.6407843
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": -23.5450700197085,
+                        "lng": -46.6394687697085
+                    },
+                    "southwest": {
+                        "lat": -23.5477679802915,
+                        "lng": -46.6421667302915
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/shopping-71.png",
+            "id": "85b45233ad49211dd6d9dab3d61df350825cdfc6",
+            "name": "Drogaderma",
+            "opening_hours": {
+                "open_now": true,
+                "weekday_text": []
+            },
+            "place_id": "ChIJ88oPEVJYzpQRTRDoIQtg36k",
+            "reference": "CmRSAAAAyUDkJviUHOesK5-xBXe5yQHgYzuH42hGxy1Xrt4TPKEiUNMEshs-9gRfCWpt3WzziKNTm6dzAALClMYzls27eKzzqsdPJj7eS_6Rl0tUbfuTKuC85b2SxviXJlrlmS5tEhDUkMzIOK-pMDbKB0VwhN_YGhQnCYtW3KdhzAHGIo9zl2M9OkAKLg",
+            "scope": "GOOGLE",
+            "types": [
+                "pharmacy",
+                "health",
+                "store",
+                "point_of_interest",
+                "establishment"
+            ],
+            "vicinity": "Rua Sete de Abril, 154 - Loja 71 - República, São Paulo"
+        },
+        {
+            "geometry": {
+                "location": {
+                    "lat": -23.5534163,
+                    "lng": -46.6596547
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": -23.5520105697085,
+                        "lng": -46.6583518697085
+                    },
+                    "southwest": {
+                        "lat": -23.5547085302915,
+                        "lng": -46.6610498302915
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/shopping-71.png",
+            "id": "b64938c4d315d9dd5e487bc56d374301bc32834a",
+            "name": "Farmácia ICESP",
+            "opening_hours": {
+                "open_now": true,
+                "weekday_text": []
+            },
+            "photos": [
+                {
+                    "height": 2368,
+                    "html_attributions": [
+                        "<a href=\"https://maps.google.com/maps/contrib/112031000756066177760/photos\">William F</a>"
+                    ],
+                    "photo_reference": "CoQBdwAAAMXftsWc0G474HMOwtzrOwCIf0QiwqgSYzIj8Q4F19TMexpKX6pSzStNDlGo0Unr9Ik2BK_hhjZ22Sm0C3EzbpZrXm_aP_sC8aynHJNt7V1YyRTmYFVeSgDrF4yKeVSptaZL2eBh0QkxtlR06lmGzXTY-267O5V5_p0d21_pDApZEhAUQIRD6F22lOfFt7ojGGQtGhSUQz8UMHMX4UyYLoc1GCoWRFXN8Q",
+                    "width": 3200
+                }
+            ],
+            "place_id": "ChIJ_08hQDJYzpQROl0qeOZVl_s",
+            "rating": 4.1,
+            "reference": "CmRSAAAAajif6C1nOfdiysv0fHjgpYMYn7y__TRI5ZWgpK6C_E4dDKbldctiOvAs0SCIwKXnIX7TIf9FSOHBEwLKah0fiCvCEu1k2qE8HNZCtsA1IJZWyDdeA4A_awqS28ktxeROEhBwoix93S0U4iBRA1TBN--rGhR12DeoEbVY9nBwDQ9DMS_9qzL3Mw",
+            "scope": "GOOGLE",
+            "types": [
+                "pharmacy",
+                "health",
+                "store",
+                "point_of_interest",
+                "establishment"
+            ],
+            "vicinity": "Rua da Consolação, 2049 - Consolação, São Paulo"
+        }
+    ],
+    "status": "OK"
+}
