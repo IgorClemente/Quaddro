@@ -15,18 +15,18 @@ func RankingInfo() -> [Usuario]? {
     var usuariosRanking:[Usuario] = []
     let address = "https://inovatend.mybluemix.net/usuarios"
     
-    guard let url = URL(string: address),
+    guard let url  = URL(string: address),
           let data = try? Data(contentsOf: url),
           let json = try? JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions()),
           let info = json as? [String:Any],
           let usuarios = info["resultado"] as? [[String:Any]] else {
-        return nil
+          return nil
     }
     
     for (_,u) in usuarios.enumerated() {
         guard let nome = u["nome"] as? String,
               let pontos = u["pontos"] as? Int else {
-            return nil
+              return nil
         }
         usuariosRanking.append((nome:nome,pontos:pontos))
     }

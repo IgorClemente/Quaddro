@@ -20,6 +20,7 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate, UINaviga
     @IBOutlet weak var viewSubMenuArvores: UIView?
     @IBOutlet weak var viewSubMenuMapa: UIView?
     @IBOutlet var botoesSubMenu: [UIBarButtonItem]?
+    @IBOutlet weak var uiProgressUpload: UIProgressView?
     
     var imagensArvores = [UIImage]()
     
@@ -28,76 +29,84 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate, UINaviga
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        
         super.viewWillAppear(true)
-        
-        guard let remoteURL = URL(string:"https://inovatend.mybluemix.net/users/\(App.shared.userCpf)") else {
-            return
+        let urlUser = "https://inovatend.mybluemix.net/users/\(App.shared.userCpf)"
+        guard let remoteURL = URL(string: urlUser),
+              let progress  = self.uiProgressUpload   else {
+              return
         }
-            
+        // Barra de Progresso - UploadImagem
+        progress.setProgress(0.0, animated: true)
+        progress.isHidden = true
+        
         var usuarioLogged:[String:Any] = [:]
-           if let data = try? Data(contentsOf: remoteURL),
-              let json = try? JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions()),
-              let info = json as? [String:Any],
-              let usuario = info["usuario"] as? [[String:Any]],
-              let quantidadeArvores = info["arvores"] as? [String:Int],
-              let ids_arvore        = info["arvore_ids"] as? [[String:Int]]  {
-                 for u in usuario {
-                    guard let nome = u["nome"] as? String,
-                        let sobrenome = u["sobrenome"] as? String,
-                        let id_user   = u["id_user"] as? Int,
-                        let localidade = u["localidade"] as? String,
-                        let uf    = u["uf"] as? String,
-                        let numeroTelefone = u["numero_telefone"] as? String,
-                        let email  = u["email"] as? String,
-                        let pontos = u["pontos"] as? Int,
-                        let quantidade = quantidadeArvores["quantidade"] else {
-                                return
-                    }
-                    usuarioLogged["nome"]       = nome
-                    usuarioLogged["sobrenome"]  = sobrenome
-                    usuarioLogged["id_user"]    = id_user
-                    usuarioLogged["localidade"] = localidade
-                    usuarioLogged["uf"] = uf
-                    usuarioLogged["numeroTelefone"] = numeroTelefone
-                    usuarioLogged["email"]  = email
-                    usuarioLogged["pontos"] = pontos
+        
+        if let data = try? Data(contentsOf: remoteURL),
+           let json = try? JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions()),
+           let info = json as? [String:Any],
+           let usuario = info["usuario"] as? [[String:Any]],
+           let quantidadeArvores = info["arvores"] as? [String:Int],
+           let ids_arvore        = info["arvore_ids"] as? [[String:Int]]  {
+            
+             for u in usuario {
+               guard let nome = u["nome"] as? String,
+                     let sobrenome = u["sobrenome"] as? String,
+                     let id_user   = u["id_user"] as? Int,
+                     let localidade = u["localidade"] as? String,
+                     let uf    = u["uf"] as? String,
+                     let numeroTelefone = u["numero_telefone"] as? String,
+                     let email  = u["email"] as? String,
+                     let pontos = u["pontos"] as? Int,
+                     let quantidade = quantidadeArvores["quantidade"] else {
+                     return
+               }
+                
+               usuarioLogged["nome"]       = nome
+               usuarioLogged["sobrenome"]  = sobrenome
+               usuarioLogged["id_user"]    = id_user
+               usuarioLogged["localidade"] = localidade
+               usuarioLogged["uf"] = uf
+               usuarioLogged["numeroTelefone"] = numeroTelefone
+               usuarioLogged["email"]  = email
+               usuarioLogged["pontos"] = pontos
                     
-                    App.shared.idTrees = ids_arvore
-                    App.shared.amountOfTrees = quantidade
-                 }
-                 self.carregarInformacoesPerfil(usuarioLogged)
-                 App.shared.setUserLogged(usuarioLogged)
-              }
+               App.shared.idTrees = ids_arvore
+               App.shared.amountOfTrees = quantidade
+             }
+            
+             self.carregarInformacoesPerfil(usuarioLogged)
+             App.shared.setUserLogged(usuarioLogged)
+          }
         
-        let idArvores = App.shared.idTrees
+        let idArvores     = App.shared.idTrees
+        
         for (idx,imagem) in idArvores.enumerated() {
-            guard let id_arvore = imagem["arvore_id"], let remoteImageURL = URL(string:"https://inovatend.mybluemix.net/imagens/\(id_arvore)"),
-                let remoteInfoURL = URL(string:"https://inovatend.mybluemix.net/imagens/arvore/\(id_arvore)") else {
+          guard let id_arvore      = imagem["arvore_id"] ,
+                let remoteImageURL = URL(string:"https://inovatend.mybluemix.net/imagens/\(id_arvore)"),
+                let remoteInfoURL  = URL(string:"https://inovatend.mybluemix.net/imagens/arvore/\(id_arvore)") else {
                 return
-            }
-            Alamofire.request(remoteImageURL).responseData { (response) in
-               if response.error == nil {
-                  print(response.result)
-                  if let data = response.data {
-                     Alamofire.request(remoteInfoURL).responseData { (response) in
-                        if response.error == nil{
-                           if let info = response.data {
-                              guard let json = try? JSONSerialization.jsonObject(with: info, options:  JSONSerialization.ReadingOptions()),
-                                let info   = json as? [String:Any],
-                                let arvore = info["arvore"] as? [String:Any] else {
-                                return
-                              }
-                              self.createMenuArvores(arvoreImagem:UIImage(data: data) ?? UIImage(),arvoreId:idx,arvore)
-                              self.uiSpinnerSubMenu?.stopAnimating()
-                                    
-                           }
-                        }
-                     }
-                  }
-                }
-            }
+          }
+            
+          Alamofire.request(remoteImageURL).responseData { (response) in
+              if response.error == nil,
+                 let data = response.data {
+                 Alamofire.request(remoteInfoURL).responseData { (response) in
+                    if response.error == nil,
+                       let info = response.data {
+                       guard let json = try? JSONSerialization.jsonObject(with: info, options:  JSONSerialization.ReadingOptions()),
+                             let info   = json as? [String:Any],
+                             let arvore = info["arvore"] as? [String:Any] else {
+                                 return
+                       }
+                      
+                       self.createMenuArvores(arvoreImagem:UIImage(data: data) ?? UIImage(),arvoreId:idx,arvore)
+                       self.uiSpinnerSubMenu?.stopAnimating()
+                    }
+                 }
+              }
+           }
         }
-        
     }
     
     
@@ -106,7 +115,7 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate, UINaviga
         guard let botoes = botoesSubMenu,
               let subArvores = viewSubMenuArvores,
               let subMapa = viewSubMenuMapa else {
-            return
+              return
         }
         
         for (index,botao) in botoes.enumerated() {
@@ -123,17 +132,21 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate, UINaviga
     }
     
     @IBAction func tapSubMenu(_ sender: UIBarButtonItem) {
+        
         guard let botoes  = botoesSubMenu,
               let viewSubMapa = viewSubMenuMapa,
               let viewSubArvore = viewSubMenuArvores else {
-            return
+              return
         }
+        
         if let titulo = sender.title {
           switch titulo {
             case "submenuMapa":
+                
                UIView.animate(withDuration: 0.2,animations: {
                     viewSubMapa.alpha    = 1.0
                }){ _ in viewSubMapa.isHidden = false }
+               
                for botao in botoes {
                  if botao.title == "submenuArvores" {
                     UIView.animate(withDuration: 0.3, animations: {
@@ -147,9 +160,11 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate, UINaviga
                  }
                }
             case "submenuArvores":
+                
                UIView.animate(withDuration: 0.2, animations: {
                  viewSubArvore.alpha    = 1.0
                }){ _ in viewSubArvore.isHidden = false }
+               
                for botao in botoes {
                  if botao.title == "submenuMapa" {
                     UIView.animate(withDuration: 0.3, animations: {
@@ -173,40 +188,19 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate, UINaviga
     }
     
     func carregarInformacoesPerfil(_ u:[String:Any]) {
-        guard let nomeCompleto = (((u["nome"] as? String) ?? "") + " " + ((u["sobrenome"] as? String) ?? "")) as? String,
-              let localidade   = (((u["localidade"] as? String) ?? "") + "," + ((u["uf"] as? String) ?? "")) as? String,
+        guard let nome         = u["nome"] as? String ,
+              let sobrenome    = u["sobrenome"] as? String ,
+              let localidade   = u["localidade"] as? String ,
+              let uf           = u["uf"] as? String ,
               let pontos       = u["pontos"] as? Int
             else {
             return
         }
-        self.uiNomeCompleto?.text = nomeCompleto
-        self.uiLocalidade?.text   = localidade
+        self.uiNomeCompleto?.text = "\(nome) \(sobrenome)"
+        self.uiLocalidade?.text   = "\(localidade),\(uf)"
         self.uiPontuacao?.text    = "\(pontos)"
     }
     
-    func uploadImage(_ pathImage:String) {
-        
-        let url = "https://inovatend.mybluemix.net/upload"
-        
-        Alamofire.upload(
-            multipartFormData: { multipartFormData in
-                multipartFormData.append(pathImage, withName: "sampleFile")
-        },
-        to: url,
-        encodingCompletion: { encodingResult in
-            switch encodingResult {
-            case .success(let upload, _, _):
-                upload.responseJSON { response in
-                    if let jsonResponse = response.result.value as? [String: Any] {
-                        print(jsonResponse)
-                    }
-                }
-            case .failure(let encodingError):
-                    print(encodingError)
-            }
-        }
-        )
-    }
     
     func createMenuArvores(arvoreImagem:UIImage, arvoreId:Int,_ arvoreInfo:[String:Any]) {
         guard let fundoCinza = self.viewFundoCinza,
@@ -223,7 +217,7 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate, UINaviga
         arvoreItem.backgroundColor = UIColor(white:1,alpha:0.9)
             
         let  fotoArvore   = UIImageView()
-        fotoArvore.frame  = CGRect(x:0,y:0,width:50,height:50)
+        fotoArvore.frame  = CGRect(x:0,y:0,width:60,height:60)
         fotoArvore.image  = arvoreImagem
         fotoArvore.contentMode = .scaleAspectFill
         fotoArvore.layer.cornerRadius = fotoArvore.frame.width/2
@@ -255,9 +249,9 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate, UINaviga
             
             limitadoresRegras.append(contentsOf:[NSLayoutConstraint(item:fotoArvore, attribute:.centerY, relatedBy:.equal, toItem:arvoreItem, attribute:.centerY, multiplier:1.0, constant:0)])
             
-            limitadoresRegras.append(contentsOf:[NSLayoutConstraint(item:fotoArvore, attribute:.width, relatedBy:.equal, toItem:nil, attribute: .notAnAttribute, multiplier:1.0, constant:50)])
+            limitadoresRegras.append(contentsOf:[NSLayoutConstraint(item:fotoArvore, attribute:.width, relatedBy:.equal, toItem:nil, attribute: .notAnAttribute, multiplier:1.0, constant:60)])
             
-            limitadoresRegras.append(contentsOf:[NSLayoutConstraint(item:fotoArvore, attribute:.height, relatedBy:.equal, toItem:nil, attribute:.notAnAttribute, multiplier:1.0, constant:50)])
+            limitadoresRegras.append(contentsOf:[NSLayoutConstraint(item:fotoArvore, attribute:.height, relatedBy:.equal, toItem:nil, attribute:.notAnAttribute, multiplier:1.0, constant:60)])
             
             limitadoresRegras.append(contentsOf:[NSLayoutConstraint(item:pontuacaoArvore, attribute:.trailing, relatedBy:.equal, toItem:fundoCinza, attribute:.trailing, multiplier:1.0, constant:0)])
             
@@ -294,7 +288,7 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate, UINaviga
             let imagemComprimida = UIImage(data: imagemData ?? Data())
             UIImageWriteToSavedPhotosAlbum(imagemComprimida ?? UIImage(), nil, nil, nil)
             
-            salvarImagemTake(imagemCapturada)
+            enviarFotoServidor(imagemCapturada)
             
             picker.dismiss(animated: true, completion: nil)
             let alerta = UIAlertController(title:"Imagem", message:"Imagem Salva com Sucesso !", preferredStyle: .alert)
@@ -304,19 +298,37 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate, UINaviga
         }
     }
     
-    func salvarImagemTake(_ image:UIImage) {
-    
-        guard let imageData = UIImagePNGRepresentation(image),
-              let docDir = try? FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: true),
-              let imageURL = docDir.appendingPathComponent("tmp.png") else {
+    func enviarFotoServidor(_ image:UIImage) {
+        
+        guard let remote = URL(string:"https://inovatend.mybluemix.net/upload"),
+              let imageData = UIImagePNGRepresentation(image),
+              let progressBar  = self.uiProgressUpload
+                else {
             return
         }
         
-        try? imageData.write(to: imageURL)
-        
-        if UIImage(contentsOfFile: (imageURL?.path)!) != nil {
-            print(imageURL?.path)
+        Alamofire.upload(multipartFormData: { multipartFormData in
+            multipartFormData.append(imageData, withName: "sampleFile",fileName: "sampleFile.png", mimeType: "image/png")
+        },
+        to:remote)
+        { (result) in
+            switch result {
+            case .success(let upload, _, _):
+                upload.uploadProgress(closure: { (progress) in
+                    progressBar.isHidden = false
+                    print("Upload Progress: \(progress.fractionCompleted)")
+                    progressBar.setProgress(Float(progress.fractionCompleted), animated: true)
+                })
+                upload.responseJSON { response in
+                    if response.result.value == nil {
+                        progressBar.isHidden = true
+                        progressBar.setProgress(0.0, animated: false)
+                    }
+                    print(response.result.value ?? "")
+                }
+            case .failure(let encodingError):
+                print(encodingError)
+            }
         }
     }
-
 }

@@ -8,8 +8,8 @@
 
 import UIKit
 
-
-class RoundViewCustom:NSObject {
+@IBDesignable
+class RoundViewCustom : NSObject {
 
     @IBInspectable var radii:Int = 10
     

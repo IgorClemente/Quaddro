@@ -14,6 +14,7 @@ class LateralMenuView : UIView {
     override init(frame: CGRect) {
         
         super.init(frame: frame)
+        
         let controladorMenu = ControllerLateralMenu.controller
         
         let fundoModal   = UIView()
@@ -131,13 +132,13 @@ class LateralMenuView : UIView {
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         if let t = touches.first {
-            if t.view?.tag == 10 {
-                UIView.animate(withDuration: 0.4, animations: {
-                    self.alpha = 0.0
-                }){ _ in
-                    self.removeFromSuperview()
-                }
-            }
+           if t.view?.tag == 10 {
+              UIView.animate(withDuration: 0.4, animations: {
+                self.alpha = 0.0
+              }){ _ in
+                self.removeFromSuperview()
+              }
+           }
         }
     }
     
