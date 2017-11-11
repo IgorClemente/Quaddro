@@ -179,7 +179,7 @@
 				TargetAttributes = {
 					432D05801F9B67A500EFF276 = {
 						CreatedOnToolsVersion = 8.3;
-						DevelopmentTeam = 6M52ZTU4DG;
+						DevelopmentTeam = 62SLG68Y9S;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -360,7 +360,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 6M52ZTU4DG;
+				DEVELOPMENT_TEAM = 62SLG68Y9S;
 				INFOPLIST_FILE = Swift200_Day10_CollectionView/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = io.nilo.pessoas.6;
@@ -373,7 +373,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 6M52ZTU4DG;
+				DEVELOPMENT_TEAM = 62SLG68Y9S;
 				INFOPLIST_FILE = Swift200_Day10_CollectionView/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = io.nilo.pessoas.6;

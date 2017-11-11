@@ -8,7 +8,7 @@ import UIKit
 import MapKit
 
 class MapViewController: UIViewController, CLLocationManagerDelegate {
-    
+        
     // MARK: outlets
     @IBOutlet weak var uiBottomMenuGuide: NSLayoutConstraint?
     @IBOutlet weak var uiAddressTextfield: UITextField?

@@ -1,15 +1,15 @@
 //
-//  LoginController.swift
+//  LoginViewController.swift
 //  EdpOnline
 //
-//  Created by MACBOOK AIR on 11/10/17.
+//  Created by MACBOOK AIR on 10/11/17.
 //  Copyright © 2017 MACBOOK AIR. All rights reserved.
 //
 
 import UIKit
 
-
-class LoginController:UIViewController {
+class LoginViewController : UIViewController {
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
