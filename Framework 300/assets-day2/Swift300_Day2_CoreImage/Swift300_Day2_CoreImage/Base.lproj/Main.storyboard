@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Camera View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="CameraViewController" customModule="Swift300_Day2_CoreImage" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gca-gY-e2G">
+                                <rect key="frame" x="24" y="150" width="200" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="ZLR-Jz-K14"/>
+                                    <constraint firstAttribute="height" constant="150" id="bPe-z4-fh8"/>
+                                </constraints>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="bottom" image="panel" translatesAutoresizingMaskIntoConstraints="NO" id="tiN-1n-wV4">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2ha-8r-6fr">
+                                <rect key="frame" x="238" y="453" width="80" height="55"/>
+                                <state key="normal" image="btnCamera"/>
+                                <state key="highlighted" image="btnCameraHL"/>
+                                <connections>
+                                    <action selector="tapPick" destination="BYZ-38-t0r" eventType="touchUpInside" id="QNp-cy-0vp"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h9N-PE-z4Y">
+                                <rect key="frame" x="238" y="511" width="80" height="55"/>
+                                <state key="normal" image="btnAlbum"/>
+                                <state key="highlighted" image="btnAlbumHL"/>
+                                <connections>
+                                    <action selector="tapChoose" destination="BYZ-38-t0r" eventType="touchUpInside" id="f4Q-ta-Lk6"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OHk-wu-As6">
+                                <rect key="frame" x="24" y="150" width="200" height="150"/>
+                                <connections>
+                                    <action selector="tapShare" destination="BYZ-38-t0r" eventType="touchUpInside" id="BON-pU-mCn"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10h30" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mxg-Wf-EYl" customClass="ClockLabel" customModule="Swift300_Day2_CoreImage" customModuleProvider="target">
+                                <rect key="frame" x="247.5" y="43.5" width="45" height="17.5"/>
+                                <fontDescription key="fontDescription" name="AmericanTypewriter-Bold" family="American Typewriter" pointSize="14"/>
+                                <color key="textColor" red="0.22279056871843969" green="0.21264244128062351" blue="0.26189720812182737" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qda-uE-cNU" customClass="CIFilterPicker" customModule="Swift300_Day2_CoreImage" customModuleProvider="target">
+                                <rect key="frame" x="84" y="33" width="120" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Anc-jw-orP"/>
+                                    <constraint firstAttribute="width" constant="120" id="lVM-CG-17G"/>
+                                </constraints>
+                            </pickerView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Cg-da-FZk" customClass="AdjustsView" customModule="Swift300_Day2_CoreImage" customModuleProvider="target">
+                                <rect key="frame" x="22" y="406" width="176" height="142"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="142" id="4qV-pc-AA9"/>
+                                    <constraint firstAttribute="width" constant="176" id="bWx-SZ-mCi"/>
+                                </constraints>
+                            </view>
+                            <activityIndicatorView hidden="YES" opaque="NO" alpha="0.80000000000000004" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="Y75-A0-Yng">
+                                <rect key="frame" x="192" y="271" width="20" height="20"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.13638218134235369" green="0.15937822716905167" blue="0.21853188451776651" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="h9N-PE-z4Y" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="118" id="4VI-A6-1xj"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="h9N-PE-z4Y" secondAttribute="bottom" constant="2" id="6Jf-LG-N9u"/>
+                            <constraint firstItem="OHk-wu-As6" firstAttribute="width" secondItem="gca-gY-e2G" secondAttribute="width" id="9VC-Ke-Ss5"/>
+                            <constraint firstItem="Y75-A0-Yng" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="42" id="9vC-zz-UY5"/>
+                            <constraint firstItem="8Cg-da-FZk" firstAttribute="top" secondItem="Y75-A0-Yng" secondAttribute="bottom" constant="115" id="A8X-hG-b6b"/>
+                            <constraint firstItem="gca-gY-e2G" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-36" id="B86-7G-tkT"/>
+                            <constraint firstAttribute="trailing" secondItem="tiN-1n-wV4" secondAttribute="trailing" id="D2h-A0-pmZ"/>
+                            <constraint firstItem="2ha-8r-6fr" firstAttribute="top" secondItem="Mxg-Wf-EYl" secondAttribute="bottom" constant="392" id="DF3-m5-f9J"/>
+                            <constraint firstItem="Mxg-Wf-EYl" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="110" id="G7V-tx-742"/>
+                            <constraint firstItem="2ha-8r-6fr" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="118" id="HPW-0Q-WXE"/>
+                            <constraint firstItem="tiN-1n-wV4" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="TMk-5f-StO"/>
+                            <constraint firstItem="OHk-wu-As6" firstAttribute="top" secondItem="Qda-uE-cNU" secondAttribute="bottom" constant="67" id="TyR-XW-qGq"/>
+                            <constraint firstItem="OHk-wu-As6" firstAttribute="centerX" secondItem="gca-gY-e2G" secondAttribute="centerX" id="WPy-Ar-tZn"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="tiN-1n-wV4" secondAttribute="bottom" id="X5g-ms-O3F"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="2ha-8r-6fr" secondAttribute="bottom" constant="60" id="Z12-t7-2pu"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="gca-gY-e2G" secondAttribute="bottom" constant="268" id="ZEi-44-VCm"/>
+                            <constraint firstItem="8Cg-da-FZk" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-50" id="bKb-qd-llu"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="8Cg-da-FZk" secondAttribute="bottom" constant="20" id="grz-Hl-4wj"/>
+                            <constraint firstItem="tiN-1n-wV4" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="iuJ-Zj-jPO"/>
+                            <constraint firstItem="Qda-uE-cNU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-16" id="pVN-ij-uLw"/>
+                            <constraint firstItem="OHk-wu-As6" firstAttribute="centerY" secondItem="gca-gY-e2G" secondAttribute="centerY" id="rXh-S3-SCY"/>
+                            <constraint firstItem="OHk-wu-As6" firstAttribute="height" secondItem="gca-gY-e2G" secondAttribute="height" id="tyF-Op-21V"/>
+                        </constraints>
+                    </view>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="uiAdjusts" destination="8Cg-da-FZk" id="fRJ-0E-Ixn"/>
+                        <outlet property="uiFilterPicker" destination="Qda-uE-cNU" id="RI2-GR-eZD"/>
+                        <outlet property="uiSpinner" destination="Y75-A0-Yng" id="Kgc-WS-lyH"/>
+                        <outlet property="uiThumb" destination="gca-gY-e2G" id="8Ym-2I-abd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="114" y="93"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="btnAlbum" width="80" height="55"/>
+        <image name="btnAlbumHL" width="80" height="55"/>
+        <image name="btnCamera" width="80" height="55"/>
+        <image name="btnCameraHL" width="80" height="55"/>
+        <image name="panel" width="375" height="667"/>
+    </resources>
+</document>
