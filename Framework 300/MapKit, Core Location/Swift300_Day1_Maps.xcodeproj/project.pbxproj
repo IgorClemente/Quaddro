@@ -368,7 +368,7 @@
 				DEVELOPMENT_TEAM = 6M52ZTU4DG;
 				INFOPLIST_FILE = Swift300_Day1_Maps/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "br.com.quaddro.Swift300-Day1-Maps";
+				PRODUCT_BUNDLE_IDENTIFIER = "br.com.quaddro.Swift300-Day1-Mapss";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
 				SWIFT_VERSION = 4.0;
@@ -382,7 +382,7 @@
 				DEVELOPMENT_TEAM = 6M52ZTU4DG;
 				INFOPLIST_FILE = Swift300_Day1_Maps/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "br.com.quaddro.Swift300-Day1-Maps";
+				PRODUCT_BUNDLE_IDENTIFIER = "br.com.quaddro.Swift300-Day1-Mapss";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
 				SWIFT_VERSION = 4.0;
