@@ -17,14 +17,15 @@ class TelaRankingController:UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         
         super.viewWillAppear(true)
-    
         uiViewFundoRanking?.backgroundColor = UIColor.white
         guard let posicoes = posicoesDoRanking else {
             return
         }
+        
         posicoes.forEach { posicao in
             posicao.isHidden = true
         }
+        
         uiSpinnerActivity?.startAnimating()
     }
     
@@ -42,7 +43,9 @@ class TelaRankingController:UIViewController {
             
             var count = 0
             posicao.subviews.enumerated().forEach { (i,p) in
-             if let identificador = p.restorationIdentifier, let campo = p as? UILabel {
+             if let identificador = p.restorationIdentifier,
+                let campo = p as? UILabel {
+                
                 switch identificador {
                  case "\(index+1)_nome":
                     campo.text  = usuarios[index].nome

@@ -93,7 +93,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
     
     func atualizarMapa(comPlaceMark endereço:CLPlacemark) {
         
-        // Recuperando last/long do endereço geocodificando
+        // Recuperando lat/long do endereço geocodificado
         guard let localizacao = endereço.location else {
             fatalError("Não sei onde é mais sei :B")
         }
@@ -121,8 +121,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
         uiMapa?.removeAnnotations(uiMapa?.annotations ?? [])
         
         if let localUser = app.currentUserLocation {
-            
-            let pinUser = UserAnnotation(paraLocalUser: localUser)
+           let pinUser = UserAnnotation(paraLocalUser: localUser)
             uiMapa?.addAnnotation(pinUser)
         }
         

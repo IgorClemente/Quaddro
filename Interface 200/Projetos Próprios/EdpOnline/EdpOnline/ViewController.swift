@@ -8,8 +8,10 @@
 
 import UIKit
 import Alamofire
+import MapKit
 
-class ViewController: UIViewController,UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class ViewController: UIViewController,UIImagePickerControllerDelegate,
+                      UINavigationControllerDelegate {
     
     @IBOutlet weak var uiFotoPerfil: UIImageView?
     @IBOutlet weak var uiPontuacao: UILabel?
@@ -22,7 +24,15 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate, UINaviga
     @IBOutlet var botoesSubMenu: [UIBarButtonItem]?
     @IBOutlet weak var uiProgressUpload: UIProgressView?
     
+    
+    @IBOutlet weak var uiMapRegionMain: MKMapView?
+    
+    // MARK: Imagens Arvores
     var imagensArvores = [UIImage]()
+    
+    // MARK: Gestor de Localização
+    let locationManagerUser = CLLocationManager()
+    let geocoder            = CLGeocoder()
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
@@ -30,7 +40,9 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate, UINaviga
     
     override func viewWillAppear(_ animated: Bool) {
         
+        self.searchLocation()
         super.viewWillAppear(true)
+        
         let urlUser = "https://inovatend.mybluemix.net/users/\(App.shared.userCpf)"
         guard let remoteURL = URL(string: urlUser),
               let progress  = self.uiProgressUpload   else {
@@ -112,6 +124,7 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate, UINaviga
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         guard let botoes = botoesSubMenu,
               let subArvores = viewSubMenuArvores,
               let subMapa = viewSubMenuMapa else {
@@ -149,14 +162,16 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate, UINaviga
                
                for botao in botoes {
                  if botao.title == "submenuArvores" {
+                    
                     UIView.animate(withDuration: 0.3, animations: {
                       viewSubArvore.alpha = 0.0
                     }){ _ in
+                        
                       botao.tintColor = UIColor.gray
                       viewSubArvore.isHidden = true
                     }
-                 } else {
-                        botao.tintColor = UIColor.white
+                 }else{
+                    botao.tintColor = UIColor.white
                  }
                }
             case "submenuArvores":
@@ -271,8 +286,8 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate, UINaviga
     }
     
     func tirarFoto() {
-        if
-     UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.camera) {
+        if UIImagePickerController.isSourceTypeAvailable(
+        UIImagePickerControllerSourceType.camera) {
             let imagePicker = UIImagePickerController()
             imagePicker.delegate = self
             imagePicker.sourceType = UIImagePickerControllerSourceType.camera
@@ -284,6 +299,7 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate, UINaviga
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         
         if let imagemCapturada = info[UIImagePickerControllerOriginalImage] as? UIImage {
+            
             let imagemData = UIImagePNGRepresentation(imagemCapturada)
             let imagemComprimida = UIImage(data: imagemData ?? Data())
             UIImageWriteToSavedPhotosAlbum(imagemComprimida ?? UIImage(), nil, nil, nil)
@@ -329,6 +345,78 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate, UINaviga
             case .failure(let encodingError):
                 print(encodingError)
             }
+        }
+    }
+}
+
+
+extension ViewController : CLLocationManagerDelegate {
+    
+    func preparePinsUpdate() -> Void {
+        
+        self.uiMapRegionMain?.removeAnnotations(uiMapRegionMain?.annotations ?? [])
+        if let location = App.shared.currentLocation {
+           let pinTree  = TreeAnnotation(forLocation: location)
+           self.uiMapRegionMain?.addAnnotation(pinTree)
+        }
+    }
+    
+    func updateMap(infoPlaceMark info:CLPlacemark) -> Void {
+        
+        guard let location = info.location else {
+            return
+        }
+        let regionSize = MKCoordinateSpanMake(0.01,0.01)
+        let region     = MKCoordinateRegionMake(location.coordinate, regionSize)
+        
+        self.preparePinsUpdate()
+        self.uiMapRegionMain?.setRegion(region, animated: true)
+    }
+    
+    func searchLocation() {
+        switch CLLocationManager.authorizationStatus() {
+          case .authorizedAlways, .authorizedWhenInUse:
+            locationManagerUser.delegate        = self
+            locationManagerUser.desiredAccuracy = kCLLocationAccuracyKilometer
+            locationManagerUser.startUpdatingLocation()
+          case .notDetermined:
+            requestLocationPermission()
+          default:
+            break
+        }
+    }
+    
+    func requestLocationPermission() -> Void {
+        if CLLocationManager.locationServicesEnabled() {
+            locationManagerUser.delegate = self
+            locationManagerUser.requestWhenInUseAuthorization()
+        }
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        guard let lastLocation = locations.last else {
+            return
+        }
+        
+        locationManagerUser.stopUpdatingLocation()
+        geocoder.reverseGeocodeLocation(lastLocation) {
+            (locations, error) in
+            if let locationFirst = locations?.first,
+               let location = locationFirst.location {
+               App.shared.currentLocation = location.coordinate
+               self.updateMap(infoPlaceMark: locationFirst)
+            }
+        }
+    }
+}
+
+extension ViewController : MKMapViewDelegate {
+    
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+        if let location = annotation as? TreeAnnotation {
+            return self.uiMapRegionMain?.dequeueReusableAnnotationView(withIdentifier: location.identifier) ?? location.viewTreeAnnotation()
+        }else{
+            return nil
         }
     }
 }

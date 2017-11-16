@@ -26,6 +26,7 @@ class TelaSettingsViewController : UIViewController, UITextFieldDelegate {
             guard let identificadorCampo = campo.restorationIdentifier else {
                 return
             }
+            
             let fieldImagem   = UIImageView(frame: CGRect(x:10,y:0,width:20, height:20))
             fieldImagem.image = UIImage(named:"field\(identificadorCampo)")
             

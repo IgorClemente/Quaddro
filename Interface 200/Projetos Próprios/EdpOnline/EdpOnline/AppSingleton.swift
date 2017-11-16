@@ -7,19 +7,21 @@
 //
 
 import Foundation
+import CoreLocation
 import Alamofire
 
 class App {
 
     static let shared = App()
     private init() {}
+    
+    var currentLocation:CLLocationCoordinate2D? = nil
 
     var userCpf = "45124712864"
     var amountOfTrees = 0
     var idTrees = Array<[String:Int]>()
     
-    // MARK: user default - setup - persitense
-    
+    // MARK: user default
     var ud  = UserDefaults.standard
     
     private var userLoggedInfos:[String:Any] = [:]
