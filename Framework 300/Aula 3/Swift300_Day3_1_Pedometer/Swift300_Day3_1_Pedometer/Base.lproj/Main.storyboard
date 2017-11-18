@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Swift300_Day3_1_Pedometer" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="forest" translatesAutoresizingMaskIntoConstraints="NO" id="csJ-e8-eBd">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O8A-cc-CYA">
+                                <rect key="frame" x="87.5" y="143.5" width="200" height="40"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g0K-lD-Y6A" customClass="ProgressView" customModule="Swift300_Day3_1_Pedometer" customModuleProvider="target">
+                                        <rect key="frame" x="5" y="5" width="190" height="30"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="g0K-lD-Y6A" secondAttribute="trailing" constant="5" id="2Qn-pn-Hz7"/>
+                                    <constraint firstAttribute="width" constant="200" id="4bJ-4l-iv4"/>
+                                    <constraint firstItem="g0K-lD-Y6A" firstAttribute="top" secondItem="O8A-cc-CYA" secondAttribute="top" constant="5" id="5uj-Ny-zq9"/>
+                                    <constraint firstAttribute="height" constant="40" id="BNa-oF-Lm6"/>
+                                    <constraint firstItem="g0K-lD-Y6A" firstAttribute="leading" secondItem="O8A-cc-CYA" secondAttribute="leading" constant="5" id="Svf-qX-D4i"/>
+                                    <constraint firstAttribute="bottom" secondItem="g0K-lD-Y6A" secondAttribute="bottom" constant="5" id="j1L-dj-tvg"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jZO-eK-ddB" customClass="RemelexoView" customModule="Swift300_Day3_1_Pedometer" customModuleProvider="target">
+                                <rect key="frame" x="122.5" y="382" width="130" height="143"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="🥚" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1bf-Lb-Zyw">
+                                        <rect key="frame" x="0.0" y="0.0" width="130" height="143"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="120"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="1bf-Lb-Zyw" secondAttribute="bottom" id="5Dd-HM-jJV"/>
+                                    <constraint firstItem="1bf-Lb-Zyw" firstAttribute="leading" secondItem="jZO-eK-ddB" secondAttribute="leading" id="INp-ge-8tf"/>
+                                    <constraint firstItem="1bf-Lb-Zyw" firstAttribute="top" secondItem="jZO-eK-ddB" secondAttribute="top" id="NCr-nL-vAF"/>
+                                    <constraint firstAttribute="trailing" secondItem="1bf-Lb-Zyw" secondAttribute="trailing" id="et2-ol-FMK"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hYg-sa-vK0">
+                                <rect key="frame" x="122" y="381.5" width="130" height="143"/>
+                                <connections>
+                                    <action selector="tapOnEgg" destination="BYZ-38-t0r" eventType="touchUpInside" id="v8a-O7-nTz"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gX1-Gx-xay">
+                                <rect key="frame" x="166" y="20" width="42" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="n1g-Pm-8ke"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="hYg-sa-vK0" firstAttribute="width" secondItem="jZO-eK-ddB" secondAttribute="width" id="10x-DO-Rm4"/>
+                            <constraint firstItem="gX1-Gx-xay" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2Rd-IY-FxN"/>
+                            <constraint firstItem="gX1-Gx-xay" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="20" id="AFg-Sv-Bh7"/>
+                            <constraint firstAttribute="trailing" secondItem="csJ-e8-eBd" secondAttribute="trailing" id="EwY-3G-2el"/>
+                            <constraint firstItem="jZO-eK-ddB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="NDV-9J-UDL"/>
+                            <constraint firstItem="csJ-e8-eBd" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Vpo-7T-BJC"/>
+                            <constraint firstItem="jZO-eK-ddB" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="120" id="VzH-Ki-3rz"/>
+                            <constraint firstItem="hYg-sa-vK0" firstAttribute="centerX" secondItem="jZO-eK-ddB" secondAttribute="centerX" id="aqs-7H-UYZ"/>
+                            <constraint firstItem="O8A-cc-CYA" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-170" id="eVU-v5-q6M"/>
+                            <constraint firstItem="hYg-sa-vK0" firstAttribute="height" secondItem="jZO-eK-ddB" secondAttribute="height" id="er7-18-8kX"/>
+                            <constraint firstItem="O8A-cc-CYA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jUs-Ra-Ob5"/>
+                            <constraint firstAttribute="bottom" secondItem="csJ-e8-eBd" secondAttribute="bottom" id="lns-nN-uKP"/>
+                            <constraint firstItem="hYg-sa-vK0" firstAttribute="centerY" secondItem="jZO-eK-ddB" secondAttribute="centerY" id="ood-gL-ACA"/>
+                            <constraint firstItem="csJ-e8-eBd" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="yji-J4-ytK"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="uiEgg" destination="jZO-eK-ddB" id="Hmf-2D-rX4"/>
+                        <outlet property="uiEggIcon" destination="1bf-Lb-Zyw" id="Fnu-Je-aDN"/>
+                        <outlet property="uiProgress" destination="g0K-lD-Y6A" id="cRA-cQ-R26"/>
+                        <outlet property="uiSteps" destination="gX1-Gx-xay" id="Xd7-gK-juh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <customObject id="9NW-gv-CAi" customClass="Riscador" customModule="Swift300_Day3_1_Pedometer" customModuleProvider="target">
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="width">
+                            <real key="value" value="3"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="color">
+                            <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <outletCollection property="uiTargets" destination="O8A-cc-CYA" collectionClass="NSMutableArray" id="aDQ-Q3-NFL"/>
+                    </connections>
+                </customObject>
+                <customObject id="ty0-1v-sJ2" customClass="Arredondador" customModule="Swift300_Day3_1_Pedometer" customModuleProvider="target">
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="radii">
+                            <real key="value" value="10"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <outletCollection property="uiAlvos" destination="O8A-cc-CYA" collectionClass="NSMutableArray" id="0zu-eX-BjV"/>
+                        <outletCollection property="uiAlvos" destination="g0K-lD-Y6A" collectionClass="NSMutableArray" id="4aq-80-Qha"/>
+                    </connections>
+                </customObject>
+            </objects>
+            <point key="canvasLocation" x="-95" y="70"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="forest" width="414" height="736"/>
+    </resources>
+</document>

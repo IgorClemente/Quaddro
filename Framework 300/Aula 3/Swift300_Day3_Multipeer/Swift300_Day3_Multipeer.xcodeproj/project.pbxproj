@@ -1,0 +1,356 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		27A571871FC0143700FE7C42 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A571861FC0143700FE7C42 /* AppDelegate.swift */; };
+		27A5718C1FC0143700FE7C42 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27A5718A1FC0143700FE7C42 /* Main.storyboard */; };
+		27A5718E1FC0143700FE7C42 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27A5718D1FC0143700FE7C42 /* Assets.xcassets */; };
+		27A571911FC0143700FE7C42 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27A5718F1FC0143700FE7C42 /* LaunchScreen.storyboard */; };
+		27A5719D1FC0170400FE7C42 /* HallViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A5719C1FC0170400FE7C42 /* HallViewController.swift */; };
+		27A571A01FC017D000FE7C42 /* MultipeerConnectivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27A5719F1FC017D000FE7C42 /* MultipeerConnectivity.framework */; };
+		27A571A21FC0190400FE7C42 /* Riscador.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A571A11FC0190400FE7C42 /* Riscador.swift */; };
+		27A571A41FC0190A00FE7C42 /* Arredondador.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A571A31FC0190A00FE7C42 /* Arredondador.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		27A571831FC0143700FE7C42 /* Swift300_Day3_Multipeer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Swift300_Day3_Multipeer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		27A571861FC0143700FE7C42 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		27A5718B1FC0143700FE7C42 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		27A5718D1FC0143700FE7C42 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		27A571901FC0143700FE7C42 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		27A571921FC0143700FE7C42 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		27A5719C1FC0170400FE7C42 /* HallViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HallViewController.swift; sourceTree = "<group>"; };
+		27A5719F1FC017D000FE7C42 /* MultipeerConnectivity.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MultipeerConnectivity.framework; path = System/Library/Frameworks/MultipeerConnectivity.framework; sourceTree = SDKROOT; };
+		27A571A11FC0190400FE7C42 /* Riscador.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Riscador.swift; sourceTree = "<group>"; };
+		27A571A31FC0190A00FE7C42 /* Arredondador.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Arredondador.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		27A571801FC0143700FE7C42 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				27A571A01FC017D000FE7C42 /* MultipeerConnectivity.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		27A5717A1FC0143700FE7C42 = {
+			isa = PBXGroup;
+			children = (
+				27A571851FC0143700FE7C42 /* Swift300_Day3_Multipeer */,
+			);
+			sourceTree = "<group>";
+		};
+		27A571841FC0143700FE7C42 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				27A571831FC0143700FE7C42 /* Swift300_Day3_Multipeer.app */,
+			);
+			name = Products;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		27A571851FC0143700FE7C42 /* Swift300_Day3_Multipeer */ = {
+			isa = PBXGroup;
+			children = (
+				27A5719A1FC016D500FE7C42 /* Layout */,
+				27A571991FC016CF00FE7C42 /* Imagens */,
+				27A571981FC016C800FE7C42 /* Suporte */,
+				27A571861FC0143700FE7C42 /* AppDelegate.swift */,
+				27A5719C1FC0170400FE7C42 /* HallViewController.swift */,
+			);
+			path = Swift300_Day3_Multipeer;
+			sourceTree = "<group>";
+		};
+		27A571981FC016C800FE7C42 /* Suporte */ = {
+			isa = PBXGroup;
+			children = (
+				27A5719E1FC017D000FE7C42 /* Frameworks */,
+				27A571841FC0143700FE7C42 /* Products */,
+				27A571921FC0143700FE7C42 /* Info.plist */,
+				27A571A11FC0190400FE7C42 /* Riscador.swift */,
+				27A571A31FC0190A00FE7C42 /* Arredondador.swift */,
+			);
+			name = Suporte;
+			sourceTree = "<group>";
+		};
+		27A571991FC016CF00FE7C42 /* Imagens */ = {
+			isa = PBXGroup;
+			children = (
+				27A5718D1FC0143700FE7C42 /* Assets.xcassets */,
+			);
+			name = Imagens;
+			sourceTree = "<group>";
+		};
+		27A5719A1FC016D500FE7C42 /* Layout */ = {
+			isa = PBXGroup;
+			children = (
+				27A5718F1FC0143700FE7C42 /* LaunchScreen.storyboard */,
+				27A5718A1FC0143700FE7C42 /* Main.storyboard */,
+			);
+			name = Layout;
+			sourceTree = "<group>";
+		};
+		27A5719E1FC017D000FE7C42 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				27A5719F1FC017D000FE7C42 /* MultipeerConnectivity.framework */,
+			);
+			name = Frameworks;
+			path = ..;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		27A571821FC0143700FE7C42 /* Swift300_Day3_Multipeer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 27A571951FC0143700FE7C42 /* Build configuration list for PBXNativeTarget "Swift300_Day3_Multipeer" */;
+			buildPhases = (
+				27A5717F1FC0143700FE7C42 /* Sources */,
+				27A571801FC0143700FE7C42 /* Frameworks */,
+				27A571811FC0143700FE7C42 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Swift300_Day3_Multipeer;
+			productName = Swift300_Day3_Multipeer;
+			productReference = 27A571831FC0143700FE7C42 /* Swift300_Day3_Multipeer.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		27A5717B1FC0143700FE7C42 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = Nilo;
+				TargetAttributes = {
+					27A571821FC0143700FE7C42 = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = 3MSY48RE9K;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 27A5717E1FC0143700FE7C42 /* Build configuration list for PBXProject "Swift300_Day3_Multipeer" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 27A5717A1FC0143700FE7C42;
+			productRefGroup = 27A571841FC0143700FE7C42 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				27A571821FC0143700FE7C42 /* Swift300_Day3_Multipeer */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		27A571811FC0143700FE7C42 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				27A571911FC0143700FE7C42 /* LaunchScreen.storyboard in Resources */,
+				27A5718E1FC0143700FE7C42 /* Assets.xcassets in Resources */,
+				27A5718C1FC0143700FE7C42 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		27A5717F1FC0143700FE7C42 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				27A571A21FC0190400FE7C42 /* Riscador.swift in Sources */,
+				27A571A41FC0190A00FE7C42 /* Arredondador.swift in Sources */,
+				27A5719D1FC0170400FE7C42 /* HallViewController.swift in Sources */,
+				27A571871FC0143700FE7C42 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		27A5718A1FC0143700FE7C42 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				27A5718B1FC0143700FE7C42 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		27A5718F1FC0143700FE7C42 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				27A571901FC0143700FE7C42 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		27A571931FC0143700FE7C42 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		27A571941FC0143700FE7C42 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		27A571961FC0143700FE7C42 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 3MSY48RE9K;
+				INFOPLIST_FILE = Swift300_Day3_Multipeer/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "io.nilo.Swift300-Day3-Multipeer10";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		27A571971FC0143700FE7C42 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 3MSY48RE9K;
+				INFOPLIST_FILE = Swift300_Day3_Multipeer/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "io.nilo.Swift300-Day3-Multipeer10";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		27A5717E1FC0143700FE7C42 /* Build configuration list for PBXProject "Swift300_Day3_Multipeer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				27A571931FC0143700FE7C42 /* Debug */,
+				27A571941FC0143700FE7C42 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		27A571951FC0143700FE7C42 /* Build configuration list for PBXNativeTarget "Swift300_Day3_Multipeer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				27A571961FC0143700FE7C42 /* Debug */,
+				27A571971FC0143700FE7C42 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 27A5717B1FC0143700FE7C42 /* Project object */;
+}

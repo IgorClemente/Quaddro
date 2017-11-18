@@ -19,7 +19,7 @@ class CameraViewController : UIViewController, CIFilterPickerDelegate, AdjustsVi
     var imagemOriginal:UIImage?
     
     // Delegate de CIFilterPickerDelegate & AdjustsViewDelegate
-    func filterChanged() {      tratarImagem() }
+    func filterChanged()    {   tratarImagem() }
     func adjustsDidChange() {   tratarImagem() }
     
     override func viewDidLoad() {
@@ -182,7 +182,7 @@ class CameraViewController : UIViewController, CIFilterPickerDelegate, AdjustsVi
         }
         
         // Cria uma tela de share com o conteúdo interesse
-        // O que tem nesse vetor decide o aplicativo
+        // O que tem nesse vetor decide o aplicativoo
         let share = UIActivityViewController(activityItems: [imagem, "-NOSSA-"], applicationActivities: nil)
         self.present(share, animated: true, completion: nil)
     }
