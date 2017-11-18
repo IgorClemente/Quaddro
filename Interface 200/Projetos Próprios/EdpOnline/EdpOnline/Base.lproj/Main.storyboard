@@ -45,7 +45,7 @@
                                             <barButtonItem width="19" style="plain" systemItem="fixedSpace" id="6Xt-a1-phE"/>
                                             <barButtonItem style="plain" id="cfi-k6-tAO">
                                                 <view key="customView" alpha="0.5" contentMode="scaleToFill" id="ptd-nJ-Xl8">
-                                                    <rect key="frame" x="159.5" y="7" width="1" height="30"/>
+                                                    <rect key="frame" x="160" y="22" width="0.0" height="0.0"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" heightSizable="YES"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </view>
@@ -107,7 +107,7 @@
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="22" id="yOI-Wh-TG5"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="20"/>
+                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="21"/>
                                                 <color key="textColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                                 <variation key="heightClass=regular-widthClass=regular">
@@ -282,7 +282,7 @@
                             <view contentMode="scaleToFill" restorationIdentifier="viewSubMenu" translatesAutoresizingMaskIntoConstraints="NO" id="sUI-Zl-AS9">
                                 <rect key="frame" x="0.0" y="316" width="320" height="252"/>
                                 <subviews>
-                                    <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" zoomEnabled="NO" scrollEnabled="NO" rotateEnabled="NO" pitchEnabled="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vwk-oP-z3g">
+                                    <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" zoomEnabled="NO" rotateEnabled="NO" pitchEnabled="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vwk-oP-z3g">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="252"/>
                                         <connections>
                                             <outlet property="delegate" destination="BYZ-38-t0r" id="Juh-oQ-AKf"/>
@@ -562,7 +562,7 @@
         <image name="Vagas-de-Emprego-em-Guarulhos-SP-600x450" width="300" height="225"/>
         <image name="c337f7af69df35c605cab3615f3f2165" width="1024" height="768"/>
         <image name="estrela_edp" width="24" height="24"/>
-        <image name="logoEdp" width="500" height="500"/>
+        <image name="logoEdp" width="250" height="250"/>
         <image name="map" width="21" height="21"/>
         <image name="map-pin-silhouette-3" width="64" height="64"/>
         <image name="menu" width="64" height="64"/>

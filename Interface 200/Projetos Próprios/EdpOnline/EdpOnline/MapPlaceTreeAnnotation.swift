@@ -10,7 +10,7 @@ import MapKit
 
 class TreeAnnotation : NSObject, MKAnnotation {
     
-    let locationTree:CLLocationCoordinate2D
+    private let locationTree:CLLocationCoordinate2D
     let identifier:String = "tree"
     
     init(forLocation location:CLLocationCoordinate2D) {

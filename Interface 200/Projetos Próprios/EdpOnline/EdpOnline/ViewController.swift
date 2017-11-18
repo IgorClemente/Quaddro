@@ -286,8 +286,7 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate,
     }
     
     func tirarFoto() {
-        if UIImagePickerController.isSourceTypeAvailable(
-        UIImagePickerControllerSourceType.camera) {
+        if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.camera) {
             let imagePicker = UIImagePickerController()
             imagePicker.delegate = self
             imagePicker.sourceType = UIImagePickerControllerSourceType.camera
@@ -303,11 +302,11 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate,
             let imagemData = UIImagePNGRepresentation(imagemCapturada)
             let imagemComprimida = UIImage(data: imagemData ?? Data())
             UIImageWriteToSavedPhotosAlbum(imagemComprimida ?? UIImage(), nil, nil, nil)
+            picker.dismiss(animated: true, completion: nil)
             
             enviarFotoServidor(imagemCapturada)
             
-            picker.dismiss(animated: true, completion: nil)
-            let alerta = UIAlertController(title:"Imagem", message:"Imagem Salva com Sucesso !", preferredStyle: .alert)
+            let alerta = UIAlertController(title:"Imagem", message:"Imagem salva com Sucesso !", preferredStyle: .alert)
             let confirmaAction = UIAlertAction(title: "Ok", style: .default, handler: nil)
             alerta.addAction(confirmaAction)
             self.present(alerta, animated: true, completion: nil)
@@ -323,8 +322,13 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate,
             return
         }
         
+        guard let para = "igor".data(using: String.Encoding.utf8) else {
+            return
+        }
+        
         Alamofire.upload(multipartFormData: { multipartFormData in
             multipartFormData.append(imageData, withName: "sampleFile",fileName: "sampleFile.png", mimeType: "image/png")
+            multipartFormData.append(para, withName: "INFORMACOES USUARIO")
         },
         to:remote)
         { (result) in
@@ -353,7 +357,6 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate,
 extension ViewController : CLLocationManagerDelegate {
     
     func preparePinsUpdate() -> Void {
-        
         self.uiMapRegionMain?.removeAnnotations(uiMapRegionMain?.annotations ?? [])
         if let location = App.shared.currentLocation {
            let pinTree  = TreeAnnotation(forLocation: location)
@@ -362,7 +365,6 @@ extension ViewController : CLLocationManagerDelegate {
     }
     
     func updateMap(infoPlaceMark info:CLPlacemark) -> Void {
-        
         guard let location = info.location else {
             return
         }
@@ -406,6 +408,15 @@ extension ViewController : CLLocationManagerDelegate {
                App.shared.currentLocation = location.coordinate
                self.updateMap(infoPlaceMark: locationFirst)
             }
+        }
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+        switch status {
+          case .authorizedAlways, .authorizedWhenInUse:
+            self.searchLocation()
+          default:
+            break
         }
     }
 }
