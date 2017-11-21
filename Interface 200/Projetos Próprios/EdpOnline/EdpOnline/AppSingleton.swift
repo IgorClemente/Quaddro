@@ -10,20 +10,29 @@ import Foundation
 import CoreLocation
 import Alamofire
 
+
+struct Tree{
+    var treeTitle    = ""
+    var treeLocation = ""
+    var treePoints   = 0
+}
+
 class App {
 
     static let shared = App()
     private init() {}
     
-    var currentLocation:CLLocationCoordinate2D? = nil
+    var userCpf       = "45124712864"
 
-    var userCpf = "45124712864"
     var amountOfTrees = 0
-    var idTrees = Array<[String:Int]>()
+    var treesIndentifiers:[[String:Int]]?
     
-    // MARK: user default
-    var ud  = UserDefaults.standard
+    private var everybodyTrees = [[String:Any]]()
+    private var trees = Dictionary<String,[String:Any]>()
     
+    // MARK: Setup Singleton
+    var currentLocation:CLLocationCoordinate2D? = nil
+    private var ud  = UserDefaults.standard
     private var userLoggedInfos:[String:Any] = [:]
     
     func setUserLogged(_ user:[String:Any]) -> Void {
@@ -54,5 +63,55 @@ class App {
     
     func getUserLogged() -> [String:Any]? {
         return ud.object(forKey: "userLogged") as? [String:Any] ?? [:]
+    }
+    
+    func toRecoverTreesDownload() -> [String:[String:[String:Any]]] {
+        return ud.object(forKey: "salvedTrees") as? [String:[String:[String:Any]]] ??
+            Dictionary<String,[String:[String:Any]]>()
+    }
+    
+    func toRecoverEverybodyTrees() -> [[String:Any]] {
+        saveTreesDownload()
+        return self.everybodyTrees
+    }
+    
+    func saveTreesDownload() -> Void {
+        guard let identifiers = self.treesIndentifiers else {
+            return
+        }
+        
+        self.everybodyTrees = []
+        
+        for identifier in identifiers {
+            guard let tree = identifier["arvore_id"],
+                  let remoteURL = URL(string: "https://inovatend.mybluemix.net/imagens/arvore/\(tree)")
+                  else {
+                  return
+            }
+            
+            Alamofire.request(remoteURL).responseData(completionHandler: {
+                (response) in
+                if response.error == nil,
+                   let data = response.data {
+    
+                   guard let json = try? JSONSerialization.jsonObject(
+                   with: data, options: JSONSerialization.ReadingOptions()),
+                         let info     = json as? [String:Any],
+                         let treeInfo = info["arvore"] as? [String:Any]
+                         else {
+                         return
+                   }
+                   self.trees["\(tree)"] = treeInfo
+                   self.everybodyTrees.append(["\(tree)":treeInfo])
+                    
+                   var informationSalved = self.ud.object(forKey: "salvedTrees")
+                    as? [String:[String:[String:Any]]] ?? [:]
+                   informationSalved["trees"] = self.trees
+                    
+                   self.ud.set(informationSalved, forKey: "salvedTrees")
+                   self.ud.synchronize()
+                }
+            })
+        }
     }
 }

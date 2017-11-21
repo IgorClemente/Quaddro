@@ -19,7 +19,7 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate,
     @IBOutlet weak var uiNomeCompleto: UILabel?
     @IBOutlet weak var uiSpinnerSubMenu: UIActivityIndicatorView?
     @IBOutlet weak var viewFundoCinza: UIView?
-    @IBOutlet weak var viewSubMenuArvores: UIView?
+    @IBOutlet weak var tableSubMenuArvores: UITableView?
     @IBOutlet weak var viewSubMenuMapa: UIView?
     @IBOutlet var botoesSubMenu: [UIBarButtonItem]?
     @IBOutlet weak var uiProgressUpload: UIProgressView?
@@ -83,7 +83,7 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate,
                usuarioLogged["email"]  = email
                usuarioLogged["pontos"] = pontos
                     
-               App.shared.idTrees = ids_arvore
+               App.shared.treesIndentifiers = ids_arvore
                App.shared.amountOfTrees = quantidade
              }
             
@@ -91,42 +91,15 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate,
              App.shared.setUserLogged(usuarioLogged)
           }
         
-        let idArvores     = App.shared.idTrees
-        
-        for (idx,imagem) in idArvores.enumerated() {
-          guard let id_arvore      = imagem["arvore_id"] ,
-                let remoteImageURL = URL(string:"https://inovatend.mybluemix.net/imagens/\(id_arvore)"),
-                let remoteInfoURL  = URL(string:"https://inovatend.mybluemix.net/imagens/arvore/\(id_arvore)") else {
-                return
-          }
-            
-          Alamofire.request(remoteImageURL).responseData { (response) in
-              if response.error == nil,
-                 let data = response.data {
-                 Alamofire.request(remoteInfoURL).responseData { (response) in
-                    if response.error == nil,
-                       let info = response.data {
-                       guard let json = try? JSONSerialization.jsonObject(with: info, options:  JSONSerialization.ReadingOptions()),
-                             let info   = json as? [String:Any],
-                             let arvore = info["arvore"] as? [String:Any] else {
-                                 return
-                       }
-                      
-                       self.createMenuArvores(arvoreImagem:UIImage(data: data) ?? UIImage(),arvoreId:idx,arvore)
-                       self.uiSpinnerSubMenu?.stopAnimating()
-                    }
-                 }
-              }
-           }
-        }
+        _     = App.shared.treesIndentifiers
+        self.tableSubMenuArvores?.reloadData()
     }
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         guard let botoes = botoesSubMenu,
-              let subArvores = viewSubMenuArvores,
+            let subArvores = tableSubMenuArvores,
               let subMapa = viewSubMenuMapa else {
               return
         }
@@ -148,7 +121,7 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate,
         
         guard let botoes  = botoesSubMenu,
               let viewSubMapa = viewSubMenuMapa,
-              let viewSubArvore = viewSubMenuArvores else {
+              let viewSubArvore = tableSubMenuArvores else {
               return
         }
         
@@ -214,75 +187,6 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate,
         self.uiNomeCompleto?.text = "\(nome) \(sobrenome)"
         self.uiLocalidade?.text   = "\(localidade),\(uf)"
         self.uiPontuacao?.text    = "\(pontos)"
-    }
-    
-    
-    func createMenuArvores(arvoreImagem:UIImage, arvoreId:Int,_ arvoreInfo:[String:Any]) {
-        guard let fundoCinza = self.viewFundoCinza,
-              let titulo = arvoreInfo["titulo"] as? String,
-              let pontos = arvoreInfo["pontos"] as? Int  else {
-            return
-        }
-        
-        var limitadoresRegras = [NSLayoutConstraint]()
-        let comprimentoArvore = self.view.frame.size.width
-        
-        let arvoreItem   = UIView()
-        arvoreItem.frame = CGRect(x:0,y:CGFloat(arvoreId*101),width:comprimentoArvore,height:100)
-        arvoreItem.backgroundColor = UIColor(white:1,alpha:0.9)
-            
-        let  fotoArvore   = UIImageView()
-        fotoArvore.frame  = CGRect(x:0,y:0,width:60,height:60)
-        fotoArvore.image  = arvoreImagem
-        fotoArvore.contentMode = .scaleAspectFill
-        fotoArvore.layer.cornerRadius = fotoArvore.frame.width/2
-        fotoArvore.clipsToBounds = true
-        fotoArvore.translatesAutoresizingMaskIntoConstraints = false
-          
-        let tituloArvore   = UILabel()
-        tituloArvore.frame = CGRect(x:90,y:23,width:200,height:30)
-        tituloArvore.font  = UIFont.systemFont(ofSize: 18)
-        tituloArvore.textColor = UIColor.black
-        tituloArvore.text = titulo
-            
-        let regiaoArvore   = UILabel()
-        regiaoArvore.frame = CGRect(x:90,y:45,width:100,height:30)
-        regiaoArvore.font  = UIFont.preferredFont(forTextStyle: UIFontTextStyle("light"))
-        regiaoArvore.font  = UIFont.systemFont(ofSize: 15)
-        regiaoArvore.textColor = UIColor.gray
-        regiaoArvore.text = "Guarulhos, SP"
-            
-        let pontuacaoArvore   = UILabel()
-        pontuacaoArvore.frame = CGRect(x:0,y:0,width:100,height:30)
-        pontuacaoArvore.font  = UIFont.preferredFont(forTextStyle: UIFontTextStyle("light"))
-        pontuacaoArvore.font  = UIFont.systemFont(ofSize: 17)
-        pontuacaoArvore.textColor = UIColor.darkGray
-        pontuacaoArvore.text  = "\(pontos) pontos"
-        pontuacaoArvore.translatesAutoresizingMaskIntoConstraints = false
-            
-            limitadoresRegras.append(contentsOf:[NSLayoutConstraint(item:fotoArvore, attribute:.leading, relatedBy:.equal, toItem:arvoreItem, attribute:.leading, multiplier:1.0, constant:15)])
-            
-            limitadoresRegras.append(contentsOf:[NSLayoutConstraint(item:fotoArvore, attribute:.centerY, relatedBy:.equal, toItem:arvoreItem, attribute:.centerY, multiplier:1.0, constant:0)])
-            
-            limitadoresRegras.append(contentsOf:[NSLayoutConstraint(item:fotoArvore, attribute:.width, relatedBy:.equal, toItem:nil, attribute: .notAnAttribute, multiplier:1.0, constant:60)])
-            
-            limitadoresRegras.append(contentsOf:[NSLayoutConstraint(item:fotoArvore, attribute:.height, relatedBy:.equal, toItem:nil, attribute:.notAnAttribute, multiplier:1.0, constant:60)])
-            
-            limitadoresRegras.append(contentsOf:[NSLayoutConstraint(item:pontuacaoArvore, attribute:.trailing, relatedBy:.equal, toItem:fundoCinza, attribute:.trailing, multiplier:1.0, constant:0)])
-            
-            limitadoresRegras.append(contentsOf:[NSLayoutConstraint(item:pontuacaoArvore, attribute:.centerY, relatedBy:.equal, toItem:arvoreItem, attribute:.centerY, multiplier:1.0, constant:0)])
-            
-            limitadoresRegras.append(contentsOf:[NSLayoutConstraint(item:pontuacaoArvore, attribute:.height, relatedBy:.equal, toItem:nil, attribute:.notAnAttribute, multiplier:1.0, constant:30)])
-            
-            limitadoresRegras.append(contentsOf:[NSLayoutConstraint(item:pontuacaoArvore, attribute:.width, relatedBy:.equal, toItem:nil, attribute:.notAnAttribute, multiplier:1.0, constant:100)])
-            
-            arvoreItem.addSubview(pontuacaoArvore)
-            arvoreItem.addSubview(tituloArvore)
-            arvoreItem.addSubview(regiaoArvore)
-            arvoreItem.addSubview(fotoArvore)
-            fundoCinza.addSubview(arvoreItem)
-        
-        NSLayoutConstraint.activate(limitadoresRegras)
     }
     
     func tirarFoto() {
@@ -357,7 +261,7 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate,
 extension ViewController : CLLocationManagerDelegate {
     
     func preparePinsUpdate() -> Void {
-        self.uiMapRegionMain?.removeAnnotations(uiMapRegionMain?.annotations ?? [])
+    self.uiMapRegionMain?.removeAnnotations(uiMapRegionMain?.annotations ?? [])
         if let location = App.shared.currentLocation {
            let pinTree  = TreeAnnotation(forLocation: location)
            self.uiMapRegionMain?.addAnnotation(pinTree)
@@ -429,5 +333,33 @@ extension ViewController : MKMapViewDelegate {
         }else{
             return nil
         }
+    }
+}
+
+extension ViewController : UITableViewDelegate, UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 13
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        guard let cellTree = tableView.dequeueReusableCell(withIdentifier: "tree") as? TreeTableViewCell else {
+            return UITableViewCell()
+        }
+        
+        cellTree.treeImage?.url  = URL(string:"https://inovatend.mybluemix.net/imagens/\(11)")
+        cellTree.treeTitle?.text    = "Nova Arvore"
+        cellTree.treePoints?.text   = "150 Pontos"
+        cellTree.treeLocation?.text = "Guarulhos, SP"
+        return cellTree
+    }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 80
     }
 }
