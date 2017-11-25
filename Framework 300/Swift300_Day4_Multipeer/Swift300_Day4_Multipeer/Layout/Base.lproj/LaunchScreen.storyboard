@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="HelveticaNeueExtras.ttc">
+            <string>HelveticaNeue-CondensedBold</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="EHf-IW-A2E">
+            <objects>
+                <viewController id="01J-lp-oVM" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" image="bg_stripe" translatesAutoresizingMaskIntoConstraints="NO" id="kjl-Fk-7tE">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" insetsLayoutMarginsFromSafeArea="NO" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="W7A-mg-NiM">
+                                <rect key="frame" x="67.5" y="213.5" width="240" height="240"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="Aqj-Ru-ZMb"/>
+                                    <constraint firstAttribute="height" constant="240" id="uaj-bA-bh6"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Q?Chat!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BsZ-cX-W39">
+                                <rect key="frame" x="93" y="461" width="189" height="71"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="60"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="W7A-mg-NiM" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="15H-Fr-eju"/>
+                            <constraint firstAttribute="bottom" secondItem="kjl-Fk-7tE" secondAttribute="bottom" id="FMv-si-J3M"/>
+                            <constraint firstItem="kjl-Fk-7tE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="LkN-tn-kEJ"/>
+                            <constraint firstItem="BsZ-cX-W39" firstAttribute="centerX" secondItem="W7A-mg-NiM" secondAttribute="centerX" id="TTR-1W-gL4"/>
+                            <constraint firstItem="BsZ-cX-W39" firstAttribute="top" secondItem="W7A-mg-NiM" secondAttribute="bottom" constant="7.5" id="dIu-Q4-USj"/>
+                            <constraint firstItem="kjl-Fk-7tE" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="fOh-QB-lwl"/>
+                            <constraint firstItem="W7A-mg-NiM" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="how-tj-xbX"/>
+                            <constraint firstAttribute="trailing" secondItem="kjl-Fk-7tE" secondAttribute="trailing" id="zeh-Vh-6aH"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="52" y="374.66266866566718"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="bg_stripe" width="10" height="300"/>
+        <image name="logo" width="340" height="340"/>
+    </resources>
+</document>
