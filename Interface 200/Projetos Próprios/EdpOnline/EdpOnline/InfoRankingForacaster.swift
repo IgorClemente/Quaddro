@@ -8,7 +8,7 @@
 
 import Foundation
 
-typealias Usuario = (nome:String,pontos:Int)
+typealias Usuario = (nome:String,pontos:Int,id:Int)
 
 func RankingInfo() -> [Usuario]? {
     
@@ -24,11 +24,12 @@ func RankingInfo() -> [Usuario]? {
     }
     
     for (_,u) in usuarios.enumerated() {
-        guard let nome = u["nome"] as? String,
-              let pontos = u["pontos"] as? Int else {
+        guard let nome   = u["nome"] as? String,
+              let pontos = u["pontos"] as? Int,
+              let id     = u["id"] as? Int else {
               return nil
         }
-        usuariosRanking.append((nome:nome,pontos:pontos))
+        usuariosRanking.append((nome:nome,pontos:pontos,id:id))
     }
     return usuariosRanking
 }

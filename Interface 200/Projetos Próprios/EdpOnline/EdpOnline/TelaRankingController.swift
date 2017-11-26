@@ -32,31 +32,41 @@ class TelaRankingController:UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         guard let posicoes = posicoesDoRanking,
               let usuarios = RankingInfo() else {
-            return
+              uiSpinnerActivity?.stopAnimating()
+              return
         }
         
         uiViewFundoRanking?.backgroundColor = UIColor.lightGray
         
         for (index,posicao) in posicoes.enumerated() {
+            
             posicao.isHidden = false
             posicao.layer.borderColor = UIColor.black.cgColor
-            
             var count = 0
+            
             posicao.subviews.enumerated().forEach { (i,p) in
              if let identificador = p.restorationIdentifier,
                 let campo = p as? UILabel {
                 
                 switch identificador {
-                 case "\(index+1)_nome":
+                  case "\(index+1)_nome":
                     campo.text  = usuarios[index].nome
-                 case "\(index+1)_pontos":
+                  case "\(index+1)_pontos":
                     campo.text = "\(usuarios[index].pontos) pontos"
-                 default:
+                  default:
                     break
                 }
                 count += 1
-              }
-            }
+             }
+              
+             if let image = p as? WebImageView ,
+                let identificador = p.restorationIdentifier{
+                if identificador == "\(index+1)_image" {
+                   let idUser = usuarios[index].id
+                   image.url = URL(string: "https://inovatend.mybluemix.net/usuarios/pictures/\(idUser)")
+                }
+             }
+           }
          }
          uiSpinnerActivity?.stopAnimating()
     }

@@ -12,9 +12,10 @@ import Alamofire
 
 
 struct Tree{
+    var treeId       = ""
     var treeTitle    = ""
-    var treeLocation = ""
     var treePoints   = 0
+    var location:CLLocationCoordinate2D?
 }
 
 class App {
@@ -24,11 +25,10 @@ class App {
     
     var userCpf       = "45124712864"
 
+    // MARK: Setup Trees
     var amountOfTrees = 0
     var treesIndentifiers:[[String:Int]]?
-    
     private var everybodyTrees = [[String:Any]]()
-    private var trees = Dictionary<String,[String:Any]>()
     
     // MARK: Setup Singleton
     var currentLocation:CLLocationCoordinate2D? = nil
@@ -65,53 +65,61 @@ class App {
         return ud.object(forKey: "userLogged") as? [String:Any] ?? [:]
     }
     
-    func toRecoverTreesDownload() -> [String:[String:[String:Any]]] {
-        return ud.object(forKey: "salvedTrees") as? [String:[String:[String:Any]]] ??
-            Dictionary<String,[String:[String:Any]]>()
+    func retrieveInformationTrees() -> [Tree]? {
+        let treesSalved = ud.object(forKey: "trees") as? [String:Any] ?? nil
+        var treesReturn = Array<Tree>()
+        
+        guard let trees = treesSalved else {
+            return nil
+        }
+        
+        for t in trees {
+            guard let value = t.value as? [String:Any],
+                  let id    = t.key as? String,
+                  let title = value["titulo"] as? String,
+                  let points    = value["pontos"] as? Int,
+                  let longitude = value["longitude"] as? String,
+                  let latitude  = value["latitude"] as? String,
+                  let degreesLongitude:CLLocationDegrees = Double(longitude),
+                  let degreesLatitude:CLLocationDegrees  = Double(latitude)
+                  else{
+                  return nil
+            }
+            
+            let location = CLLocationCoordinate2D(latitude: degreesLatitude, longitude: degreesLongitude)
+            let newTree = Tree(treeId: id, treeTitle: title, treePoints: points, location: location)
+            treesReturn.append(newTree)
+        }
+        return treesReturn
     }
     
-    func toRecoverEverybodyTrees() -> [[String:Any]] {
-        saveTreesDownload()
-        return self.everybodyTrees
-    }
-    
-    func saveTreesDownload() -> Void {
+    func saveInformationTrees() -> Void {
         guard let identifiers = self.treesIndentifiers else {
             return
         }
         
-        self.everybodyTrees = []
-        
         for identifier in identifiers {
-            guard let tree = identifier["arvore_id"],
-                  let remoteURL = URL(string: "https://inovatend.mybluemix.net/imagens/arvore/\(tree)")
-                  else {
-                  return
+            guard let treeId = identifier["arvore_id"] else {
+                print("Desenpacote id fail")
+                return
             }
-            
-            Alamofire.request(remoteURL).responseData(completionHandler: {
-                (response) in
-                if response.error == nil,
-                   let data = response.data {
-    
-                   guard let json = try? JSONSerialization.jsonObject(
-                   with: data, options: JSONSerialization.ReadingOptions()),
-                         let info     = json as? [String:Any],
-                         let treeInfo = info["arvore"] as? [String:Any]
-                         else {
-                         return
-                   }
-                   self.trees["\(tree)"] = treeInfo
-                   self.everybodyTrees.append(["\(tree)":treeInfo])
-                    
-                   var informationSalved = self.ud.object(forKey: "salvedTrees")
-                    as? [String:[String:[String:Any]]] ?? [:]
-                   informationSalved["trees"] = self.trees
-                    
-                   self.ud.set(informationSalved, forKey: "salvedTrees")
-                   self.ud.synchronize()
+            DispatchQueue.global().async {
+                guard let remoteURL = URL(string:
+                "https://inovatend.mybluemix.net/imagens/arvore/\(treeId)"),
+                      let treeInfoData  = try? Data(contentsOf: remoteURL),
+                      let json = try? JSONSerialization.jsonObject(with: treeInfoData, options: JSONSerialization.ReadingOptions()),
+                      let info = json as? [String:Any],
+                      let tree = info["arvore"] as? [String:Any]
+                      else{
+                      return
                 }
-            })
+                DispatchQueue.main.async {
+                    var salved = self.ud.object(forKey: "trees") as? [String:Any] ?? [:]
+                    salved["\(treeId)"] = tree
+                    self.ud.set(salved, forKey: "trees")
+                    self.ud.synchronize()
+                }
+            }
         }
     }
 }
