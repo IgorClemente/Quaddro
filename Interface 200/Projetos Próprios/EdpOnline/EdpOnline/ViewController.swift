@@ -9,6 +9,7 @@
 import UIKit
 import Alamofire
 import MapKit
+import UserNotifications
 
 class ViewController: UIViewController,UIImagePickerControllerDelegate,
                       UINavigationControllerDelegate {
@@ -52,9 +53,13 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate,
         progress.setProgress(0.0, animated: true)
         progress.isHidden = true
         
+        NotificationCenter.default.addObserver(forName: NSNotification.Name("update-map"),
+                                               object: nil, queue: OperationQueue.main) { _ in
+            self.saveUserInfo(remoteURL)
+            self.searchLocation()
+            self.tableSubMenuArvores?.reloadData()
+        }
         self.saveUserInfo(remoteURL)
-        
-        _     = App.shared.treesIndentifiers
         self.tableSubMenuArvores?.reloadData()
     }
     
@@ -64,14 +69,14 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate,
         var usuarioLogged:[String:Any] = [:]
         
         if let data = try? Data(contentsOf: remoteURL),
-            let json = try? JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions()),
-            let info = json as? [String:Any],
-            let usuario = info["usuario"] as? [[String:Any]],
-            let quantidadeArvores = info["arvores"] as? [String:Int],
-            let ids_arvore        = info["arvore_ids"] as? [[String:Int]]  {
+           let json = try? JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions()),
+           let info = json as? [String:Any],
+           let usuario = info["usuario"] as? [[String:Any]],
+           let quantidadeArvores = info["arvores"] as? [String:Int],
+           let ids_arvore        = info["arvore_ids"] as? [[String:Int]]  {
             
-            for u in usuario {
-                guard let nome = u["nome"] as? String,
+           for u in usuario {
+              guard let nome = u["nome"] as? String,
                     let sobrenome = u["sobrenome"] as? String,
                     let id_user   = u["id_user"] as? Int,
                     let localidade = u["localidade"] as? String,
@@ -81,24 +86,24 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate,
                     let pontos = u["pontos"] as? Int,
                     let quantidade = quantidadeArvores["quantidade"] else {
                         return
-                }
+              }
                 
-                usuarioLogged["nome"]       = nome
-                usuarioLogged["sobrenome"]  = sobrenome
-                usuarioLogged["id_user"]    = id_user
-                usuarioLogged["localidade"] = localidade
-                usuarioLogged["uf"] = uf
-                usuarioLogged["numeroTelefone"] = numeroTelefone
-                usuarioLogged["email"]  = email
-                usuarioLogged["pontos"] = pontos
+              usuarioLogged["nome"]       = nome
+              usuarioLogged["sobrenome"]  = sobrenome
+              usuarioLogged["id_user"]    = id_user
+              usuarioLogged["localidade"] = localidade
+              usuarioLogged["uf"] = uf
+              usuarioLogged["numeroTelefone"] = numeroTelefone
+              usuarioLogged["email"]  = email
+              usuarioLogged["pontos"] = pontos
                 
                 App.shared.treesIndentifiers = ids_arvore
                 App.shared.amountOfTrees = quantidade
-            }
+           }
             
-            self.carregarInformacoesPerfil(usuarioLogged)
-            App.shared.setUserLogged(usuarioLogged)
-            App.shared.saveInformationTrees()
+           self.carregarInformacoesPerfil(usuarioLogged)
+           App.shared.setUserLogged(usuarioLogged)
+           App.shared.saveInformationTrees()
         }
     }
     
@@ -243,7 +248,7 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate,
             multipartFormData.append(longitudeData, withName: "longitude")
             multipartFormData.append(latitudeData, withName: "latitude")
         },
-        to:remote)
+        to: remote)
         { (result) in
             switch result {
             case .success(let upload, _, _):
@@ -253,17 +258,22 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate,
                     progressBar.setProgress(Float(progress.fractionCompleted), animated: true)
                 })
                 upload.responseJSON { response in
-                    if response.result.value == nil {
-                       progressBar.isHidden = true
-                       progressBar.setProgress(0.0, animated: false)
-                    }
-                    print(response.result.value ?? "")
+                    progressBar.isHidden = true
+                    progressBar.setProgress(0.0, animated: false)
+                    print("RESULTADO => =>",response.result.value)
                     
-                    if let remoteURL = URL(string:"https://inovatend.mybluemix.net/users/\(App.shared.userCpf)") {
-                       self.saveUserInfo(remoteURL)
+                    // MARK: Notification End Progress
+                    DispatchQueue.main.async {
+                        if UIApplication.shared.applicationState == .background {
+                            let contentNotification   = UNMutableNotificationContent()
+                            contentNotification.body  = "Imagem enviada com Sucesso"
+                            contentNotification.title = "Envio de Imagem"
+                            
+                            let notificationProgress = UNNotificationRequest(identifier: "upload", content: contentNotification, trigger: nil)
+                            UNUserNotificationCenter.current().add(notificationProgress, withCompletionHandler: nil)
+                        }
                     }
-                    self.tableSubMenuArvores?.reloadData()
-                    self.uiMapRegionMain?.reloadInputViews()
+                    NotificationCenter.default.post(name: NSNotification.Name("update-map") , object: nil)
                 }
             case .failure(let encodingError):
                 print(encodingError)

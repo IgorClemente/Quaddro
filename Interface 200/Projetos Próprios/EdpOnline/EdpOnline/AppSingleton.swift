@@ -66,6 +66,14 @@ class App {
     }
     
     func retrieveInformationTrees() -> [Tree]? {
+        
+        if let ids = self.treesIndentifiers,
+           ids.isEmpty {
+           ud.removeObject(forKey: "trees")
+        }else{
+            self.saveInformationTrees()
+        }
+        
         let treesSalved = ud.object(forKey: "trees") as? [String:Any] ?? nil
         var treesReturn = Array<Tree>()
         
@@ -94,13 +102,12 @@ class App {
     }
     
     func saveInformationTrees() -> Void {
-        guard let identifiers = self.treesIndentifiers else {
-            return
+        guard let identifiers = self.treesIndentifiers,
+              !identifiers.isEmpty else {
+              return
         }
-        
         for identifier in identifiers {
             guard let treeId = identifier["arvore_id"] else {
-                print("Desenpacote id fail")
                 return
             }
             DispatchQueue.global().async {
