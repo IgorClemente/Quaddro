@@ -54,7 +54,8 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate,
         progress.isHidden = true
         
         NotificationCenter.default.addObserver(forName: NSNotification.Name("update-map"),
-                                               object: nil, queue: OperationQueue.main) { _ in
+                                               object: nil, queue: OperationQueue.main)
+            { _ in
             self.saveUserInfo(remoteURL)
             self.searchLocation()
             self.tableSubMenuArvores?.reloadData()
@@ -70,15 +71,15 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate,
         
         if let data = try? Data(contentsOf: remoteURL),
            let json = try? JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions()),
-           let info = json as? [String:Any],
+           let info    = json as? [String:Any],
            let usuario = info["usuario"] as? [[String:Any]],
            let quantidadeArvores = info["arvores"] as? [String:Int],
            let ids_arvore        = info["arvore_ids"] as? [[String:Int]]  {
             
            for u in usuario {
               guard let nome = u["nome"] as? String,
-                    let sobrenome = u["sobrenome"] as? String,
-                    let id_user   = u["id_user"] as? Int,
+                    let sobrenome  = u["sobrenome"] as? String,
+                    let id_user    = u["id_user"] as? Int,
                     let localidade = u["localidade"] as? String,
                     let uf    = u["uf"] as? String,
                     let numeroTelefone = u["numero_telefone"] as? String,
@@ -203,13 +204,12 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate,
             let imagePicker = UIImagePickerController()
             imagePicker.delegate = self
             imagePicker.sourceType = UIImagePickerControllerSourceType.camera
-            imagePicker.allowsEditing = false
+            imagePicker.allowsEditing = true
             self.present(imagePicker, animated: true, completion: nil)
         }
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
-        
         if let imagePicked = info[UIImagePickerControllerOriginalImage] as? UIImage {
            let imagemData = UIImagePNGRepresentation(imagePicked)
            let imagemComprimida = UIImage(data: imagemData ?? Data())
@@ -226,7 +226,6 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate,
     }
     
     func enviarFotoServidor(_ image:UIImage) {
-        
         guard let remote = URL(string:"https://inovatend.mybluemix.net/upload"),
               let imageData   = UIImagePNGRepresentation(image),
               let progressBar = self.uiProgressUpload
@@ -363,7 +362,7 @@ extension ViewController : MKMapViewDelegate {
     
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
         if let location = annotation as? TreeAnnotation {
-            return self.uiMapRegionMain?.dequeueReusableAnnotationView(withIdentifier: location.identifier) ?? location.viewTreeAnnotation()
+           return self.uiMapRegionMain?.dequeueReusableAnnotationView(withIdentifier: location.identifier) ?? location.viewTreeAnnotation()
         }else{
             return nil
         }
