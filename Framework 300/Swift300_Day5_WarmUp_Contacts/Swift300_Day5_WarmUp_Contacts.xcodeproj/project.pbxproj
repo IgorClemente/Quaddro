@@ -300,10 +300,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 8372T62SAN;
-				INFOPLIST_FILE = Swift300_Day5_WarmUp_Contacts/Info.plist;
+				DEVELOPMENT_TEAM = 6M52ZTU4DG;
+				INFOPLIST_FILE = "$(SRCROOT)/Swift300_Day5_WarmUp_Contacts/Suporte/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "io.nilo.Swift300-Day5-WarmUp-Contacts";
+				PRODUCT_BUNDLE_IDENTIFIER = "io.nilo.Swift300-Day5-WarmUp-Contactsf";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -315,10 +315,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 8372T62SAN;
-				INFOPLIST_FILE = Swift300_Day5_WarmUp_Contacts/Info.plist;
+				DEVELOPMENT_TEAM = 6M52ZTU4DG;
+				INFOPLIST_FILE = "$(SRCROOT)/Swift300_Day5_WarmUp_Contacts/Suporte/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "io.nilo.Swift300-Day5-WarmUp-Contacts";
+				PRODUCT_BUNDLE_IDENTIFIER = "io.nilo.Swift300-Day5-WarmUp-Contactsf";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

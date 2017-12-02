@@ -61,7 +61,7 @@ extension FolderViewController : UITableViewDelegate, UITableViewDataSource {
         let nomeDaCelula = conteudo.tag == .folder ? "folder" : "file"
         
         guard let celula = tableView.dequeueReusableCell(withIdentifier: nomeDaCelula) 
-            as? EntryTableViewCell else{
+            as? EntryTableViewCell else {
             fatalError("Interface não encontrada")    
         }
         
@@ -78,7 +78,7 @@ extension FolderViewController : UITableViewDelegate, UITableViewDataSource {
            // Cria uma nova tela de Folder
            // Empilhar na navegação
            guard let tela = storyboard?.instantiateViewController(withIdentifier: "FolderController")
-                 as? FolderViewController else{
+                 as? FolderViewController else {
                  return    
            }
            
@@ -86,6 +86,10 @@ extension FolderViewController : UITableViewDelegate, UITableViewDataSource {
            tela.nomePasta = conteudo.caminho.components(separatedBy: "/").last ?? ""
 
            self.navigationController?.pushViewController(tela, animated: true)
+        }else{
+           let tela = VerArquivosViewController()
+           tela.conteudo = conteudo
+           self.present(tela, animated: true, completion: nil)
         }
     }
 }

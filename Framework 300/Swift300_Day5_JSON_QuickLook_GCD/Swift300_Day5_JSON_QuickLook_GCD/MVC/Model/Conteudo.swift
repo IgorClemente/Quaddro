@@ -83,13 +83,13 @@ struct Conteudo {
 
     init?(data:[String:Any]) {
         // recuperar o campo 'nome'
-        guard let nome = data["name"] as? String else{
+        guard let nome = data["name"] as? String else {
             return nil
         }  
         self.nome = nome
         
         // recuperar o campo 'caminho'
-        guard let caminho = data["path_lower"] as? String else{
+        guard let caminho = data["path_lower"] as? String else {
             return nil
         }
         self.caminho = caminho
@@ -107,7 +107,7 @@ struct Conteudo {
         
         // recuperar o campo 'tag'
         guard let tagString = data[".tag"] as? String,
-              let tag = Tag(rawValue: tagString) else{
+              let tag = Tag(rawValue: tagString) else {
               return nil
         }
         self.tag = tag
@@ -116,7 +116,7 @@ struct Conteudo {
     // funções auxiliares
     // retornar o tipo de arquivo, tipo a extensão
     var extensaoDoArquivo:String? {
-        guard tag == .file else{
+        guard tag == .file else {
             return nil
         }
         return nome.components(separatedBy: ".").last ?? ""
@@ -124,7 +124,7 @@ struct Conteudo {
     
     // Mostra a data, no formato: segunda, 13 de setembro ..
     var dataBonitinha:String? {
-        guard let d = self.modificadoEm else{
+        guard let d = self.modificadoEm else {
             return nil
         }
         
