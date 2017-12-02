@@ -14,24 +14,20 @@ import UserNotifications
 class ViewController: UIViewController,UIImagePickerControllerDelegate,
                       UINavigationControllerDelegate {
     
-    @IBOutlet weak var uiFotoPerfil: UIImageView?
-    @IBOutlet weak var uiPontuacao: UILabel?
-    @IBOutlet weak var uiLocalidade: UILabel?
-    @IBOutlet weak var uiNomeCompleto: UILabel?
-    @IBOutlet weak var uiSpinnerSubMenu: UIActivityIndicatorView?
-    @IBOutlet weak var viewFundoCinza: UIView?
+    @IBOutlet weak var uiProfilePhoto: UIImageView?
+    @IBOutlet weak var uiPoints: UILabel?
+    @IBOutlet weak var uiLocality: UILabel?
+    @IBOutlet weak var uiFullName: UILabel?
     @IBOutlet weak var tableSubMenuArvores: UITableView?
-    @IBOutlet weak var viewSubMenuMapa: UIView?
-    @IBOutlet var botoesSubMenu: [UIBarButtonItem]?
-    @IBOutlet weak var uiProgressUpload: UIProgressView?
-    
-    
+    @IBOutlet weak var uiSubMenuMap: UIView?
+    @IBOutlet var uiButtonsSubMenu: [UIBarButtonItem]?
+    @IBOutlet weak var uiProgressBarUpload: UIProgressView?
     @IBOutlet weak var uiMapRegionMain: MKMapView?
     
     // MARK: Imagens Arvores
     var imagensArvores = [UIImage]()
     
-    // MARK: Gestor de Localização
+    // MARK: Gestor de Localização - Geocoficador
     let locationManagerUser = CLLocationManager()
     let geocoder            = CLGeocoder()
     
@@ -40,13 +36,11 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate,
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        
-        self.searchLocation()
         super.viewWillAppear(true)
         
         let urlUser = "https://inovatend.mybluemix.net/users/\(App.shared.userCpf)"
         guard let remoteURL = URL(string: urlUser),
-              let progress  = self.uiProgressUpload   else {
+              let progress  = self.uiProgressBarUpload   else {
               return
         }
         // Barra de Progresso - UploadImagem
@@ -54,19 +48,18 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate,
         progress.isHidden = true
         
         NotificationCenter.default.addObserver(forName: NSNotification.Name("update-map"),
-                                               object: nil, queue: OperationQueue.main)
-            { _ in
+                                               object: nil, queue: OperationQueue.main) { _ in
             self.saveUserInfo(remoteURL)
             self.searchLocation()
             self.tableSubMenuArvores?.reloadData()
         }
+        
         self.saveUserInfo(remoteURL)
+        self.searchLocation()
         self.tableSubMenuArvores?.reloadData()
     }
     
-    
-    func saveUserInfo(_ remoteURL:URL) {
-        
+    func saveUserInfo(_ remoteURL:URL) -> Void {
         var usuarioLogged:[String:Any] = [:]
         
         if let data = try? Data(contentsOf: remoteURL),
@@ -98,31 +91,47 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate,
               usuarioLogged["email"]  = email
               usuarioLogged["pontos"] = pontos
                 
-                App.shared.treesIndentifiers = ids_arvore
-                App.shared.amountOfTrees = quantidade
+              App.shared.treesIndentifiers = ids_arvore
+              App.shared.amountOfTrees = quantidade
            }
-            
-           self.carregarInformacoesPerfil(usuarioLogged)
+           self.loadInformation(forUser: usuarioLogged)
            App.shared.setUserLogged(usuarioLogged)
            App.shared.saveInformationTrees()
         }
     }
     
+    func loadInformation(forUser u:[String:Any]) -> Void {
+        guard let firstName  = u["nome"] as? String ,
+              let lastName   = u["sobrenome"] as? String ,
+              let locality   = u["localidade"] as? String ,
+              let uf         = u["uf"] as? String ,
+              let points     = u["pontos"] as? Int
+              else {
+              return
+        }
+        self.uiFullName?.text = "\(firstName) \(lastName)"
+        self.uiLocality?.text   = "\(locality),\(uf)"
+        self.uiPoints?.text    = "\(points)"
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        guard let botoes = botoesSubMenu,
-            let subArvores = tableSubMenuArvores,
-              let subMapa = viewSubMenuMapa else {
+        guard let buttons = uiButtonsSubMenu,
+              let treesTable = tableSubMenuArvores,
+              let treesMap = uiSubMenuMap else {
               return
         }
         
-        for (index,botao) in botoes.enumerated() {
-            if index == 0 {
-                botao.tintColor = UIColor.gray
-                subArvores.isHidden = false
-                subMapa.isHidden = true
+        for button in buttons {
+            guard let titleButton = button.title else {
+                return
+            }
+            
+            if titleButton == "submenuMapa" {
+               button.tintColor = UIColor.gray
+               treesTable.isHidden = false
+               treesMap.isHidden = true
             }
         }
     }
@@ -132,9 +141,8 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate,
     }
     
     @IBAction func tapSubMenu(_ sender: UIBarButtonItem) {
-        
-        guard let botoes  = botoesSubMenu,
-              let viewSubMapa = viewSubMenuMapa,
+        guard let botoes  = uiButtonsSubMenu,
+              let viewSubMapa = uiSubMenuMap,
               let viewSubArvore = tableSubMenuArvores else {
               return
         }
@@ -142,39 +150,39 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate,
         if let titulo = sender.title {
           switch titulo {
             case "submenuMapa":
-               UIView.animate(withDuration: 0.2,animations: {
-               viewSubMapa.alpha    = 1.0
-               }){ _ in viewSubMapa.isHidden = false }
-               
-               for botao in botoes {
-                 if botao.title == "submenuArvores" {
-                    UIView.animate(withDuration: 0.3, animations: {
-                    viewSubArvore.alpha = 0.0
-                    }){ _ in
-                      botao.tintColor = UIColor.gray
-                      viewSubArvore.isHidden = true
-                    }
-                 }else{
-                    botao.tintColor = UIColor.white
-                 }
-               }
+              UIView.animate(withDuration: 0.2,animations: {
+                viewSubMapa.alpha    = 1.0
+              }){ _ in viewSubMapa.isHidden = false }
+              
+              for botao in botoes {
+                if botao.title == "submenuArvores" {
+                   UIView.animate(withDuration: 0.3, animations: {
+                   viewSubArvore.alpha = 0.0
+                   }){ _ in
+                     botao.tintColor = UIColor.gray
+                     viewSubArvore.isHidden = true
+                   }
+                }else{
+                   botao.tintColor = UIColor.white
+                }
+              }
             case "submenuArvores":
-               UIView.animate(withDuration: 0.2, animations: {
+              UIView.animate(withDuration: 0.2, animations: {
                  viewSubArvore.alpha    = 1.0
-               }){ _ in viewSubArvore.isHidden = false }
+              }){ _ in viewSubArvore.isHidden = false }
             
-               for botao in botoes {
-                 if botao.title == "submenuMapa" {
-                    UIView.animate(withDuration: 0.3, animations: {
-                      viewSubMapa.alpha = 0.0
-                    }){ _ in
-                      botao.tintColor = UIColor.gray
-                      viewSubMapa.isHidden = true
-                    }
-                 } else {
-                        botao.tintColor = UIColor.white
-                 }
-               }
+              for botao in botoes {
+                if botao.title == "submenuMapa" {
+                   UIView.animate(withDuration: 0.3, animations: {
+                     viewSubMapa.alpha = 0.0
+                   }){ _ in
+                     botao.tintColor = UIColor.gray
+                     viewSubMapa.isHidden = true
+                   }
+                }else{
+                   botao.tintColor = UIColor.white
+                }
+              }
             default:
                break
            }
@@ -185,21 +193,7 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate,
         self.tirarFoto()
     }
     
-    func carregarInformacoesPerfil(_ u:[String:Any]) {
-        guard let nome         = u["nome"] as? String ,
-              let sobrenome    = u["sobrenome"] as? String ,
-              let localidade   = u["localidade"] as? String ,
-              let uf           = u["uf"] as? String ,
-              let pontos       = u["pontos"] as? Int
-            else {
-            return
-        }
-        self.uiNomeCompleto?.text = "\(nome) \(sobrenome)"
-        self.uiLocalidade?.text   = "\(localidade),\(uf)"
-        self.uiPontuacao?.text    = "\(pontos)"
-    }
-    
-    func tirarFoto() {
+    func tirarFoto() -> Void {
         if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.camera) {
             let imagePicker = UIImagePickerController()
             imagePicker.delegate = self
@@ -218,9 +212,10 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate,
            enviarFotoServidor(imagePicked)
            UIImageWriteToSavedPhotosAlbum(imagemComprimida ?? UIImage() , nil, nil, nil)
             
-           let alerta = UIAlertController(title:"Imagem", message:"Imagem salva com Sucesso !", preferredStyle: .alert)
+           let alerta = UIAlertController(title:"Imagem", message:"Imagem salva com sucesso !", preferredStyle: .alert)
            let confirmaAction = UIAlertAction(title: "OK", style: .default, handler: nil)
            alerta.addAction(confirmaAction)
+           
            self.present(alerta, animated: true, completion: nil)
         }
     }
@@ -228,7 +223,7 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate,
     func enviarFotoServidor(_ image:UIImage) {
         guard let remote = URL(string:"https://inovatend.mybluemix.net/upload"),
               let imageData   = UIImagePNGRepresentation(image),
-              let progressBar = self.uiProgressUpload
+              let progressBar = self.uiProgressBarUpload
               else {
               return
         }
@@ -251,26 +246,27 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate,
         { (result) in
             switch result {
             case .success(let upload, _, _):
+                
                 upload.uploadProgress(closure: { (progress) in
                     progressBar.isHidden = false
                     print("Upload Progress: \(progress.fractionCompleted)")
                     progressBar.setProgress(Float(progress.fractionCompleted), animated: true)
                 })
+                
                 upload.responseJSON { response in
                     progressBar.isHidden = true
                     progressBar.setProgress(0.0, animated: false)
-                    print("RESULTADO => =>",response.result.value)
                     
-                    // MARK: Notification End Progress
+                    // MARK: Notification End Progress - BackgroundMode
                     DispatchQueue.main.async {
-                        if UIApplication.shared.applicationState == .background {
-                            let contentNotification   = UNMutableNotificationContent()
-                            contentNotification.body  = "Imagem enviada com Sucesso"
-                            contentNotification.title = "Envio de Imagem"
+                       if UIApplication.shared.applicationState == .background {
+                          let contentNotification   = UNMutableNotificationContent()
+                          contentNotification.body  = "Imagem enviada com sucesso"
+                          contentNotification.title = "Envio de Imagem"
                             
-                            let notificationProgress = UNNotificationRequest(identifier: "upload", content: contentNotification, trigger: nil)
-                            UNUserNotificationCenter.current().add(notificationProgress, withCompletionHandler: nil)
-                        }
+                          let notificationProgress = UNNotificationRequest(identifier: "upload", content: contentNotification, trigger: nil)
+                          UNUserNotificationCenter.current().add(notificationProgress, withCompletionHandler: nil)
+                       }
                     }
                     NotificationCenter.default.post(name: NSNotification.Name("update-map") , object: nil)
                 }
@@ -286,16 +282,16 @@ extension ViewController : CLLocationManagerDelegate {
     
     func preparePinsUpdate() -> Void {
         self.uiMapRegionMain?.removeAnnotations(uiMapRegionMain?.annotations ?? [])
-        if let location = App.shared.currentLocation {
-           let pinTree  = TreeAnnotation(forLocation: location)
-           self.uiMapRegionMain?.addAnnotation(pinTree)
+        if let locationUser = App.shared.currentLocation {
+           let pinUser  = TreeAnnotation(forLocation: locationUser)
+           self.uiMapRegionMain?.addAnnotation(pinUser)
         }
         
-        if let ts = App.shared.retrieveInformationTrees() {
-           ts.forEach({ (tree) in
-              if let location = tree.location {
-                 let pin = TreeAnnotation(forLocation: location)
-                 self.uiMapRegionMain?.addAnnotation(pin)
+        if let trees = App.shared.retrieveInformationTrees() {
+           trees.forEach({ (tree) in
+              if let locationTree = tree.location {
+                 let pinTree = TreeAnnotation(forLocation: locationTree)
+                 self.uiMapRegionMain?.addAnnotation(pinTree)
               }
            })
         }
@@ -305,6 +301,7 @@ extension ViewController : CLLocationManagerDelegate {
         guard let location = info.location else {
             return
         }
+        
         let regionSize = MKCoordinateSpanMake(0.01,0.01)
         let region     = MKCoordinateRegionMake(location.coordinate, regionSize)
         
@@ -376,21 +373,21 @@ extension ViewController : UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let treesIdentifiers = App.shared.treesIndentifiers
         
-        guard let cellTree = tableView.dequeueReusableCell(withIdentifier: "tree") as? TreeTableViewCell else {
+        guard let cellTree = tableView.dequeueReusableCell(withIdentifier: "tree") as? TreeTableViewCell,
+              let identifiers = treesIdentifiers else {
             return UITableViewCell()
         }
         
-        let treesIdentifiers = App.shared.treesIndentifiers
-        
-        if let identifiers = treesIdentifiers,
-           let identifier  = identifiers[indexPath.row] as? [String:Int],
-           let tree        = identifier["arvore_id"] {
-           
+        let identifier  = identifiers[indexPath.row]
+        if let tree = identifier["arvore_id"] {
+            
            let cellInfoURL  = "https://inovatend.mybluemix.net/imagens/arvore/\(tree)"
            let cellImageURL = "https://inovatend.mybluemix.net/imagens/\(tree)"
-            
-           cellTree.treeImage?.url  = URL(string:cellImageURL)
+           
+           cellTree.useCell = true
+           cellTree.treeImage?.url = URL(string:cellImageURL)
            cellTree.url            = URL(string:cellInfoURL)
         }
         return cellTree

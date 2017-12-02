@@ -25,12 +25,10 @@ class App {
     
     var userCpf       = "45124712864"
 
-    // MARK: Setup Trees
     var amountOfTrees = 0
     var treesIndentifiers:[[String:Int]]?
     private var everybodyTrees = [[String:Any]]()
     
-    // MARK: Setup Singleton
     var currentLocation:CLLocationCoordinate2D? = nil
     private var ud  = UserDefaults.standard
     private var userLoggedInfos:[String:Any] = [:]
@@ -49,10 +47,10 @@ class App {
         }
         self.userLoggedInfos = user
         var salvo = ud.object(forKey: "userLogged") as? [String:Any] ?? [:]
-        salvo["nome"] = nome
-        salvo["sobrenome"] = sobrenome
+        salvo["nome"]       = nome
+        salvo["sobrenome"]  = sobrenome
         salvo["localidade"] = localidade
-        salvo["id_user"]  = id_user
+        salvo["id_user"] = id_user
         salvo["uf"]      = uf
         salvo["numeroTelefone"] = numeroTelefone
         salvo["email"]   = email
@@ -66,14 +64,6 @@ class App {
     }
     
     func retrieveInformationTrees() -> [Tree]? {
-        
-        if let ids = self.treesIndentifiers,
-           ids.isEmpty {
-           ud.removeObject(forKey: "trees")
-        }else{
-            self.saveInformationTrees()
-        }
-        
         let treesSalved = ud.object(forKey: "trees") as? [String:Any] ?? nil
         var treesReturn = Array<Tree>()
         
@@ -83,7 +73,6 @@ class App {
         
         for t in trees {
             guard let value = t.value as? [String:Any],
-                  let id    = t.key as? String,
                   let title = value["titulo"] as? String,
                   let points    = value["pontos"] as? Int,
                   let longitude = value["longitude"] as? String,
@@ -94,6 +83,7 @@ class App {
                   return nil
             }
             
+            let id    = t.key
             let location = CLLocationCoordinate2D(latitude: degreesLatitude, longitude: degreesLongitude)
             let newTree = Tree(treeId: id, treeTitle: title, treePoints: points, location: location)
             treesReturn.append(newTree)
@@ -102,10 +92,13 @@ class App {
     }
     
     func saveInformationTrees() -> Void {
+        
+        self.ud.removeObject(forKey: "trees")
         guard let identifiers = self.treesIndentifiers,
               !identifiers.isEmpty else {
               return
         }
+
         for identifier in identifiers {
             guard let treeId = identifier["arvore_id"] else {
                 return
@@ -113,7 +106,7 @@ class App {
             DispatchQueue.global().async {
                 guard let remoteURL = URL(string:
                 "https://inovatend.mybluemix.net/imagens/arvore/\(treeId)"),
-                      let treeInfoData  = try? Data(contentsOf: remoteURL),
+                      let treeInfoData = try? Data(contentsOf: remoteURL),
                       let json = try? JSONSerialization.jsonObject(with: treeInfoData, options: JSONSerialization.ReadingOptions()),
                       let info = json as? [String:Any],
                       let tree = info["arvore"] as? [String:Any]

@@ -10,6 +10,7 @@
 		7BF36EA486B788E3A2CD4269 /* Pods_EdpOnline.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF0B71E0B51B7B27ECBF4881 /* Pods_EdpOnline.framework */; };
 		D00983CA1F7B21E2002EF018 /* TelaSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00983C91F7B21E2002EF018 /* TelaSettingsViewController.swift */; };
 		D00EC05D1F7BCF9000198884 /* MenuLateralController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00EC05C1F7BCF9000198884 /* MenuLateralController.swift */; };
+		D01A74F31FD0F78F00BE8711 /* KeyboardContraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01A74F21FD0F78F00BE8711 /* KeyboardContraint.swift */; };
 		D01F91151F8BA4F1006EAC9B /* AppSingleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01F91141F8BA4F1006EAC9B /* AppSingleton.swift */; };
 		D01FBF921F81B2C800908931 /* TelaPremiosController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D01FBF911F81B2C800908931 /* TelaPremiosController.xib */; };
 		D01FBF941F81B2E400908931 /* TelaPremiosController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01FBF931F81B2E400908931 /* TelaPremiosController.swift */; };
@@ -35,6 +36,7 @@
 		6B3D99D1166E75AAEA618182 /* Pods-EdpOnline.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EdpOnline.release.xcconfig"; path = "Pods/Target Support Files/Pods-EdpOnline/Pods-EdpOnline.release.xcconfig"; sourceTree = "<group>"; };
 		D00983C91F7B21E2002EF018 /* TelaSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TelaSettingsViewController.swift; sourceTree = "<group>"; };
 		D00EC05C1F7BCF9000198884 /* MenuLateralController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuLateralController.swift; sourceTree = "<group>"; };
+		D01A74F21FD0F78F00BE8711 /* KeyboardContraint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardContraint.swift; sourceTree = "<group>"; };
 		D01F91141F8BA4F1006EAC9B /* AppSingleton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSingleton.swift; sourceTree = "<group>"; };
 		D01FBF911F81B2C800908931 /* TelaPremiosController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TelaPremiosController.xib; sourceTree = "<group>"; };
 		D01FBF931F81B2E400908931 /* TelaPremiosController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TelaPremiosController.swift; sourceTree = "<group>"; };
@@ -151,6 +153,7 @@
 				D0F88F931F7861F2003424BA /* LateralMenuView.swift */,
 				D06B22851F8459B100FD0EAE /* InfoRankingForacaster.swift */,
 				D0EFFB9B1FBD40D3001CEE2F /* MapPlaceTreeAnnotation.swift */,
+				D01A74F21FD0F78F00BE8711 /* KeyboardContraint.swift */,
 				D02A8B961FC357C700B4DE9F /* TreeTableViewCell.swift */,
 				D02A8B981FC35B8F00B4DE9F /* WebImageView.swift */,
 			);
@@ -356,6 +359,7 @@
 				D0F8282B1F814B3B00AB9688 /* TelaRankingController.swift in Sources */,
 				D0BFBF061F756A92009B1F11 /* AppDelegate.swift in Sources */,
 				D01FBF941F81B2E400908931 /* TelaPremiosController.swift in Sources */,
+				D01A74F31FD0F78F00BE8711 /* KeyboardContraint.swift in Sources */,
 				D0B73B2B1FB67203007ACC40 /* LoginViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

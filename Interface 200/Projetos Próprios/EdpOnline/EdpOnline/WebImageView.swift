@@ -11,23 +11,25 @@ import UIKit
 @IBDesignable
 class WebImageView : UIImageView {
     
-    static var imagesCached:[URL:UIImage] = [:]
+    static private var imageCached:[URL:UIImage] = [:]
     
     var url:URL? {
        didSet{
          guard let url = self.url else {
            return
          }
-         if let image = WebImageView.imagesCached[url] {
+         if let image = WebImageView.imageCached[url] {
             self.image = image
          }else{
             DispatchQueue.global().async {
-              guard let pictureData = try? Data(contentsOf: url) else{
-                return
-              }
-              DispatchQueue.main.async {
-                self.image = UIImage(data: pictureData)
-                WebImageView.imagesCached[url] = self.image
+              do{
+                let pictureData = try Data(contentsOf: url)
+                DispatchQueue.main.async {
+                    self.image = UIImage(data: pictureData)
+                    WebImageView.imageCached[url] = self.image
+                }
+              }catch{
+                print(error.localizedDescription)
               }
             }
          }
