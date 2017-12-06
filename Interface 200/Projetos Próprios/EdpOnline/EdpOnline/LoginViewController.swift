@@ -16,6 +16,30 @@ class LoginViewController : UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
        super.viewDidLoad()
+       
+       let viewLeftUser   = UIView()
+       viewLeftUser.frame = CGRect(x: 0, y: 0, width: 95, height: 25)
+        
+       let viewLeftPassword   = UIView()
+       viewLeftPassword.frame = CGRect(x: 0, y: 0, width: 95, height: 25)
+       
+       let imageLeftViewUser   = UIImageView()
+       imageLeftViewUser.frame = CGRect(x: 20, y: 0, width: 25, height: viewLeftUser.frame.height)
+       imageLeftViewUser.image = UIImage(named: "user-login")
+       viewLeftUser.addSubview(imageLeftViewUser)
+        
+       let imageLeftViewPassword   = UIImageView()
+       imageLeftViewPassword.frame = CGRect(x: 20, y: 0, width: 25, height: viewLeftPassword.frame.height)
+       imageLeftViewPassword.image = UIImage(named: "lock-password")
+       viewLeftPassword.addSubview(imageLeftViewPassword)
+        
+       uiUsernameField?.leftViewMode  = .always
+       uiUsernameField?.leftView      = viewLeftUser
+       uiUsernameField?.textAlignment = .natural
+        
+       uiPasswordField?.leftViewMode  = .always
+       uiPasswordField?.leftView      = viewLeftPassword
+       uiPasswordField?.textAlignment = .natural
     }
   
     override var prefersStatusBarHidden: Bool {
@@ -23,7 +47,6 @@ class LoginViewController : UIViewController, UITextFieldDelegate {
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        
         guard let usernameField = self.uiUsernameField,
               let passwordField = self.uiPasswordField else {
               return true

@@ -123,7 +123,7 @@
 			name = Controller;
 			sourceTree = "<group>";
 		};
-		D0B1874B1F79C40C00DC1D5B /* Layout */ = {
+		D0B1874B1F79C40C00DC1D5B /* View */ = {
 			isa = PBXGroup;
 			children = (
 				D01FBF901F81B1E200908931 /* TelaPremiosController */,
@@ -132,7 +132,7 @@
 				D0BFBF091F756A92009B1F11 /* Main.storyboard */,
 				D0BFBF0E1F756A92009B1F11 /* LaunchScreen.storyboard */,
 			);
-			name = Layout;
+			name = View;
 			sourceTree = "<group>";
 		};
 		D0B1874C1F79C41700DC1D5B /* Imagem */ = {
@@ -200,7 +200,7 @@
 				D0B1874D1F79C42400DC1D5B /* Suporte */,
 				D0B1874C1F79C41700DC1D5B /* Imagem */,
 				D0B1874A1F79C3EF00DC1D5B /* Controller */,
-				D0B1874B1F79C40C00DC1D5B /* Layout */,
+				D0B1874B1F79C40C00DC1D5B /* View */,
 			);
 			path = EdpOnline;
 			sourceTree = "<group>";

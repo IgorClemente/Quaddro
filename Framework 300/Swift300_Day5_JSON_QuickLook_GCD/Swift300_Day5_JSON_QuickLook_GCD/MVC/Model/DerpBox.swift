@@ -82,14 +82,14 @@ class Derpbox {
             
             // Agora vamos converter de Bytes -> (JSON) -> [String:Any]
             guard let jsonData = try? JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions()),
-                let jsonObject = jsonData as? [String:Any] else {
-                    fatalError("Formato inválido")
+                  let jsonObject = jsonData as? [String:Any] else {
+                  fatalError("Formato inválido")
             }
             
             // Agora temos [String:Any]!!
             // é só passar para STRUCT USUÁRIO
             guard let usuario = Usuario(data: jsonObject) else {
-                fatalError("SLC, quase deu certo! Faltou campo :(")
+                  fatalError("SLC, quase deu certo! Faltou campo :(")
             }
             
             DispatchQueue.main.async {
@@ -111,7 +111,7 @@ class Derpbox {
             // Depois tranformar os bytes em [String:Any]
             guard let jsonData = try? JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions()),
                 let jsonObject = jsonData as? [String:Any] else {
-                    fatalError("Formato inválido!")  
+                fatalError("Formato inválido!")
             }
             
             // Recuperar entries como uma lista
@@ -122,7 +122,7 @@ class Derpbox {
             var conteudos:[Conteudo] = []
             for dados in lista {
                 if let conteudo = Conteudo(data: dados) {
-                    conteudos.append(conteudo)  
+                   conteudos.append(conteudo)
                 }
             }
             

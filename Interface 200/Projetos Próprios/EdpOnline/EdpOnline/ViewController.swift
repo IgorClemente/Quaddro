@@ -24,10 +24,12 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate,
     @IBOutlet weak var uiProgressBarUpload: UIProgressView?
     @IBOutlet weak var uiMapRegionMain: MKMapView?
     
-    // MARK: Imagens Arvores
+    @IBOutlet var starsBarBottom:[UIView]?
+    
+    // MARK: images trees
     var imagensArvores = [UIImage]()
     
-    // MARK: Gestor de Localização - Geocoficador
+    // MARK: managerLocation - geocoder
     let locationManagerUser = CLLocationManager()
     let geocoder            = CLGeocoder()
     
@@ -46,6 +48,17 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate,
         // Barra de Progresso - UploadImagem
         progress.setProgress(0.0, animated: true)
         progress.isHidden = true
+        
+        
+        //MARK :
+        
+        if let stars = self.starsBarBottom {
+            for s in stars {
+                if let i = s.restorationIdentifier {
+                   s.isHidden = i == "3" ? true : false
+                }
+            }
+        }
         
         NotificationCenter.default.addObserver(forName: NSNotification.Name("update-map"),
                                                object: nil, queue: OperationQueue.main) { _ in
@@ -150,6 +163,7 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate,
         if let titulo = sender.title {
           switch titulo {
             case "submenuMapa":
+                
               UIView.animate(withDuration: 0.2,animations: {
                 viewSubMapa.alpha    = 1.0
               }){ _ in viewSubMapa.isHidden = false }
@@ -166,7 +180,9 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate,
                    botao.tintColor = UIColor.white
                 }
               }
+            
             case "submenuArvores":
+                
               UIView.animate(withDuration: 0.2, animations: {
                  viewSubArvore.alpha    = 1.0
               }){ _ in viewSubArvore.isHidden = false }
@@ -183,6 +199,7 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate,
                    botao.tintColor = UIColor.white
                 }
               }
+            
             default:
                break
            }
@@ -204,19 +221,21 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate,
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
-        if let imagePicked = info[UIImagePickerControllerOriginalImage] as? UIImage {
-           let imagemData = UIImagePNGRepresentation(imagePicked)
-           let imagemComprimida = UIImage(data: imagemData ?? Data())
-           picker.dismiss(animated: true, completion: nil)
+        DispatchQueue.global().async {
+           if let imagePicked = info[UIImagePickerControllerOriginalImage] as? UIImage {
+              let imagemData = UIImagePNGRepresentation(imagePicked)
+              let imagemComprimida = UIImage(data: imagemData ?? Data())
+              self.enviarFotoServidor(imagePicked)
+              DispatchQueue.main.async {
+                 picker.dismiss(animated: true, completion: nil)
+                 UIImageWriteToSavedPhotosAlbum(imagemComprimida ?? UIImage() , nil, nil, nil)
             
-           enviarFotoServidor(imagePicked)
-           UIImageWriteToSavedPhotosAlbum(imagemComprimida ?? UIImage() , nil, nil, nil)
-            
-           let alerta = UIAlertController(title:"Imagem", message:"Imagem salva com sucesso !", preferredStyle: .alert)
-           let confirmaAction = UIAlertAction(title: "OK", style: .default, handler: nil)
-           alerta.addAction(confirmaAction)
-           
-           self.present(alerta, animated: true, completion: nil)
+                 let alerta = UIAlertController(title:"Imagem", message:"Imagem salva com sucesso !", preferredStyle: .alert)
+                 let confirmaAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+                alerta.addAction(confirmaAction)
+                 self.present(alerta, animated: true, completion: nil)
+              }
+           }
         }
     }
     

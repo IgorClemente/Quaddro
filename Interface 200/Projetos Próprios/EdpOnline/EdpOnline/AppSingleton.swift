@@ -64,6 +64,7 @@ class App {
     }
     
     func retrieveInformationTrees() -> [Tree]? {
+        
         let treesSalved = ud.object(forKey: "trees") as? [String:Any] ?? nil
         var treesReturn = Array<Tree>()
         

@@ -91,7 +91,7 @@
                                         <rect key="frame" x="88" y="20.5" width="232" height="60"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1950" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ISX-0H-3xC">
-                                                <rect key="frame" x="157" y="12" width="75" height="20"/>
+                                                <rect key="frame" x="156.5" y="12" width="75.5" height="20"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="20" id="pwm-In-Q8v"/>
                                                 </constraints>
@@ -103,7 +103,7 @@
                                                 </variation>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Igor Clemente" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fch-XO-HsQ">
-                                                <rect key="frame" x="2" y="10" width="154" height="24"/>
+                                                <rect key="frame" x="2" y="10" width="153.5" height="24"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="24" id="yOI-Wh-TG5"/>
                                                 </constraints>
@@ -115,7 +115,7 @@
                                                 </variation>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="São Paulo, SP" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5UI-vp-Skq">
-                                                <rect key="frame" x="21" y="35" width="136" height="17"/>
+                                                <rect key="frame" x="21" y="35" width="135.5" height="17"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="17" id="CZV-lp-Xaf"/>
                                                 </constraints>
@@ -135,7 +135,7 @@
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pontos" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Gw-91-mzW">
-                                                <rect key="frame" x="173.5" y="36" width="41.5" height="10"/>
+                                                <rect key="frame" x="173" y="36" width="41.5" height="10"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="10" id="zHF-Qj-Fpz"/>
                                                 </constraints>
@@ -147,7 +147,7 @@
                                                 </variation>
                                             </label>
                                             <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zVX-RG-wCn">
-                                                <rect key="frame" x="156" y="12" width="1" height="36"/>
+                                                <rect key="frame" x="155.5" y="12" width="1" height="36"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="1" id="KIx-hz-awm"/>
@@ -328,52 +328,78 @@
                                 </connections>
                             </tableView>
                             <view contentMode="scaleToFill" restorationIdentifier="viewSubMenu" translatesAutoresizingMaskIntoConstraints="NO" id="sUI-Zl-AS9">
-                                <rect key="frame" x="0.0" y="316" width="320" height="251.5"/>
+                                <rect key="frame" x="0.0" y="316" width="320" height="252"/>
                                 <subviews>
                                     <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" rotateEnabled="NO" pitchEnabled="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vwk-oP-z3g">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="251.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="252"/>
                                         <connections>
                                             <outlet property="delegate" destination="BYZ-38-t0r" id="Juh-oQ-AKf"/>
                                         </connections>
                                     </mapView>
                                     <visualEffectView opaque="NO" alpha="0.94999999999999996" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sT1-9y-gP3">
-                                        <rect key="frame" x="0.0" y="191.5" width="320" height="60"/>
+                                        <rect key="frame" x="0.0" y="202" width="320" height="50"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="w3c-cr-Q4B">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="60"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Vagas-de-Emprego-em-Guarulhos-SP-600x450" translatesAutoresizingMaskIntoConstraints="NO" id="HaB-L9-d7V">
-                                                    <rect key="frame" x="20" y="7.5" width="45" height="45"/>
+                                                    <rect key="frame" x="20" y="5" width="40" height="40"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="45" id="PfE-rm-bWs"/>
-                                                        <constraint firstAttribute="height" constant="45" id="xMJ-jV-GVY"/>
+                                                        <constraint firstAttribute="width" constant="40" id="PfE-rm-bWs"/>
+                                                        <constraint firstAttribute="height" constant="40" id="xMJ-jV-GVY"/>
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Guarulhos" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="a0f-m9-hhE">
-                                                    <rect key="frame" x="95" y="10" width="82" height="21.5"/>
+                                                    <rect key="frame" x="80" y="3" width="82" height="21.5"/>
                                                     <fontDescription key="fontDescription" type="system" weight="light" pointSize="18"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="150 Pontos" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7vQ-GF-dj6">
-                                                    <rect key="frame" x="220" y="20.5" width="80" height="19.5"/>
+                                                    <rect key="frame" x="220" y="15.5" width="80" height="19.5"/>
                                                     <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.57232553679999998" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Zkp-ql-KNx">
+                                                    <rect key="frame" x="79" y="25.5" width="100" height="18"/>
+                                                    <subviews>
+                                                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" insetsLayoutMarginsFromSafeArea="NO" image="star" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2kw-v1-wPT">
+                                                            <rect key="frame" x="0.0" y="0.0" width="20" height="18"/>
+                                                        </imageView>
+                                                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" insetsLayoutMarginsFromSafeArea="NO" image="star" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lLA-m3-ux0">
+                                                            <rect key="frame" x="20" y="0.0" width="20" height="18"/>
+                                                        </imageView>
+                                                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" insetsLayoutMarginsFromSafeArea="NO" image="star" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5gn-ik-F68">
+                                                            <rect key="frame" x="40" y="0.0" width="20" height="18"/>
+                                                        </imageView>
+                                                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" insetsLayoutMarginsFromSafeArea="NO" image="star" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zPO-CG-Jeq">
+                                                            <rect key="frame" x="60" y="0.0" width="20" height="18"/>
+                                                        </imageView>
+                                                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" insetsLayoutMarginsFromSafeArea="NO" image="star" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eM7-If-0yq">
+                                                            <rect key="frame" x="80" y="0.0" width="20" height="18"/>
+                                                        </imageView>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="18" id="Tjr-gz-i7e"/>
+                                                        <constraint firstAttribute="width" constant="100" id="edo-AB-FTZ"/>
+                                                    </constraints>
+                                                </stackView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="a0f-m9-hhE" firstAttribute="top" secondItem="w3c-cr-Q4B" secondAttribute="top" constant="10" id="C4d-Hj-ywi"/>
-                                                <constraint firstItem="a0f-m9-hhE" firstAttribute="leading" secondItem="HaB-L9-d7V" secondAttribute="trailing" constant="30" id="KZa-ea-8XR"/>
+                                                <constraint firstItem="Zkp-ql-KNx" firstAttribute="leading" secondItem="HaB-L9-d7V" secondAttribute="trailing" constant="19" id="9Ue-iU-TwM"/>
+                                                <constraint firstItem="a0f-m9-hhE" firstAttribute="top" secondItem="w3c-cr-Q4B" secondAttribute="top" constant="3" id="C4d-Hj-ywi"/>
+                                                <constraint firstItem="a0f-m9-hhE" firstAttribute="leading" secondItem="HaB-L9-d7V" secondAttribute="trailing" constant="20" id="KZa-ea-8XR"/>
                                                 <constraint firstItem="HaB-L9-d7V" firstAttribute="leading" secondItem="w3c-cr-Q4B" secondAttribute="leading" constant="20" id="Pcb-eb-kib"/>
                                                 <constraint firstItem="7vQ-GF-dj6" firstAttribute="centerY" secondItem="w3c-cr-Q4B" secondAttribute="centerY" id="U9X-wB-xtx"/>
                                                 <constraint firstAttribute="trailing" secondItem="7vQ-GF-dj6" secondAttribute="trailing" constant="20" id="VmC-nc-m99"/>
+                                                <constraint firstItem="Zkp-ql-KNx" firstAttribute="top" secondItem="a0f-m9-hhE" secondAttribute="bottom" constant="1" id="WLb-6h-fIa"/>
                                                 <constraint firstItem="HaB-L9-d7V" firstAttribute="centerY" secondItem="w3c-cr-Q4B" secondAttribute="centerY" id="lhM-ed-FFK"/>
                                             </constraints>
                                         </view>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.041818443251533742" colorSpace="calibratedRGB"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="60" id="EmK-hp-2QH"/>
+                                            <constraint firstAttribute="height" constant="50" id="EmK-hp-2QH"/>
                                         </constraints>
                                         <blurEffect style="light"/>
                                     </visualEffectView>
@@ -436,6 +462,11 @@
                         <outlet property="uiSubMenuMap" destination="sUI-Zl-AS9" id="hHw-vi-ROh"/>
                         <outletCollection property="uiButtonsSubMenu" destination="yG0-UU-1Ab" collectionClass="NSMutableArray" id="fgR-n5-SdP"/>
                         <outletCollection property="uiButtonsSubMenu" destination="UTA-cZ-jWD" collectionClass="NSMutableArray" id="iZE-cS-CvB"/>
+                        <outletCollection property="starsBarBottom" destination="2kw-v1-wPT" collectionClass="NSMutableArray" id="Q6t-T6-CRq"/>
+                        <outletCollection property="starsBarBottom" destination="lLA-m3-ux0" collectionClass="NSMutableArray" id="Ba1-Mf-XFq"/>
+                        <outletCollection property="starsBarBottom" destination="5gn-ik-F68" collectionClass="NSMutableArray" id="8ap-eH-fZp"/>
+                        <outletCollection property="starsBarBottom" destination="zPO-CG-Jeq" collectionClass="NSMutableArray" id="FDU-zT-noh"/>
+                        <outletCollection property="starsBarBottom" destination="eM7-If-0yq" collectionClass="NSMutableArray" id="Hdt-1z-08k"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -469,14 +500,14 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <subviews>
                                     <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" insetsLayoutMarginsFromSafeArea="NO" image="logoEdp" translatesAutoresizingMaskIntoConstraints="NO" id="pLd-WA-2wO">
-                                        <rect key="frame" x="80.5" y="25" width="160" height="170"/>
+                                        <rect key="frame" x="80" y="25" width="160" height="170"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="170" id="2ZF-5Q-5rO">
                                                 <variation key="heightClass=regular-widthClass=regular" constant="300"/>
                                             </constraint>
                                         </constraints>
                                     </imageView>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Login" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="4ya-1F-XdK">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Login" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="4ya-1F-XdK">
                                         <rect key="frame" x="0.0" y="288" width="320" height="55"/>
                                         <color key="backgroundColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="0.30328556365030673" colorSpace="calibratedRGB"/>
                                         <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -484,13 +515,13 @@
                                             <constraint firstAttribute="height" constant="55" id="kLX-pM-19P"/>
                                         </constraints>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences" autocorrectionType="no" spellCheckingType="no" keyboardType="alphabet" keyboardAppearance="alert" returnKeyType="continue" enablesReturnKeyAutomatically="YES" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="username"/>
                                         <connections>
                                             <outlet property="delegate" destination="mfB-Fj-Mvb" id="w0M-FP-f3L"/>
                                         </connections>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QZu-be-2Uc">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QZu-be-2Uc">
                                         <rect key="frame" x="0.5" y="363" width="320" height="55"/>
                                         <color key="backgroundColor" red="0.50196081400000003" green="0.50196081400000003" blue="0.50196081400000003" alpha="0.30090107361963192" colorSpace="calibratedRGB"/>
                                         <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -498,7 +529,7 @@
                                             <constraint firstAttribute="height" constant="55" id="vG4-aT-HO9"/>
                                         </constraints>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences" autocorrectionType="no" spellCheckingType="no" keyboardType="alphabet" keyboardAppearance="alert" returnKeyType="go" enablesReturnKeyAutomatically="YES" secureTextEntry="YES" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="password"/>
                                         <connections>
                                             <outlet property="delegate" destination="mfB-Fj-Mvb" id="Ihl-4d-gNP"/>
@@ -510,7 +541,7 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="60" id="ctO-6E-SuG"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
+                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
                                         <state key="normal" title="Entrar">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
@@ -559,7 +590,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iAH-tP-Eth" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-569" y="151"/>
+            <point key="canvasLocation" x="-583" y="150"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="TYZ-MI-vNW">
@@ -576,7 +607,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9U0-sJ-dX4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1333" y="150"/>
+            <point key="canvasLocation" x="-1395" y="150"/>
         </scene>
     </scenes>
     <resources>
@@ -589,6 +620,7 @@
         <image name="map-pin-silhouette-3" width="64" height="64"/>
         <image name="menu" width="64" height="64"/>
         <image name="perfil-amostra" width="300" height="254"/>
+        <image name="star" width="25" height="25"/>
         <image name="subMenu" width="21" height="21"/>
     </resources>
 </document>
