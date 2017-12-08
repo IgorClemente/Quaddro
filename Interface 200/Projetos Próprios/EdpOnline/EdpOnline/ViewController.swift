@@ -24,7 +24,7 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate,
     @IBOutlet weak var uiProgressBarUpload: UIProgressView?
     @IBOutlet weak var uiMapRegionMain: MKMapView?
     
-    @IBOutlet var starsBarBottom:[UIView]?
+    @IBOutlet var uiStarsBarBottom: [UIImageView]?
     
     // MARK: images trees
     var imagensArvores = [UIImage]()
@@ -49,15 +49,16 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate,
         progress.setProgress(0.0, animated: true)
         progress.isHidden = true
         
-        
-        //MARK :
-        
-        if let stars = self.starsBarBottom {
-            for s in stars {
-                if let i = s.restorationIdentifier {
-                   s.isHidden = i == "3" ? true : false
-                }
-            }
+        //MARK : Stars Bottom Bar
+        if let stars = self.uiStarsBarBottom {
+           for s in 0..<stars.count {
+             let star = stars[s]
+             if (0..<App.shared.amountOfStars).contains(s) {
+                star.image = UIImage(named:"star")
+             }else{
+                star.image = UIImage(named:"star-disabled")
+             }
+           }
         }
         
         NotificationCenter.default.addObserver(forName: NSNotification.Name("update-map"),
@@ -230,10 +231,10 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate,
                  picker.dismiss(animated: true, completion: nil)
                  UIImageWriteToSavedPhotosAlbum(imagemComprimida ?? UIImage() , nil, nil, nil)
             
-                 let alerta = UIAlertController(title:"Imagem", message:"Imagem salva com sucesso !", preferredStyle: .alert)
-                 let confirmaAction = UIAlertAction(title: "OK", style: .default, handler: nil)
-                alerta.addAction(confirmaAction)
-                 self.present(alerta, animated: true, completion: nil)
+                 let sucessAlert = UIAlertController(title:"Imagem", message:"Imagem salva com sucesso !", preferredStyle: .alert)
+                 let confirmSucessAlert = UIAlertAction(title: "OK", style: .default, handler: nil)
+                 sucessAlert.addAction(confirmSucessAlert)
+                 self.present(sucessAlert, animated: true, completion: nil)
               }
            }
         }

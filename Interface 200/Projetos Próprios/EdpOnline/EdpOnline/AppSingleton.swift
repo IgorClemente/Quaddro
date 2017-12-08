@@ -25,6 +25,11 @@ class App {
     
     var userCpf       = "45124712864"
 
+    var amountOfStars = 4 {
+        didSet {
+         amountOfStars = amountOfStars > 5 ? min(amountOfStars,5) : oldValue
+        }
+    }
     var amountOfTrees = 0
     var treesIndentifiers:[[String:Int]]?
     private var everybodyTrees = [[String:Any]]()

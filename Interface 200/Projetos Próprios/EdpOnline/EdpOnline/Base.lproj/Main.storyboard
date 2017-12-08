@@ -135,7 +135,7 @@
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pontos" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Gw-91-mzW">
-                                                <rect key="frame" x="173" y="36" width="41.5" height="10"/>
+                                                <rect key="frame" x="173" y="37" width="41.5" height="10"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="10" id="zHF-Qj-Fpz"/>
                                                 </constraints>
@@ -175,7 +175,7 @@
                                             <constraint firstItem="ISX-0H-3xC" firstAttribute="centerY" secondItem="Bah-U7-3jB" secondAttribute="centerY" constant="-8" id="hrK-Zp-e6y"/>
                                             <constraint firstItem="zVX-RG-wCn" firstAttribute="centerY" secondItem="Bah-U7-3jB" secondAttribute="centerY" id="id0-sS-JtQ"/>
                                             <constraint firstAttribute="trailing" secondItem="ISX-0H-3xC" secondAttribute="trailing" id="oub-PU-GrQ"/>
-                                            <constraint firstItem="7Gw-91-mzW" firstAttribute="centerY" secondItem="Bah-U7-3jB" secondAttribute="centerY" constant="11" id="p5d-lY-PR5"/>
+                                            <constraint firstItem="7Gw-91-mzW" firstAttribute="centerY" secondItem="Bah-U7-3jB" secondAttribute="centerY" constant="12" id="p5d-lY-PR5"/>
                                             <constraint firstItem="ISX-0H-3xC" firstAttribute="leading" secondItem="5UI-vp-Skq" secondAttribute="trailing" id="qrb-6L-ebI"/>
                                             <constraint firstItem="fch-XO-HsQ" firstAttribute="top" secondItem="Bah-U7-3jB" secondAttribute="top" constant="10" id="siN-UZ-vee"/>
                                         </constraints>
@@ -365,19 +365,19 @@
                                                     <rect key="frame" x="79" y="25.5" width="100" height="18"/>
                                                     <subviews>
                                                         <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" insetsLayoutMarginsFromSafeArea="NO" image="star" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2kw-v1-wPT">
-                                                            <rect key="frame" x="0.0" y="0.0" width="20" height="18"/>
+                                                            <rect key="frame" x="0.0" y="1" width="20" height="16"/>
                                                         </imageView>
                                                         <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" insetsLayoutMarginsFromSafeArea="NO" image="star" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lLA-m3-ux0">
-                                                            <rect key="frame" x="20" y="0.0" width="20" height="18"/>
+                                                            <rect key="frame" x="20" y="1" width="20" height="16"/>
                                                         </imageView>
                                                         <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" insetsLayoutMarginsFromSafeArea="NO" image="star" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5gn-ik-F68">
-                                                            <rect key="frame" x="40" y="0.0" width="20" height="18"/>
+                                                            <rect key="frame" x="40" y="1" width="20" height="16"/>
                                                         </imageView>
                                                         <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" insetsLayoutMarginsFromSafeArea="NO" image="star" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zPO-CG-Jeq">
-                                                            <rect key="frame" x="60" y="0.0" width="20" height="18"/>
+                                                            <rect key="frame" x="60" y="1" width="20" height="16"/>
                                                         </imageView>
                                                         <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" insetsLayoutMarginsFromSafeArea="NO" image="star" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eM7-If-0yq">
-                                                            <rect key="frame" x="80" y="0.0" width="20" height="18"/>
+                                                            <rect key="frame" x="80" y="1" width="20" height="16"/>
                                                         </imageView>
                                                     </subviews>
                                                     <constraints>
@@ -462,11 +462,11 @@
                         <outlet property="uiSubMenuMap" destination="sUI-Zl-AS9" id="hHw-vi-ROh"/>
                         <outletCollection property="uiButtonsSubMenu" destination="yG0-UU-1Ab" collectionClass="NSMutableArray" id="fgR-n5-SdP"/>
                         <outletCollection property="uiButtonsSubMenu" destination="UTA-cZ-jWD" collectionClass="NSMutableArray" id="iZE-cS-CvB"/>
-                        <outletCollection property="starsBarBottom" destination="2kw-v1-wPT" collectionClass="NSMutableArray" id="Q6t-T6-CRq"/>
-                        <outletCollection property="starsBarBottom" destination="lLA-m3-ux0" collectionClass="NSMutableArray" id="Ba1-Mf-XFq"/>
-                        <outletCollection property="starsBarBottom" destination="5gn-ik-F68" collectionClass="NSMutableArray" id="8ap-eH-fZp"/>
-                        <outletCollection property="starsBarBottom" destination="zPO-CG-Jeq" collectionClass="NSMutableArray" id="FDU-zT-noh"/>
-                        <outletCollection property="starsBarBottom" destination="eM7-If-0yq" collectionClass="NSMutableArray" id="Hdt-1z-08k"/>
+                        <outletCollection property="uiStarsBarBottom" destination="2kw-v1-wPT" collectionClass="NSMutableArray" id="jLL-dV-bXJ"/>
+                        <outletCollection property="uiStarsBarBottom" destination="lLA-m3-ux0" collectionClass="NSMutableArray" id="fYj-Fb-wHm"/>
+                        <outletCollection property="uiStarsBarBottom" destination="5gn-ik-F68" collectionClass="NSMutableArray" id="Z18-o8-DJp"/>
+                        <outletCollection property="uiStarsBarBottom" destination="zPO-CG-Jeq" collectionClass="NSMutableArray" id="nlk-Ly-q71"/>
+                        <outletCollection property="uiStarsBarBottom" destination="eM7-If-0yq" collectionClass="NSMutableArray" id="5oO-TK-Wmz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -507,9 +507,9 @@
                                             </constraint>
                                         </constraints>
                                     </imageView>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Login" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="4ya-1F-XdK">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Login" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="4ya-1F-XdK">
                                         <rect key="frame" x="0.0" y="288" width="320" height="55"/>
-                                        <color key="backgroundColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="0.30328556365030673" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="0.2031369823619632" colorSpace="calibratedRGB"/>
                                         <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="55" id="kLX-pM-19P"/>
@@ -523,7 +523,7 @@
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QZu-be-2Uc">
                                         <rect key="frame" x="0.5" y="363" width="320" height="55"/>
-                                        <color key="backgroundColor" red="0.50196081400000003" green="0.50196081400000003" blue="0.50196081400000003" alpha="0.30090107361963192" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" red="0.50196081400000003" green="0.50196081400000003" blue="0.50196081400000003" alpha="0.20482649539877301" colorSpace="calibratedRGB"/>
                                         <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="55" id="vG4-aT-HO9"/>
@@ -590,7 +590,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iAH-tP-Eth" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-583" y="150"/>
+            <point key="canvasLocation" x="-591" y="150"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="TYZ-MI-vNW">
@@ -617,10 +617,10 @@
         <image name="c337f7af69df35c605cab3615f3f2165" width="1024" height="768"/>
         <image name="logoEdp" width="166" height="166"/>
         <image name="map" width="21" height="21"/>
-        <image name="map-pin-silhouette-3" width="64" height="64"/>
+        <image name="map-pin-silhouette-3" width="32" height="32"/>
         <image name="menu" width="64" height="64"/>
         <image name="perfil-amostra" width="300" height="254"/>
-        <image name="star" width="25" height="25"/>
+        <image name="star" width="16" height="16"/>
         <image name="subMenu" width="21" height="21"/>
     </resources>
 </document>

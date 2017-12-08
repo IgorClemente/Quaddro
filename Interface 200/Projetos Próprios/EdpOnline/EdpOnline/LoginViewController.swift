@@ -18,10 +18,9 @@ class LoginViewController : UIViewController, UITextFieldDelegate {
        super.viewDidLoad()
        
        let viewLeftUser   = UIView()
-       viewLeftUser.frame = CGRect(x: 0, y: 0, width: 95, height: 25)
-        
+       viewLeftUser.frame = CGRect(x: 0, y: 0, width: 90, height: 25)
        let viewLeftPassword   = UIView()
-       viewLeftPassword.frame = CGRect(x: 0, y: 0, width: 95, height: 25)
+       viewLeftPassword.frame = CGRect(x: 0, y: 0, width: 90, height: 25)
        
        let imageLeftViewUser   = UIImageView()
        imageLeftViewUser.frame = CGRect(x: 20, y: 0, width: 25, height: viewLeftUser.frame.height)
@@ -36,10 +35,12 @@ class LoginViewController : UIViewController, UITextFieldDelegate {
        uiUsernameField?.leftViewMode  = .always
        uiUsernameField?.leftView      = viewLeftUser
        uiUsernameField?.textAlignment = .natural
+       uiUsernameField?.attributedPlaceholder = NSAttributedString(string: "Username", attributes: [NSAttributedStringKey.foregroundColor:UIColor.black.withAlphaComponent(0.4)])
         
        uiPasswordField?.leftViewMode  = .always
        uiPasswordField?.leftView      = viewLeftPassword
        uiPasswordField?.textAlignment = .natural
+       uiPasswordField?.attributedPlaceholder = NSAttributedString(string: "Password", attributes: [NSAttributedStringKey.foregroundColor:UIColor.black.withAlphaComponent(0.4)])
     }
   
     override var prefersStatusBarHidden: Bool {
