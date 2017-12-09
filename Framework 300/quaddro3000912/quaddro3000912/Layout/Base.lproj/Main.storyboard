@@ -237,21 +237,131 @@
             </objects>
             <point key="canvasLocation" x="830.625" y="-47.5"/>
         </scene>
-        <!--Por Email View Controller-->
+        <!--Melhor por email 🙅‍♀️-->
         <scene sceneID="zi6-Gn-hXe">
             <objects>
                 <viewController id="l5I-iC-TVu" customClass="PorEmailViewController" customModule="quaddro3000912" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0UU-90-1A6">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="431"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No caso, qual o nome da pessoa ?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b1W-DG-i77">
+                                <rect key="frame" x="15" y="79" width="290" height="16"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nome" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mOD-Mk-1sU">
+                                <rect key="frame" x="15" y="105" width="290" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" autocorrectionType="no" spellCheckingType="no" keyboardType="alphabet" keyboardAppearance="light" returnKeyType="continue" enablesReturnKeyAutomatically="YES" textContentType="name"/>
+                                <connections>
+                                    <outlet property="delegate" destination="l5I-iC-TVu" id="apv-Un-MbE"/>
+                                </connections>
+                            </textField>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="7kU-Pc-Iyl">
+                                <rect key="frame" x="15" y="150" width="290" height="237"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="gray" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="contato" textLabel="Zj1-0I-cAU" detailTextLabel="6fZ-am-Njc" style="IBUITableViewCellStyleSubtitle" id="Mx3-No-Ye0" customClass="PessoaTableViewCell" customModule="quaddro3000912" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="290" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Mx3-No-Ye0" id="lfv-AQ-ggz">
+                                            <rect key="frame" x="0.0" y="0.0" width="290" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Igor" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Zj1-0I-cAU">
+                                                    <rect key="frame" x="15" y="5" width="30" height="20.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Clemente" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="6fZ-am-Njc">
+                                                    <rect key="frame" x="15" y="25.5" width="54" height="14.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="nome" destination="Zj1-0I-cAU" id="euO-i8-rBk"/>
+                                            <outlet property="sobrenome" destination="6fZ-am-Njc" id="UG2-K1-euR"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="l5I-iC-TVu" id="LIw-pM-GFg"/>
+                                    <outlet property="delegate" destination="l5I-iC-TVu" id="5Xs-8K-wjH"/>
+                                </connections>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t2W-XW-gwC">
+                                <rect key="frame" x="134" y="393" width="171" height="28"/>
+                                <color key="backgroundColor" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="171" id="lhv-Be-RJL"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <state key="normal" title="demoro, mandei!">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="uiTapEnviarEmail" destination="l5I-iC-TVu" eventType="touchUpInside" id="MuV-0T-F4z"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="7kU-Pc-Iyl" firstAttribute="leading" secondItem="6sR-uX-bZF" secondAttribute="leading" constant="15" id="7uf-Fm-I5I"/>
+                            <constraint firstItem="b1W-DG-i77" firstAttribute="top" secondItem="6sR-uX-bZF" secondAttribute="top" constant="15" id="8uG-Ov-bHA"/>
+                            <constraint firstItem="6sR-uX-bZF" firstAttribute="trailing" secondItem="mOD-Mk-1sU" secondAttribute="trailing" constant="15" id="FhT-E9-1aj"/>
+                            <constraint firstItem="t2W-XW-gwC" firstAttribute="top" secondItem="7kU-Pc-Iyl" secondAttribute="bottom" constant="6" id="INF-Tb-caq"/>
+                            <constraint firstItem="6sR-uX-bZF" firstAttribute="trailing" secondItem="t2W-XW-gwC" secondAttribute="trailing" constant="15" id="LaI-Ub-LJx"/>
+                            <constraint firstItem="mOD-Mk-1sU" firstAttribute="top" secondItem="b1W-DG-i77" secondAttribute="bottom" constant="10" id="P3X-Bg-PEh"/>
+                            <constraint firstItem="6sR-uX-bZF" firstAttribute="bottom" secondItem="t2W-XW-gwC" secondAttribute="bottom" constant="10" id="SXM-oV-rLQ"/>
+                            <constraint firstItem="mOD-Mk-1sU" firstAttribute="leading" secondItem="6sR-uX-bZF" secondAttribute="leading" constant="15" id="XtS-k7-STL"/>
+                            <constraint firstItem="6sR-uX-bZF" firstAttribute="trailing" secondItem="b1W-DG-i77" secondAttribute="trailing" constant="15" id="Y7G-AI-ifN"/>
+                            <constraint firstItem="7kU-Pc-Iyl" firstAttribute="top" secondItem="mOD-Mk-1sU" secondAttribute="bottom" constant="15" id="ZOE-FA-G8F"/>
+                            <constraint firstItem="6sR-uX-bZF" firstAttribute="trailing" secondItem="7kU-Pc-Iyl" secondAttribute="trailing" constant="15" id="bDG-rV-uyn"/>
+                            <constraint firstItem="b1W-DG-i77" firstAttribute="leading" secondItem="6sR-uX-bZF" secondAttribute="leading" constant="15" id="nmU-r3-lqY"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6sR-uX-bZF"/>
                     </view>
-                    <navigationItem key="navigationItem" id="xWb-51-tyq"/>
+                    <navigationItem key="navigationItem" title="Melhor por email 🙅‍♀️" id="xWb-51-tyq"/>
+                    <connections>
+                        <outlet property="uiTableViewContatos" destination="7kU-Pc-Iyl" id="abe-y6-CeR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XyL-dU-84c" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="OY5-8A-VOK" customClass="Arredondador" customModule="quaddro3000912" customModuleProvider="target">
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="radii">
+                            <real key="value" value="10"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <outletCollection property="viewsParaArredondar" destination="t2W-XW-gwC" collectionClass="NSMutableArray" id="I6b-7X-ORM"/>
+                        <outletCollection property="viewsParaArredondar" destination="7kU-Pc-Iyl" collectionClass="NSMutableArray" id="oso-IU-x83"/>
+                    </connections>
+                </customObject>
+                <customObject id="yWZ-hy-l2P" customClass="Riscador" customModule="quaddro3000912" customModuleProvider="target">
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="width">
+                            <real key="value" value="1"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="color">
+                            <color key="value" red="0.7019608021" green="0.7019608021" blue="0.7019608021" alpha="1" colorSpace="calibratedRGB"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <outletCollection property="uiTargets" destination="7kU-Pc-Iyl" collectionClass="NSMutableArray" id="APD-dg-vR4"/>
+                    </connections>
+                </customObject>
             </objects>
-            <point key="canvasLocation" x="831" y="645"/>
+            <point key="canvasLocation" x="830.625" y="645"/>
         </scene>
         <!--Manda ae!-->
         <scene sceneID="ELy-YM-vPw">

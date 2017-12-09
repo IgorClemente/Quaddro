@@ -111,5 +111,5 @@ UITableViewDelegate, MFMessageComposeViewControllerDelegate {
            self.uiTableContatos?.reloadData()
            self.uiTableDestinos?.reloadData()  
         }
-    }
+    } 
 }
