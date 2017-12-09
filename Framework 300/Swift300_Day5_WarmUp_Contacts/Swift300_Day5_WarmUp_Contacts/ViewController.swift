@@ -22,7 +22,7 @@ class ViewController: UIViewController {
         
         // Depois de configurada a requisição, é só percorrer a lista de contatos encontrada
         try? CNContactStore().enumerateContacts(with: requisicao, usingBlock: { (contato, _) in
-            print(contato.givenName,contato.familyName)
+            print(contato.givenName,contato.familyName) 
         })
     }
 }
