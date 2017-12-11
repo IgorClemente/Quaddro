@@ -2,12 +2,11 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "book.png",
+      "filename" : "icons8-user-512.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "book@2x.png",
       "scale" : "2x"
     },
     {

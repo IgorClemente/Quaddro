@@ -222,13 +222,13 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate,
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        picker.dismiss(animated: true, completion: nil)
         DispatchQueue.global().async {
            if let imagePicked = info[UIImagePickerControllerOriginalImage] as? UIImage {
               let imagemData = UIImagePNGRepresentation(imagePicked)
               let imagemComprimida = UIImage(data: imagemData ?? Data())
               self.enviarFotoServidor(imagePicked)
               DispatchQueue.main.async {
-                 picker.dismiss(animated: true, completion: nil)
                  UIImageWriteToSavedPhotosAlbum(imagemComprimida ?? UIImage() , nil, nil, nil)
             
                  let sucessAlert = UIAlertController(title:"Imagem", message:"Imagem salva com sucesso !", preferredStyle: .alert)

@@ -16,9 +16,12 @@ class TelaSettingsViewController : UIViewController, UITextFieldDelegate {
     @IBOutlet weak var uiTextFieldEmail: UITextField?
     @IBOutlet weak var uiTextFieldSenha: UITextField?
     @IBOutlet weak var uiTextFieldNumeroTelefone: UITextField?
+    @IBOutlet weak var uiUserPhoto: UIButton?
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         guard let camposText = self.uiTextFieldsSettings else {
             return
         }
@@ -78,5 +81,27 @@ class TelaSettingsViewController : UIViewController, UITextFieldDelegate {
     
     @IBAction func tapAbrirMenuPrincipal(_ sender: UIButton) {
         ControllerLateralMenu.controller.criarMenuPrincipal(self)
+    }
+}
+
+extension TelaSettingsViewController : UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    @IBAction func uiChosePhotoUser(_ sender: UIButton) {
+        let galeryPickerView = UIImagePickerController()
+        if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.photoLibrary) {
+           galeryPickerView.sourceType    = UIImagePickerControllerSourceType.photoLibrary
+           galeryPickerView.allowsEditing = true
+        }
+        galeryPickerView.delegate   = self
+        self.present(galeryPickerView, animated: true, completion: nil)
+    }
+    
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        picker.dismiss(animated: true, completion: nil)
+        guard let originalImage = info[UIImagePickerControllerOriginalImage] as? UIImage ??    (info[UIImagePickerControllerEditedImage] as? UIImage) else {
+              return
+        }
+        
+        self.uiUserPhoto?.setImage(originalImage, for: .normal)
     }
 }

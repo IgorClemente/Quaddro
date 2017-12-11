@@ -51,7 +51,7 @@
                                         <view contentMode="scaleToFill" restorationIdentifier="1" translatesAutoresizingMaskIntoConstraints="NO" id="amn-7o-9z9">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="99"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="1_image" image="perfil-amostra" translatesAutoresizingMaskIntoConstraints="NO" id="irm-N4-wAf" customClass="WebImageView" customModule="EdpOnline" customModuleProvider="target">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="1_image" image="user-icon" translatesAutoresizingMaskIntoConstraints="NO" id="irm-N4-wAf" customClass="WebImageView" customModule="EdpOnline" customModuleProvider="target">
                                                     <rect key="frame" x="16" y="19.5" width="60" height="60"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="60" id="Ptt-s8-0jV"/>
@@ -95,7 +95,7 @@
                                         <view contentMode="scaleToFill" restorationIdentifier="2" translatesAutoresizingMaskIntoConstraints="NO" id="5sp-qh-n41">
                                             <rect key="frame" x="0.0" y="100" width="320" height="99"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="2_image" image="perfil-amostra" translatesAutoresizingMaskIntoConstraints="NO" id="WOc-UQ-kj9" customClass="WebImageView" customModule="EdpOnline" customModuleProvider="target">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="2_image" image="user-icon" translatesAutoresizingMaskIntoConstraints="NO" id="WOc-UQ-kj9" customClass="WebImageView" customModule="EdpOnline" customModuleProvider="target">
                                                     <rect key="frame" x="16" y="20" width="60" height="60"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="60" id="Y4R-NT-SKg"/>
@@ -139,7 +139,7 @@
                                         <view contentMode="scaleToFill" restorationIdentifier="3" translatesAutoresizingMaskIntoConstraints="NO" id="Ad1-ao-1uX">
                                             <rect key="frame" x="0.0" y="200" width="320" height="99.5"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="3_image" image="perfil-amostra" translatesAutoresizingMaskIntoConstraints="NO" id="UnZ-zh-pSO" customClass="WebImageView" customModule="EdpOnline" customModuleProvider="target">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="3_image" image="user-icon" translatesAutoresizingMaskIntoConstraints="NO" id="UnZ-zh-pSO" customClass="WebImageView" customModule="EdpOnline" customModuleProvider="target">
                                                     <rect key="frame" x="16" y="20" width="60" height="60"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="60" id="nmV-6G-EGQ"/>
@@ -183,7 +183,7 @@
                                         <view contentMode="scaleToFill" restorationIdentifier="4" translatesAutoresizingMaskIntoConstraints="NO" id="HFJ-K5-QcW">
                                             <rect key="frame" x="0.0" y="300.5" width="320" height="99"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="4_image" image="perfil-amostra" translatesAutoresizingMaskIntoConstraints="NO" id="5sE-Fj-lCn" customClass="WebImageView" customModule="EdpOnline" customModuleProvider="target">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="4_image" image="user-icon" translatesAutoresizingMaskIntoConstraints="NO" id="5sE-Fj-lCn" customClass="WebImageView" customModule="EdpOnline" customModuleProvider="target">
                                                     <rect key="frame" x="16" y="19" width="60" height="60"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="60" id="179-xG-GrO"/>
@@ -227,7 +227,7 @@
                                         <view contentMode="scaleToFill" restorationIdentifier="5" translatesAutoresizingMaskIntoConstraints="NO" id="9vt-8a-Jwa">
                                             <rect key="frame" x="0.0" y="400.5" width="320" height="99"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="5_image" image="perfil-amostra" translatesAutoresizingMaskIntoConstraints="NO" id="RLS-tZ-Yh7" customClass="WebImageView" customModule="EdpOnline" customModuleProvider="target">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="5_image" image="user-icon" translatesAutoresizingMaskIntoConstraints="NO" id="RLS-tZ-Yh7" customClass="WebImageView" customModule="EdpOnline" customModuleProvider="target">
                                                     <rect key="frame" x="16" y="19.5" width="60" height="60"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="60" id="4fv-Q0-dvV"/>
@@ -271,7 +271,7 @@
                                         <view contentMode="scaleToFill" restorationIdentifier="6" translatesAutoresizingMaskIntoConstraints="NO" id="KsM-mZ-v7o">
                                             <rect key="frame" x="0.0" y="500.5" width="320" height="99"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="6_image" image="perfil-amostra" translatesAutoresizingMaskIntoConstraints="NO" id="PcY-u4-JQD" customClass="WebImageView" customModule="EdpOnline" customModuleProvider="target">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="6_image" image="user-icon" translatesAutoresizingMaskIntoConstraints="NO" id="PcY-u4-JQD" customClass="WebImageView" customModule="EdpOnline" customModuleProvider="target">
                                                     <rect key="frame" x="16" y="19.5" width="60" height="60"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="60" id="rz5-ae-QiV"/>
@@ -315,7 +315,7 @@
                                         <view contentMode="scaleToFill" restorationIdentifier="7" translatesAutoresizingMaskIntoConstraints="NO" id="jWP-ec-nBp">
                                             <rect key="frame" x="0.0" y="600.5" width="320" height="99"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="7_image" image="perfil-amostra" translatesAutoresizingMaskIntoConstraints="NO" id="k6R-36-ESg" customClass="WebImageView" customModule="EdpOnline" customModuleProvider="target">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="7_image" image="user-icon" translatesAutoresizingMaskIntoConstraints="NO" id="k6R-36-ESg" customClass="WebImageView" customModule="EdpOnline" customModuleProvider="target">
                                                     <rect key="frame" x="16" y="20" width="60" height="60"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="60" id="06M-Xv-pvZ"/>
@@ -359,7 +359,7 @@
                                         <view contentMode="scaleToFill" restorationIdentifier="8" translatesAutoresizingMaskIntoConstraints="NO" id="N8p-fb-tSR">
                                             <rect key="frame" x="0.0" y="700.5" width="320" height="99.5"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="8_image" image="perfil-amostra" translatesAutoresizingMaskIntoConstraints="NO" id="SYU-Op-cwO" customClass="WebImageView" customModule="EdpOnline" customModuleProvider="target">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="8_image" image="user-icon" translatesAutoresizingMaskIntoConstraints="NO" id="SYU-Op-cwO" customClass="WebImageView" customModule="EdpOnline" customModuleProvider="target">
                                                     <rect key="frame" x="16" y="20" width="60" height="60"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="60" id="Tsn-aL-Jw4"/>
@@ -403,7 +403,7 @@
                                         <view contentMode="scaleToFill" restorationIdentifier="9" translatesAutoresizingMaskIntoConstraints="NO" id="Me9-K4-9qM">
                                             <rect key="frame" x="0.0" y="801" width="320" height="99"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="9_image" image="perfil-amostra" translatesAutoresizingMaskIntoConstraints="NO" id="fJK-Qj-rge" customClass="WebImageView" customModule="EdpOnline" customModuleProvider="target">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="9_image" image="user-icon" translatesAutoresizingMaskIntoConstraints="NO" id="fJK-Qj-rge" customClass="WebImageView" customModule="EdpOnline" customModuleProvider="target">
                                                     <rect key="frame" x="16" y="19" width="60" height="60"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="60" id="3fC-x9-FFg"/>
@@ -447,7 +447,7 @@
                                         <view contentMode="scaleToFill" restorationIdentifier="10" translatesAutoresizingMaskIntoConstraints="NO" id="QoO-Om-nOW">
                                             <rect key="frame" x="0.0" y="901" width="320" height="99"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="10_image" image="perfil-amostra" translatesAutoresizingMaskIntoConstraints="NO" id="MPd-ET-HHC" customClass="WebImageView" customModule="EdpOnline" customModuleProvider="target">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="10_image" image="user-icon" translatesAutoresizingMaskIntoConstraints="NO" id="MPd-ET-HHC" customClass="WebImageView" customModule="EdpOnline" customModuleProvider="target">
                                                     <rect key="frame" x="16" y="20" width="60" height="60"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="60" id="5Ou-Vf-QPs"/>
@@ -540,7 +540,7 @@
                     </constraints>
                 </view>
                 <activityIndicatorView opaque="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="yGH-QY-Rxb">
-                    <rect key="frame" x="140" y="220" width="40" height="40"/>
+                    <rect key="frame" x="140" y="230" width="40" height="40"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="40" id="FFD-CL-hn8"/>
                         <constraint firstAttribute="height" constant="40" id="Otu-Yr-JBC"/>
@@ -554,7 +554,7 @@
                 <constraint firstItem="yGH-QY-Rxb" firstAttribute="centerX" secondItem="GuX-h6-v4r" secondAttribute="centerX" id="XwO-gS-B2R"/>
                 <constraint firstItem="wZI-KO-0ol" firstAttribute="top" secondItem="GuX-h6-v4r" secondAttribute="top" id="b2w-ae-gu5"/>
                 <constraint firstItem="iKb-u4-Byl" firstAttribute="leading" secondItem="GuX-h6-v4r" secondAttribute="leading" id="gC8-fC-89s"/>
-                <constraint firstItem="yGH-QY-Rxb" firstAttribute="centerY" secondItem="GuX-h6-v4r" secondAttribute="centerY" id="jNv-jM-5Mm"/>
+                <constraint firstItem="yGH-QY-Rxb" firstAttribute="centerY" secondItem="GuX-h6-v4r" secondAttribute="centerY" constant="10" id="jNv-jM-5Mm"/>
                 <constraint firstItem="wZI-KO-0ol" firstAttribute="leading" secondItem="GuX-h6-v4r" secondAttribute="leading" id="k3M-Sa-xiw"/>
                 <constraint firstAttribute="trailing" secondItem="iKb-u4-Byl" secondAttribute="trailing" id="mPW-o3-WDA"/>
                 <constraint firstItem="jPD-Xw-X3q" firstAttribute="width" secondItem="GuX-h6-v4r" secondAttribute="width" id="pvm-og-wbl"/>
@@ -567,6 +567,6 @@
     </objects>
     <resources>
         <image name="menu" width="64" height="64"/>
-        <image name="perfil-amostra" width="300" height="254"/>
+        <image name="user-icon" width="512" height="512"/>
     </resources>
 </document>
