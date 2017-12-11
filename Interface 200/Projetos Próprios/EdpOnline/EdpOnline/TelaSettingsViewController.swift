@@ -10,6 +10,7 @@ import UIKit
 
 class TelaSettingsViewController : UIViewController, UITextFieldDelegate {
     
+    @IBOutlet weak var uiScrollViewForm: UIScrollView?
     @IBOutlet var uiTextFieldsSettings: [UITextField]?
     
     @IBOutlet weak var uiTextNomeCompleto: UITextField?
@@ -102,6 +103,23 @@ extension TelaSettingsViewController : UIImagePickerControllerDelegate, UINaviga
               return
         }
         
+        self.uiUserPhoto?.contentMode = .scaleAspectFill
         self.uiUserPhoto?.setImage(originalImage, for: .normal)
     }
 }
+
+extension TelaSettingsViewController : UIScrollViewDelegate {
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        if scrollView.contentOffset.y > 0.0 {
+           var largura = scrollView.contentOffset.y
+               largura = CGFloat(Int(largura))
+            print(largura)
+               largura = largura*(self.uiUserPhoto?.frame.width)!
+           self.uiUserPhoto?.frame.size = CGSize(width: largura, height: largura)
+        }else{
+           print("NO")
+        }
+    }
+}
+

@@ -12,6 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TelaSettingsViewController" customModule="EdpOnline" customModuleProvider="target">
             <connections>
+                <outlet property="uiScrollViewForm" destination="4kL-XS-idy" id="zxh-kI-ROq"/>
                 <outlet property="uiTextFieldEmail" destination="2YU-0H-uN1" id="37B-hK-fYe"/>
                 <outlet property="uiTextFieldNumeroTelefone" destination="2VW-UV-Lei" id="uK9-cN-Gc6"/>
                 <outlet property="uiTextFieldSenha" destination="MvH-5s-Aqd" id="yMr-yB-eFB"/>
@@ -75,7 +76,7 @@
                         <constraint firstItem="6aN-zU-J52" firstAttribute="centerY" secondItem="OKo-QD-Ku2" secondAttribute="centerY" constant="7" id="q8y-yY-oI9"/>
                     </constraints>
                 </view>
-                <button opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFill" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hIw-Kt-CFc">
+                <button opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFill" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" adjustsImageSizeForAccessibilityContentSizeCategory="YES" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hIw-Kt-CFc">
                     <rect key="frame" x="117.5" y="99" width="140" height="140"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="140" id="5nV-l5-mQ6"/>
@@ -239,6 +240,9 @@
                         <constraint firstItem="98d-XF-wXJ" firstAttribute="leading" secondItem="4kL-XS-idy" secondAttribute="leading" id="dDw-SZ-wmL"/>
                         <constraint firstAttribute="bottom" secondItem="98d-XF-wXJ" secondAttribute="bottom" id="gZA-8S-Kxi"/>
                     </constraints>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="uMg-lU-YWo"/>
+                    </connections>
                 </scrollView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
