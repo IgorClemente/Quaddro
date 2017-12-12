@@ -27,6 +27,7 @@
 		D0BFBF0D1F756A92009B1F11 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0BFBF0C1F756A92009B1F11 /* Assets.xcassets */; };
 		D0BFBF101F756A92009B1F11 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0BFBF0E1F756A92009B1F11 /* LaunchScreen.storyboard */; };
 		D0EFFB9C1FBD40D4001CEE2F /* MapPlaceTreeAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EFFB9B1FBD40D3001CEE2F /* MapPlaceTreeAnnotation.swift */; };
+		D0F049B31FDF820700CA6B2A /* Scratch.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F049B21FDF820700CA6B2A /* Scratch.swift */; };
 		D0F8282B1F814B3B00AB9688 /* TelaRankingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F8282A1F814B3A00AB9688 /* TelaRankingController.swift */; };
 		D0F88F901F784DFD003424BA /* RoundViewsCustom.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F88F8F1F784DFD003424BA /* RoundViewsCustom.swift */; };
 		D0F88F941F7861F2003424BA /* LateralMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F88F931F7861F2003424BA /* LateralMenuView.swift */; };
@@ -55,6 +56,7 @@
 		D0BFBF0F1F756A92009B1F11 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D0BFBF111F756A92009B1F11 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D0EFFB9B1FBD40D3001CEE2F /* MapPlaceTreeAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapPlaceTreeAnnotation.swift; sourceTree = "<group>"; };
+		D0F049B21FDF820700CA6B2A /* Scratch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scratch.swift; sourceTree = "<group>"; };
 		D0F8282A1F814B3A00AB9688 /* TelaRankingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TelaRankingController.swift; sourceTree = "<group>"; };
 		D0F88F8F1F784DFD003424BA /* RoundViewsCustom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundViewsCustom.swift; sourceTree = "<group>"; };
 		D0F88F931F7861F2003424BA /* LateralMenuView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LateralMenuView.swift; sourceTree = "<group>"; };
@@ -156,6 +158,7 @@
 				D01A74F21FD0F78F00BE8711 /* KeyboardContraint.swift */,
 				D02A8B961FC357C700B4DE9F /* TreeTableViewCell.swift */,
 				D02A8B981FC35B8F00B4DE9F /* WebImageView.swift */,
+				D0F049B21FDF820700CA6B2A /* Scratch.swift */,
 			);
 			name = Suporte;
 			sourceTree = "<group>";
@@ -346,6 +349,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0F049B31FDF820700CA6B2A /* Scratch.swift in Sources */,
 				D00EC05D1F7BCF9000198884 /* MenuLateralController.swift in Sources */,
 				D0EFFB9C1FBD40D4001CEE2F /* MapPlaceTreeAnnotation.swift in Sources */,
 				D00983CA1F7B21E2002EF018 /* TelaSettingsViewController.swift in Sources */,

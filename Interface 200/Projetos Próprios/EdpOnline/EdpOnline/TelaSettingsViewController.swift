@@ -26,6 +26,7 @@ class TelaSettingsViewController : UIViewController, UITextFieldDelegate {
         guard let camposText = self.uiTextFieldsSettings else {
             return
         }
+        
         for campo in camposText {
             guard let identificadorCampo = campo.restorationIdentifier else {
                 return
@@ -64,6 +65,7 @@ class TelaSettingsViewController : UIViewController, UITextFieldDelegate {
               let campoTelefone = uiTextFieldNumeroTelefone else {
             return true
         }
+        
         let mapaCamposContinue:[UITextField:UITextField?] = [
             campoNome : campoEmail,
             campoEmail : campoSenha,
@@ -85,13 +87,17 @@ class TelaSettingsViewController : UIViewController, UITextFieldDelegate {
     }
 }
 
-extension TelaSettingsViewController : UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+extension TelaSettingsViewController : UIImagePickerControllerDelegate,
+                                       UINavigationControllerDelegate {
+    
     @IBAction func uiChosePhotoUser(_ sender: UIButton) {
         let galeryPickerView = UIImagePickerController()
+        
         if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.photoLibrary) {
            galeryPickerView.sourceType    = UIImagePickerControllerSourceType.photoLibrary
            galeryPickerView.allowsEditing = true
         }
+        
         galeryPickerView.delegate   = self
         self.present(galeryPickerView, animated: true, completion: nil)
     }
@@ -99,26 +105,46 @@ extension TelaSettingsViewController : UIImagePickerControllerDelegate, UINaviga
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         picker.dismiss(animated: true, completion: nil)
-        guard let originalImage = info[UIImagePickerControllerOriginalImage] as? UIImage ??    (info[UIImagePickerControllerEditedImage] as? UIImage) else {
+        
+        guard let originalImage = info[UIImagePickerControllerOriginalImage] as? UIImage ?? (info[UIImagePickerControllerEditedImage] as? UIImage) else {
               return
         }
         
         self.uiUserPhoto?.contentMode = .scaleAspectFill
-        self.uiUserPhoto?.setImage(originalImage, for: .normal)
+        self.uiUserPhoto?.setBackgroundImage(originalImage, for: .normal)
     }
 }
 
 extension TelaSettingsViewController : UIScrollViewDelegate {
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        if scrollView.contentOffset.y > 0.0 {
-           var largura = scrollView.contentOffset.y
-               largura = CGFloat(Int(largura))
-            print(largura)
-               largura = largura*(self.uiUserPhoto?.frame.width)!
-           self.uiUserPhoto?.frame.size = CGSize(width: largura, height: largura)
+        guard let photo = self.uiUserPhoto else {
+            return
+        }
+        
+        let photoWidth = photo.frame.size.width
+        
+        photo.center.x     = self.view.center.x
+        photo.frame.size   = CGSize(width: 140.0, height: 140.0)
+        photo.layer.cornerRadius = photoWidth * 0.5
+        
+        if scrollView.contentOffset.y < 1.0 {
+           let photoWidthOriginal = photo.frame.size.width
+           var yValueScroll = scrollView.contentOffset.y
+        
+           UIView.animate(withDuration: 0.4, animations: {
+              photo.alpha = 1.0
+           }, completion: { (_) in
+              yValueScroll     = CGFloat(Int(yValueScroll) * -1)
+              yValueScroll     = min(yValueScroll + photoWidthOriginal,280)
+              photo.frame.size = CGSize(width: yValueScroll, height: yValueScroll)
+           })
         }else{
-           print("NO")
+            UIView.animate(withDuration: 0.4, animations: {
+               photo.alpha = 1.0
+            }, completion: { (_) in
+               photo.frame.size = CGSize(width: 140.0, height: 140.0)
+            })
         }
     }
 }
