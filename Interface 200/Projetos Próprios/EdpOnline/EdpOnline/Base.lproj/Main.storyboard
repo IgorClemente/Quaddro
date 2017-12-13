@@ -223,7 +223,7 @@
                                             <action selector="uiTapAbreMenuPrincipal" destination="BYZ-38-t0r" eventType="touchUpInside" id="f8U-6l-9Ra"/>
                                         </connections>
                                     </button>
-                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" image="logoEdp" translatesAutoresizingMaskIntoConstraints="NO" id="gXZ-c8-T6R">
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="logoEdp" translatesAutoresizingMaskIntoConstraints="NO" id="gXZ-c8-T6R">
                                         <rect key="frame" x="120" y="1.5" width="80" height="80"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="80" id="ajq-kf-UaQ"/>
@@ -330,7 +330,7 @@
                             <view contentMode="scaleToFill" restorationIdentifier="viewSubMenu" translatesAutoresizingMaskIntoConstraints="NO" id="sUI-Zl-AS9">
                                 <rect key="frame" x="0.0" y="316" width="320" height="252"/>
                                 <subviews>
-                                    <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" zoomEnabled="NO" rotateEnabled="NO" pitchEnabled="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vwk-oP-z3g">
+                                    <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" rotateEnabled="NO" pitchEnabled="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vwk-oP-z3g">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="252"/>
                                         <connections>
                                             <outlet property="delegate" destination="BYZ-38-t0r" id="Juh-oQ-AKf"/>
@@ -615,7 +615,7 @@
         <image name="Vagas-de-Emprego-em-Guarulhos-SP-600x450" width="300" height="225"/>
         <image name="arvore-fio-demo" width="470" height="250"/>
         <image name="c337f7af69df35c605cab3615f3f2165" width="1024" height="768"/>
-        <image name="logoEdp" width="166" height="166"/>
+        <image name="logoEdp" width="250" height="250"/>
         <image name="map" width="21" height="21"/>
         <image name="map-pin-silhouette-3" width="32" height="32"/>
         <image name="menu" width="64" height="64"/>

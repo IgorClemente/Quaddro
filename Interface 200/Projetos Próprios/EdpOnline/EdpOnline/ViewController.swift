@@ -20,10 +20,10 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate,
     @IBOutlet weak var uiFullName: UILabel?
     @IBOutlet weak var tableSubMenuArvores: UITableView?
     @IBOutlet weak var uiSubMenuMap: UIView?
-    @IBOutlet var uiButtonsSubMenu: [UIBarButtonItem]?
     @IBOutlet weak var uiProgressBarUpload: UIProgressView?
     @IBOutlet weak var uiMapRegionMain: MKMapView?
     
+    @IBOutlet var uiButtonsSubMenu: [UIBarButtonItem]?
     @IBOutlet var uiStarsBarBottom: [UIImageView]?
     
     // MARK: images trees
@@ -39,13 +39,12 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate,
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
-        
         let urlUser = "https://inovatend.mybluemix.net/users/\(App.shared.userCpf)"
         guard let remoteURL = URL(string: urlUser),
               let progress  = self.uiProgressBarUpload   else {
               return
         }
-        // Barra de Progresso - UploadImagem
+        
         progress.setProgress(0.0, animated: true)
         progress.isHidden = true
         
@@ -62,75 +61,20 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate,
         }
         
         NotificationCenter.default.addObserver(forName: NSNotification.Name("update-map"),
-                                               object: nil, queue: OperationQueue.main) { _ in
-            self.saveUserInfo(remoteURL)
-            self.searchLocation()
-            self.tableSubMenuArvores?.reloadData()
-        }
-        
-        self.saveUserInfo(remoteURL)
-        self.searchLocation()
-        self.tableSubMenuArvores?.reloadData()
-    }
-    
-    func saveUserInfo(_ remoteURL:URL) -> Void {
-        var usuarioLogged:[String:Any] = [:]
-        
-        if let data = try? Data(contentsOf: remoteURL),
-           let json = try? JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions()),
-           let info    = json as? [String:Any],
-           let usuario = info["usuario"] as? [[String:Any]],
-           let quantidadeArvores = info["arvores"] as? [String:Int],
-           let ids_arvore        = info["arvore_ids"] as? [[String:Int]]  {
-            
-           for u in usuario {
-              guard let nome = u["nome"] as? String,
-                    let sobrenome  = u["sobrenome"] as? String,
-                    let id_user    = u["id_user"] as? Int,
-                    let localidade = u["localidade"] as? String,
-                    let uf    = u["uf"] as? String,
-                    let numeroTelefone = u["numero_telefone"] as? String,
-                    let email  = u["email"] as? String,
-                    let pontos = u["pontos"] as? Int,
-                    let quantidade = quantidadeArvores["quantidade"] else {
-                        return
-              }
+            object: nil, queue: OperationQueue.main) { _ in
                 
-              usuarioLogged["nome"]       = nome
-              usuarioLogged["sobrenome"]  = sobrenome
-              usuarioLogged["id_user"]    = id_user
-              usuarioLogged["localidade"] = localidade
-              usuarioLogged["uf"] = uf
-              usuarioLogged["numeroTelefone"] = numeroTelefone
-              usuarioLogged["email"]  = email
-              usuarioLogged["pontos"] = pontos
-                
-              App.shared.treesIndentifiers = ids_arvore
-              App.shared.amountOfTrees = quantidade
-           }
-           self.loadInformation(forUser: usuarioLogged)
-           App.shared.setUserLogged(usuarioLogged)
-           App.shared.saveInformationTrees()
+            DispatchQueue.global().async{
+                self.saveUserInfo(remoteURL)
+                DispatchQueue.main.asyncAfter(deadline: .now() + 1 , execute: {
+                  self.searchLocation()
+                  self.tableSubMenuArvores?.reloadData()
+                })
+            }
         }
-    }
-    
-    func loadInformation(forUser u:[String:Any]) -> Void {
-        guard let firstName  = u["nome"] as? String ,
-              let lastName   = u["sobrenome"] as? String ,
-              let locality   = u["localidade"] as? String ,
-              let uf         = u["uf"] as? String ,
-              let points     = u["pontos"] as? Int
-              else {
-              return
-        }
-        self.uiFullName?.text = "\(firstName) \(lastName)"
-        self.uiLocality?.text   = "\(locality),\(uf)"
-        self.uiPoints?.text    = "\(points)"
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         guard let buttons = uiButtonsSubMenu,
               let treesTable = tableSubMenuArvores,
               let treesMap = uiSubMenuMap else {
@@ -148,6 +92,79 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate,
                treesMap.isHidden = true
             }
         }
+        
+        let urlUser = "https://inovatend.mybluemix.net/users/\(App.shared.userCpf)"
+        
+        guard let remoteURL = URL(string: urlUser) else {
+              return
+        }
+        
+        DispatchQueue.global().async{
+            self.saveUserInfo(remoteURL)
+            self.searchLocation()
+            DispatchQueue.main.async{
+               self.tableSubMenuArvores?.reloadData()
+            }
+        }
+    }
+    
+    func saveUserInfo(_ remoteURL:URL) -> Void {
+        var usuarioLogged:[String:Any] = [:]
+        
+        if let data = try? Data(contentsOf: remoteURL),
+           let json = try? JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions()),
+           let info = json as? [String:Any],
+           let user = info["usuario"] as? [[String:Any]],
+           let numberOfTrees = info["arvores"] as? [String:Int],
+           let tree_ids      = info["arvore_ids"] as? [[String:Int]]  {
+            
+           for u in user {
+              guard let nome = u["nome"] as? String,
+                    let sobrenome  = u["sobrenome"] as? String,
+                    let id_user    = u["id_user"] as? Int,
+                    let localidade = u["localidade"] as? String,
+                    let uf     = u["uf"] as? String,
+                    let numeroTelefone = u["numero_telefone"] as? String,
+                    let email  = u["email"] as? String,
+                    let pontos = u["pontos"] as? Int,
+                    let quantidade = numberOfTrees["quantidade"] else {
+                    return
+              }
+                
+              usuarioLogged["nome"]       = nome
+              usuarioLogged["sobrenome"]  = sobrenome
+              usuarioLogged["id_user"]    = id_user
+              usuarioLogged["localidade"] = localidade
+              usuarioLogged["uf"] = uf
+              usuarioLogged["numeroTelefone"] = numeroTelefone
+              usuarioLogged["email"]  = email
+              usuarioLogged["pontos"] = pontos
+                
+              App.shared.treesIndentifiers = tree_ids
+              App.shared.amountOfTrees = quantidade
+              App.shared.saveInformationTrees()
+           }
+           
+           DispatchQueue.main.async{
+              self.loadInformation(forUser: usuarioLogged)
+              App.shared.setUserLogged(usuarioLogged)
+           }
+        }
+    }
+    
+    func loadInformation(forUser u:[String:Any]) -> Void {
+        guard let firstName  = u["nome"] as? String ,
+              let lastName   = u["sobrenome"] as? String ,
+              let locality   = u["localidade"] as? String ,
+              let uf         = u["uf"] as? String ,
+              let points     = u["pontos"] as? Int
+              else {
+              return
+        }
+        
+        self.uiFullName?.text = "\(firstName) \(lastName)"
+        self.uiLocality?.text   = "\(locality),\(uf)"
+        self.uiPoints?.text    = "\(points)"
     }
     
     @IBAction func uiTapAbreMenuPrincipal() {
@@ -162,46 +179,46 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate,
         }
         
         if let titulo = sender.title {
-          switch titulo {
-            case "submenuMapa":
+           switch titulo {
+             case "submenuMapa":
                 
-              UIView.animate(withDuration: 0.2,animations: {
+              UIView.animate(withDuration: 0.1,animations: {
                 viewSubMapa.alpha    = 1.0
               }){ _ in viewSubMapa.isHidden = false }
               
               for botao in botoes {
-                if botao.title == "submenuArvores" {
-                   UIView.animate(withDuration: 0.3, animations: {
-                   viewSubArvore.alpha = 0.0
-                   }){ _ in
-                     botao.tintColor = UIColor.gray
-                     viewSubArvore.isHidden = true
-                   }
-                }else{
-                   botao.tintColor = UIColor.white
-                }
+               if botao.title == "submenuArvores" {
+                  UIView.animate(withDuration: 0.2, animations: {
+                    viewSubArvore.alpha = 0.0
+                  }){ _ in
+                        botao.tintColor = UIColor.gray
+                        viewSubArvore.isHidden = true
+                    }
+               }else{
+                  botao.tintColor = UIColor.white
+               }
               }
             
-            case "submenuArvores":
+             case "submenuArvores":
                 
-              UIView.animate(withDuration: 0.2, animations: {
-                 viewSubArvore.alpha    = 1.0
+              UIView.animate(withDuration: 0.1, animations: {
+                viewSubArvore.alpha    = 1.0
               }){ _ in viewSubArvore.isHidden = false }
             
               for botao in botoes {
-                if botao.title == "submenuMapa" {
-                   UIView.animate(withDuration: 0.3, animations: {
-                     viewSubMapa.alpha = 0.0
-                   }){ _ in
-                     botao.tintColor = UIColor.gray
-                     viewSubMapa.isHidden = true
-                   }
-                }else{
+               if botao.title == "submenuMapa" {
+                  UIView.animate(withDuration: 0.2, animations: {
+                    viewSubMapa.alpha = 0.0
+                  }){ _ in
+                        botao.tintColor = UIColor.gray
+                        viewSubMapa.isHidden = true
+                    }
+               }else{
                    botao.tintColor = UIColor.white
-                }
+               }
               }
             
-            default:
+             default:
                break
            }
         }
@@ -227,10 +244,11 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate,
            if let imagePicked = info[UIImagePickerControllerOriginalImage] as? UIImage {
               let imagemData = UIImagePNGRepresentation(imagePicked)
               let imagemComprimida = UIImage(data: imagemData ?? Data())
-              self.enviarFotoServidor(imagePicked)
-              DispatchQueue.main.async {
-                 UIImageWriteToSavedPhotosAlbum(imagemComprimida ?? UIImage() , nil, nil, nil)
             
+              self.enviarFotoServidor(imagePicked)
+              UIImageWriteToSavedPhotosAlbum(imagemComprimida ?? UIImage() , nil, nil, nil)
+            
+              DispatchQueue.main.async {
                  let sucessAlert = UIAlertController(title:"Imagem", message:"Imagem salva com sucesso !", preferredStyle: .alert)
                  let confirmSucessAlert = UIAlertAction(title: "OK", style: .default, handler: nil)
                  sucessAlert.addAction(confirmSucessAlert)
@@ -267,32 +285,32 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate,
             switch result {
             case .success(let upload, _, _):
                 
-                upload.uploadProgress(closure: { (progress) in
-                    progressBar.isHidden = false
-                    print("Upload Progress: \(progress.fractionCompleted)")
-                    progressBar.setProgress(Float(progress.fractionCompleted), animated: true)
-                })
+              upload.uploadProgress(closure: { (progress) in
+                 progressBar.isHidden = false
+                 print("Upload Progress: \(progress.fractionCompleted)")
+                 progressBar.setProgress(Float(progress.fractionCompleted), animated: true)
+              })
                 
-                upload.responseJSON { response in
-                    progressBar.isHidden = true
-                    progressBar.setProgress(0.0, animated: false)
+              upload.responseJSON { response in
+                 progressBar.isHidden = true
+                 progressBar.setProgress(0.0, animated: false)
                     
-                    // MARK: Notification End Progress - BackgroundMode
-                    DispatchQueue.main.async {
-                       if UIApplication.shared.applicationState == .background {
-                          let contentNotification   = UNMutableNotificationContent()
-                          contentNotification.body  = "Imagem enviada com sucesso"
-                          contentNotification.title = "Envio de Imagem"
+                 // MARK: Notification End Progress - BackgroundMode
+                 DispatchQueue.main.async {
+                   if UIApplication.shared.applicationState == .background {
+                      let contentNotification   = UNMutableNotificationContent()
+                      contentNotification.body  = "Imagem enviada com sucesso"
+                      contentNotification.title = "Envio de Imagem"
                             
-                          let notificationProgress = UNNotificationRequest(identifier: "upload", content: contentNotification, trigger: nil)
+                      let notificationProgress = UNNotificationRequest(identifier: "upload", content: contentNotification, trigger: nil)
                           UNUserNotificationCenter.current().add(notificationProgress, withCompletionHandler: nil)
-                       }
-                    }
-                    NotificationCenter.default.post(name: NSNotification.Name("update-map") , object: nil)
-                }
+                      }
+                   }
+                   NotificationCenter.default.post(name: NSNotification.Name("update-map") , object: nil)
+               }
             case .failure(let encodingError):
                 print(encodingError)
-            }
+           }
         }
     }
 }
@@ -301,7 +319,8 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate,
 extension ViewController : CLLocationManagerDelegate {
     
     func preparePinsUpdate() -> Void {
-        self.uiMapRegionMain?.removeAnnotations(uiMapRegionMain?.annotations ?? [])
+        self.uiMapRegionMain?.removeAnnotations(
+        uiMapRegionMain?.annotations ?? [])
         if let locationUser = App.shared.currentLocation {
            let pinUser  = TreeAnnotation(forLocation: locationUser)
            self.uiMapRegionMain?.addAnnotation(pinUser)
@@ -349,7 +368,8 @@ extension ViewController : CLLocationManagerDelegate {
         }
     }
     
-    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+    func locationManager(_ manager: CLLocationManager,
+                         didUpdateLocations locations: [CLLocation]) {
         guard let lastLocation = locations.last else {
             return
         }
@@ -392,7 +412,8 @@ extension ViewController : UITableViewDelegate, UITableViewDataSource {
         return App.shared.amountOfTrees
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView,
+         cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let treesIdentifiers = App.shared.treesIndentifiers
         
         guard let cellTree = tableView.dequeueReusableCell(withIdentifier: "tree") as? TreeTableViewCell,
@@ -402,7 +423,6 @@ extension ViewController : UITableViewDelegate, UITableViewDataSource {
         
         let identifier  = identifiers[indexPath.row]
         if let tree = identifier["arvore_id"] {
-            
            let cellInfoURL  = "https://inovatend.mybluemix.net/imagens/arvore/\(tree)"
            let cellImageURL = "https://inovatend.mybluemix.net/imagens/\(tree)"
            

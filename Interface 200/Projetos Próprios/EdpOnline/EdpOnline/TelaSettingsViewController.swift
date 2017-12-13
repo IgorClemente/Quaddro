@@ -138,6 +138,7 @@ extension TelaSettingsViewController : UIScrollViewDelegate {
               yValueScroll     = CGFloat(Int(yValueScroll) * -1)
               yValueScroll     = min(yValueScroll + photoWidthOriginal,280)
               photo.frame.size = CGSize(width: yValueScroll, height: yValueScroll)
+              photo.center.x   = self.view.center.x
            })
         }else{
             UIView.animate(withDuration: 0.4, animations: {
