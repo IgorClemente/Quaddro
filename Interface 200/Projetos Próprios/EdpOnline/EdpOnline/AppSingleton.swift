@@ -12,7 +12,7 @@ import Alamofire
 
 
 struct Tree{
-    var treeId       = ""
+    var treeId       = 0
     var treeTitle    = ""
     var treePoints   = 0
     var location:CLLocationCoordinate2D?
@@ -27,12 +27,51 @@ class App {
 
     var amountOfStars = 4 {
         didSet {
-         amountOfStars = amountOfStars > 5 ? min(amountOfStars,5) : oldValue
+          amountOfStars = amountOfStars > 5 ? min(amountOfStars,5) : oldValue
         }
     }
+    
+    private var everybodyTrees:[[String:Any]]? {
+        didSet {
+          guard let trees = everybodyTrees,
+                !trees.isEmpty else {
+                everybodyTrees = nil
+                self.ud.removeObject(forKey: "trees")
+                return
+          }
+
+          var salved = self.ud.object(forKey: "trees") as? [String:Any] ?? [:]
+          salved["trees_information"] = trees
+          self.ud.set(salved, forKey: "trees")
+          self.ud.synchronize()
+        }
+    }
+    
     var amountOfTrees = 0
-    var treesIndentifiers:[[String:Int]]?
-    private var everybodyTrees = [[String:Any]]()
+    
+    var treesIdentifiers:[[String:Int]]? {
+        didSet {
+          guard let identifiers = treesIdentifiers else {
+                treesIdentifiers = nil
+                return
+          }
+            
+          var number_trees:[Int] = []
+          for i in identifiers {
+            guard let id = i["arvore_id"] else {
+                  treesIdentifiers = nil
+                  return
+            }
+            number_trees.append(id)
+          }
+            
+          var number_trees_salved = ud.object(forKey: "number_trees") as? [String:Any] ?? [:]
+          number_trees_salved["numbers"] = number_trees
+          ud.set(number_trees_salved, forKey: "number_trees")
+          ud.synchronize()
+        }
+    }
+    
     
     var currentLocation:CLLocationCoordinate2D? = nil
     private var ud  = UserDefaults.standard
@@ -47,9 +86,10 @@ class App {
               let numeroTelefone = user["numeroTelefone"] as? String,
               let email      = user["email"] as? String,
               let pontos     = user["pontos"] as? Int
-        else {
-            return
+              else {
+              return
         }
+        
         self.userLoggedInfos = user
         var salvo = ud.object(forKey: "userLogged") as? [String:Any] ?? [:]
         salvo["nome"]       = nome
@@ -60,6 +100,7 @@ class App {
         salvo["numeroTelefone"] = numeroTelefone
         salvo["email"]   = email
         salvo["pontos"]  = pontos
+        
         ud.set(salvo, forKey:"userLogged")
         ud.synchronize()
     }
@@ -69,27 +110,27 @@ class App {
     }
     
     func retrieveInformationTrees() -> [Tree]? {
-        
-        let treesSalved = ud.object(forKey: "trees") as? [String:Any] ?? nil
-        var treesReturn = Array<Tree>()
-        
-        guard let trees = treesSalved else {
+        guard let treesSalved = ud.object(forKey: "trees") as? [String:Any] else {
             return nil
         }
         
-        for t in trees {
-            guard let value = t.value as? [String:Any],
-                  let title = value["titulo"] as? String,
-                  let points    = value["pontos"] as? Int,
-                  let longitude = value["longitude"] as? String,
-                  let latitude  = value["latitude"] as? String,
+        guard let informations = treesSalved["trees_information"] as? [[String:Any]] else {
+            return nil
+        }
+        
+        var treesReturn = Array<Tree>()
+        for (i,t) in informations.enumerated() {
+            guard let title = t["titulo"] as? String,
+                  let points    = t["pontos"] as? Int,
+                  let longitude = t["longitude"] as? String,
+                  let latitude  = t["latitude"] as? String,
                   let degreesLongitude:CLLocationDegrees = Double(longitude),
                   let degreesLatitude:CLLocationDegrees  = Double(latitude)
                   else{
                   return nil
             }
             
-            let id    = t.key
+            let id    = i + 1
             let location = CLLocationCoordinate2D(latitude: degreesLatitude, longitude: degreesLongitude)
             let newTree = Tree(treeId: id, treeTitle: title, treePoints: points, location: location)
             treesReturn.append(newTree)
@@ -98,34 +139,24 @@ class App {
     }
     
     func saveInformationTrees() -> Void {
-        
-        self.ud.removeObject(forKey: "trees")
-        guard let identifiers = self.treesIndentifiers,
-              !identifiers.isEmpty else {
+        guard let number_trees = ud.object(forKey: "number_trees") as? [String:Any],
+              let trees = number_trees["numbers"] as? [Int] else {
               return
         }
-
-        for identifier in identifiers {
-            guard let treeId = identifier["arvore_id"] else {
-                return
+        
+        var treesForSalved:[[String:Any]] = []
+        for tree in trees {
+            guard let remoteURL = URL(string: "https://inovatend.mybluemix.net/imagens/arvore/\(tree)"),
+                  let treeInfoData = try? Data(contentsOf: remoteURL),
+                  let json = try? JSONSerialization.jsonObject(with: treeInfoData, options: JSONSerialization.ReadingOptions()),
+                  let info = json as? [String:Any],
+                  let tree = info["arvore"] as? [String:Any]
+                  else{
+                  return
             }
-            DispatchQueue.global().async {
-                guard let remoteURL = URL(string:
-                "https://inovatend.mybluemix.net/imagens/arvore/\(treeId)"),
-                      let treeInfoData = try? Data(contentsOf: remoteURL),
-                      let json = try? JSONSerialization.jsonObject(with: treeInfoData, options: JSONSerialization.ReadingOptions()),
-                      let info = json as? [String:Any],
-                      let tree = info["arvore"] as? [String:Any]
-                      else{
-                      return
-                }
-                DispatchQueue.main.async {
-                    var salved = self.ud.object(forKey: "trees") as? [String:Any] ?? [:]
-                    salved["\(treeId)"] = tree
-                    self.ud.set(salved, forKey: "trees")
-                    self.ud.synchronize()
-                }
-            }
+            
+            treesForSalved.append(tree)
         }
+        self.everybodyTrees = treesForSalved
     }
 }

@@ -62,14 +62,10 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate,
         
         NotificationCenter.default.addObserver(forName: NSNotification.Name("update-map"),
             object: nil, queue: OperationQueue.main) { _ in
-                
-            DispatchQueue.global().async{
+            
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1 , execute: {
                 self.saveUserInfo(remoteURL)
-                DispatchQueue.main.asyncAfter(deadline: .now() + 1 , execute: {
-                  self.searchLocation()
-                  self.tableSubMenuArvores?.reloadData()
-                })
-            }
+            })
         }
     }
     
@@ -94,60 +90,58 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate,
         }
         
         let urlUser = "https://inovatend.mybluemix.net/users/\(App.shared.userCpf)"
-        
         guard let remoteURL = URL(string: urlUser) else {
-              return
+            return
         }
-        
-        DispatchQueue.global().async{
-            self.saveUserInfo(remoteURL)
-            self.searchLocation()
-            DispatchQueue.main.async{
-               self.tableSubMenuArvores?.reloadData()
-            }
-        }
+
+        self.saveUserInfo(remoteURL)
     }
     
     func saveUserInfo(_ remoteURL:URL) -> Void {
-        var usuarioLogged:[String:Any] = [:]
-        
-        if let data = try? Data(contentsOf: remoteURL),
-           let json = try? JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions()),
-           let info = json as? [String:Any],
-           let user = info["usuario"] as? [[String:Any]],
-           let numberOfTrees = info["arvores"] as? [String:Int],
-           let tree_ids      = info["arvore_ids"] as? [[String:Int]]  {
+        DispatchQueue.global().async {
+            var usuarioLogged:[String:Any] = [:]
             
-           for u in user {
-              guard let nome = u["nome"] as? String,
-                    let sobrenome  = u["sobrenome"] as? String,
-                    let id_user    = u["id_user"] as? Int,
-                    let localidade = u["localidade"] as? String,
-                    let uf     = u["uf"] as? String,
-                    let numeroTelefone = u["numero_telefone"] as? String,
-                    let email  = u["email"] as? String,
-                    let pontos = u["pontos"] as? Int,
-                    let quantidade = numberOfTrees["quantidade"] else {
-                    return
-              }
+            if let data = try? Data(contentsOf: remoteURL),
+               let json = try? JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions()),
+               let info = json as? [String:Any],
+               let user = info["usuario"] as? [[String:Any]],
+               let numberOfTrees = info["arvores"] as? [String:Int],
+               let tree_ids      = info["arvore_ids"] as? [[String:Int]]  {
                 
-              usuarioLogged["nome"]       = nome
-              usuarioLogged["sobrenome"]  = sobrenome
-              usuarioLogged["id_user"]    = id_user
-              usuarioLogged["localidade"] = localidade
-              usuarioLogged["uf"] = uf
-              usuarioLogged["numeroTelefone"] = numeroTelefone
-              usuarioLogged["email"]  = email
-              usuarioLogged["pontos"] = pontos
+               for u in user {
+                 guard let nome = u["nome"] as? String,
+                       let sobrenome  = u["sobrenome"] as? String,
+                       let id_user    = u["id_user"] as? Int,
+                       let localidade = u["localidade"] as? String,
+                       let uf     = u["uf"] as? String,
+                       let numeroTelefone = u["numero_telefone"] as? String,
+                       let email  = u["email"] as? String,
+                       let pontos = u["pontos"] as? Int,
+                       let quantidade = numberOfTrees["quantidade"] else {
+                       return
+                  }
+                    
+                  usuarioLogged["nome"]       = nome
+                  usuarioLogged["sobrenome"]  = sobrenome
+                  usuarioLogged["id_user"]    = id_user
+                  usuarioLogged["localidade"] = localidade
+                  usuarioLogged["uf"] = uf
+                  usuarioLogged["numeroTelefone"] = numeroTelefone
+                  usuarioLogged["email"]  = email
+                  usuarioLogged["pontos"] = pontos
+                    
+                  App.shared.treesIdentifiers = tree_ids
+                  App.shared.amountOfTrees = quantidade
+                  App.shared.saveInformationTrees()
+               }
                 
-              App.shared.treesIndentifiers = tree_ids
-              App.shared.amountOfTrees = quantidade
-              App.shared.saveInformationTrees()
-           }
-           
-           DispatchQueue.main.async{
-              self.loadInformation(forUser: usuarioLogged)
-              App.shared.setUserLogged(usuarioLogged)
+               DispatchQueue.main.async {
+                  self.loadInformation(forUser: usuarioLogged)
+                  App.shared.setUserLogged(usuarioLogged)
+                    
+                  self.searchLocation()
+                  self.tableSubMenuArvores?.reloadData()
+               }
            }
         }
     }
@@ -247,11 +241,10 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate,
             
               self.enviarFotoServidor(imagePicked)
               UIImageWriteToSavedPhotosAlbum(imagemComprimida ?? UIImage() , nil, nil, nil)
-            
-              DispatchQueue.main.async {
-                 let sucessAlert = UIAlertController(title:"Imagem", message:"Imagem salva com sucesso !", preferredStyle: .alert)
-                 let confirmSucessAlert = UIAlertAction(title: "OK", style: .default, handler: nil)
+              let sucessAlert = UIAlertController(title:"Imagem", message:"Imagem salva com sucesso !", preferredStyle: .alert)
+              let confirmSucessAlert = UIAlertAction(title: "OK", style: .default, handler: nil)
                  sucessAlert.addAction(confirmSucessAlert)
+              DispatchQueue.main.async {
                  self.present(sucessAlert, animated: true, completion: nil)
               }
            }
@@ -284,9 +277,8 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate,
         { (result) in
             switch result {
             case .success(let upload, _, _):
-                
+              progressBar.isHidden = false
               upload.uploadProgress(closure: { (progress) in
-                 progressBar.isHidden = false
                  print("Upload Progress: \(progress.fractionCompleted)")
                  progressBar.setProgress(Float(progress.fractionCompleted), animated: true)
               })
@@ -369,7 +361,7 @@ extension ViewController : CLLocationManagerDelegate {
     }
     
     func locationManager(_ manager: CLLocationManager,
-                         didUpdateLocations locations: [CLLocation]) {
+                        didUpdateLocations locations: [CLLocation]) {
         guard let lastLocation = locations.last else {
             return
         }
@@ -414,7 +406,7 @@ extension ViewController : UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView,
          cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let treesIdentifiers = App.shared.treesIndentifiers
+        let treesIdentifiers = App.shared.treesIdentifiers
         
         guard let cellTree = tableView.dequeueReusableCell(withIdentifier: "tree") as? TreeTableViewCell,
               let identifiers = treesIdentifiers else {

@@ -63,7 +63,7 @@ class TelaSettingsViewController : UIViewController, UITextFieldDelegate {
               let campoEmail = uiTextFieldEmail,
               let campoSenha = uiTextFieldSenha,
               let campoTelefone = uiTextFieldNumeroTelefone else {
-            return true
+              return true
         }
         
         let mapaCamposContinue:[UITextField:UITextField?] = [
@@ -93,7 +93,8 @@ extension TelaSettingsViewController : UIImagePickerControllerDelegate,
     @IBAction func uiChosePhotoUser(_ sender: UIButton) {
         let galeryPickerView = UIImagePickerController()
         
-        if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.photoLibrary) {
+        if UIImagePickerController.isSourceTypeAvailable(
+           UIImagePickerControllerSourceType.photoLibrary) {
            galeryPickerView.sourceType    = UIImagePickerControllerSourceType.photoLibrary
            galeryPickerView.allowsEditing = true
         }
@@ -106,7 +107,7 @@ extension TelaSettingsViewController : UIImagePickerControllerDelegate,
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         picker.dismiss(animated: true, completion: nil)
         
-        guard let originalImage = info[UIImagePickerControllerOriginalImage] as? UIImage ?? (info[UIImagePickerControllerEditedImage] as? UIImage) else {
+        guard let originalImage = info[UIImagePickerControllerOriginalImage] as? UIImage ??     (info[UIImagePickerControllerEditedImage] as? UIImage) else {
               return
         }
         
