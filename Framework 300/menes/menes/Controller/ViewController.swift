@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import SafariServices
+import AVKit
 
 class ViewController: UIViewController, UITableViewDelegate,
                       UITableViewDataSource {
@@ -42,7 +44,28 @@ class ViewController: UIViewController, UITableViewDelegate,
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 70
+        return 60
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        // Eu vou para webview ou para player nativo?
+        let memes = todosMenes()
+        let mene  = memes[indexPath.row]
+        
+        if mene.html {
+           // Vai para o safari
+           let safari = SFSafariViewController(url: mene.url)
+           self.present(safari, animated: true, completion: nil) 
+        }else{
+           // Vai para o Safari
+           let tocador = AVPlayer(url: mene.url)
+           let tela    = AVPlayerViewController()
+           tela.player = tocador
+           present(tela, animated: true) {
+               tocador.play()
+           } 
+        }
     }
 }
 
