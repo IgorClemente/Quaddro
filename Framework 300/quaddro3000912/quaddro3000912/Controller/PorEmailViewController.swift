@@ -87,7 +87,6 @@ class PorEmailViewController : UIViewController, UITextFieldDelegate,
     }
     
     @IBAction func uiTapEnviarEmail() {
-        
         guard let linhaSelecionada = uiTableViewContatos?.indexPathForSelectedRow?.row else {
               return   
         }

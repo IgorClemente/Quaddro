@@ -12,7 +12,7 @@ import MessageUI
 
 
 class MandaAeViewController : UIViewController, UITableViewDataSource,
-UITableViewDelegate, MFMessageComposeViewControllerDelegate {
+                              UITableViewDelegate, MFMessageComposeViewControllerDelegate {
     
     @IBOutlet weak var uiTableContatos: UITableView?
     @IBOutlet weak var uiTableDestinos: UITableView?

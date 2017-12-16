@@ -85,10 +85,10 @@
 			isa = PBXGroup;
 			children = (
 				43D333051FDC070000985B5B /* Products */,
-				43D333071FDC070000985B5B /* AppDelegate.swift */,
 				43D333241FDC141B00985B5B /* Arredondador.swift */,
 				43D333261FDC19EF00985B5B /* Riscador.swift */,
 				43D333281FDC386B00985B5B /* PessoaTableViewCell.swift */,
+				43D333071FDC070000985B5B /* AppDelegate.swift */,
 			);
 			path = Suporte;
 			sourceTree = "<group>";
