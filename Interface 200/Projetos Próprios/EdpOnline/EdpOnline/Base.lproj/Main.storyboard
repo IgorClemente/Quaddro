@@ -95,7 +95,7 @@
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="20" id="pwm-In-Q8v"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="23"/>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="24"/>
                                                 <color key="textColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                                 <variation key="heightClass=regular-widthClass=regular">
@@ -103,7 +103,7 @@
                                                 </variation>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Igor Clemente" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fch-XO-HsQ">
-                                                <rect key="frame" x="2" y="10" width="153.5" height="24"/>
+                                                <rect key="frame" x="2" y="8" width="153.5" height="24"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="24" id="yOI-Wh-TG5"/>
                                                 </constraints>
@@ -115,11 +115,11 @@
                                                 </variation>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="São Paulo, SP" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5UI-vp-Skq">
-                                                <rect key="frame" x="21" y="35" width="135.5" height="17"/>
+                                                <rect key="frame" x="21" y="34" width="135.5" height="17"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="17" id="CZV-lp-Xaf"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
+                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
                                                 <color key="textColor" red="0.7019608021" green="0.7019608021" blue="0.7019608021" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                                 <variation key="heightClass=regular-widthClass=regular">
@@ -127,7 +127,7 @@
                                                 </variation>
                                             </label>
                                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="map-pin-silhouette-3" translatesAutoresizingMaskIntoConstraints="NO" id="xDP-Ow-6Sr">
-                                                <rect key="frame" x="0.0" y="37" width="15" height="15"/>
+                                                <rect key="frame" x="0.0" y="36" width="15" height="15"/>
                                                 <color key="tintColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="15" id="Ym6-de-Z85"/>
@@ -164,12 +164,12 @@
                                             <constraint firstItem="zVX-RG-wCn" firstAttribute="leading" secondItem="fch-XO-HsQ" secondAttribute="trailing" id="7Kt-XW-JIJ"/>
                                             <constraint firstItem="7Gw-91-mzW" firstAttribute="centerX" secondItem="ISX-0H-3xC" secondAttribute="centerX" id="KTc-j2-juc"/>
                                             <constraint firstItem="zVX-RG-wCn" firstAttribute="centerX" secondItem="Bah-U7-3jB" secondAttribute="centerX" constant="40" id="Kpp-3V-H07"/>
-                                            <constraint firstItem="xDP-Ow-6Sr" firstAttribute="top" secondItem="fch-XO-HsQ" secondAttribute="bottom" constant="3" id="LGj-uU-hKs">
+                                            <constraint firstItem="xDP-Ow-6Sr" firstAttribute="top" secondItem="fch-XO-HsQ" secondAttribute="bottom" constant="4" id="LGj-uU-hKs">
                                                 <variation key="heightClass=regular-widthClass=regular" constant="5"/>
                                             </constraint>
                                             <constraint firstItem="ISX-0H-3xC" firstAttribute="leading" secondItem="zVX-RG-wCn" secondAttribute="trailing" id="YMO-V2-MQg"/>
                                             <constraint firstItem="5UI-vp-Skq" firstAttribute="leading" secondItem="xDP-Ow-6Sr" secondAttribute="trailing" constant="6" id="dU2-OQ-PZo"/>
-                                            <constraint firstItem="5UI-vp-Skq" firstAttribute="top" secondItem="fch-XO-HsQ" secondAttribute="bottom" constant="1" id="hL1-DO-xa3">
+                                            <constraint firstItem="5UI-vp-Skq" firstAttribute="top" secondItem="fch-XO-HsQ" secondAttribute="bottom" constant="2" id="hL1-DO-xa3">
                                                 <variation key="heightClass=regular-widthClass=regular" constant="4"/>
                                             </constraint>
                                             <constraint firstItem="ISX-0H-3xC" firstAttribute="centerY" secondItem="Bah-U7-3jB" secondAttribute="centerY" constant="-8" id="hrK-Zp-e6y"/>
@@ -177,7 +177,7 @@
                                             <constraint firstAttribute="trailing" secondItem="ISX-0H-3xC" secondAttribute="trailing" id="oub-PU-GrQ"/>
                                             <constraint firstItem="7Gw-91-mzW" firstAttribute="centerY" secondItem="Bah-U7-3jB" secondAttribute="centerY" constant="12" id="p5d-lY-PR5"/>
                                             <constraint firstItem="ISX-0H-3xC" firstAttribute="leading" secondItem="5UI-vp-Skq" secondAttribute="trailing" id="qrb-6L-ebI"/>
-                                            <constraint firstItem="fch-XO-HsQ" firstAttribute="top" secondItem="Bah-U7-3jB" secondAttribute="top" constant="10" id="siN-UZ-vee"/>
+                                            <constraint firstItem="fch-XO-HsQ" firstAttribute="top" secondItem="Bah-U7-3jB" secondAttribute="top" constant="8" id="siN-UZ-vee"/>
                                         </constraints>
                                     </view>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="perfil-amostra" highlighted="YES" translatesAutoresizingMaskIntoConstraints="NO" id="abe-ua-t0T">

@@ -60,6 +60,8 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate,
            }
         }
         
+        self.saveUserInfo(remoteURL)
+        
         NotificationCenter.default.addObserver(forName: NSNotification.Name("update-map"),
             object: nil, queue: OperationQueue.main) { _ in
             
@@ -88,13 +90,6 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate,
                treesMap.isHidden = true
             }
         }
-        
-        let urlUser = "https://inovatend.mybluemix.net/users/\(App.shared.userCpf)"
-        guard let remoteURL = URL(string: urlUser) else {
-            return
-        }
-
-        self.saveUserInfo(remoteURL)
     }
     
     func saveUserInfo(_ remoteURL:URL) -> Void {
@@ -136,11 +131,10 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate,
                }
                 
                DispatchQueue.main.async {
-                  self.loadInformation(forUser: usuarioLogged)
-                  App.shared.setUserLogged(usuarioLogged)
-                    
                   self.searchLocation()
                   self.tableSubMenuArvores?.reloadData()
+                  self.loadInformation(forUser: usuarioLogged)
+                  App.shared.setUserLogged(usuarioLogged)
                }
            }
         }
@@ -333,7 +327,7 @@ extension ViewController : CLLocationManagerDelegate {
             return
         }
         
-        let regionSize = MKCoordinateSpanMake(0.01,0.01)
+        let regionSize = MKCoordinateSpanMake(0.001,0.001)
         let region     = MKCoordinateRegionMake(location.coordinate, regionSize)
         
         self.preparePinsUpdate()
