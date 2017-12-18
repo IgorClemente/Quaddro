@@ -64,10 +64,7 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate,
         
         NotificationCenter.default.addObserver(forName: NSNotification.Name("update-map"),
             object: nil, queue: OperationQueue.main) { _ in
-            
-            DispatchQueue.main.asyncAfter(deadline: .now() + 1 , execute: {
-                self.saveUserInfo(remoteURL)
-            })
+            self.saveUserInfo(remoteURL)
         }
     }
     
@@ -100,41 +97,32 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate,
                let json = try? JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions()),
                let info = json as? [String:Any],
                let user = info["usuario"] as? [[String:Any]],
+               let info_user = user.first,
                let numberOfTrees = info["arvores"] as? [String:Int],
                let tree_ids      = info["arvore_ids"] as? [[String:Int]]  {
                 
-               for u in user {
-                 guard let nome = u["nome"] as? String,
-                       let sobrenome  = u["sobrenome"] as? String,
-                       let id_user    = u["id_user"] as? Int,
-                       let localidade = u["localidade"] as? String,
-                       let uf     = u["uf"] as? String,
-                       let numeroTelefone = u["numero_telefone"] as? String,
-                       let email  = u["email"] as? String,
-                       let pontos = u["pontos"] as? Int,
-                       let quantidade = numberOfTrees["quantidade"] else {
-                       return
-                  }
-                    
-                  usuarioLogged["nome"]       = nome
-                  usuarioLogged["sobrenome"]  = sobrenome
-                  usuarioLogged["id_user"]    = id_user
-                  usuarioLogged["localidade"] = localidade
-                  usuarioLogged["uf"] = uf
-                  usuarioLogged["numeroTelefone"] = numeroTelefone
-                  usuarioLogged["email"]  = email
-                  usuarioLogged["pontos"] = pontos
-                    
-                  App.shared.treesIdentifiers = tree_ids
-                  App.shared.amountOfTrees = quantidade
-                  App.shared.saveInformationTrees()
+               
+               guard let _ = info_user["nome"] as? String,
+                     let _ = info_user["sobrenome"] as? String,
+                     let _ = info_user["id_user"] as? Int,
+                     let _ = info_user["localidade"] as? String,
+                     let _ = info_user["uf"] as? String,
+                     let _ = info_user["numero_telefone"] as? String,
+                     let _ = info_user["email"] as? String,
+                     let _ = info_user["pontos"] as? Int,
+                     let amount_trees = numberOfTrees["quantidade"] else {
+                     return
                }
-                
+               
                DispatchQueue.main.async {
+                  App.shared.amountOfTrees = amount_trees
+                  App.shared.treesIdentifiers = tree_ids
+                  App.shared.saveInformationTrees()
+                
                   self.searchLocation()
+                  self.loadInformation(forUser: info_user)
                   self.tableSubMenuArvores?.reloadData()
-                  self.loadInformation(forUser: usuarioLogged)
-                  App.shared.setUserLogged(usuarioLogged)
+                  App.shared.setUserLogged(info_user)
                }
            }
         }

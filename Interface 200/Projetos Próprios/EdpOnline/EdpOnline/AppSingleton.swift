@@ -51,27 +51,26 @@ class App {
     
     var treesIdentifiers:[[String:Int]]? {
         didSet {
-          guard let identifiers = treesIdentifiers else {
-                treesIdentifiers = nil
-                return
-          }
+           guard let identifiers = treesIdentifiers else {
+                 treesIdentifiers = nil
+                 return
+           }
             
-          var number_trees:[Int] = []
-          for i in identifiers {
-            guard let id = i["arvore_id"] else {
-                  treesIdentifiers = nil
-                  return
-            }
-            number_trees.append(id)
-          }
+           var number_trees:[Int] = []
+           for i in identifiers {
+             guard let id = i["arvore_id"] else {
+                   treesIdentifiers = nil
+                   return
+             }
+             number_trees.append(id)
+           }
             
-          var number_trees_salved = ud.object(forKey: "number_trees") as? [String:Any] ?? [:]
-          number_trees_salved["numbers"] = number_trees
-          ud.set(number_trees_salved, forKey: "number_trees")
-          ud.synchronize()
+           var number_trees_salved = ud.object(forKey: "number_trees") as? [String:Any] ?? [:]
+           number_trees_salved["numbers"] = number_trees
+           ud.set(number_trees_salved, forKey: "number_trees")
+           ud.synchronize()
         }
     }
-    
     
     var currentLocation:CLLocationCoordinate2D? = nil
     private var ud  = UserDefaults.standard
