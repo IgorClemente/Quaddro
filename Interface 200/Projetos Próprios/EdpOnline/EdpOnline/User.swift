@@ -8,17 +8,6 @@
 
 import Foundation
 
-/**
-let nome       = user["nome"] as? String,
-let sobrenome  = user["sobrenome"] as? String,
-let localidade = user["localidade"] as? String,
-let id_user    = user["id_user"] as? Int,
-let uf         = user["uf"] as? String,
-let numeroTelefone = user["numeroTelefone"] as? String,
-let email      = user["email"] as? String,
-let pontos     = user["pontos"] as? Int
-**/
-
 struct User {
     
     let user_id:Int
@@ -56,7 +45,7 @@ struct User {
         }
         self.uf = uf
         
-        guard let number_phone = i["numeroTelefone"] as? String else {
+        guard let number_phone = i["numero_telefone"] as? String else {
            return nil
         }
         self.number_phone = number_phone
@@ -70,7 +59,5 @@ struct User {
             return nil
         }
         self.points = points
-        
-        return nil
     }
 }

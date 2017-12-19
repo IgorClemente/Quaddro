@@ -39,9 +39,8 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate,
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
-        let urlUser = "https://inovatend.mybluemix.net/users/\(App.shared.userCpf)"
-        guard let remoteURL = URL(string: urlUser),
-              let progress  = self.uiProgressBarUpload   else {
+    
+        guard let progress  = self.uiProgressBarUpload else {
               return
         }
         
@@ -59,12 +58,12 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate,
              }
            }
         }
-        
-        self.saveUserInfo(remoteURL)
-        
+
         NotificationCenter.default.addObserver(forName: NSNotification.Name("update-map"),
             object: nil, queue: OperationQueue.main) { _ in
-            self.saveUserInfo(remoteURL)
+            DispatchQueue.main.asyncAfter(deadline: .now() + 2, execute: {
+                self.saveUserInfo()
+            })
         }
     }
     
@@ -87,60 +86,31 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate,
                treesMap.isHidden = true
             }
         }
+        self.saveUserInfo()
     }
     
-    func saveUserInfo(_ remoteURL:URL) -> Void {
-        DispatchQueue.global().async {
-            var usuarioLogged:[String:Any] = [:]
-            
-            if let data = try? Data(contentsOf: remoteURL),
-               let json = try? JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions()),
-               let info = json as? [String:Any],
-               let user = info["usuario"] as? [[String:Any]],
-               let info_user = user.first,
-               let numberOfTrees = info["arvores"] as? [String:Int],
-               let tree_ids      = info["arvore_ids"] as? [[String:Int]]  {
+    func saveUserInfo() -> Void {
+        App.shared.saveUser { (save) in
+            if save {
+               App.shared.getUserLogged({ (user) in
+                  guard let u = user else {
+                        return
+                  }
+                  self.loadInformation(forUser: u)
+               })
                 
-               
-               guard let _ = info_user["nome"] as? String,
-                     let _ = info_user["sobrenome"] as? String,
-                     let _ = info_user["id_user"] as? Int,
-                     let _ = info_user["localidade"] as? String,
-                     let _ = info_user["uf"] as? String,
-                     let _ = info_user["numero_telefone"] as? String,
-                     let _ = info_user["email"] as? String,
-                     let _ = info_user["pontos"] as? Int,
-                     let amount_trees = numberOfTrees["quantidade"] else {
-                     return
-               }
-               
-               DispatchQueue.main.async {
-                  App.shared.amountOfTrees = amount_trees
-                  App.shared.treesIdentifiers = tree_ids
-                  App.shared.saveInformationTrees()
-                
-                  self.searchLocation()
-                  self.loadInformation(forUser: info_user)
-                  self.tableSubMenuArvores?.reloadData()
-                  App.shared.setUserLogged(info_user)
-               }
-           }
+               self.searchLocation()
+               self.tableSubMenuArvores?.reloadData()
+            }else{
+               print("NSALVO")
+            }
         }
     }
     
-    func loadInformation(forUser u:[String:Any]) -> Void {
-        guard let firstName  = u["nome"] as? String ,
-              let lastName   = u["sobrenome"] as? String ,
-              let locality   = u["localidade"] as? String ,
-              let uf         = u["uf"] as? String ,
-              let points     = u["pontos"] as? Int
-              else {
-              return
-        }
-        
-        self.uiFullName?.text = "\(firstName) \(lastName)"
-        self.uiLocality?.text   = "\(locality),\(uf)"
-        self.uiPoints?.text    = "\(points)"
+    func loadInformation(forUser u:User) -> Void {
+        self.uiFullName?.text = "\(u.first_name) \(u.last_name)"
+        self.uiLocality?.text   = "\(u.locality),\(u.uf)"
+        self.uiPoints?.text    = "\(u.points)"
     }
     
     @IBAction func uiTapAbreMenuPrincipal() {
@@ -372,46 +342,44 @@ extension ViewController : CLLocationManagerDelegate {
 extension ViewController : MKMapViewDelegate {
     
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
-        if let location = annotation as? TreeAnnotation {
-           return self.uiMapRegionMain?.dequeueReusableAnnotationView(withIdentifier: location.identifier) ?? location.viewTreeAnnotation()
-        }else{
-            return nil
-        }
+         if let location = annotation as? TreeAnnotation {
+            return self.uiMapRegionMain?.dequeueReusableAnnotationView(withIdentifier: location.identifier) ?? location.viewTreeAnnotation()
+         }else{
+             return nil
+         }
     }
 }
 
 extension ViewController : UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return App.shared.amountOfTrees
+         return App.shared.amountOfTrees
     }
     
     func tableView(_ tableView: UITableView,
          cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let treesIdentifiers = App.shared.treesIdentifiers
+         let treesIdentifiers = App.shared.trees_numbers
+         guard let cellTree = tableView.dequeueReusableCell(withIdentifier: "tree") as? TreeTableViewCell,
+               let identifiers = treesIdentifiers else {
+               return UITableViewCell()
+         }
         
-        guard let cellTree = tableView.dequeueReusableCell(withIdentifier: "tree") as? TreeTableViewCell,
-              let identifiers = treesIdentifiers else {
-            return UITableViewCell()
-        }
-        
-        let identifier  = identifiers[indexPath.row]
-        if let tree = identifier["arvore_id"] {
-           let cellInfoURL  = "https://inovatend.mybluemix.net/imagens/arvore/\(tree)"
-           let cellImageURL = "https://inovatend.mybluemix.net/imagens/\(tree)"
+         let identifier   = identifiers[indexPath.row]
+         let cellInfoURL  = "https://inovatend.mybluemix.net/imagens/arvore/\(identifier)"
+         let cellImageURL = "https://inovatend.mybluemix.net/imagens/\(identifier)"
            
-           cellTree.useCell = true
-           cellTree.treeImage?.url = URL(string:cellImageURL)
-           cellTree.url            = URL(string:cellInfoURL)
-        }
-        return cellTree
+         cellTree.useCell = true
+         cellTree.treeImage?.url = URL(string:cellImageURL)
+         cellTree.url     = URL(string:cellInfoURL)
+         
+         return cellTree
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
+         return 1
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 80
+         return 80
     }
 }

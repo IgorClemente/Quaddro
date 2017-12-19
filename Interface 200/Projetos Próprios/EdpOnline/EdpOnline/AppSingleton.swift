@@ -22,8 +22,24 @@ class App {
 
     static let shared = App()
     private init() {}
+
+    var currentLocation:CLLocationCoordinate2D? = nil
+    private var ud  = UserDefaults.standard
     
-    var userCpf       = "45124712864"
+    var amountOfTrees = 0
+    var userCpf = "45124712864"
+    var trees_numbers:[Int]? = nil {
+        didSet {
+            guard let numbers = trees_numbers else {
+                return
+            }
+            
+            let reverse_numbers = numbers.reversed().map {
+                return $0
+            }
+            trees_numbers = reverse_numbers
+        }
+    }
 
     var amountOfStars = 4 {
         didSet {
@@ -47,65 +63,90 @@ class App {
         }
     }
     
-    var amountOfTrees = 0
-    
     var treesIdentifiers:[[String:Int]]? {
         didSet {
-           guard let identifiers = treesIdentifiers else {
-                 treesIdentifiers = nil
-                 return
-           }
+          guard let identifiers = treesIdentifiers else {
+                treesIdentifiers = nil
+                return
+          }
             
-           var number_trees:[Int] = []
-           for i in identifiers {
-             guard let id = i["arvore_id"] else {
-                   treesIdentifiers = nil
-                   return
-             }
-             number_trees.append(id)
-           }
+          var number_trees:[Int] = []
+          for i in identifiers {
+            guard let id = i["arvore_id"] else {
+                  treesIdentifiers = nil
+                  return
+            }
+            number_trees.append(id)
+          }
+          self.trees_numbers = number_trees
             
-           var number_trees_salved = ud.object(forKey: "number_trees") as? [String:Any] ?? [:]
-           number_trees_salved["numbers"] = number_trees
-           ud.set(number_trees_salved, forKey: "number_trees")
-           ud.synchronize()
+          var number_trees_salved = ud.object(forKey: "number_trees") as? [String:Any] ?? [:]
+          number_trees_salved["numbers"] = number_trees
+          ud.set(number_trees_salved, forKey: "number_trees")
+          ud.synchronize()
         }
     }
     
-    var currentLocation:CLLocationCoordinate2D? = nil
-    private var ud  = UserDefaults.standard
-    private var userLoggedInfos:[String:Any] = [:]
+    private var userLogged:[String:Any]? {
+        get {
+            guard let salved = ud.object(forKey: "logged_information") as? [String:Any],
+                  let info   = salved["information"] as? [String:Any] else {
+                  return nil
+            }
+            return info
+        }
+        
+        set {
+            var salved = ud.object(forKey: "logged_information") as? [String:Any] ?? [:]
+            salved["information"] = newValue
+            ud.set(salved, forKey: "logged_information")
+            ud.synchronize()
+        }
+    }
     
-    func setUserLogged(_ user:[String:Any]) -> Void {
-        guard let nome       = user["nome"] as? String,
-              let sobrenome  = user["sobrenome"] as? String,
-              let localidade = user["localidade"] as? String,
-              let id_user    = user["id_user"] as? Int,
-              let uf         = user["uf"] as? String,
-              let numeroTelefone = user["numeroTelefone"] as? String,
-              let email      = user["email"] as? String,
-              let pontos     = user["pontos"] as? Int
-              else {
+    func saveUser(_ completation:(Bool)->()) -> Void {
+        let end_point = "https://inovatend.mybluemix.net/users/\(self.userCpf)"
+        
+        guard let remoteURL = URL(string: end_point) else {
+              completation(false)
               return
         }
         
-        self.userLoggedInfos = user
-        var salvo = ud.object(forKey: "userLogged") as? [String:Any] ?? [:]
-        salvo["nome"]       = nome
-        salvo["sobrenome"]  = sobrenome
-        salvo["localidade"] = localidade
-        salvo["id_user"] = id_user
-        salvo["uf"]      = uf
-        salvo["numeroTelefone"] = numeroTelefone
-        salvo["email"]   = email
-        salvo["pontos"]  = pontos
-        
-        ud.set(salvo, forKey:"userLogged")
-        ud.synchronize()
+        do {
+            let data     = try Data(contentsOf: remoteURL)
+            let jsonData = try JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions())
+            
+            guard let jsonObject = jsonData as? [String:Any],
+                  let info       = jsonObject["usuario"] as? [[String:Any]],
+                  let user_info  = info.first,
+                  let trees_id   = jsonObject["arvore_ids"] as? [[String:Int]],
+                  let trees      = jsonObject["arvores"] as? [String:Any],
+                  let trees_amount = trees["quantidade"] as? Int,
+                  let user       = User(forInformation: user_info) else {
+                  completation(false)
+                  return
+            }
+            
+            self.userLogged       = user_info
+            self.treesIdentifiers = trees_id
+            self.amountOfTrees    = trees_amount
+            completation(true)
+        }catch{
+            completation(false)
+            print("ERROR", error.localizedDescription)
+        }
     }
     
-    func getUserLogged() -> [String:Any]? {
-        return ud.object(forKey: "userLogged") as? [String:Any] ?? [:]
+    func getUserLogged(_ completation:(User?)->()) -> Void {
+        
+        guard let user_information = self.userLogged,
+              let user = User(forInformation: user_information) else {
+              completation(nil)
+              return
+        }
+        
+        completation(user)
+        return
     }
     
     func retrieveInformationTrees() -> [Tree]? {

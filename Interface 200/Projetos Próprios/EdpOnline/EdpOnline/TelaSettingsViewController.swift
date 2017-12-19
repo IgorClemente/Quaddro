@@ -45,13 +45,16 @@ class TelaSettingsViewController : UIViewController, UITextFieldDelegate {
             campo.leftViewMode = .always
         }
     
-        guard let u = App.shared.getUserLogged() else {
-            return
+        App.shared.getUserLogged { (info) in
+            guard let u = info else {
+                return
+            }
+            
+            self.uiTextNomeCompleto?.text = "\(u.first_name) \(u.last_name)"
+            self.uiTextFieldEmail?.text   = "\(u.email_account)"
+            self.uiTextFieldSenha?.text   = "12345678"
+            self.uiTextFieldNumeroTelefone?.text = "\(u.number_phone)"
         }
-        self.uiTextNomeCompleto?.text = (((u["nome"] as? String) ?? "") + " " + ((u["sobrenome"] as? String) ?? ""))
-        self.uiTextFieldEmail?.text   = ((u["email"] as? String) ?? "")
-        self.uiTextFieldSenha?.text   = "12345678"
-        self.uiTextFieldNumeroTelefone?.text = ((u["numeroTelefone"] as? String) ?? "") 
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
@@ -76,7 +79,7 @@ class TelaSettingsViewController : UIViewController, UITextFieldDelegate {
         if let proximoCampo = mapaCamposContinue[textField],
            let destino = proximoCampo {
            destino.becomeFirstResponder()
-        }else {
+        }else{
            textField.resignFirstResponder()
         }
         return false
@@ -91,18 +94,51 @@ extension TelaSettingsViewController : UIImagePickerControllerDelegate,
                                        UINavigationControllerDelegate {
     
     @IBAction func uiChosePhotoUser(_ sender: UIButton) {
+        
+        let baseAlert = UIAlertController(title: "Carregar Foto", message: "Escolha uma das opções para carregar uma imagem ao perfil", preferredStyle: .actionSheet)
+        
+        let actionBaseAlertGalery = UIAlertAction(title: "Galeria", style: .default) { (_) in
+            self.choseGalery()
+        }
+        
+        let actionBaseAlertCamera = UIAlertAction(title: "Camera", style: .default) { (_) in
+            self.choseCamera()
+        }
+        
+        let actionBaseAlertCancel = UIAlertAction(title: "Cancelar", style: .destructive, handler: nil)
+        
+        baseAlert.addAction(actionBaseAlertGalery)
+        baseAlert.addAction(actionBaseAlertCamera)
+        baseAlert.addAction(actionBaseAlertCancel)
+        self.present(baseAlert, animated: true, completion: nil)
+    }
+    
+    func choseGalery() -> Void {
         let galeryPickerView = UIImagePickerController()
         
         if UIImagePickerController.isSourceTypeAvailable(
-           UIImagePickerControllerSourceType.photoLibrary) {
-           galeryPickerView.sourceType    = UIImagePickerControllerSourceType.photoLibrary
-           galeryPickerView.allowsEditing = true
+            UIImagePickerControllerSourceType.photoLibrary) {
+            galeryPickerView.sourceType    = UIImagePickerControllerSourceType.photoLibrary
+            galeryPickerView.allowsEditing = true
         }
         
         galeryPickerView.delegate   = self
         self.present(galeryPickerView, animated: true, completion: nil)
     }
     
+    func choseCamera() -> Void {
+        let cameraPickerView = UIImagePickerController()
+        
+        if UIImagePickerController.isSourceTypeAvailable(
+           UIImagePickerControllerSourceType.camera) {
+           cameraPickerView.sourceType = .camera
+           cameraPickerView.delegate   = self
+           cameraPickerView.allowsEditing = true
+           cameraPickerView.cameraFlashMode = .auto
+        }
+        
+        self.present(cameraPickerView, animated: true, completion: nil)
+    }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         picker.dismiss(animated: true, completion: nil)
