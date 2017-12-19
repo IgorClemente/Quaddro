@@ -59,9 +59,9 @@ class LoginViewController : UIViewController, UITextFieldDelegate {
         ]
         
         if let fieldSelected = fieldsMap[textField] ?? UITextField() {
-            fieldSelected.becomeFirstResponder()
+           fieldSelected.becomeFirstResponder()
         }else{
-            textField.resignFirstResponder()
+             textField.resignFirstResponder()
         }
         return false
     }

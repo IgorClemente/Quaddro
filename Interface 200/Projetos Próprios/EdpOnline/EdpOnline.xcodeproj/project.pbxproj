@@ -102,6 +102,7 @@
 			children = (
 				D01FBF931F81B2E400908931 /* TelaPremiosController.swift */,
 				D00983C91F7B21E2002EF018 /* TelaSettingsViewController.swift */,
+				D0B73B2A1FB67203007ACC40 /* LoginViewController.swift */,
 				D0F8282A1F814B3A00AB9688 /* TelaRankingController.swift */,
 			);
 			name = Layout;
@@ -122,7 +123,6 @@
 				D0BFBF071F756A92009B1F11 /* ViewController.swift */,
 				D00EC05C1F7BCF9000198884 /* MenuLateralController.swift */,
 				D0BFBF051F756A92009B1F11 /* AppDelegate.swift */,
-				D0B73B2A1FB67203007ACC40 /* LoginViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
