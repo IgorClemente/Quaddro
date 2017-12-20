@@ -61,7 +61,7 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate,
 
         NotificationCenter.default.addObserver(forName: NSNotification.Name("update-map"),
             object: nil, queue: OperationQueue.main) { _ in
-            DispatchQueue.main.asyncAfter(deadline: .now() + 2, execute: {
+            DispatchQueue.global().asyncAfter(deadline: .now() + 2, execute: {
                 self.saveUserInfo()
             })
         }

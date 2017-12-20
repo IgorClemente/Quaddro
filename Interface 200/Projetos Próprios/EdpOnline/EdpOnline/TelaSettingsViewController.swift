@@ -94,18 +94,17 @@ extension TelaSettingsViewController : UIImagePickerControllerDelegate,
                                        UINavigationControllerDelegate {
     
     @IBAction func uiChosePhotoUser(_ sender: UIButton) {
-        
-        let baseAlert = UIAlertController(title: "Carregar Foto", message: "Escolha uma das opções para carregar uma imagem ao perfil", preferredStyle: .actionSheet)
+        let baseAlert = UIAlertController(title: "Carregar Foto", message: "Escolha uma das opções para carregar uma\n imagem ao perfil", preferredStyle: .actionSheet)
         
         let actionBaseAlertGalery = UIAlertAction(title: "Galeria", style: .default) { (_) in
             self.choseGalery()
         }
         
-        let actionBaseAlertCamera = UIAlertAction(title: "Camera", style: .default) { (_) in
+        let actionBaseAlertCamera = UIAlertAction(title: "Câmera", style: .default) { (g) in
             self.choseCamera()
         }
         
-        let actionBaseAlertCancel = UIAlertAction(title: "Cancelar", style: .destructive, handler: nil)
+        let actionBaseAlertCancel = UIAlertAction(title: "Cancelar", style: .cancel, handler: nil)
         
         baseAlert.addAction(actionBaseAlertGalery)
         baseAlert.addAction(actionBaseAlertCamera)
@@ -128,7 +127,7 @@ extension TelaSettingsViewController : UIImagePickerControllerDelegate,
     
     func choseCamera() -> Void {
         let cameraPickerView = UIImagePickerController()
-        
+    
         if UIImagePickerController.isSourceTypeAvailable(
            UIImagePickerControllerSourceType.camera) {
            cameraPickerView.sourceType = .camera
@@ -136,15 +135,14 @@ extension TelaSettingsViewController : UIImagePickerControllerDelegate,
            cameraPickerView.allowsEditing = true
            cameraPickerView.cameraFlashMode = .auto
         }
-        
         self.present(cameraPickerView, animated: true, completion: nil)
     }
     
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
-        picker.dismiss(animated: true, completion: nil)
+    func imagePickerController(_ picker: UIImagePickerController,    didFinishPickingMediaWithInfo info: [String : Any]) {
         
-        guard let originalImage = info[UIImagePickerControllerOriginalImage] as? UIImage ??     (info[UIImagePickerControllerEditedImage] as? UIImage) else {
-              return
+        picker.dismiss(animated: true, completion: nil)
+        guard let originalImage = info[UIImagePickerControllerOriginalImage] as?   UIImage ?? (info[UIImagePickerControllerEditedImage] as? UIImage) else {
+            return
         }
         
         self.uiUserPhoto?.contentMode = .scaleAspectFill
@@ -181,6 +179,7 @@ extension TelaSettingsViewController : UIScrollViewDelegate {
             UIView.animate(withDuration: 0.4, animations: {
                photo.alpha = 1.0
             }, completion: { (_) in
+               photo.center.x   = self.view.center.x
                photo.frame.size = CGSize(width: 140.0, height: 140.0)
             })
         }
