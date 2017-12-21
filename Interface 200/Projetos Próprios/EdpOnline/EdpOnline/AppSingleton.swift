@@ -41,7 +41,7 @@ class App {
         }
     }
 
-    var amountOfStars = 4 {
+    var amountOfStars = 3 {
         didSet {
           amountOfStars = amountOfStars > 5 ? min(amountOfStars,5) : oldValue
         }
@@ -138,7 +138,6 @@ class App {
     }
     
     func getUserLogged(_ completation:(User?)->()) -> Void {
-        
         guard let user_information = self.userLogged,
               let user = User(forInformation: user_information) else {
               completation(nil)

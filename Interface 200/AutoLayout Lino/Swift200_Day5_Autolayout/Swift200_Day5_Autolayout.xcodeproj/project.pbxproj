@@ -127,6 +127,7 @@
 				TargetAttributes = {
 					436220941F6D5178003C09EB = {
 						CreatedOnToolsVersion = 8.3;
+						DevelopmentTeam = 3MSY48RE9K;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
@@ -300,9 +301,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 3MSY48RE9K;
 				INFOPLIST_FILE = Swift200_Day5_Autolayout/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "br.com.quaddro.Swift200-Day5-Autolayout";
+				PRODUCT_BUNDLE_IDENTIFIER = "br.com.quaddro.Swift200-Day5-Autolayou8";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -312,9 +314,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 3MSY48RE9K;
 				INFOPLIST_FILE = Swift200_Day5_Autolayout/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "br.com.quaddro.Swift200-Day5-Autolayout";
+				PRODUCT_BUNDLE_IDENTIFIER = "br.com.quaddro.Swift200-Day5-Autolayou8";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};

@@ -97,7 +97,7 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		D01F91111F8B03FA006EAC9B /* Layout */ = {
+		D01F91111F8B03FA006EAC9B /* Screens */ = {
 			isa = PBXGroup;
 			children = (
 				D01FBF931F81B2E400908931 /* TelaPremiosController.swift */,
@@ -105,7 +105,7 @@
 				D0B73B2A1FB67203007ACC40 /* LoginViewController.swift */,
 				D0F8282A1F814B3A00AB9688 /* TelaRankingController.swift */,
 			);
-			name = Layout;
+			name = Screens;
 			sourceTree = "<group>";
 		};
 		D01FBF901F81B1E200908931 /* TelaPremiosController */ = {
@@ -119,7 +119,7 @@
 		D0B1874A1F79C3EF00DC1D5B /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				D01F91111F8B03FA006EAC9B /* Layout */,
+				D01F91111F8B03FA006EAC9B /* Screens */,
 				D0BFBF071F756A92009B1F11 /* ViewController.swift */,
 				D00EC05C1F7BCF9000198884 /* MenuLateralController.swift */,
 				D0BFBF051F756A92009B1F11 /* AppDelegate.swift */,
