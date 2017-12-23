@@ -19,10 +19,8 @@ class TelaSettingsViewController : UIViewController, UITextFieldDelegate {
     @IBOutlet weak var uiTextFieldNumeroTelefone: UITextField?
     @IBOutlet weak var uiUserPhoto: UIButton?
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         guard let camposText = self.uiTextFieldsSettings else {
             return
         }
@@ -32,7 +30,7 @@ class TelaSettingsViewController : UIViewController, UITextFieldDelegate {
                 return
             }
             
-            let fieldImagem   = UIImageView(frame: CGRect(x:10,y:0,width:20, height:20))
+            let fieldImagem = UIImageView(frame: CGRect(x:10, y:0, width:20, height:20))
             fieldImagem.image = UIImage(named:"field\(identificadorCampo)")
             
             let view   = UIView()
@@ -85,6 +83,41 @@ class TelaSettingsViewController : UIViewController, UITextFieldDelegate {
         return false
     }
     
+    @IBAction func tapSaveInformationUser(_ sender: UIButton) {
+        
+        guard let fieldName = self.uiTextNomeCompleto,
+              let fieldEmailAccount = self.uiTextFieldEmail,
+              let fieldPassword     = self.uiTextFieldSenha,
+              let fieldPhoneNumber  = self.uiTextFieldNumeroTelefone
+              else {
+              return
+        }
+        
+        App.shared.getUserLogged { (info) in
+            guard let u = info else {
+                  return
+            }
+            
+            let worlds = fieldName.text?.components(separatedBy: " ")
+            
+            var user:[String:Any] = [:]
+            user["id_user"] = u.user_id
+            user["nome"]    = worlds?.first
+            user["sobrenome"]  = worlds?.last
+            user["localidade"] = u.locality
+            user["uf"]      = u.uf
+            user["numero_telefone"] = fieldPhoneNumber.text
+            user["email"]   = fieldEmailAccount.text
+            user["pontos"]  = u.points
+            
+            App.shared.setUserLogged(information: user, { (save) in
+                if save {
+                   print("USUARIO ATUALIZADO COM SUCESSO")
+                }
+            })
+        }
+    }
+    
     @IBAction func tapAbrirMenuPrincipal(_ sender: UIButton) {
         ControllerLateralMenu.controller.criarMenuPrincipal(self)
     }
@@ -117,7 +150,7 @@ extension TelaSettingsViewController : UIImagePickerControllerDelegate,
         
         if UIImagePickerController.isSourceTypeAvailable(
             UIImagePickerControllerSourceType.photoLibrary) {
-            galeryPickerView.sourceType    = UIImagePickerControllerSourceType.photoLibrary
+            galeryPickerView.sourceType = UIImagePickerControllerSourceType.photoLibrary
             galeryPickerView.allowsEditing = true
         }
         
@@ -138,7 +171,8 @@ extension TelaSettingsViewController : UIImagePickerControllerDelegate,
         self.present(cameraPickerView, animated: true, completion: nil)
     }
     
-    func imagePickerController(_ picker: UIImagePickerController,    didFinishPickingMediaWithInfo info: [String : Any]) {
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info:
+         [String : Any]) {
         
         picker.dismiss(animated: true, completion: nil)
         guard let originalImage = info[UIImagePickerControllerOriginalImage] as?   UIImage ?? (info[UIImagePickerControllerEditedImage] as? UIImage) else {

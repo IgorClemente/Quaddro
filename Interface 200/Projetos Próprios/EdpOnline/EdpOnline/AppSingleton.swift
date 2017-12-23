@@ -28,16 +28,17 @@ class App {
     
     var amountOfTrees = 0
     var userCpf = "45124712864"
+  
     var trees_numbers:[Int]? = nil {
         didSet {
-            guard let numbers = trees_numbers else {
+          guard let numbers = trees_numbers else {
                 return
-            }
-            
-            let reverse_numbers = numbers.reversed().map {
-                return $0
-            }
-            trees_numbers = reverse_numbers
+          }
+        
+          let reverse_numbers = numbers.reversed().map {
+              return $0
+          }
+          trees_numbers = reverse_numbers
         }
     }
 
@@ -72,10 +73,10 @@ class App {
             
           var number_trees:[Int] = []
           for i in identifiers {
-            guard let id = i["arvore_id"] else {
-                  treesIdentifiers = nil
-                  return
-            }
+              guard let id = i["arvore_id"] else {
+                    treesIdentifiers = nil
+                    return
+              }
             number_trees.append(id)
           }
           self.trees_numbers = number_trees
@@ -87,7 +88,7 @@ class App {
         }
     }
     
-    private var userLogged:[String:Any]? {
+    private var userLoggedPersistence:[String:Any]? {
         get {
             guard let salved = ud.object(forKey: "logged_information") as? [String:Any],
                   let info   = salved["information"] as? [String:Any] else {
@@ -101,44 +102,47 @@ class App {
             salved["information"] = newValue
             ud.set(salved, forKey: "logged_information")
             ud.synchronize()
+            
+            self.upload(with: "/upload/user?_method=PUT", body: newValue) { (_) in
+                return
+            }
         }
     }
     
     func saveUser(_ completation:(Bool)->()) -> Void {
         let end_point = "https://inovatend.mybluemix.net/users/\(self.userCpf)"
-        
         guard let remoteURL = URL(string: end_point) else {
               completation(false)
               return
         }
         
         do {
-            let data     = try Data(contentsOf: remoteURL)
-            let jsonData = try JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions())
+           let data     = try Data(contentsOf: remoteURL)
+           let jsonData = try JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions())
             
-            guard let jsonObject = jsonData as? [String:Any],
-                  let info       = jsonObject["usuario"] as? [[String:Any]],
-                  let user_info  = info.first,
-                  let trees_id   = jsonObject["arvore_ids"] as? [[String:Int]],
-                  let trees      = jsonObject["arvores"] as? [String:Any],
-                  let trees_amount = trees["quantidade"] as? Int,
-                  let user       = User(forInformation: user_info) else {
-                  completation(false)
-                  return
-            }
+           guard let jsonObject = jsonData as? [String:Any],
+                 let info       = jsonObject["usuario"] as? [[String:Any]],
+                 let user_info  = info.first,
+                 let trees_id   = jsonObject["arvore_ids"] as? [[String:Int]],
+                 let trees      = jsonObject["arvores"] as? [String:Any],
+                 let trees_amount = trees["quantidade"] as? Int,
+                 let _          = User(forInformation: user_info) else {
+                 completation(false)
+                 return
+           }
             
-            self.userLogged       = user_info
-            self.treesIdentifiers = trees_id
-            self.amountOfTrees    = trees_amount
-            completation(true)
+           self.userLoggedPersistence = user_info
+           self.treesIdentifiers = trees_id
+           self.amountOfTrees    = trees_amount
+           completation(true)
         }catch{
-            completation(false)
-            print("ERROR", error.localizedDescription)
+           completation(false)
+           print("ERROR", error.localizedDescription)
         }
     }
     
     func getUserLogged(_ completation:(User?)->()) -> Void {
-        guard let user_information = self.userLogged,
+        guard let user_information = self.userLoggedPersistence,
               let user = User(forInformation: user_information) else {
               completation(nil)
               return
@@ -146,6 +150,16 @@ class App {
         
         completation(user)
         return
+    }
+    
+    func setUserLogged(information i:[String:Any]?,_ completation:(Bool)->()) -> Void {
+        guard let userInformation = i,
+              let _ = User(forInformation: userInformation) else {
+              completation(false)
+              return
+        }
+        self.userLoggedPersistence = userInformation
+        completation(true)
     }
     
     func retrieveInformationTrees() -> [Tree]? {
@@ -187,7 +201,7 @@ class App {
         for tree in trees {
             guard let remoteURL = URL(string: "https://inovatend.mybluemix.net/imagens/arvore/\(tree)"),
                   let treeInfoData = try? Data(contentsOf: remoteURL),
-                  let json = try? JSONSerialization.jsonObject(with: treeInfoData, options: JSONSerialization.ReadingOptions()),
+                  let json = try? JSONSerialization.jsonObject(with:treeInfoData, options: JSONSerialization.ReadingOptions()),
                   let info = json as? [String:Any],
                   let tree = info["arvore"] as? [String:Any]
                   else{
@@ -197,5 +211,48 @@ class App {
             treesForSalved.append(tree)
         }
         self.everybodyTrees = treesForSalved
+    }
+    
+    func upload(with endPoint:String, body:[String:Any]? = nil, completation:@escaping (Bool?)->()) {
+        let urlBase = "https://inovatend.mybluemix.net"
+        let url     = "\(urlBase)\(endPoint)"
+        
+        guard let remoteURL = URL(string: url),
+              let bodyHttp  = body else {
+              completation(false)
+              return
+        }
+        
+        do {
+           var request = URLRequest(url: remoteURL)
+           request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+           request.httpMethod = "POST"
+           request.httpBody = try JSONSerialization.data(withJSONObject: bodyHttp, options: .prettyPrinted)
+            
+           let config  = URLSessionConfiguration.default
+           let session = URLSession(configuration: config)
+           let semaphore = DispatchSemaphore(value: 0)
+            
+           session.dataTask(with: request, completionHandler: { (data , _, error) in
+                if let e = error {
+                   completation(false)
+                   print("ERROR",e.localizedDescription)
+                }
+            
+                guard let d = data,
+                      let result = String(data: d,encoding: .utf8) else {
+                      completation(false)
+                      return
+                }
+                print("RESULT",result)
+                completation(true)
+                semaphore.signal()
+           }).resume()
+    
+           let _ = semaphore.wait(timeout: .distantFuture)
+        }catch{
+            completation(false)
+            print("ERROR",error.localizedDescription)
+        }
     }
 }

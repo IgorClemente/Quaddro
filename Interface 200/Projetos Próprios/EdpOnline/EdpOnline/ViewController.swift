@@ -54,6 +54,13 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate,
                }
            }
         }
+        
+        App.shared.getUserLogged { (user) in
+           guard let u = user else {
+                 return
+           }
+           self.loadInformation(forUser: u)
+        }
 
         NotificationCenter.default.addObserver(forName: NSNotification.Name("update-map"),
             object: nil, queue: OperationQueue.main) { _ in
@@ -86,21 +93,22 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate,
     }
     
     func saveUserInfo() -> Void {
-         App.shared.saveUser { (save) in
-            if save {
-               App.shared.getUserLogged({ (user) in
-                  guard let u = user else {
-                        return
-                  }
-                  self.loadInformation(forUser: u)
-               })
-               self.searchLocation()
-               DispatchQueue.main.async {
-                  self.tableSubMenuArvores?.reloadData()
-               }
-            }else{
-               print("NSALVO")
-            }
+        App.shared.saveUser { (save) in
+           if save {
+              App.shared.getUserLogged({ (user) in
+                 guard let u = user else {
+                       return
+                 }
+                 self.loadInformation(forUser: u)
+              })
+            
+              self.searchLocation()
+              DispatchQueue.main.async {
+                 self.tableSubMenuArvores?.reloadData()
+              }
+           }else{
+              print("NSALVO")
+           }
         }
     }
     
@@ -125,40 +133,38 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate,
         
         if let titulo = sender.title {
            switch titulo {
-              case "submenuMapa":
-                 UIView.animate(withDuration: 0.1,animations: {
-                       viewSubMapa.alpha    = 1.0
-                 }){ _ in viewSubMapa.isHidden = false }
-    
+             case "submenuMapa":
+               UIView.animate(withDuration: 0.1,animations: {
+                     viewSubMapa.alpha    = 1.0
+               }){ _ in viewSubMapa.isHidden = false }
+
                  for botao in botoes {
-                     if botao.title == "submenuArvores" {
-                        UIView.animate(withDuration: 0.2, animations: {
-                              viewSubArvore.alpha = 0.0
-                        }){ _ in botao.tintColor = UIColor.gray
-                                 viewSubArvore.isHidden = true
-                        }
-                     }else{
-                        botao.tintColor = UIColor.white
-                     }
+                    if botao.title == "submenuArvores" {
+                       UIView.animate(withDuration: 0.2, animations: {
+                             viewSubArvore.alpha = 0.0
+                       }){ _ in botao.tintColor = UIColor.gray
+                                viewSubArvore.isHidden = true }
+                    }else{
+                       botao.tintColor = UIColor.white
+                    }
                  }
             
-              case "submenuArvores":
-                 UIView.animate(withDuration: 0.1, animations: {
-                       viewSubArvore.alpha    = 1.0
-                 }){ _ in viewSubArvore.isHidden = false }
+             case "submenuArvores":
+               UIView.animate(withDuration: 0.1, animations: {
+                     viewSubArvore.alpha    = 1.0
+               }){ _ in viewSubArvore.isHidden = false }
              
                  for botao in botoes {
-                     if botao.title == "submenuMapa" {
-                        UIView.animate(withDuration: 0.2, animations: {
-                              viewSubMapa.alpha = 0.0
-                        }){ _ in botao.tintColor = UIColor.gray
-                                 viewSubMapa.isHidden = true
-                        }
-                     }else{
-                        botao.tintColor = UIColor.white
-                     }
+                    if botao.title == "submenuMapa" {
+                       UIView.animate(withDuration: 0.2, animations: {
+                             viewSubMapa.alpha = 0.0
+                       }){ _ in botao.tintColor = UIColor.gray
+                                viewSubMapa.isHidden = true }
+                    }else{
+                       botao.tintColor = UIColor.white
+                    }
                  }
-              default:
+             default:
                  break
            }
         }
@@ -188,7 +194,6 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate,
             }
             
             UIImageWriteToSavedPhotosAlbum(imagePicked, nil, nil, nil)
-            
             let sucessAlert = UIAlertController(
                 title:"Enviar imagem", message:"Digite um título para essa imagem", preferredStyle: .alert)
 
@@ -196,11 +201,12 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate,
             let confirmSucessAlert = UIAlertAction(title: "Enviar", style: .default, handler:
                 { (_) in
                   guard let fields = sucessAlert.textFields,
-                        let confirmField  = fields[0] as? UITextField,
-                        let titleForImage = confirmField.text
+                        let confirmField  = fields[0].text
                         else {
                         return
                   }
+    
+                  let titleForImage = confirmField
                   self.uploadImage(imagePicked,and: titleForImage)
             })
             
