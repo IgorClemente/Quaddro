@@ -13,45 +13,46 @@ class TelaSettingsViewController : UIViewController, UITextFieldDelegate {
     @IBOutlet weak var uiScrollViewForm: UIScrollView?
     @IBOutlet var uiTextFieldsSettings: [UITextField]?
     
-    @IBOutlet weak var uiTextNomeCompleto: UITextField?
-    @IBOutlet weak var uiTextFieldEmail: UITextField?
-    @IBOutlet weak var uiTextFieldSenha: UITextField?
-    @IBOutlet weak var uiTextFieldNumeroTelefone: UITextField?
+    @IBOutlet weak var uiFieldName: UITextField?
+    @IBOutlet weak var uiFieldEmailAccount: UITextField?
+    @IBOutlet weak var uiFieldPassword: UITextField?
+    @IBOutlet weak var uiFieldPhoneNumber: UITextField?
     @IBOutlet weak var uiUserPhoto: UIButton?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        guard let camposText = self.uiTextFieldsSettings else {
+        guard let fields = self.uiTextFieldsSettings else {
             return
         }
         
-        for campo in camposText {
-            guard let identificadorCampo = campo.restorationIdentifier else {
+        for field in fields {
+            guard let identifierField = field.restorationIdentifier else {
                 return
             }
             
-            let fieldImagem = UIImageView(frame: CGRect(x:10, y:0, width:20, height:20))
-            fieldImagem.image = UIImage(named:"field\(identificadorCampo)")
+            let imageField = UIImageView(frame: CGRect(x:10, y:0, width:20, height:20))
+                imageField.image = UIImage(named:"field\(identifierField)")
             
             let view   = UIView()
-            view.frame = CGRect(x:0, y:0, width:45, height:20)
+            view.frame = CGRect(x:0, y:0, width:40, height:20)
             view.layer.borderColor = UIColor.clear.cgColor
             view.layer.borderWidth = 10
             
-            view.addSubview(fieldImagem)
-            campo.leftView     = view
-            campo.leftViewMode = .always
+            view.addSubview(imageField)
+            field.leftView     = view
+            field.leftViewMode = .always
+            field.textAlignment = .center
         }
     
-        App.shared.getUserLogged { (info) in
-            guard let u = info else {
+        App.shared.getUserLogged { (user) in
+            guard let u = user else {
                 return
             }
             
-            self.uiTextNomeCompleto?.text = "\(u.first_name) \(u.last_name)"
-            self.uiTextFieldEmail?.text   = "\(u.email_account)"
-            self.uiTextFieldSenha?.text   = "12345678"
-            self.uiTextFieldNumeroTelefone?.text = "\(u.number_phone)"
+            self.uiFieldName?.text = "\(u.first_name) \(u.last_name)"
+            self.uiFieldEmailAccount?.text   = "\(u.email_account)"
+            self.uiFieldPassword?.text   = "12345678"
+            self.uiFieldPhoneNumber?.text = "\(u.number_phone)"
         }
     }
     
@@ -60,23 +61,24 @@ class TelaSettingsViewController : UIViewController, UITextFieldDelegate {
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        guard let campoNome  = uiTextNomeCompleto,
-              let campoEmail = uiTextFieldEmail,
-              let campoSenha = uiTextFieldSenha,
-              let campoTelefone = uiTextFieldNumeroTelefone else {
+        guard let fieldName  = self.uiFieldName,
+              let fieldEmail = self.uiFieldEmailAccount,
+              let fieldPassword    = self.uiFieldPassword,
+              let fieldPhoneNumber = self.uiFieldPhoneNumber
+              else {
               return true
         }
         
-        let mapaCamposContinue:[UITextField:UITextField?] = [
-            campoNome : campoEmail,
-            campoEmail : campoSenha,
-            campoSenha : campoTelefone,
-            campoTelefone : nil
+        let mapFieldsContinue:[UITextField:UITextField?] = [
+            fieldName : fieldEmail,
+            fieldEmail : fieldPassword,
+            fieldPassword : fieldPhoneNumber,
+            fieldPhoneNumber : nil
         ]
         
-        if let proximoCampo = mapaCamposContinue[textField],
-           let destino = proximoCampo {
-           destino.becomeFirstResponder()
+        if let nextField = mapFieldsContinue[textField],
+           let destiny   = nextField {
+               destiny.becomeFirstResponder()
         }else{
            textField.resignFirstResponder()
         }
@@ -84,17 +86,16 @@ class TelaSettingsViewController : UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func tapSaveInformationUser(_ sender: UIButton) {
-        
-        guard let fieldName = self.uiTextNomeCompleto,
-              let fieldEmailAccount = self.uiTextFieldEmail,
-              let fieldPassword     = self.uiTextFieldSenha,
-              let fieldPhoneNumber  = self.uiTextFieldNumeroTelefone
+        guard let fieldName = self.uiFieldName,
+              let fieldEmailAccount = self.uiFieldEmailAccount,
+              let fieldPassword    = self.uiFieldPassword,
+              let fieldPhoneNumber = self.uiFieldPhoneNumber
               else {
               return
         }
         
-        App.shared.getUserLogged { (info) in
-            guard let u = info else {
+        App.shared.getUserLogged { (user) in
+            guard let u = user else {
                   return
             }
             
@@ -111,9 +112,9 @@ class TelaSettingsViewController : UIViewController, UITextFieldDelegate {
             user["pontos"]  = u.points
             
             App.shared.setUserLogged(information: user, { (save) in
-                if save {
-                   print("USUARIO ATUALIZADO COM SUCESSO")
-                }
+               if save {
+                  print("USUARIO ATUALIZADO COM SUCESSO")
+               }
             })
         }
     }
@@ -173,7 +174,6 @@ extension TelaSettingsViewController : UIImagePickerControllerDelegate,
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info:
          [String : Any]) {
-        
         picker.dismiss(animated: true, completion: nil)
         guard let originalImage = info[UIImagePickerControllerOriginalImage] as?   UIImage ?? (info[UIImagePickerControllerEditedImage] as? UIImage) else {
             return

@@ -12,11 +12,11 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TelaSettingsViewController" customModule="EdpOnline" customModuleProvider="target">
             <connections>
+                <outlet property="uiFieldEmailAccount" destination="2YU-0H-uN1" id="cFa-8h-VwN"/>
+                <outlet property="uiFieldName" destination="TKx-Wd-y34" id="0bN-W6-TbJ"/>
+                <outlet property="uiFieldPassword" destination="MvH-5s-Aqd" id="ajx-sZ-FDr"/>
+                <outlet property="uiFieldPhoneNumber" destination="2VW-UV-Lei" id="2f2-xF-qrz"/>
                 <outlet property="uiScrollViewForm" destination="4kL-XS-idy" id="zxh-kI-ROq"/>
-                <outlet property="uiTextFieldEmail" destination="2YU-0H-uN1" id="37B-hK-fYe"/>
-                <outlet property="uiTextFieldNumeroTelefone" destination="2VW-UV-Lei" id="uK9-cN-Gc6"/>
-                <outlet property="uiTextFieldSenha" destination="MvH-5s-Aqd" id="yMr-yB-eFB"/>
-                <outlet property="uiTextNomeCompleto" destination="TKx-Wd-y34" id="GHb-tY-W9u"/>
                 <outlet property="uiUserPhoto" destination="hIw-Kt-CFc" id="uBd-5Q-U25"/>
                 <outlet property="view" destination="Q1j-1K-qjm" id="aYE-zx-SAv"/>
                 <outletCollection property="uiTextFieldsSettings" destination="MvH-5s-Aqd" collectionClass="NSMutableArray" id="7XA-Og-kEe"/>

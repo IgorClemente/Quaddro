@@ -66,8 +66,10 @@ class App {
     
     var treesIdentifiers:[[String:Int]]? {
         didSet {
-          guard let identifiers = treesIdentifiers else {
+          guard let identifiers = treesIdentifiers,
+                !identifiers.isEmpty else {
                 treesIdentifiers = nil
+                self.ud.removeObject(forKey: "number_trees")
                 return
           }
             
