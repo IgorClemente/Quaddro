@@ -30,13 +30,13 @@ class TelaSettingsViewController : UIViewController, UITextFieldDelegate {
                 return
             }
             
-            let imageField = UIImageView(frame: CGRect(x:10, y:0, width:20, height:20))
+            let imageField = UIImageView(frame: CGRect(x: 10, y: 0, width: 20, height: 20))
                 imageField.image = UIImage(named:"field\(identifierField)")
             
             let view   = UIView()
-            view.frame = CGRect(x:0, y:0, width:40, height:20)
-            view.layer.borderColor = UIColor.clear.cgColor
-            view.layer.borderWidth = 10
+                view.frame = CGRect(x: 0, y: 0, width: 40, height: 20)
+                view.layer.borderColor = UIColor.clear.cgColor
+                view.layer.borderWidth = 10
             
             view.addSubview(imageField)
             field.leftView     = view
@@ -130,11 +130,13 @@ extension TelaSettingsViewController : UIImagePickerControllerDelegate,
     @IBAction func uiChosePhotoUser(_ sender: UIButton) {
         let baseAlert = UIAlertController(title: "Carregar Foto", message: "Escolha uma das opções para carregar uma\n imagem ao perfil", preferredStyle: .actionSheet)
         
-        let actionBaseAlertGalery = UIAlertAction(title: "Galeria", style: .default) { (_) in
+        let actionBaseAlertGalery = UIAlertAction(title: "Galeria", style: .default)
+            { (_) in
             self.choseGalery()
         }
         
-        let actionBaseAlertCamera = UIAlertAction(title: "Câmera", style: .default) { (g) in
+        let actionBaseAlertCamera = UIAlertAction(title: "Câmera", style: .default)
+            { (_) in
             self.choseCamera()
         }
         
@@ -150,8 +152,8 @@ extension TelaSettingsViewController : UIImagePickerControllerDelegate,
         let galeryPickerView = UIImagePickerController()
         
         if UIImagePickerController.isSourceTypeAvailable(
-            UIImagePickerControllerSourceType.photoLibrary) {
-            galeryPickerView.sourceType = UIImagePickerControllerSourceType.photoLibrary
+           UIImagePickerControllerSourceType.photoLibrary) {
+            galeryPickerView.sourceType    = UIImagePickerControllerSourceType.photoLibrary
             galeryPickerView.allowsEditing = true
         }
         
@@ -166,7 +168,7 @@ extension TelaSettingsViewController : UIImagePickerControllerDelegate,
            UIImagePickerControllerSourceType.camera) {
            cameraPickerView.sourceType = .camera
            cameraPickerView.delegate   = self
-           cameraPickerView.allowsEditing = true
+           cameraPickerView.allowsEditing   = true
            cameraPickerView.cameraFlashMode = .auto
         }
         self.present(cameraPickerView, animated: true, completion: nil)
@@ -193,8 +195,8 @@ extension TelaSettingsViewController : UIScrollViewDelegate {
         
         let photoWidth = photo.frame.size.width
         
-        photo.center.x     = self.view.center.x
-        photo.frame.size   = CGSize(width: 140.0, height: 140.0)
+        photo.center.x   = self.view.center.x
+        photo.frame.size = CGSize(width: 140.0, height: 140.0)
         photo.layer.cornerRadius = photoWidth * 0.5
         
         if scrollView.contentOffset.y < 1.0 {

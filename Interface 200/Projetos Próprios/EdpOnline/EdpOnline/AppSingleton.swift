@@ -50,10 +50,8 @@ class App {
     
     private var everybodyTrees:[[String:Any]]? {
         didSet {
-          guard let trees = everybodyTrees,
-                !trees.isEmpty else {
+          guard let trees = everybodyTrees else {
                 everybodyTrees = nil
-                self.ud.removeObject(forKey: "trees")
                 return
           }
 
@@ -66,10 +64,8 @@ class App {
     
     var treesIdentifiers:[[String:Int]]? {
         didSet {
-          guard let identifiers = treesIdentifiers,
-                !identifiers.isEmpty else {
+          guard let identifiers = treesIdentifiers else {
                 treesIdentifiers = nil
-                self.ud.removeObject(forKey: "number_trees")
                 return
           }
             
@@ -79,7 +75,7 @@ class App {
                     treesIdentifiers = nil
                     return
               }
-            number_trees.append(id)
+              number_trees.append(id)
           }
           self.trees_numbers = number_trees
             
@@ -123,12 +119,12 @@ class App {
            let jsonData = try JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions())
             
            guard let jsonObject = jsonData as? [String:Any],
-                 let info       = jsonObject["usuario"] as? [[String:Any]],
-                 let user_info  = info.first,
-                 let trees_id   = jsonObject["arvore_ids"] as? [[String:Int]],
-                 let trees      = jsonObject["arvores"] as? [String:Any],
+                 let info      = jsonObject["usuario"] as? [[String:Any]],
+                 let user_info = info.first,
+                 let trees_id  = jsonObject["arvore_ids"] as? [[String:Int]],
+                 let trees     = jsonObject["arvores"] as? [String:Any],
                  let trees_amount = trees["quantidade"] as? Int,
-                 let _          = User(forInformation: user_info) else {
+                 let _         = User(forInformation: user_info) else {
                  completation(false)
                  return
            }

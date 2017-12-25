@@ -291,8 +291,7 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate,
 extension ViewController : CLLocationManagerDelegate {
     
     func preparePinsUpdate() -> Void {
-        self.uiMapRegionMain?.removeAnnotations(
-        uiMapRegionMain?.annotations ?? [])
+        self.uiMapRegionMain?.removeAnnotations(uiMapRegionMain?.annotations ?? [])
         if let locationUser = App.shared.currentLocation {
            let pinUser  = TreeAnnotation(forLocation: locationUser)
            self.uiMapRegionMain?.addAnnotation(pinUser)
@@ -370,44 +369,44 @@ extension ViewController : CLLocationManagerDelegate {
 extension ViewController : MKMapViewDelegate {
     
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
-         if let location = annotation as? TreeAnnotation {
-            return self.uiMapRegionMain?.dequeueReusableAnnotationView(withIdentifier: location.identifier) ?? location.viewTreeAnnotation()
-         }else{
-             return nil
-         }
+        if let location = annotation as? TreeAnnotation {
+           return self.uiMapRegionMain?.dequeueReusableAnnotationView(withIdentifier: location.identifier) ?? location.viewTreeAnnotation()
+        }else{
+           return nil
+        }
     }
 }
 
 extension ViewController : UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-         return App.shared.amountOfTrees
+        return App.shared.amountOfTrees
     }
     
     func tableView(_ tableView: UITableView,
-         cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-         let treesIdentifiers = App.shared.trees_numbers
-         guard let cellTree = tableView.dequeueReusableCell(withIdentifier: "tree")  as? TreeTableViewCell,
-               let identifiers = treesIdentifiers else {
-               return UITableViewCell()
-         }
+        cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let treesIdentifiers = App.shared.trees_numbers
+        guard let cellTree = tableView.dequeueReusableCell(withIdentifier: "tree")  as? TreeTableViewCell,
+              let identifiers = treesIdentifiers else {
+              return UITableViewCell()
+        }
         
-         let identifier   = identifiers[indexPath.row]
-         let cellInfoURL  = "https://inovatend.mybluemix.net/imagens/arvore/\(identifier)"
-         let cellImageURL = "https://inovatend.mybluemix.net/imagens/\(identifier)"
+        let identifier   = identifiers[indexPath.row]
+        let cellInfoURL  = "https://inovatend.mybluemix.net/imagens/arvore/\(identifier)"
+        let cellImageURL = "https://inovatend.mybluemix.net/imagens/\(identifier)"
            
-         cellTree.useCell = true
-         cellTree.treeImage?.url = URL(string:cellImageURL)
-         cellTree.url     = URL(string:cellInfoURL)
+        cellTree.useCell = true
+        cellTree.treeImage?.url = URL(string:cellImageURL)
+        cellTree.url     = URL(string:cellInfoURL)
          
-         return cellTree
+        return cellTree
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
-         return 1
+        return 1
     }
     
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-         return 80
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) ->  CGFloat {
+       return 80
     }
 }
