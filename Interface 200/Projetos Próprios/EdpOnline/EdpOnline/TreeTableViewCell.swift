@@ -32,7 +32,7 @@ class TreeTableViewCell : UITableViewCell {
     var url:URL? {
         didSet{
           guard let remoteURL = url else{
-             return
+                return
           }
           
           if let treeInfoCached = TreeTableViewCell.cacheRam[remoteURL] {
@@ -48,22 +48,22 @@ class TreeTableViewCell : UITableViewCell {
           }else{
             Alamofire.request(remoteURL).responseData(completionHandler: {
             (response) in
-              if response.error == nil,
-                 let data = response.data {
-                 guard let json = try? JSONSerialization.jsonObject(
-                    with: data, options: JSONSerialization.ReadingOptions()),
-                       let info     = json as? [String:Any],
-                       let treeInfo = info["arvore"] as? [String:Any],
-                       let title    = treeInfo["titulo"] as? String,
-                       let points   = treeInfo["pontos"] as? Int,
-                       let locality = treeInfo["localidade"] as? String
-                       else {
-                       return
-                 }
+            if response.error == nil,
+               let data = response.data {
+               guard let json = try? JSONSerialization.jsonObject(
+                     with: data, options: JSONSerialization.ReadingOptions()),
+                     let info     = json as? [String:Any],
+                     let treeInfo = info["arvore"] as? [String:Any],
+                     let title    = treeInfo["titulo"] as? String,
+                     let points   = treeInfo["pontos"] as? Int,
+                     let locality = treeInfo["localidade"] as? String
+                     else {
+                     return
+               }
                     
-                 UIView.animate(withDuration: 0.5, animations: {
-                    self.treeSpinnerLoad?.stopAnimating()
-                 }){_ in
+               UIView.animate(withDuration: 0.5, animations: {
+                     self.treeSpinnerLoad?.stopAnimating()
+               }){_ in
                     self.treeTitle?.text  = title
                     self.treePoints?.text = "\(points) Pontos"
                     self.treeLocation?.text = locality

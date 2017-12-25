@@ -42,7 +42,7 @@ class App {
         }
     }
 
-    var amountOfStars = 3 {
+    var amountOfStars = 2 {
         didSet {
           amountOfStars = amountOfStars > 5 ? min(amountOfStars,5) : oldValue
         }
@@ -54,7 +54,7 @@ class App {
                 everybodyTrees = nil
                 return
           }
-
+    
           var salved = self.ud.object(forKey: "trees") as? [String:Any] ?? [:]
           salved["trees_information"] = trees
           self.ud.set(salved, forKey: "trees")
@@ -64,8 +64,10 @@ class App {
     
     var treesIdentifiers:[[String:Int]]? {
         didSet {
-          guard let identifiers = treesIdentifiers else {
+          guard let identifiers = treesIdentifiers,
+                !identifiers.isEmpty else {
                 treesIdentifiers = nil
+                self.ud.removeObject(forKey: "number_trees")
                 return
           }
             
@@ -132,6 +134,7 @@ class App {
            self.userLoggedPersistence = user_info
            self.treesIdentifiers = trees_id
            self.amountOfTrees    = trees_amount
+           self.saveInformationTrees()
            completation(true)
         }catch{
            completation(false)
@@ -145,7 +148,6 @@ class App {
               completation(nil)
               return
         }
-        
         completation(user)
         return
     }
@@ -161,14 +163,11 @@ class App {
     }
     
     func retrieveInformationTrees() -> [Tree]? {
-        guard let treesSalved = ud.object(forKey: "trees") as? [String:Any] else {
-            return nil
+        guard let treesSalved = ud.object(forKey: "trees") as? [String:Any],
+              let informations = treesSalved["trees_information"] as? [[String:Any]] else {
+              return nil
         }
-        
-        guard let informations = treesSalved["trees_information"] as? [[String:Any]] else {
-            return nil
-        }
-        
+
         var treesReturn = Array<Tree>()
         for (i,t) in informations.enumerated() {
             guard let title = t["titulo"] as? String,
@@ -232,19 +231,19 @@ class App {
            let semaphore = DispatchSemaphore(value: 0)
             
            session.dataTask(with: request, completionHandler: { (data , _, error) in
-                if let e = error {
-                   completation(false)
-                   print("ERROR",e.localizedDescription)
-                }
+             if let e = error {
+                completation(false)
+                print("ERROR",e.localizedDescription)
+             }
             
-                guard let d = data,
-                      let result = String(data: d,encoding: .utf8) else {
-                      completation(false)
-                      return
-                }
-                print("RESULT",result)
-                completation(true)
-                semaphore.signal()
+             guard let d = data,
+                   let result = String(data: d,encoding: .utf8) else {
+                   completation(false)
+                   return
+             }
+             print("RESULT",result)
+             completation(true)
+             semaphore.signal()
            }).resume()
     
            let _ = semaphore.wait(timeout: .distantFuture)
