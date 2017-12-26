@@ -43,8 +43,8 @@ class LoginControllerView : UIViewController, UITextFieldDelegate {
        uiPasswordField?.attributedPlaceholder = NSAttributedString(string: "Password", attributes: [NSAttributedStringKey.foregroundColor:UIColor.black.withAlphaComponent(0.5)])
     }
   
-    override var prefersStatusBarHidden: Bool {
-        return true
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {

@@ -115,7 +115,7 @@
                                                 </variation>
                                             </label>
                                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="map-pin-silhouette-3" translatesAutoresizingMaskIntoConstraints="NO" id="xDP-Ow-6Sr">
-                                                <rect key="frame" x="0.0" y="42" width="15" height="15"/>
+                                                <rect key="frame" x="0.0" y="43.5" width="15" height="15"/>
                                                 <color key="tintColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="15" id="RsA-CL-8hH"/>
@@ -157,8 +157,8 @@
                                             <constraint firstItem="7Gw-91-mzW" firstAttribute="leading" secondItem="zVX-RG-wCn" secondAttribute="trailing" id="52G-3L-BED"/>
                                             <constraint firstItem="ISX-0H-3xC" firstAttribute="leading" secondItem="zVX-RG-wCn" secondAttribute="trailing" id="DFZ-l0-YiN"/>
                                             <constraint firstItem="ISX-0H-3xC" firstAttribute="top" secondItem="zVX-RG-wCn" secondAttribute="top" id="K83-yK-b0f"/>
-                                            <constraint firstItem="xDP-Ow-6Sr" firstAttribute="centerY" secondItem="7Gw-91-mzW" secondAttribute="centerY" id="Pv9-SP-xOd"/>
                                             <constraint firstItem="7Gw-91-mzW" firstAttribute="bottom" secondItem="zVX-RG-wCn" secondAttribute="bottom" id="R7a-i9-tzZ"/>
+                                            <constraint firstItem="xDP-Ow-6Sr" firstAttribute="centerY" secondItem="5UI-vp-Skq" secondAttribute="centerY" constant="1" id="SJW-Lp-7La"/>
                                             <constraint firstItem="xDP-Ow-6Sr" firstAttribute="leading" secondItem="Bah-U7-3jB" secondAttribute="leading" id="XdD-KJ-URf"/>
                                             <constraint firstItem="zVX-RG-wCn" firstAttribute="leading" secondItem="5UI-vp-Skq" secondAttribute="trailing" id="ZUc-1o-kSD"/>
                                             <constraint firstAttribute="trailing" secondItem="zVX-RG-wCn" secondAttribute="trailing" constant="90" id="dKD-8n-xb2"/>
@@ -214,9 +214,9 @@
                                         </connections>
                                     </button>
                                     <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="logoEdp" translatesAutoresizingMaskIntoConstraints="NO" id="gXZ-c8-T6R">
-                                        <rect key="frame" x="120" y="1.5" width="80" height="80"/>
+                                        <rect key="frame" x="120" y="4" width="80" height="75"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="80" id="ajq-kf-UaQ"/>
+                                            <constraint firstAttribute="height" constant="75" id="ajq-kf-UaQ"/>
                                             <constraint firstAttribute="width" constant="80" id="lbi-Wj-hau"/>
                                         </constraints>
                                     </imageView>
@@ -476,10 +476,10 @@
             </objects>
             <point key="canvasLocation" x="198.75" y="150"/>
         </scene>
-        <!--Login View Controller-->
+        <!--Login Controller View-->
         <scene sceneID="9V0-qf-PIm">
             <objects>
-                <viewController id="mfB-Fj-Mvb" customClass="LoginViewController" customModule="EdpOnline" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="mfB-Fj-Mvb" customClass="LoginControllerView" customModule="EdpOnline" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Yzv-7g-ALn">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -574,6 +574,10 @@
                         <viewLayoutGuide key="safeArea" id="SwR-ZA-ck2"/>
                     </view>
                     <navigationItem key="navigationItem" id="4lb-QH-0C7"/>
+                    <connections>
+                        <outlet property="uiPasswordField" destination="QZu-be-2Uc" id="peC-Hc-Zav"/>
+                        <outlet property="uiUsernameField" destination="4ya-1F-XdK" id="mPF-mF-ovH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iAH-tP-Eth" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
