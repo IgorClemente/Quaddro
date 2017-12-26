@@ -9,7 +9,7 @@
 import UIKit
 
 
-class TelaPremiosController:UIViewController {
+class PrizesControllerView : UIViewController {
     
     @IBOutlet var viewsPremios: [UIView]?
     
@@ -29,6 +29,6 @@ class TelaPremiosController:UIViewController {
     }
     
     @IBAction func tapAbrirMenuPrincipal() {
-        ControllerLateralMenu.controller.criarMenuPrincipal(self)
+        ControllerSideMenu.controller.createMainMenu(self)
     }
 }

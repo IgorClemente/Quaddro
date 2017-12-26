@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TelaRankingController:UIViewController {
+class RankingControllerView : UIViewController {
     
     @IBOutlet weak var uiViewFundoRanking: UIView?
     @IBOutlet var posicoesDoRanking: [UIView]?
@@ -76,6 +76,6 @@ class TelaRankingController:UIViewController {
     }
     
     @IBAction func tapCriarMenuPrincipal() {
-        ControllerLateralMenu.controller.criarMenuPrincipal(self)
+        ControllerSideMenu.controller.createMainMenu(self)
     }
 }

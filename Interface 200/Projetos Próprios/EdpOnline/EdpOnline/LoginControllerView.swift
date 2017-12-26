@@ -9,7 +9,7 @@
 
 import UIKit
 
-class LoginViewController : UIViewController, UITextFieldDelegate {
+class LoginControllerView : UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var uiUsernameField: UITextField?
     @IBOutlet weak var uiPasswordField: UITextField?
@@ -35,12 +35,12 @@ class LoginViewController : UIViewController, UITextFieldDelegate {
        uiUsernameField?.leftViewMode  = .always
        uiUsernameField?.leftView      = viewLeftUser
        uiUsernameField?.textAlignment = .natural
-       uiUsernameField?.attributedPlaceholder = NSAttributedString(string: "Username", attributes: [NSAttributedStringKey.foregroundColor:UIColor.black.withAlphaComponent(0.4)])
+       uiUsernameField?.attributedPlaceholder = NSAttributedString(string: "Username", attributes: [NSAttributedStringKey.foregroundColor:UIColor.black.withAlphaComponent(0.5)])
         
        uiPasswordField?.leftViewMode  = .always
        uiPasswordField?.leftView      = viewLeftPassword
        uiPasswordField?.textAlignment = .natural
-       uiPasswordField?.attributedPlaceholder = NSAttributedString(string: "Password", attributes: [NSAttributedStringKey.foregroundColor:UIColor.black.withAlphaComponent(0.4)])
+       uiPasswordField?.attributedPlaceholder = NSAttributedString(string: "Password", attributes: [NSAttributedStringKey.foregroundColor:UIColor.black.withAlphaComponent(0.5)])
     }
   
     override var prefersStatusBarHidden: Bool {

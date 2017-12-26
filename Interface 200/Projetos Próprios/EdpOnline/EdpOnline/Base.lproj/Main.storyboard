@@ -103,7 +103,7 @@
                                                 </variation>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Igor Clemente" lineBreakMode="tailTruncation" baselineAdjustment="none" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fch-XO-HsQ">
-                                                <rect key="frame" x="2" y="12" width="139" height="27"/>
+                                                <rect key="frame" x="2" y="12" width="137" height="27"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="27" id="Fvt-Tz-cTq"/>
                                                 </constraints>
@@ -163,7 +163,7 @@
                                             <constraint firstItem="zVX-RG-wCn" firstAttribute="leading" secondItem="5UI-vp-Skq" secondAttribute="trailing" id="ZUc-1o-kSD"/>
                                             <constraint firstAttribute="trailing" secondItem="zVX-RG-wCn" secondAttribute="trailing" constant="90" id="dKD-8n-xb2"/>
                                             <constraint firstItem="5UI-vp-Skq" firstAttribute="centerY" secondItem="7Gw-91-mzW" secondAttribute="centerY" id="fuB-xU-QmH"/>
-                                            <constraint firstItem="zVX-RG-wCn" firstAttribute="leading" secondItem="fch-XO-HsQ" secondAttribute="trailing" id="gKd-d0-NvF"/>
+                                            <constraint firstItem="zVX-RG-wCn" firstAttribute="leading" secondItem="fch-XO-HsQ" secondAttribute="trailing" constant="2" id="gKd-d0-NvF"/>
                                             <constraint firstAttribute="trailing" secondItem="ISX-0H-3xC" secondAttribute="trailing" id="ghX-E6-hnl"/>
                                             <constraint firstItem="5UI-vp-Skq" firstAttribute="top" secondItem="fch-XO-HsQ" secondAttribute="bottom" constant="2" id="m2N-hK-UVD"/>
                                             <constraint firstItem="5UI-vp-Skq" firstAttribute="leading" secondItem="xDP-Ow-6Sr" secondAttribute="trailing" constant="5" id="vgt-mP-mgK"/>
@@ -453,11 +453,11 @@
                         <outlet property="uiSubMenuMap" destination="sUI-Zl-AS9" id="hHw-vi-ROh"/>
                         <outletCollection property="uiButtonsSubMenu" destination="yG0-UU-1Ab" collectionClass="NSMutableArray" id="fgR-n5-SdP"/>
                         <outletCollection property="uiButtonsSubMenu" destination="UTA-cZ-jWD" collectionClass="NSMutableArray" id="iZE-cS-CvB"/>
-                        <outletCollection property="uiStarsBarBottom" destination="2kw-v1-wPT" collectionClass="NSMutableArray" id="jLL-dV-bXJ"/>
-                        <outletCollection property="uiStarsBarBottom" destination="lLA-m3-ux0" collectionClass="NSMutableArray" id="fYj-Fb-wHm"/>
-                        <outletCollection property="uiStarsBarBottom" destination="5gn-ik-F68" collectionClass="NSMutableArray" id="Z18-o8-DJp"/>
-                        <outletCollection property="uiStarsBarBottom" destination="zPO-CG-Jeq" collectionClass="NSMutableArray" id="nlk-Ly-q71"/>
-                        <outletCollection property="uiStarsBarBottom" destination="eM7-If-0yq" collectionClass="NSMutableArray" id="5oO-TK-Wmz"/>
+                        <outletCollection property="uiStarsBarBottom" destination="2kw-v1-wPT" collectionClass="NSMutableArray" id="Zit-Xe-wSM"/>
+                        <outletCollection property="uiStarsBarBottom" destination="lLA-m3-ux0" collectionClass="NSMutableArray" id="aR1-Nb-h0G"/>
+                        <outletCollection property="uiStarsBarBottom" destination="5gn-ik-F68" collectionClass="NSMutableArray" id="czW-v0-yuD"/>
+                        <outletCollection property="uiStarsBarBottom" destination="zPO-CG-Jeq" collectionClass="NSMutableArray" id="hqI-rN-A2C"/>
+                        <outletCollection property="uiStarsBarBottom" destination="eM7-If-0yq" collectionClass="NSMutableArray" id="ZvY-sC-YhC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -574,10 +574,6 @@
                         <viewLayoutGuide key="safeArea" id="SwR-ZA-ck2"/>
                     </view>
                     <navigationItem key="navigationItem" id="4lb-QH-0C7"/>
-                    <connections>
-                        <outlet property="uiPasswordField" destination="QZu-be-2Uc" id="FeN-YQ-o43"/>
-                        <outlet property="uiUsernameField" destination="4ya-1F-XdK" id="YD8-Gf-mT6"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iAH-tP-Eth" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

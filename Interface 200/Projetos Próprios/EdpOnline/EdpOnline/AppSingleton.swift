@@ -137,8 +137,8 @@ class App {
            self.saveInformationTrees()
            completation(true)
         }catch{
-           completation(false)
            print("ERROR", error.localizedDescription)
+           completation(false)
         }
     }
     
@@ -204,7 +204,6 @@ class App {
                   else{
                   return
             }
-            
             treesForSalved.append(tree)
         }
         self.everybodyTrees = treesForSalved

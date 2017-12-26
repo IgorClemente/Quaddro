@@ -17,7 +17,7 @@
         </array>
     </customFonts>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TelaRankingController" customModule="EdpOnline" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RankingControllerView" customModule="EdpOnline" customModuleProvider="target">
             <connections>
                 <outlet property="uiSpinnerActivity" destination="yGH-QY-Rxb" id="Mt4-uv-h8e"/>
                 <outlet property="uiViewFundoRanking" destination="jPD-Xw-X3q" id="kiK-Yc-fiD"/>

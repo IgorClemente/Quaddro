@@ -16,7 +16,7 @@ class WebImageView : UIImageView {
     var url:URL? {
        didSet{
          guard let url = self.url else {
-           return
+               return
          }
          if let image = WebImageView.imageCached[url] {
             self.image = image
@@ -29,7 +29,7 @@ class WebImageView : UIImageView {
                     WebImageView.imageCached[url] = self.image
                 }
               }catch{
-                print(error.localizedDescription)
+                print("ERROR",error.localizedDescription)
               }
             }
          }

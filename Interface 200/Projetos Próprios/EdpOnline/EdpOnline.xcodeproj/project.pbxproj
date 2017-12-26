@@ -8,19 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		7BF36EA486B788E3A2CD4269 /* Pods_EdpOnline.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF0B71E0B51B7B27ECBF4881 /* Pods_EdpOnline.framework */; };
-		D00983CA1F7B21E2002EF018 /* TelaSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00983C91F7B21E2002EF018 /* TelaSettingsViewController.swift */; };
-		D00EC05D1F7BCF9000198884 /* MenuLateralController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00EC05C1F7BCF9000198884 /* MenuLateralController.swift */; };
+		D00983CA1F7B21E2002EF018 /* SettingsControllerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00983C91F7B21E2002EF018 /* SettingsControllerView.swift */; };
+		D00EC05D1F7BCF9000198884 /* ControllerSideMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00EC05C1F7BCF9000198884 /* ControllerSideMenu.swift */; };
 		D01A74F31FD0F78F00BE8711 /* KeyboardContraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01A74F21FD0F78F00BE8711 /* KeyboardContraint.swift */; };
 		D01F91151F8BA4F1006EAC9B /* AppSingleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01F91141F8BA4F1006EAC9B /* AppSingleton.swift */; };
-		D01FBF921F81B2C800908931 /* TelaPremiosController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D01FBF911F81B2C800908931 /* TelaPremiosController.xib */; };
-		D01FBF941F81B2E400908931 /* TelaPremiosController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01FBF931F81B2E400908931 /* TelaPremiosController.swift */; };
+		D01FBF921F81B2C800908931 /* PrizesControllerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D01FBF911F81B2C800908931 /* PrizesControllerView.xib */; };
+		D01FBF941F81B2E400908931 /* PrizesControllerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01FBF931F81B2E400908931 /* PrizesControllerView.swift */; };
 		D02A8B971FC357C700B4DE9F /* TreeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02A8B961FC357C700B4DE9F /* TreeTableViewCell.swift */; };
 		D02A8B991FC35B8F00B4DE9F /* WebImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02A8B981FC35B8F00B4DE9F /* WebImageView.swift */; };
 		D06B22861F8459B100FD0EAE /* InfoRankingForacaster.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06B22851F8459B100FD0EAE /* InfoRankingForacaster.swift */; };
-		D0B187501F79C4CA00DC1D5B /* TelaRankingController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0B1874F1F79C4CA00DC1D5B /* TelaRankingController.xib */; };
-		D0B187531F79D5D700DC1D5B /* TelaSettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0B187521F79D5D700DC1D5B /* TelaSettingsViewController.xib */; };
+		D0B187501F79C4CA00DC1D5B /* RankingControllerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0B1874F1F79C4CA00DC1D5B /* RankingControllerView.xib */; };
+		D0B187531F79D5D700DC1D5B /* SettingsControllerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0B187521F79D5D700DC1D5B /* SettingsControllerView.xib */; };
 		D0B73B271FB542AF007ACC40 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0B73B261FB542AF007ACC40 /* MapKit.framework */; };
-		D0B73B2B1FB67203007ACC40 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B73B2A1FB67203007ACC40 /* LoginViewController.swift */; };
+		D0B73B2B1FB67203007ACC40 /* LoginControllerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B73B2A1FB67203007ACC40 /* LoginControllerView.swift */; };
 		D0BFBF061F756A92009B1F11 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0BFBF051F756A92009B1F11 /* AppDelegate.swift */; };
 		D0BFBF081F756A92009B1F11 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0BFBF071F756A92009B1F11 /* ViewController.swift */; };
 		D0BFBF0B1F756A92009B1F11 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0BFBF091F756A92009B1F11 /* Main.storyboard */; };
@@ -29,26 +29,26 @@
 		D0E003061FE827F200B541BA /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E003051FE827F200B541BA /* User.swift */; };
 		D0EFFB9C1FBD40D4001CEE2F /* MapPlaceTreeAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EFFB9B1FBD40D3001CEE2F /* MapPlaceTreeAnnotation.swift */; };
 		D0F049B31FDF820700CA6B2A /* Scratch.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F049B21FDF820700CA6B2A /* Scratch.swift */; };
-		D0F8282B1F814B3B00AB9688 /* TelaRankingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F8282A1F814B3A00AB9688 /* TelaRankingController.swift */; };
-		D0F88F901F784DFD003424BA /* RoundViewsCustom.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F88F8F1F784DFD003424BA /* RoundViewsCustom.swift */; };
-		D0F88F941F7861F2003424BA /* LateralMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F88F931F7861F2003424BA /* LateralMenuView.swift */; };
+		D0F8282B1F814B3B00AB9688 /* RankingControllerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F8282A1F814B3A00AB9688 /* RankingControllerView.swift */; };
+		D0F88F901F784DFD003424BA /* RoundViewCustom.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F88F8F1F784DFD003424BA /* RoundViewCustom.swift */; };
+		D0F88F941F7861F2003424BA /* SideMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F88F931F7861F2003424BA /* SideMenuView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		6B3D99D1166E75AAEA618182 /* Pods-EdpOnline.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EdpOnline.release.xcconfig"; path = "Pods/Target Support Files/Pods-EdpOnline/Pods-EdpOnline.release.xcconfig"; sourceTree = "<group>"; };
-		D00983C91F7B21E2002EF018 /* TelaSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TelaSettingsViewController.swift; sourceTree = "<group>"; };
-		D00EC05C1F7BCF9000198884 /* MenuLateralController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuLateralController.swift; sourceTree = "<group>"; };
+		D00983C91F7B21E2002EF018 /* SettingsControllerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsControllerView.swift; sourceTree = "<group>"; };
+		D00EC05C1F7BCF9000198884 /* ControllerSideMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControllerSideMenu.swift; sourceTree = "<group>"; };
 		D01A74F21FD0F78F00BE8711 /* KeyboardContraint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardContraint.swift; sourceTree = "<group>"; };
 		D01F91141F8BA4F1006EAC9B /* AppSingleton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSingleton.swift; sourceTree = "<group>"; };
-		D01FBF911F81B2C800908931 /* TelaPremiosController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TelaPremiosController.xib; sourceTree = "<group>"; };
-		D01FBF931F81B2E400908931 /* TelaPremiosController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TelaPremiosController.swift; sourceTree = "<group>"; };
+		D01FBF911F81B2C800908931 /* PrizesControllerView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PrizesControllerView.xib; sourceTree = "<group>"; };
+		D01FBF931F81B2E400908931 /* PrizesControllerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrizesControllerView.swift; sourceTree = "<group>"; };
 		D02A8B961FC357C700B4DE9F /* TreeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreeTableViewCell.swift; sourceTree = "<group>"; };
 		D02A8B981FC35B8F00B4DE9F /* WebImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebImageView.swift; sourceTree = "<group>"; };
 		D06B22851F8459B100FD0EAE /* InfoRankingForacaster.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoRankingForacaster.swift; sourceTree = "<group>"; };
-		D0B1874F1F79C4CA00DC1D5B /* TelaRankingController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TelaRankingController.xib; sourceTree = "<group>"; };
-		D0B187521F79D5D700DC1D5B /* TelaSettingsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TelaSettingsViewController.xib; sourceTree = "<group>"; };
+		D0B1874F1F79C4CA00DC1D5B /* RankingControllerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RankingControllerView.xib; sourceTree = "<group>"; };
+		D0B187521F79D5D700DC1D5B /* SettingsControllerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingsControllerView.xib; sourceTree = "<group>"; };
 		D0B73B261FB542AF007ACC40 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
-		D0B73B2A1FB67203007ACC40 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		D0B73B2A1FB67203007ACC40 /* LoginControllerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginControllerView.swift; sourceTree = "<group>"; };
 		D0BFBF021F756A92009B1F11 /* EdpOnline.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EdpOnline.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0BFBF051F756A92009B1F11 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D0BFBF071F756A92009B1F11 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -59,9 +59,9 @@
 		D0E003051FE827F200B541BA /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		D0EFFB9B1FBD40D3001CEE2F /* MapPlaceTreeAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapPlaceTreeAnnotation.swift; sourceTree = "<group>"; };
 		D0F049B21FDF820700CA6B2A /* Scratch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scratch.swift; sourceTree = "<group>"; };
-		D0F8282A1F814B3A00AB9688 /* TelaRankingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TelaRankingController.swift; sourceTree = "<group>"; };
-		D0F88F8F1F784DFD003424BA /* RoundViewsCustom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundViewsCustom.swift; sourceTree = "<group>"; };
-		D0F88F931F7861F2003424BA /* LateralMenuView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LateralMenuView.swift; sourceTree = "<group>"; };
+		D0F8282A1F814B3A00AB9688 /* RankingControllerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingControllerView.swift; sourceTree = "<group>"; };
+		D0F88F8F1F784DFD003424BA /* RoundViewCustom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundViewCustom.swift; sourceTree = "<group>"; };
+		D0F88F931F7861F2003424BA /* SideMenuView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideMenuView.swift; sourceTree = "<group>"; };
 		DF0B71E0B51B7B27ECBF4881 /* Pods_EdpOnline.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EdpOnline.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8CED7ACB602A6BDE070AD16 /* Pods-EdpOnline.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EdpOnline.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EdpOnline/Pods-EdpOnline.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -100,20 +100,20 @@
 		D01F91111F8B03FA006EAC9B /* Screens */ = {
 			isa = PBXGroup;
 			children = (
-				D01FBF931F81B2E400908931 /* TelaPremiosController.swift */,
-				D00983C91F7B21E2002EF018 /* TelaSettingsViewController.swift */,
-				D0B73B2A1FB67203007ACC40 /* LoginViewController.swift */,
-				D0F8282A1F814B3A00AB9688 /* TelaRankingController.swift */,
+				D01FBF931F81B2E400908931 /* PrizesControllerView.swift */,
+				D00983C91F7B21E2002EF018 /* SettingsControllerView.swift */,
+				D0B73B2A1FB67203007ACC40 /* LoginControllerView.swift */,
+				D0F8282A1F814B3A00AB9688 /* RankingControllerView.swift */,
 			);
 			name = Screens;
 			sourceTree = "<group>";
 		};
-		D01FBF901F81B1E200908931 /* TelaPremiosController */ = {
+		D01FBF901F81B1E200908931 /* PrizesControllerView */ = {
 			isa = PBXGroup;
 			children = (
-				D01FBF911F81B2C800908931 /* TelaPremiosController.xib */,
+				D01FBF911F81B2C800908931 /* PrizesControllerView.xib */,
 			);
-			name = TelaPremiosController;
+			name = PrizesControllerView;
 			sourceTree = "<group>";
 		};
 		D0B1874A1F79C3EF00DC1D5B /* Controller */ = {
@@ -121,7 +121,7 @@
 			children = (
 				D01F91111F8B03FA006EAC9B /* Screens */,
 				D0BFBF071F756A92009B1F11 /* ViewController.swift */,
-				D00EC05C1F7BCF9000198884 /* MenuLateralController.swift */,
+				D00EC05C1F7BCF9000198884 /* ControllerSideMenu.swift */,
 				D0BFBF051F756A92009B1F11 /* AppDelegate.swift */,
 			);
 			name = Controller;
@@ -130,9 +130,9 @@
 		D0B1874B1F79C40C00DC1D5B /* View */ = {
 			isa = PBXGroup;
 			children = (
-				D01FBF901F81B1E200908931 /* TelaPremiosController */,
-				D0B187511F79D59D00DC1D5B /* TelaSettingsViewController */,
-				D0B1874E1F79C43A00DC1D5B /* TelaRankingController */,
+				D01FBF901F81B1E200908931 /* PrizesControllerView */,
+				D0B187511F79D59D00DC1D5B /* SettingsControllerView */,
+				D0B1874E1F79C43A00DC1D5B /* RankingControllerView */,
 				D0BFBF091F756A92009B1F11 /* Main.storyboard */,
 				D0BFBF0E1F756A92009B1F11 /* LaunchScreen.storyboard */,
 			);
@@ -152,8 +152,8 @@
 			children = (
 				D0BFBF031F756A92009B1F11 /* Products */,
 				D0BFBF111F756A92009B1F11 /* Info.plist */,
-				D0F88F8F1F784DFD003424BA /* RoundViewsCustom.swift */,
-				D0F88F931F7861F2003424BA /* LateralMenuView.swift */,
+				D0F88F8F1F784DFD003424BA /* RoundViewCustom.swift */,
+				D0F88F931F7861F2003424BA /* SideMenuView.swift */,
 				D06B22851F8459B100FD0EAE /* InfoRankingForacaster.swift */,
 				D0EFFB9B1FBD40D3001CEE2F /* MapPlaceTreeAnnotation.swift */,
 				D01A74F21FD0F78F00BE8711 /* KeyboardContraint.swift */,
@@ -165,20 +165,20 @@
 			name = Suporte;
 			sourceTree = "<group>";
 		};
-		D0B1874E1F79C43A00DC1D5B /* TelaRankingController */ = {
+		D0B1874E1F79C43A00DC1D5B /* RankingControllerView */ = {
 			isa = PBXGroup;
 			children = (
-				D0B1874F1F79C4CA00DC1D5B /* TelaRankingController.xib */,
+				D0B1874F1F79C4CA00DC1D5B /* RankingControllerView.xib */,
 			);
-			name = TelaRankingController;
+			name = RankingControllerView;
 			sourceTree = "<group>";
 		};
-		D0B187511F79D59D00DC1D5B /* TelaSettingsViewController */ = {
+		D0B187511F79D59D00DC1D5B /* SettingsControllerView */ = {
 			isa = PBXGroup;
 			children = (
-				D0B187521F79D5D700DC1D5B /* TelaSettingsViewController.xib */,
+				D0B187521F79D5D700DC1D5B /* SettingsControllerView.xib */,
 			);
-			name = TelaSettingsViewController;
+			name = SettingsControllerView;
 			sourceTree = "<group>";
 		};
 		D0BFBEF91F756A92009B1F11 = {
@@ -289,10 +289,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				D0BFBF101F756A92009B1F11 /* LaunchScreen.storyboard in Resources */,
-				D01FBF921F81B2C800908931 /* TelaPremiosController.xib in Resources */,
-				D0B187531F79D5D700DC1D5B /* TelaSettingsViewController.xib in Resources */,
+				D01FBF921F81B2C800908931 /* PrizesControllerView.xib in Resources */,
+				D0B187531F79D5D700DC1D5B /* SettingsControllerView.xib in Resources */,
 				D0BFBF0D1F756A92009B1F11 /* Assets.xcassets in Resources */,
-				D0B187501F79C4CA00DC1D5B /* TelaRankingController.xib in Resources */,
+				D0B187501F79C4CA00DC1D5B /* RankingControllerView.xib in Resources */,
 				D0BFBF0B1F756A92009B1F11 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -361,22 +361,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				D0F049B31FDF820700CA6B2A /* Scratch.swift in Sources */,
-				D00EC05D1F7BCF9000198884 /* MenuLateralController.swift in Sources */,
+				D00EC05D1F7BCF9000198884 /* ControllerSideMenu.swift in Sources */,
 				D0EFFB9C1FBD40D4001CEE2F /* MapPlaceTreeAnnotation.swift in Sources */,
-				D00983CA1F7B21E2002EF018 /* TelaSettingsViewController.swift in Sources */,
+				D00983CA1F7B21E2002EF018 /* SettingsControllerView.swift in Sources */,
 				D02A8B991FC35B8F00B4DE9F /* WebImageView.swift in Sources */,
 				D0BFBF081F756A92009B1F11 /* ViewController.swift in Sources */,
 				D01F91151F8BA4F1006EAC9B /* AppSingleton.swift in Sources */,
 				D0E003061FE827F200B541BA /* User.swift in Sources */,
 				D02A8B971FC357C700B4DE9F /* TreeTableViewCell.swift in Sources */,
-				D0F88F941F7861F2003424BA /* LateralMenuView.swift in Sources */,
+				D0F88F941F7861F2003424BA /* SideMenuView.swift in Sources */,
 				D06B22861F8459B100FD0EAE /* InfoRankingForacaster.swift in Sources */,
-				D0F88F901F784DFD003424BA /* RoundViewsCustom.swift in Sources */,
-				D0F8282B1F814B3B00AB9688 /* TelaRankingController.swift in Sources */,
+				D0F88F901F784DFD003424BA /* RoundViewCustom.swift in Sources */,
+				D0F8282B1F814B3B00AB9688 /* RankingControllerView.swift in Sources */,
 				D0BFBF061F756A92009B1F11 /* AppDelegate.swift in Sources */,
-				D01FBF941F81B2E400908931 /* TelaPremiosController.swift in Sources */,
+				D01FBF941F81B2E400908931 /* PrizesControllerView.swift in Sources */,
 				D01A74F31FD0F78F00BE8711 /* KeyboardContraint.swift in Sources */,
-				D0B73B2B1FB67203007ACC40 /* LoginViewController.swift in Sources */,
+				D0B73B2B1FB67203007ACC40 /* LoginControllerView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

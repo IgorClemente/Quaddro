@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TelaSettingsViewController : UIViewController, UITextFieldDelegate {
+class SettingsControllerView : UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var uiScrollViewForm: UIScrollView?
     @IBOutlet var uiTextFieldsSettings: [UITextField]?
@@ -34,14 +34,14 @@ class TelaSettingsViewController : UIViewController, UITextFieldDelegate {
                 imageField.image = UIImage(named:"field\(identifierField)")
             
             let view   = UIView()
-                view.frame = CGRect(x: 0, y: 0, width: 40, height: 20)
+                view.frame = CGRect(x: 0, y: 0, width: 60, height: 20)
                 view.layer.borderColor = UIColor.clear.cgColor
                 view.layer.borderWidth = 10
             
             view.addSubview(imageField)
             field.leftView     = view
             field.leftViewMode = .always
-            field.textAlignment = .center
+            field.textAlignment = .justified
         }
     
         App.shared.getUserLogged { (user) in
@@ -65,8 +65,8 @@ class TelaSettingsViewController : UIViewController, UITextFieldDelegate {
               let fieldEmail = self.uiFieldEmailAccount,
               let fieldPassword    = self.uiFieldPassword,
               let fieldPhoneNumber = self.uiFieldPhoneNumber
-              else {
-              return true
+            else {
+            return true
         }
         
         let mapFieldsContinue:[UITextField:UITextField?] = [
@@ -90,13 +90,13 @@ class TelaSettingsViewController : UIViewController, UITextFieldDelegate {
               let fieldEmailAccount = self.uiFieldEmailAccount,
               let fieldPassword    = self.uiFieldPassword,
               let fieldPhoneNumber = self.uiFieldPhoneNumber
-              else {
-              return
+            else {
+            return
         }
         
         App.shared.getUserLogged { (user) in
             guard let u = user else {
-                  return
+                return
             }
             
             let worlds = fieldName.text?.components(separatedBy: " ")
@@ -120,12 +120,12 @@ class TelaSettingsViewController : UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func tapAbrirMenuPrincipal(_ sender: UIButton) {
-        ControllerLateralMenu.controller.criarMenuPrincipal(self)
+        ControllerSideMenu.controller.createMainMenu(self)
     }
 }
 
-extension TelaSettingsViewController : UIImagePickerControllerDelegate,
-                                       UINavigationControllerDelegate {
+extension SettingsControllerView : UIImagePickerControllerDelegate,
+                                   UINavigationControllerDelegate {
     
     @IBAction func uiChosePhotoUser(_ sender: UIButton) {
         let baseAlert = UIAlertController(title: "Carregar Foto", message: "Escolha uma das opções para carregar uma\n imagem ao perfil", preferredStyle: .actionSheet)
@@ -186,7 +186,7 @@ extension TelaSettingsViewController : UIImagePickerControllerDelegate,
     }
 }
 
-extension TelaSettingsViewController : UIScrollViewDelegate {
+extension SettingsControllerView : UIScrollViewDelegate {
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         guard let photo = self.uiUserPhoto else {

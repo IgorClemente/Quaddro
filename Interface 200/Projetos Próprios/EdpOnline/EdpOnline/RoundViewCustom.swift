@@ -15,28 +15,29 @@ class RoundViewCustom : NSObject {
     
     @IBOutlet var viewsRoundMedi:[UIView]? {
         didSet {
-            guard let views = viewsRoundMedi else {
-                return
-            }
-            views.forEach { view in
+           guard let views = viewsRoundMedi else {
+               return
+           }
+          
+           views.forEach { view in
                 view.layer.cornerRadius = CGFloat(radii)
                 view.clipsToBounds      = true
-            }
+           }
         }
     }
     
     @IBOutlet var imageRoundCircle:[UIView]? {
         didSet {
-            guard let views =  imageRoundCircle else {
-                return
-            }
-            views.forEach { view in
+           guard let views =  imageRoundCircle else {
+               return
+           }
+           
+           views.forEach { view in
                 let large               = view.frame.size.width
                 view.clipsToBounds      = true
                 view.layer.cornerRadius = CGFloat(0.5 * large)
-            }
+           }
         }
     }
-
 }
 

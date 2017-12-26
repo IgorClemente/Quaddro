@@ -121,7 +121,7 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate,
     }
     
     @IBAction func uiTapAbreMenuPrincipal() {
-        ControllerLateralMenu.controller.criarMenuPrincipal(self)
+        ControllerSideMenu.controller.createMainMenu(self)
     }
     
     @IBAction func tapSubMenu(_ sender: UIBarButtonItem) {
