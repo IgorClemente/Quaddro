@@ -64,15 +64,25 @@
                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KD3-NT-ozQ">
+                            <rect key="frame" x="269" y="27" width="35" height="30"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="30" id="FV5-OH-u3l"/>
+                                <constraint firstAttribute="width" constant="35" id="iII-14-HB9"/>
+                            </constraints>
+                            <state key="normal" image="check"/>
+                        </button>
                     </subviews>
                     <color key="backgroundColor" red="0.84267109630000003" green="0.2451241612" blue="0.16414961219999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
+                        <constraint firstItem="KD3-NT-ozQ" firstAttribute="centerY" secondItem="6aN-zU-J52" secondAttribute="centerY" id="5pK-cH-vCF"/>
                         <constraint firstItem="DG9-Uv-odc" firstAttribute="centerX" secondItem="OKo-QD-Ku2" secondAttribute="centerX" id="8aM-9K-2sA"/>
                         <constraint firstAttribute="height" constant="69" id="BCb-lR-aDF">
                             <variation key="heightClass=regular-widthClass=regular" constant="80"/>
                         </constraint>
                         <constraint firstItem="6aN-zU-J52" firstAttribute="leading" secondItem="OKo-QD-Ku2" secondAttribute="leading" constant="16" id="C5Z-6L-UDu"/>
                         <constraint firstItem="DG9-Uv-odc" firstAttribute="centerY" secondItem="6aN-zU-J52" secondAttribute="centerY" id="Yfg-Bo-iXf"/>
+                        <constraint firstAttribute="trailing" secondItem="KD3-NT-ozQ" secondAttribute="trailing" constant="16" id="fbz-Qz-rMF"/>
                         <constraint firstItem="6aN-zU-J52" firstAttribute="centerY" secondItem="OKo-QD-Ku2" secondAttribute="centerY" constant="7" id="q8y-yY-oI9"/>
                     </constraints>
                 </view>
@@ -279,6 +289,7 @@
         </customObject>
     </objects>
     <resources>
+        <image name="check" width="80" height="80"/>
         <image name="menu" width="64" height="64"/>
         <image name="user-icon" width="512" height="512"/>
     </resources>

@@ -240,7 +240,7 @@ class App {
                    completation(false)
                    return
              }
-             print("RESULT",result)
+        
              completation(true)
              semaphore.signal()
            }).resume()

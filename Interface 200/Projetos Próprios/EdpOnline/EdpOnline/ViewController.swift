@@ -57,7 +57,7 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate,
         
         App.shared.getUserLogged { (user) in
            guard let u = user else {
-                 return
+               return
            }
            self.loadInformation(forUser: u)
         }
@@ -74,13 +74,15 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate,
         super.viewDidLoad()
         guard let buttons = uiButtonsSubMenu,
               let treesTable = tableSubMenuArvores,
-              let treesMap = uiSubMenuMap else {
-              return
+              let treesMap = uiSubMenuMap
+            else {
+            return
         }
         
         for button in buttons {
-            guard let titleButton = button.title else {
-                  return
+            guard let titleButton = button.title
+                else {
+                return
             }
             
             if titleButton == "submenuMapa" {
