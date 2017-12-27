@@ -97,7 +97,7 @@
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="CEa-zZ-AHy">
                                     <rect key="frame" x="2" y="0.0" width="316" height="255"/>
                                     <subviews>
-                                        <textField opaque="NO" contentMode="scaleToFill" restorationIdentifier="NomeCompleto" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Nome Completo" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TKx-Wd-y34">
+                                        <textField opaque="NO" contentMode="scaleToFill" restorationIdentifier="NomeCompleto" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Nome Completo" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="TKx-Wd-y34">
                                             <rect key="frame" x="0.0" y="0.0" width="316" height="56.5"/>
                                             <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                             <color key="textColor" red="0.57414853570000002" green="0.57416242360000003" blue="0.57415497299999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -107,7 +107,7 @@
                                                 <outlet property="delegate" destination="-1" id="733-6T-JjR"/>
                                             </connections>
                                         </textField>
-                                        <textField opaque="NO" contentMode="scaleToFill" restorationIdentifier="Email" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="E-mail" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2YU-0H-uN1">
+                                        <textField opaque="NO" contentMode="scaleToFill" restorationIdentifier="Email" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="E-mail" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="2YU-0H-uN1">
                                             <rect key="frame" x="0.0" y="66.5" width="316" height="56"/>
                                             <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                             <color key="textColor" red="0.57414853570000002" green="0.57416242360000003" blue="0.57415497299999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -117,7 +117,7 @@
                                                 <outlet property="delegate" destination="-1" id="fF3-d5-X32"/>
                                             </connections>
                                         </textField>
-                                        <textField opaque="NO" contentMode="scaleToFill" restorationIdentifier="Senha" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Senha" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MvH-5s-Aqd">
+                                        <textField opaque="NO" contentMode="scaleToFill" restorationIdentifier="Senha" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Senha" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="MvH-5s-Aqd">
                                             <rect key="frame" x="0.0" y="132.5" width="316" height="56.5"/>
                                             <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                             <color key="textColor" red="0.57414853570000002" green="0.57416242360000003" blue="0.57415497299999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -127,7 +127,7 @@
                                                 <outlet property="delegate" destination="-1" id="wji-hY-IwG"/>
                                             </connections>
                                         </textField>
-                                        <textField opaque="NO" contentMode="scaleToFill" restorationIdentifier="NumeroTelefone" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Número de Telefone" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2VW-UV-Lei">
+                                        <textField opaque="NO" contentMode="scaleToFill" restorationIdentifier="NumeroTelefone" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Número de Telefone" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="2VW-UV-Lei">
                                             <rect key="frame" x="0.0" y="199" width="316" height="56"/>
                                             <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                             <color key="textColor" red="0.57414853570000002" green="0.57416242360000003" blue="0.57415497299999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

@@ -28,7 +28,7 @@ class SideMenuView : UIView {
         let profileImage       = UIImageView()
             profileImage.frame = CGRect(x:20,y:30,width:90,height:90)
             profileImage.clipsToBounds = true
-            profileImage.image         = UIImage(named:"perfil-amostra")
+            profileImage.image         = UIImage(named:"photo-perfil")
             profileImage.contentMode        = .scaleAspectFill
             profileImage.layer.cornerRadius = profileImage.frame.width/2
         
@@ -110,7 +110,7 @@ class SideMenuView : UIView {
         
         limiters.append(contentsOf:[NSLayoutConstraint(item: settingsButton, attribute: .width,relatedBy: .equal,toItem: mainMenu,attribute: .width,multiplier: 0.4,constant: 3)])
         
-        limiters.append(contentsOf:[NSLayoutConstraint(item: settingsButton, attribute: .height,relatedBy: .equal,toItem: nil,attribute: .notAnAttribute, multiplier: 1.0, constant: 52)])
+        limiters.append(contentsOf:[NSLayoutConstraint(item: settingsButton, attribute: .height,relatedBy: .equal,toItem: nil,attribute: .notAnAttribute, multiplier: 1.0, constant: 53)])
         
         NSLayoutConstraint.activate(limiters)
         

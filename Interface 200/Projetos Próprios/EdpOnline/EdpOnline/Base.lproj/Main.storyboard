@@ -24,7 +24,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="c337f7af69df35c605cab3615f3f2165" translatesAutoresizingMaskIntoConstraints="NO" id="gCH-H8-srq" userLabel="background-image-perfil">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background-perfil" translatesAutoresizingMaskIntoConstraints="NO" id="gCH-H8-srq" userLabel="background-image-perfil">
                                 <rect key="frame" x="0.0" y="69" width="320" height="212"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="knr-HG-GUk" userLabel="background-dark-perfil">
@@ -114,7 +114,7 @@
                                                     <fontDescription key="fontDescription" type="system" weight="light" pointSize="26"/>
                                                 </variation>
                                             </label>
-                                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="map-pin-silhouette-3" translatesAutoresizingMaskIntoConstraints="NO" id="xDP-Ow-6Sr">
+                                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="map-pin" translatesAutoresizingMaskIntoConstraints="NO" id="xDP-Ow-6Sr">
                                                 <rect key="frame" x="0.0" y="43.5" width="15" height="15"/>
                                                 <color key="tintColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
@@ -170,7 +170,7 @@
                                             <constraint firstItem="fch-XO-HsQ" firstAttribute="leading" secondItem="Bah-U7-3jB" secondAttribute="leading" constant="2" id="xrr-SF-XdA"/>
                                         </constraints>
                                     </view>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="perfil-amostra" highlighted="YES" translatesAutoresizingMaskIntoConstraints="NO" id="abe-ua-t0T">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="photo-perfil" highlighted="YES" translatesAutoresizingMaskIntoConstraints="NO" id="abe-ua-t0T">
                                         <rect key="frame" x="10" y="5.5" width="70" height="70"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="70" id="QYH-lX-d7w">
@@ -213,10 +213,10 @@
                                             <action selector="uiTapAbreMenuPrincipal" destination="BYZ-38-t0r" eventType="touchUpInside" id="f8U-6l-9Ra"/>
                                         </connections>
                                     </button>
-                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="logoEdp" translatesAutoresizingMaskIntoConstraints="NO" id="gXZ-c8-T6R">
-                                        <rect key="frame" x="120" y="4" width="80" height="75"/>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" image="logoEdp" translatesAutoresizingMaskIntoConstraints="NO" id="gXZ-c8-T6R">
+                                        <rect key="frame" x="120" y="16.5" width="80" height="50"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="75" id="ajq-kf-UaQ"/>
+                                            <constraint firstAttribute="height" constant="50" id="ajq-kf-UaQ"/>
                                             <constraint firstAttribute="width" constant="80" id="lbi-Wj-hau"/>
                                         </constraints>
                                     </imageView>
@@ -252,7 +252,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Vagas-de-Emprego-em-Guarulhos-SP-600x450" translatesAutoresizingMaskIntoConstraints="NO" id="HaB-L9-d7V">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="demo-city" translatesAutoresizingMaskIntoConstraints="NO" id="HaB-L9-d7V">
                                                     <rect key="frame" x="20" y="5" width="40" height="40"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="40" id="PfE-rm-bWs"/>
@@ -339,7 +339,7 @@
                                                 <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="dby-Fh-qQl">
                                                     <rect key="frame" x="150" y="30" width="20" height="20"/>
                                                 </activityIndicatorView>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arvore-fio-demo" translatesAutoresizingMaskIntoConstraints="NO" id="dHU-d9-a34" customClass="WebImageView" customModule="EdpOnline" customModuleProvider="target">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tree-demo" translatesAutoresizingMaskIntoConstraints="NO" id="dHU-d9-a34" customClass="WebImageView" customModule="EdpOnline" customModuleProvider="target">
                                                     <rect key="frame" x="20" y="14.5" width="50" height="50.5"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="50" id="A0p-kL-TNy"/>
@@ -484,7 +484,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" insetsLayoutMarginsFromSafeArea="NO" image="USA-city-night-views-skyscrapers-buildings-lights-illumination_3840x2160" translatesAutoresizingMaskIntoConstraints="NO" id="XaF-vi-pN6">
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" insetsLayoutMarginsFromSafeArea="NO" image="background-login" translatesAutoresizingMaskIntoConstraints="NO" id="XaF-vi-pN6">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pu8-Zr-0pN">
@@ -602,16 +602,16 @@
         </scene>
     </scenes>
     <resources>
-        <image name="USA-city-night-views-skyscrapers-buildings-lights-illumination_3840x2160" width="3840" height="2160"/>
-        <image name="Vagas-de-Emprego-em-Guarulhos-SP-600x450" width="300" height="225"/>
-        <image name="arvore-fio-demo" width="470" height="250"/>
-        <image name="c337f7af69df35c605cab3615f3f2165" width="1024" height="768"/>
+        <image name="background-login" width="3840" height="2160"/>
+        <image name="background-perfil" width="1024" height="768"/>
+        <image name="demo-city" width="300" height="225"/>
         <image name="logoEdp" width="250" height="250"/>
         <image name="map" width="21" height="21"/>
-        <image name="map-pin-silhouette-3" width="32" height="32"/>
+        <image name="map-pin" width="32" height="32"/>
         <image name="menu" width="64" height="64"/>
-        <image name="perfil-amostra" width="300" height="254"/>
+        <image name="photo-perfil" width="300" height="254"/>
         <image name="star" width="16" height="16"/>
         <image name="subMenu" width="21" height="21"/>
+        <image name="tree-demo" width="16" height="16"/>
     </resources>
 </document>

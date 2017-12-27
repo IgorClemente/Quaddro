@@ -97,7 +97,7 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate,
            if save {
               App.shared.getUserLogged({ (user) in
                  guard let u = user else {
-                       return
+                     return
                  }
                  self.loadInformation(forUser: u)
               })
@@ -107,7 +107,10 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate,
                  self.tableSubMenuArvores?.reloadData()
               }
            }else{
-              print("NSALVO")
+              let alertError = UIAlertController(title: "Error ao salvar", message: "Ocorreu um erro ao salvar as informações do usuário", preferredStyle: .alert)
+              let alertErrorAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+              alertError.addAction(alertErrorAction)
+              self.present(alertError, animated: true, completion: nil)
            }
         }
     }
