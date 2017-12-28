@@ -128,7 +128,7 @@ extension SettingsControllerView : UIImagePickerControllerDelegate,
                                    UINavigationControllerDelegate {
     
     @IBAction func uiChosePhotoUser(_ sender: UIButton) {
-        let baseAlert = UIAlertController(title: "Carregar Foto", message: "Escolha uma das opções para carregar uma\n imagem ao perfil", preferredStyle: .actionSheet)
+        let baseAlert = UIAlertController(title: "Carregar Foto", message: "Escolha uma das opções para carregar\n uma imagem ao perfil", preferredStyle: .actionSheet)
         
         let actionBaseAlertGalery = UIAlertAction(title: "Galeria", style: .default)
             { (_) in
