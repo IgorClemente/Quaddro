@@ -98,10 +98,10 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate,
         App.shared.saveUser { (save) in
            if save {
               App.shared.getUserLogged({ (user) in
-                 guard let u = user else {
-                     return
-                 }
-                 self.loadInformation(forUser: u)
+                guard let u = user else {
+                    return
+                }
+                self.loadInformation(forUser: u)
               })
             
               self.searchLocation()

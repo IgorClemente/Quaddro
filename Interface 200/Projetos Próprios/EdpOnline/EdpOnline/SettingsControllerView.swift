@@ -26,22 +26,22 @@ class SettingsControllerView : UIViewController, UITextFieldDelegate {
         }
         
         for field in fields {
-            guard let identifierField = field.restorationIdentifier else {
-                return
-            }
+          guard let identifierField = field.restorationIdentifier else {
+              return
+          }
             
-            let imageField = UIImageView(frame: CGRect(x: 10, y: 0, width: 20, height: 20))
-                imageField.image = UIImage(named:"field\(identifierField)")
+          let imageField = UIImageView(frame: CGRect(x:10, y:0, width:20, height:20))
+              imageField.image = UIImage(named:"field\(identifierField)")
             
-            let view   = UIView()
-                view.frame = CGRect(x: 0, y: 0, width: 60, height: 20)
-                view.layer.borderColor = UIColor.clear.cgColor
-                view.layer.borderWidth = 10
+          let view   = UIView()
+              view.frame = CGRect(x:0, y:0, width:60, height:20)
+              view.layer.borderColor = UIColor.clear.cgColor
+              view.layer.borderWidth = 10
             
-            view.addSubview(imageField)
-            field.leftView     = view
-            field.leftViewMode = .always
-            field.textAlignment = .justified
+          view.addSubview(imageField)
+          field.leftView     = view
+          field.leftViewMode = .always
+          field.textAlignment = .justified
         }
     
         App.shared.getUserLogged { (user) in
@@ -153,7 +153,7 @@ extension SettingsControllerView : UIImagePickerControllerDelegate,
         
         if UIImagePickerController.isSourceTypeAvailable(
            UIImagePickerControllerSourceType.photoLibrary) {
-            galeryPickerView.sourceType    = UIImagePickerControllerSourceType.photoLibrary
+            galeryPickerView.sourceType    = .photoLibrary
             galeryPickerView.allowsEditing = true
         }
         
@@ -163,7 +163,7 @@ extension SettingsControllerView : UIImagePickerControllerDelegate,
     
     func choseCamera() -> Void {
         let cameraPickerView = UIImagePickerController()
-    
+        
         if UIImagePickerController.isSourceTypeAvailable(
            UIImagePickerControllerSourceType.camera) {
            cameraPickerView.sourceType = .camera
@@ -171,6 +171,7 @@ extension SettingsControllerView : UIImagePickerControllerDelegate,
            cameraPickerView.allowsEditing   = true
            cameraPickerView.cameraFlashMode = .auto
         }
+        
         self.present(cameraPickerView, animated: true, completion: nil)
     }
     

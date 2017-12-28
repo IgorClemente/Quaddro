@@ -175,9 +175,8 @@ class App {
                   let longitude = t["longitude"] as? String,
                   let latitude  = t["latitude"] as? String,
                   let degreesLongitude:CLLocationDegrees = Double(longitude),
-                  let degreesLatitude:CLLocationDegrees  = Double(latitude)
-                  else{
-                  return nil
+                  let degreesLatitude:CLLocationDegrees  = Double(latitude) else{
+                return nil
             }
             
             let id    = i + 1
@@ -191,20 +190,19 @@ class App {
     func saveInformationTrees() -> Void {
         guard let number_trees = ud.object(forKey: "number_trees") as? [String:Any],
               let trees = number_trees["numbers"] as? [Int] else {
-              return
+            return
         }
         
         var treesForSalved:[[String:Any]] = []
         for tree in trees {
-            guard let remoteURL = URL(string: "https://inovatend.mybluemix.net/imagens/arvore/\(tree)"),
-                  let treeInfoData = try? Data(contentsOf: remoteURL),
-                  let json = try? JSONSerialization.jsonObject(with:treeInfoData, options: JSONSerialization.ReadingOptions()),
-                  let info = json as? [String:Any],
-                  let tree = info["arvore"] as? [String:Any]
-                  else{
-                  return
-            }
-            treesForSalved.append(tree)
+          guard let remoteURL = URL(string: "https://inovatend.mybluemix.net/imagens/arvore/\(tree)"),
+                let treeInfoData = try? Data(contentsOf: remoteURL),
+                let json = try? JSONSerialization.jsonObject(with:treeInfoData, options: JSONSerialization.ReadingOptions()),
+                let info = json as? [String:Any],
+                let tree = info["arvore"] as? [String:Any] else{
+              return
+          }
+          treesForSalved.append(tree)
         }
         self.everybodyTrees = treesForSalved
     }
@@ -216,7 +214,7 @@ class App {
         guard let remoteURL = URL(string: url),
               let bodyHttp  = body else {
               completation(false)
-              return
+            return
         }
         
         do {
@@ -238,7 +236,7 @@ class App {
              guard let d = data,
                    let result = String(data: d,encoding: .utf8) else {
                    completation(false)
-                   return
+                 return
              }
         
              completation(true)
