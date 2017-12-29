@@ -64,11 +64,11 @@
                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KD3-NT-ozQ">
-                            <rect key="frame" x="270" y="27" width="32" height="30"/>
+                        <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KD3-NT-ozQ">
+                            <rect key="frame" x="260" y="17" width="50" height="50"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="30" id="FV5-OH-u3l"/>
-                                <constraint firstAttribute="width" constant="32" id="iII-14-HB9"/>
+                                <constraint firstAttribute="height" constant="50" id="FV5-OH-u3l"/>
+                                <constraint firstAttribute="width" constant="50" id="iII-14-HB9"/>
                             </constraints>
                             <state key="normal" image="check"/>
                         </button>
@@ -82,7 +82,7 @@
                         </constraint>
                         <constraint firstItem="6aN-zU-J52" firstAttribute="leading" secondItem="OKo-QD-Ku2" secondAttribute="leading" constant="16" id="C5Z-6L-UDu"/>
                         <constraint firstItem="DG9-Uv-odc" firstAttribute="centerY" secondItem="6aN-zU-J52" secondAttribute="centerY" id="Yfg-Bo-iXf"/>
-                        <constraint firstAttribute="trailing" secondItem="KD3-NT-ozQ" secondAttribute="trailing" constant="18" id="fbz-Qz-rMF"/>
+                        <constraint firstAttribute="trailing" secondItem="KD3-NT-ozQ" secondAttribute="trailing" constant="10" id="fbz-Qz-rMF"/>
                         <constraint firstItem="6aN-zU-J52" firstAttribute="centerY" secondItem="OKo-QD-Ku2" secondAttribute="centerY" constant="7" id="q8y-yY-oI9"/>
                     </constraints>
                 </view>
@@ -289,7 +289,7 @@
         </customObject>
     </objects>
     <resources>
-        <image name="check" width="80" height="80"/>
+        <image name="check" width="25" height="25"/>
         <image name="menu" width="64" height="64"/>
         <image name="user-icon" width="512" height="512"/>
     </resources>

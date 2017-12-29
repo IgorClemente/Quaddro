@@ -401,8 +401,8 @@ extension ViewController : UITableViewDelegate, UITableViewDataSource {
         let cellImageURL = "https://inovatend.mybluemix.net/imagens/\(identifier)"
            
         cellTree.useCell = true
-        cellTree.treeImage?.url = URL(string:cellImageURL)
-        cellTree.url     = URL(string:cellInfoURL)
+        cellTree.treeImage?.url = URL(string: cellImageURL)
+        cellTree.url     = URL(string: cellInfoURL)
          
         return cellTree
     }
@@ -416,11 +416,22 @@ extension ViewController : UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        guard let identifiers = App.shared.treesIdentifiers else {
+        
+        let sender = tableView.cellForRow(at: indexPath)
+        performSegue(withIdentifier: "tree", sender: sender)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let controller = segue.destination as? TreeDetailsControllerView,
+              let sender = sender as? TreeTableViewCell
+            else {
             return
         }
         
-        let identifier = identifiers[indexPath.row]
-        performSegue(withIdentifier: "tree", sender: identifier)
+        controller.information = sender
+    }
+    
+    @IBAction func exit(segue:UIStoryboardSegue) {
+        self.dismiss(animated: true, completion: nil)
     }
 }
