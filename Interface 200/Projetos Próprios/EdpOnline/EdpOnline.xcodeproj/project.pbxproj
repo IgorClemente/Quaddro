@@ -29,6 +29,7 @@
 		D0E003061FE827F200B541BA /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E003051FE827F200B541BA /* User.swift */; };
 		D0EFFB9C1FBD40D4001CEE2F /* MapPlaceTreeAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EFFB9B1FBD40D3001CEE2F /* MapPlaceTreeAnnotation.swift */; };
 		D0F049B31FDF820700CA6B2A /* Scratch.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F049B21FDF820700CA6B2A /* Scratch.swift */; };
+		D0F1BF351FF5E1B500DCB161 /* TreeDetailsControllerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F1BF341FF5E1B500DCB161 /* TreeDetailsControllerView.swift */; };
 		D0F8282B1F814B3B00AB9688 /* RankingControllerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F8282A1F814B3A00AB9688 /* RankingControllerView.swift */; };
 		D0F88F901F784DFD003424BA /* RoundViewCustom.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F88F8F1F784DFD003424BA /* RoundViewCustom.swift */; };
 		D0F88F941F7861F2003424BA /* SideMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F88F931F7861F2003424BA /* SideMenuView.swift */; };
@@ -59,6 +60,7 @@
 		D0E003051FE827F200B541BA /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		D0EFFB9B1FBD40D3001CEE2F /* MapPlaceTreeAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapPlaceTreeAnnotation.swift; sourceTree = "<group>"; };
 		D0F049B21FDF820700CA6B2A /* Scratch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scratch.swift; sourceTree = "<group>"; };
+		D0F1BF341FF5E1B500DCB161 /* TreeDetailsControllerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreeDetailsControllerView.swift; sourceTree = "<group>"; };
 		D0F8282A1F814B3A00AB9688 /* RankingControllerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingControllerView.swift; sourceTree = "<group>"; };
 		D0F88F8F1F784DFD003424BA /* RoundViewCustom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundViewCustom.swift; sourceTree = "<group>"; };
 		D0F88F931F7861F2003424BA /* SideMenuView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideMenuView.swift; sourceTree = "<group>"; };
@@ -123,6 +125,7 @@
 				D0BFBF071F756A92009B1F11 /* ViewController.swift */,
 				D00EC05C1F7BCF9000198884 /* ControllerSideMenu.swift */,
 				D0BFBF051F756A92009B1F11 /* AppDelegate.swift */,
+				D0F1BF341FF5E1B500DCB161 /* TreeDetailsControllerView.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -367,6 +370,7 @@
 				D02A8B991FC35B8F00B4DE9F /* WebImageView.swift in Sources */,
 				D0BFBF081F756A92009B1F11 /* ViewController.swift in Sources */,
 				D01F91151F8BA4F1006EAC9B /* AppSingleton.swift in Sources */,
+				D0F1BF351FF5E1B500DCB161 /* TreeDetailsControllerView.swift in Sources */,
 				D0E003061FE827F200B541BA /* User.swift in Sources */,
 				D02A8B971FC357C700B4DE9F /* TreeTableViewCell.swift in Sources */,
 				D0F88F941F7861F2003424BA /* SideMenuView.swift in Sources */,

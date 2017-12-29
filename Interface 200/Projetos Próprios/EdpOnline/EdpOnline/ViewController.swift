@@ -414,4 +414,13 @@ extension ViewController : UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) ->  CGFloat {
        return 80
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let identifiers = App.shared.treesIdentifiers else {
+            return
+        }
+        
+        let identifier = identifiers[indexPath.row]
+        performSegue(withIdentifier: "tree", sender: identifier)
+    }
 }
