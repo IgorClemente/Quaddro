@@ -329,7 +329,7 @@
                                 <rect key="frame" x="0.0" y="281" width="320" height="199"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="tree" id="wTd-1I-gq8" customClass="TreeTableViewCell" customModule="EdpOnline" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="tree" id="wTd-1I-gq8" customClass="TreeTableViewCell" customModule="EdpOnline" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="320" height="80"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="wTd-1I-gq8" id="e4i-f4-zM2">
@@ -519,43 +519,22 @@
                                     <constraint firstItem="I9U-A2-rrm" firstAttribute="centerY" secondItem="0PB-un-Vl6" secondAttribute="centerY" constant="7" id="jhI-lW-NE7"/>
                                 </constraints>
                             </view>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tree-demo-details" translatesAutoresizingMaskIntoConstraints="NO" id="UN4-aP-Evj" customClass="WebImageView" customModule="EdpOnline" customModuleProvider="target">
-                                <rect key="frame" x="35.5" y="99" width="250" height="250"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="250" id="0b4-00-Fbe"/>
-                                    <constraint firstAttribute="width" secondItem="UN4-aP-Evj" secondAttribute="height" multiplier="1:1" id="1N7-KD-T6I"/>
-                                    <constraint firstAttribute="height" constant="250" id="d3U-kr-uLk"/>
-                                </constraints>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tree-demo-details" translatesAutoresizingMaskIntoConstraints="NO" id="UN4-aP-Evj" customClass="WebImageView" customModule="EdpOnline" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="69" width="320" height="192"/>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="NO"/>
                                 </userDefinedRuntimeAttributes>
                             </imageView>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="uXI-Yv-4vE">
-                                <rect key="frame" x="0.0" y="354" width="320" height="126"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="obF-qZ-Slq">
-                                        <rect key="frame" x="0.0" y="28" width="320" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="obF-qZ-Slq" id="s9u-vy-BSx">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </prototypes>
-                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="kdJ-lP-e1K" firstAttribute="top" secondItem="uXI-Yv-4vE" secondAttribute="bottom" id="1Mh-Nf-CMV"/>
-                            <constraint firstItem="uXI-Yv-4vE" firstAttribute="leading" secondItem="gUD-V1-QLP" secondAttribute="leading" id="Fiu-nu-PF3"/>
-                            <constraint firstItem="uXI-Yv-4vE" firstAttribute="top" secondItem="UN4-aP-Evj" secondAttribute="bottom" constant="5" id="IhF-g8-roq"/>
+                            <constraint firstItem="UN4-aP-Evj" firstAttribute="leading" secondItem="gUD-V1-QLP" secondAttribute="leading" id="A93-EA-eXq"/>
                             <constraint firstItem="0PB-un-Vl6" firstAttribute="top" secondItem="gUD-V1-QLP" secondAttribute="top" id="Ius-FP-29p"/>
-                            <constraint firstAttribute="trailing" secondItem="uXI-Yv-4vE" secondAttribute="trailing" id="KRk-3y-Pje"/>
-                            <constraint firstItem="UN4-aP-Evj" firstAttribute="centerX" secondItem="gUD-V1-QLP" secondAttribute="centerX" id="Vl4-A6-mi6"/>
-                            <constraint firstItem="UN4-aP-Evj" firstAttribute="top" secondItem="0PB-un-Vl6" secondAttribute="bottom" constant="30" id="cia-ur-7E4"/>
+                            <constraint firstItem="UN4-aP-Evj" firstAttribute="height" secondItem="gUD-V1-QLP" secondAttribute="height" multiplier="0.4" id="RAD-pV-uPm"/>
+                            <constraint firstAttribute="trailing" secondItem="UN4-aP-Evj" secondAttribute="trailing" id="XP6-Gs-EHh"/>
                             <constraint firstAttribute="trailing" secondItem="0PB-un-Vl6" secondAttribute="trailing" id="iXO-7p-HGJ"/>
                             <constraint firstItem="0PB-un-Vl6" firstAttribute="leading" secondItem="gUD-V1-QLP" secondAttribute="leading" id="kYz-Oc-Q7V"/>
+                            <constraint firstItem="UN4-aP-Evj" firstAttribute="top" secondItem="0PB-un-Vl6" secondAttribute="bottom" id="lu1-G2-QwV"/>
                         </constraints>
                     </view>
                     <connections>
@@ -583,7 +562,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                                 <subviews>
                                     <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" insetsLayoutMarginsFromSafeArea="NO" image="logoEdp" translatesAutoresizingMaskIntoConstraints="NO" id="pLd-WA-2wO">
-                                        <rect key="frame" x="80" y="25" width="160" height="170"/>
+                                        <rect key="frame" x="80.5" y="25" width="160" height="170"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="170" id="2ZF-5Q-5rO">
                                                 <variation key="heightClass=regular-widthClass=regular" constant="300"/>
