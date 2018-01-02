@@ -8,7 +8,8 @@
 
 import UIKit
 
-class TreeDetailsControllerView : UIViewController {
+class TreeDetailsControllerView : UIViewController, UITableViewDelegate,
+                                  UITableViewDataSource {
     
     @IBOutlet weak var titleForTree:UILabel?
     @IBOutlet weak var imageForTree:WebImageView?
@@ -30,5 +31,31 @@ class TreeDetailsControllerView : UIViewController {
         
         title.text = i.treeTitle?.text
         image.image = i.treeImage?.image
+    }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cellForInformation = tableView.dequeueReusableCell(withIdentifier: "information") as? TreeDetailViewCell,
+              let info = self.information else {
+            return UITableViewCell()
+        }
+        
+        cellForInformation.dateForTree?.text   = "\(Date())"
+        cellForInformation.titleForTree?.text  = info.treeTitle?.text
+        cellForInformation.pointsForTree?.text = info.treePoints?.text
+        cellForInformation.situation?.text = "Em analíse"
+        
+        return cellForInformation
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 180
     }
 }

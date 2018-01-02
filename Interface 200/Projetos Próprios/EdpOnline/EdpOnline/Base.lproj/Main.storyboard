@@ -329,7 +329,7 @@
                                 <rect key="frame" x="0.0" y="281" width="320" height="199"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="tree" id="wTd-1I-gq8" customClass="TreeTableViewCell" customModule="EdpOnline" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="tree" id="wTd-1I-gq8" customClass="TreeTableViewCell" customModule="EdpOnline" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="320" height="80"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="wTd-1I-gq8" id="e4i-f4-zM2">
@@ -525,13 +525,79 @@
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="NO"/>
                                 </userDefinedRuntimeAttributes>
                             </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="150" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="hx7-QM-qLv">
+                                <rect key="frame" x="0.0" y="265" width="320" height="215"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="information" id="WD5-d3-1LS" customClass="TreeDetailViewCell" customModule="EdpOnline" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="320" height="150"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="WD5-d3-1LS" id="69B-jh-yBE">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="149.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="biF-8y-UDH">
+                                                    <rect key="frame" x="80" y="0.0" width="160" height="150"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Título" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9mA-Be-PFd">
+                                                            <rect key="frame" x="53.5" y="0.0" width="53" height="37.5"/>
+                                                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="21"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Data " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HMd-km-Aoe">
+                                                            <rect key="frame" x="63.5" y="37.5" width="33.5" height="37.5"/>
+                                                            <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="14"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Situação" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uO9-Q9-xGm">
+                                                            <rect key="frame" x="52.5" y="75" width="55.5" height="37.5"/>
+                                                            <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="14"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pontos" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zr6-hx-9uL">
+                                                            <rect key="frame" x="57" y="112.5" width="46" height="37.5"/>
+                                                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="biF-8y-UDH" firstAttribute="leading" secondItem="69B-jh-yBE" secondAttribute="leading" constant="80" id="ARj-Je-f3W"/>
+                                                <constraint firstItem="biF-8y-UDH" firstAttribute="centerX" secondItem="69B-jh-yBE" secondAttribute="centerX" id="DpO-lo-E0X"/>
+                                                <constraint firstAttribute="bottom" secondItem="biF-8y-UDH" secondAttribute="bottom" id="W0U-4n-8BA"/>
+                                                <constraint firstItem="biF-8y-UDH" firstAttribute="top" secondItem="69B-jh-yBE" secondAttribute="top" id="ey1-hE-ddt"/>
+                                                <constraint firstAttribute="trailing" secondItem="biF-8y-UDH" secondAttribute="trailing" constant="80" id="pBk-Ii-xIl"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="dateForTree" destination="HMd-km-Aoe" id="1sf-iP-DTM"/>
+                                            <outlet property="pointsForTree" destination="zr6-hx-9uL" id="vSl-bm-jub"/>
+                                            <outlet property="situation" destination="uO9-Q9-xGm" id="BfV-Ks-q3a"/>
+                                            <outlet property="titleForTree" destination="9mA-Be-PFd" id="tAp-6R-EUr"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="rGu-DP-Dll" id="FyW-vn-wzb"/>
+                                    <outlet property="delegate" destination="rGu-DP-Dll" id="fhs-Oy-Qde"/>
+                                </connections>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="hx7-QM-qLv" firstAttribute="leading" secondItem="gUD-V1-QLP" secondAttribute="leading" id="7PQ-Xu-hSr"/>
                             <constraint firstItem="UN4-aP-Evj" firstAttribute="leading" secondItem="gUD-V1-QLP" secondAttribute="leading" id="A93-EA-eXq"/>
                             <constraint firstItem="0PB-un-Vl6" firstAttribute="top" secondItem="gUD-V1-QLP" secondAttribute="top" id="Ius-FP-29p"/>
+                            <constraint firstAttribute="trailing" secondItem="hx7-QM-qLv" secondAttribute="trailing" id="JMM-G0-5xL"/>
                             <constraint firstItem="UN4-aP-Evj" firstAttribute="height" secondItem="gUD-V1-QLP" secondAttribute="height" multiplier="0.4" id="RAD-pV-uPm"/>
                             <constraint firstAttribute="trailing" secondItem="UN4-aP-Evj" secondAttribute="trailing" id="XP6-Gs-EHh"/>
+                            <constraint firstItem="kdJ-lP-e1K" firstAttribute="top" secondItem="hx7-QM-qLv" secondAttribute="bottom" id="blo-eM-jHe"/>
+                            <constraint firstItem="hx7-QM-qLv" firstAttribute="top" secondItem="UN4-aP-Evj" secondAttribute="bottom" constant="4" id="dZp-0d-PEk"/>
                             <constraint firstAttribute="trailing" secondItem="0PB-un-Vl6" secondAttribute="trailing" id="iXO-7p-HGJ"/>
                             <constraint firstItem="0PB-un-Vl6" firstAttribute="leading" secondItem="gUD-V1-QLP" secondAttribute="leading" id="kYz-Oc-Q7V"/>
                             <constraint firstItem="UN4-aP-Evj" firstAttribute="top" secondItem="0PB-un-Vl6" secondAttribute="bottom" id="lu1-G2-QwV"/>

@@ -21,6 +21,7 @@
 		D0B187531F79D5D700DC1D5B /* SettingsControllerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0B187521F79D5D700DC1D5B /* SettingsControllerView.xib */; };
 		D0B73B271FB542AF007ACC40 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0B73B261FB542AF007ACC40 /* MapKit.framework */; };
 		D0B73B2B1FB67203007ACC40 /* LoginControllerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B73B2A1FB67203007ACC40 /* LoginControllerView.swift */; };
+		D0BEAD4D1FF735B6001419B4 /* TreeDetailViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0BEAD4C1FF735B6001419B4 /* TreeDetailViewCell.swift */; };
 		D0BFBF061F756A92009B1F11 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0BFBF051F756A92009B1F11 /* AppDelegate.swift */; };
 		D0BFBF081F756A92009B1F11 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0BFBF071F756A92009B1F11 /* ViewController.swift */; };
 		D0BFBF0B1F756A92009B1F11 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0BFBF091F756A92009B1F11 /* Main.storyboard */; };
@@ -50,6 +51,7 @@
 		D0B187521F79D5D700DC1D5B /* SettingsControllerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingsControllerView.xib; sourceTree = "<group>"; };
 		D0B73B261FB542AF007ACC40 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		D0B73B2A1FB67203007ACC40 /* LoginControllerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginControllerView.swift; sourceTree = "<group>"; };
+		D0BEAD4C1FF735B6001419B4 /* TreeDetailViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreeDetailViewCell.swift; sourceTree = "<group>"; };
 		D0BFBF021F756A92009B1F11 /* EdpOnline.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EdpOnline.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0BFBF051F756A92009B1F11 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D0BFBF071F756A92009B1F11 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -164,6 +166,7 @@
 				D02A8B981FC35B8F00B4DE9F /* WebImageView.swift */,
 				D0F049B21FDF820700CA6B2A /* Scratch.swift */,
 				D01F91141F8BA4F1006EAC9B /* AppSingleton.swift */,
+				D0BEAD4C1FF735B6001419B4 /* TreeDetailViewCell.swift */,
 			);
 			name = Suporte;
 			sourceTree = "<group>";
@@ -367,6 +370,7 @@
 				D00EC05D1F7BCF9000198884 /* ControllerSideMenu.swift in Sources */,
 				D0EFFB9C1FBD40D4001CEE2F /* MapPlaceTreeAnnotation.swift in Sources */,
 				D00983CA1F7B21E2002EF018 /* SettingsControllerView.swift in Sources */,
+				D0BEAD4D1FF735B6001419B4 /* TreeDetailViewCell.swift in Sources */,
 				D02A8B991FC35B8F00B4DE9F /* WebImageView.swift in Sources */,
 				D0BFBF081F756A92009B1F11 /* ViewController.swift in Sources */,
 				D01F91151F8BA4F1006EAC9B /* AppSingleton.swift in Sources */,
