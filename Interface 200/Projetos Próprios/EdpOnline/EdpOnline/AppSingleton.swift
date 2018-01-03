@@ -24,10 +24,11 @@ class App {
     private init() {}
 
     var currentLocation:CLLocationCoordinate2D? = nil
+    var photoLocation:CLPlacemark?              = nil
     private var ud  = UserDefaults.standard
     
     var amountOfTrees = 0
-    var userCpf = "45124712864"
+    var userCpf       = "45124712864"
   
     var trees_numbers:[Int]? = nil {
         didSet {

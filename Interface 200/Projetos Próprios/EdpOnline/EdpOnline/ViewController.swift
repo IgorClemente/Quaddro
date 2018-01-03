@@ -97,17 +97,17 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate,
     func saveUserInfo() -> Void {
         App.shared.saveUser { (save) in
            if save {
-              App.shared.getUserLogged({ (user) in
-                guard let u = user else {
-                    return
-                }
-                self.loadInformation(forUser: u)
-              })
+            App.shared.getUserLogged({ (user) in
+               guard let u = user else {
+                   return
+               }
+               self.loadInformation(forUser: u)
+            })
             
-              self.searchLocation()
-              DispatchQueue.main.async {
-                 self.tableSubMenuArvores?.reloadData()
-              }
+            self.searchLocation()
+            DispatchQueue.main.async {
+                self.tableSubMenuArvores?.reloadData()
+            }
            }else{
               let alertError = UIAlertController(title: "Error ao salvar", message: "Ocorreu um erro ao salvar as informações do usuário", preferredStyle: .alert)
               let alertErrorAction = UIAlertAction(title: "OK", style: .default, handler: nil)
@@ -191,7 +191,9 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate,
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        
         picker.dismiss(animated: true, completion: nil)
+        
         DispatchQueue.global().async {
             guard let imagePicked = info[UIImagePickerControllerOriginalImage]
                 as? UIImage else {
@@ -242,6 +244,7 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate,
         }
         
         let currentLocation = App.shared.currentLocation
+        let photoLocation   = App.shared.photoLocation
         
         guard let longitude = currentLocation?.longitude.description,
               let latitude  = currentLocation?.latitude.description,
@@ -260,7 +263,7 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate,
         },
         to: remote)
         { (result) in
-            switch result {
+           switch result {
             case .success(let upload, _, _):
               progressBar.isHidden = false
               upload.uploadProgress(closure: { (progress) in
@@ -356,6 +359,7 @@ extension ViewController : CLLocationManagerDelegate {
             if let locationFirst = locations?.first,
                let location = locationFirst.location {
                App.shared.currentLocation = location.coordinate
+               App.shared.photoLocation   = locationFirst
                self.updateMap(infoPlaceMark: locationFirst)
             }
         }
@@ -375,7 +379,8 @@ extension ViewController : MKMapViewDelegate {
     
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
         if let location = annotation as? TreeAnnotation {
-           return self.uiMapRegionMain?.dequeueReusableAnnotationView(withIdentifier: location.identifier) ?? location.viewTreeAnnotation()
+           return self.uiMapRegionMain?.dequeueReusableAnnotationView(
+           withIdentifier: location.identifier) ?? location.viewTreeAnnotation()
         }else{
            return nil
         }
@@ -390,7 +395,9 @@ extension ViewController : UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView,
         cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
         let treesIdentifiers = App.shared.trees_numbers
+        
         guard let cellTree = tableView.dequeueReusableCell(withIdentifier: "tree")  as? TreeTableViewCell,
               let identifiers = treesIdentifiers else {
               return UITableViewCell()
@@ -427,7 +434,6 @@ extension ViewController : UITableViewDelegate, UITableViewDataSource {
             else {
             return
         }
-        
         controller.information = sender
     }
     

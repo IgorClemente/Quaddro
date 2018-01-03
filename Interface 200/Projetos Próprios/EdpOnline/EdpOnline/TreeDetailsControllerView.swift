@@ -47,7 +47,11 @@ class TreeDetailsControllerView : UIViewController, UITableViewDelegate,
             return UITableViewCell()
         }
         
-        cellForInformation.dateForTree?.text   = "\(Date())"
+        let formater = DateFormatter()
+        formater.dateFormat = "yyyy:MM:dd'T'HH:mm:ss'Z'"
+        formater.dateStyle  = .full
+        
+        cellForInformation.dateForTree?.text   = formater.string(from: Date())
         cellForInformation.titleForTree?.text  = info.treeTitle?.text
         cellForInformation.pointsForTree?.text = info.treePoints?.text
         cellForInformation.situation?.text = "Em analíse"
