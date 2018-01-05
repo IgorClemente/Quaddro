@@ -244,13 +244,14 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate,
         }
         
         let currentLocation = App.shared.currentLocation
-        let photoLocation   = App.shared.photoLocation
+        let photoLocation   = App.shared.photoLocation?.addressDictionary
         
         guard let longitude = currentLocation?.longitude.description,
               let latitude  = currentLocation?.latitude.description,
               let longitudeData = longitude.data(using: String.Encoding.utf8),
               let latitudeData  = latitude.data(using: String.Encoding.utf8),
-              let titleData = title.data(using: String.Encoding.utf8)
+              let titleData = title.data(using: String.Encoding.utf8),
+              let photoLocationData = try? JSONSerialization.data(withJSONObject: photoLocation ?? [:], options: .prettyPrinted)
               else {
               return
         }
@@ -260,6 +261,7 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate,
             multipartFormData.append(longitudeData, withName: "longitude")
             multipartFormData.append(latitudeData, withName: "latitude")
             multipartFormData.append(titleData, withName: "title")
+            multipartFormData.append(photoLocationData, withName: "locationPhoto")
         },
         to: remote)
         { (result) in
