@@ -228,18 +228,12 @@ class App {
            let session = URLSession(configuration: config)
            let semaphore = DispatchSemaphore(value: 0)
             
-           session.dataTask(with: request, completionHandler: { (data , _, error) in
-             if let e = error {
-                completation(false)
-                print("ERROR",e.localizedDescription)
-             }
-            
-             guard let d = data,
-                   let result = String(data: d,encoding: .utf8) else {
-                   completation(false)
+           session.dataTask(with: request, completionHandler: { (_, _, error) in
+             guard error != nil else {
+                 completation(false)
                  return
              }
-        
+            
              completation(true)
              semaphore.signal()
            }).resume()

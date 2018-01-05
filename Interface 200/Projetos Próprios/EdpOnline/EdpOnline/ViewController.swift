@@ -43,7 +43,6 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate,
         progress.setProgress(0.0, animated: true)
         progress.isHidden = true
         
-        //MARK : Stars Bottom Bar
         if let stars = self.uiStarsBarBottom {
            for s in 0..<stars.count {
                let star = stars[s]
