@@ -476,7 +476,7 @@
                     </connections>
                 </customObject>
             </objects>
-            <point key="canvasLocation" x="272" y="150"/>
+            <point key="canvasLocation" x="501" y="150"/>
         </scene>
         <!--Tree Details Controller View-->
         <scene sceneID="gES-Eq-GXg">
@@ -668,7 +668,7 @@
                 <customObject id="kxW-Fx-LvR" customClass="RoundViewCustom" customModule="EdpOnline" customModuleProvider="target"/>
                 <exit id="65g-7c-ne6" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1131" y="150"/>
+            <point key="canvasLocation" x="1436" y="150"/>
         </scene>
         <!--Login Controller View-->
         <scene sceneID="9V0-qf-PIm">
@@ -775,7 +775,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iAH-tP-Eth" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-591" y="150"/>
+            <point key="canvasLocation" x="-414" y="150"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="TYZ-MI-vNW">
@@ -797,7 +797,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9U0-sJ-dX4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1109" y="150"/>
+            <point key="canvasLocation" x="-1326" y="150"/>
         </scene>
     </scenes>
     <resources>

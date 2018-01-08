@@ -244,7 +244,11 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate,
             return
         }
         
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy:MM:dd'T'HH:mm:ss'Z'"
+        
         let currentLocation = App.shared.currentLocation
+        let datePicturePhoto = formatter.string(from: Date ())
         
         guard let longitude = currentLocation?.longitude.description,
               let latitude  = currentLocation?.latitude.description,
@@ -255,7 +259,8 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate,
               let locationStreetData = location.street.data(using: String.Encoding.utf8),
               let locationStateData  = location.state.data(using: String.Encoding.utf8),
               let locationCityData   = location.city.data(using: String.Encoding.utf8),
-              let locationSubLocData = location.subLocality.data(using: String.Encoding.utf8)
+              let locationSubLocData = location.subLocality.data(using: String.Encoding.utf8),
+              let datePicturePhotoData = datePicturePhoto.data(using: String.Encoding.utf8)
             else {
             return
         }
@@ -269,6 +274,7 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate,
             multipartFormData.append(locationStateData, withName: "state")
             multipartFormData.append(locationCityData, withName: "city")
             multipartFormData.append(locationSubLocData, withName: "sublocality")
+            multipartFormData.append(datePicturePhotoData, withName: "datePhoto")
         },
         to: remote)
         { (result) in

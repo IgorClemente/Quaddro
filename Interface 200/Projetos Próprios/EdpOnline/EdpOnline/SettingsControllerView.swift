@@ -50,8 +50,8 @@ class SettingsControllerView : UIViewController, UITextFieldDelegate {
             }
             
             self.uiFieldName?.text = "\(u.first_name) \(u.last_name)"
-            self.uiFieldEmailAccount?.text   = "\(u.email_account)"
-            self.uiFieldPassword?.text   = "12345678"
+            self.uiFieldEmailAccount?.text = "\(u.email_account)"
+            self.uiFieldPassword?.text    = "12345678"
             self.uiFieldPhoneNumber?.text = "\(u.number_phone)"
         }
     }
@@ -113,7 +113,11 @@ class SettingsControllerView : UIViewController, UITextFieldDelegate {
             
             App.shared.setUserLogged(information: user, { (save) in
                if save {
-                  print("USUARIO ATUALIZADO COM SUCESSO")
+                  let sucessAlert = UIAlertController(title: "Atualizar informações", message: "Usuário atualizado", preferredStyle: .alert)
+                  let sucessAlertAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+                
+                  sucessAlert.addAction(sucessAlertAction)
+                  self.present(sucessAlert, animated: true, completion: nil)
                }
             })
         }

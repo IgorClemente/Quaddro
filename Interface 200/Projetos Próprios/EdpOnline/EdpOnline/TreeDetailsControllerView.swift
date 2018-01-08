@@ -42,6 +42,11 @@ class TreeDetailsControllerView : UIViewController, UITableViewDelegate,
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy:MM:dd'T'HH:mm:ss'Z'"
+        formatter.dateStyle  = .full
+        
         guard let cellForInformation = tableView.dequeueReusableCell(
             withIdentifier: "information") as? TreeDetailViewCell,
               let info  = self.information,
@@ -51,15 +56,14 @@ class TreeDetailsControllerView : UIViewController, UITableViewDelegate,
               let locality = i["country"] as? String,
               let city   = i["city"] as? String,
               let state  = i["state"] as? String,
-              let street = i["street"] else {
+              let street = i["street"] as? String,
+              let datePicked = i["photo_date"] as? String else {
             return UITableViewCell()
         }
         
-        let formater = DateFormatter()
-        formater.dateFormat = "yyyy:MM:dd'T'HH:mm:ss'Z'"
-        formater.dateStyle  = .full
+        let date = formatter.date(from: datePicked) ?? Date()
         
-        cellForInformation.dateForTree?.text   = formater.string(from: Date())
+        cellForInformation.dateForTree?.text   = formatter.string(from: date)
         cellForInformation.titleForTree?.text  = title
         cellForInformation.pointsForTree?.text = "\(points) Pontos"
         cellForInformation.addressForTree?.text = "\(street)\n\(locality), \(city)-\(state)  "

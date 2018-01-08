@@ -104,8 +104,9 @@ class App {
             ud.set(salved, forKey: "logged_information")
             ud.synchronize()
             
-            self.upload(with: "/upload/user?_method=PUT", body: newValue) { (_) in
-                return
+            self.upload(with: "/upload/user?_method=PUT", body: newValue) {
+                _ in
+                print("DEBUG - user update sucess")
             }
         }
     }
@@ -208,14 +209,14 @@ class App {
         self.everybodyTrees = treesForSalved
     }
     
-    func upload(with endPoint:String, body:[String:Any]? = nil, completation:@escaping (Bool?)->()) {
+    func upload(with endPoint:String, body:[String:Any]? = nil, completation: @escaping (Bool)->()) {
         let urlBase = "https://inovatend.mybluemix.net"
         let url     = "\(urlBase)\(endPoint)"
         
         guard let remoteURL = URL(string: url),
               let bodyHttp  = body else {
               completation(false)
-            return
+              return
         }
         
         do {
