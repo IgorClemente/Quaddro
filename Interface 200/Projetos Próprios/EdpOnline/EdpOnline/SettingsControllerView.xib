@@ -37,7 +37,7 @@
             </connections>
         </customObject>
         <view contentMode="scaleToFill" id="Q1j-1K-qjm">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="751"/>
+            <rect key="frame" x="0.0" y="0.0" width="320" height="651"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OKo-QD-Ku2">
@@ -71,6 +71,9 @@
                                 <constraint firstAttribute="width" constant="50" id="iII-14-HB9"/>
                             </constraints>
                             <state key="normal" image="check"/>
+                            <connections>
+                                <action selector="tapSaveInformationUser:" destination="-1" eventType="touchUpInside" id="jbT-d0-y4H"/>
+                            </connections>
                         </button>
                     </subviews>
                     <color key="backgroundColor" red="0.84267109630000003" green="0.2451241612" blue="0.16414961219999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -99,10 +102,10 @@
                     </connections>
                 </button>
                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" keyboardDismissMode="onDrag" translatesAutoresizingMaskIntoConstraints="NO" id="4kL-XS-idy">
-                    <rect key="frame" x="0.0" y="274" width="320" height="652"/>
+                    <rect key="frame" x="0.0" y="274" width="320" height="552"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="98d-XF-wXJ">
-                            <rect key="frame" x="0.0" y="0.0" width="320" height="650"/>
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="600"/>
                             <subviews>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="CEa-zZ-AHy">
                                     <rect key="frame" x="2" y="0.0" width="316" height="255"/>
@@ -216,34 +219,17 @@
                                         <constraint firstItem="JYG-fd-0Lz" firstAttribute="leading" secondItem="ggv-A3-IYI" secondAttribute="leading" constant="79" id="zUM-E3-1WJ"/>
                                     </constraints>
                                 </view>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cDs-bH-hH6">
-                                    <rect key="frame" x="0.0" y="395" width="320" height="80"/>
-                                    <color key="backgroundColor" red="0.46255108673718193" green="0.82738934018567645" blue="0.30849324592325045" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    <constraints>
-                                        <constraint firstAttribute="height" constant="80" id="A0m-8y-2gp"/>
-                                    </constraints>
-                                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
-                                    <state key="normal" title="Salvar Informações">
-                                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                    </state>
-                                    <connections>
-                                        <action selector="tapSaveInformationUser:" destination="-1" eventType="touchUpInside" id="xKC-0R-a8J"/>
-                                    </connections>
-                                </button>
                             </subviews>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="650" id="2Dx-oh-prH"/>
+                                <constraint firstAttribute="height" constant="600" id="2Dx-oh-prH"/>
                                 <constraint firstItem="CEa-zZ-AHy" firstAttribute="leading" secondItem="98d-XF-wXJ" secondAttribute="leading" constant="2" id="7pm-p9-i1F"/>
                                 <constraint firstItem="ggv-A3-IYI" firstAttribute="top" secondItem="CEa-zZ-AHy" secondAttribute="bottom" constant="30" id="IM8-Xw-ET4"/>
                                 <constraint firstAttribute="trailing" secondItem="ggv-A3-IYI" secondAttribute="trailing" id="NMj-4p-uy9"/>
                                 <constraint firstItem="CEa-zZ-AHy" firstAttribute="centerX" secondItem="98d-XF-wXJ" secondAttribute="centerX" id="SYO-OV-63O"/>
                                 <constraint firstItem="CEa-zZ-AHy" firstAttribute="top" secondItem="98d-XF-wXJ" secondAttribute="top" id="Wqt-VV-59f"/>
                                 <constraint firstAttribute="trailing" secondItem="CEa-zZ-AHy" secondAttribute="trailing" constant="2" id="gYg-fJ-t70"/>
-                                <constraint firstAttribute="trailing" secondItem="cDs-bH-hH6" secondAttribute="trailing" id="lyC-LV-vuz"/>
                                 <constraint firstItem="ggv-A3-IYI" firstAttribute="leading" secondItem="98d-XF-wXJ" secondAttribute="leading" id="onc-2Q-cSU"/>
-                                <constraint firstItem="cDs-bH-hH6" firstAttribute="leading" secondItem="98d-XF-wXJ" secondAttribute="leading" id="pi1-nR-cvi"/>
-                                <constraint firstItem="cDs-bH-hH6" firstAttribute="top" secondItem="ggv-A3-IYI" secondAttribute="bottom" constant="30" id="sMv-RE-9dZ"/>
                             </constraints>
                         </view>
                     </subviews>
@@ -272,7 +258,7 @@
                 <constraint firstAttribute="trailing" secondItem="4kL-XS-idy" secondAttribute="trailing" id="wZg-WG-gtL"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="-29" y="778.5"/>
+            <point key="canvasLocation" x="-29" y="728.5"/>
         </view>
         <customObject id="AIZ-aZ-5Mp" customClass="Scratch" customModule="EdpOnline" customModuleProvider="target">
             <userDefinedRuntimeAttributes>

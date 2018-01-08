@@ -42,8 +42,16 @@ class TreeDetailsControllerView : UIViewController, UITableViewDelegate,
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cellForInformation = tableView.dequeueReusableCell(withIdentifier: "information") as? TreeDetailViewCell,
-              let info = self.information else {
+        guard let cellForInformation = tableView.dequeueReusableCell(
+            withIdentifier: "information") as? TreeDetailViewCell,
+              let info  = self.information,
+              let i = info.treeCellCache(),
+              let title  = i["titulo"] as? String,
+              let points = i["pontos"] as? Int,
+              let locality = i["country"] as? String,
+              let city   = i["city"] as? String,
+              let state  = i["state"] as? String,
+              let street = i["street"] else {
             return UITableViewCell()
         }
         
@@ -52,8 +60,9 @@ class TreeDetailsControllerView : UIViewController, UITableViewDelegate,
         formater.dateStyle  = .full
         
         cellForInformation.dateForTree?.text   = formater.string(from: Date())
-        cellForInformation.titleForTree?.text  = info.treeTitle?.text
-        cellForInformation.pointsForTree?.text = info.treePoints?.text
+        cellForInformation.titleForTree?.text  = title
+        cellForInformation.pointsForTree?.text = "\(points) Pontos"
+        cellForInformation.addressForTree?.text = "\(street)\n\(locality), \(city)-\(state)  "
         cellForInformation.situation?.text = "Em analíse"
         
         return cellForInformation

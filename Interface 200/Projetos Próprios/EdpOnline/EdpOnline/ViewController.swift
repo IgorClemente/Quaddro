@@ -198,8 +198,8 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate,
                 as? UIImage else {
                 return
             }
-            
             UIImageWriteToSavedPhotosAlbum(imagePicked, nil, nil, nil)
+            
             let sucessAlert = UIAlertController(
                 title:"Enviar imagem", message:"Digite um título para essa imagem", preferredStyle: .alert)
 
@@ -237,22 +237,26 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate,
     func uploadImage(_ image:UIImage, and title:String) {
         guard let remote = URL(string:"https://inovatend.mybluemix.net/upload"),
               let imageData   = UIImagePNGRepresentation(image),
-              let progressBar = self.uiProgressBarUpload
-              else {
-              return
+              let progressBar = self.uiProgressBarUpload,
+              let photoLocation = App.shared.photoLocation?.addressDictionary
+            else {
+            return
         }
         
         let currentLocation = App.shared.currentLocation
-        let photoLocation   = App.shared.photoLocation?.addressDictionary
         
         guard let longitude = currentLocation?.longitude.description,
               let latitude  = currentLocation?.latitude.description,
               let longitudeData = longitude.data(using: String.Encoding.utf8),
               let latitudeData  = latitude.data(using: String.Encoding.utf8),
+              let location  = PhotoLocation(forInformation: photoLocation),
               let titleData = title.data(using: String.Encoding.utf8),
-              let photoLocationData = try? JSONSerialization.data(withJSONObject: photoLocation ?? [:], options: .prettyPrinted)
-              else {
-              return
+              let locationStreetData = location.street.data(using: String.Encoding.utf8),
+              let locationStateData  = location.state.data(using: String.Encoding.utf8),
+              let locationCityData   = location.city.data(using: String.Encoding.utf8),
+              let locationSubLocData = location.subLocality.data(using: String.Encoding.utf8)
+            else {
+            return
         }
         
         Alamofire.upload(multipartFormData: { multipartFormData in
@@ -260,7 +264,10 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate,
             multipartFormData.append(longitudeData, withName: "longitude")
             multipartFormData.append(latitudeData, withName: "latitude")
             multipartFormData.append(titleData, withName: "title")
-            multipartFormData.append(photoLocationData, withName: "locationPhoto")
+            multipartFormData.append(locationStreetData, withName: "street")
+            multipartFormData.append(locationStateData, withName: "state")
+            multipartFormData.append(locationCityData, withName: "city")
+            multipartFormData.append(locationSubLocData, withName: "sublocality")
         },
         to: remote)
         { (result) in

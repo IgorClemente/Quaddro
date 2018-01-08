@@ -229,7 +229,7 @@ class App {
            let semaphore = DispatchSemaphore(value: 0)
             
            session.dataTask(with: request, completionHandler: { (_, _, error) in
-             guard error != nil else {
+             guard error == nil else {
                  completation(false)
                  return
              }

@@ -19,6 +19,14 @@ class TreeTableViewCell : UITableViewCell {
     
     static private var cacheRam:[URL:[String:Any]] = [:]
     
+    func treeCellCache() -> [String:Any]? {
+        guard let url = self.url,
+              let cached = TreeTableViewCell.cacheRam[url] else {
+            return nil
+        }
+        return cached
+    }
+    
     var useCell:Bool = false {
         didSet{
             self.treeTitle?.text = ""
@@ -36,7 +44,7 @@ class TreeTableViewCell : UITableViewCell {
           }
           
           if let treeInfoCached = TreeTableViewCell.cacheRam[remoteURL] {
-             guard let title = treeInfoCached["titulo"] as? String,
+             guard let title  = treeInfoCached["titulo"] as? String,
                    let points = treeInfoCached["pontos"] as? Int,
                    let locality = treeInfoCached["localidade"] as? String
                  else {

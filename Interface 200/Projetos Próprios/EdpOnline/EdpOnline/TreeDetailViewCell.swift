@@ -14,4 +14,5 @@ class TreeDetailViewCell : UITableViewCell {
     @IBOutlet var dateForTree:UILabel?
     @IBOutlet var situation:UILabel?
     @IBOutlet var pointsForTree:UILabel?
+    @IBOutlet var addressForTree:UILabel?
 }

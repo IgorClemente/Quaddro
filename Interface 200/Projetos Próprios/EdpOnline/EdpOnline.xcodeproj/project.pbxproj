@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		7BF36EA486B788E3A2CD4269 /* Pods_EdpOnline.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF0B71E0B51B7B27ECBF4881 /* Pods_EdpOnline.framework */; };
+		D00373082002F06800C0D2A6 /* PhotoLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00373072002F06800C0D2A6 /* PhotoLocation.swift */; };
 		D00983CA1F7B21E2002EF018 /* SettingsControllerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00983C91F7B21E2002EF018 /* SettingsControllerView.swift */; };
 		D00EC05D1F7BCF9000198884 /* ControllerSideMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00EC05C1F7BCF9000198884 /* ControllerSideMenu.swift */; };
 		D01A74F31FD0F78F00BE8711 /* KeyboardContraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01A74F21FD0F78F00BE8711 /* KeyboardContraint.swift */; };
@@ -38,6 +39,7 @@
 
 /* Begin PBXFileReference section */
 		6B3D99D1166E75AAEA618182 /* Pods-EdpOnline.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EdpOnline.release.xcconfig"; path = "Pods/Target Support Files/Pods-EdpOnline/Pods-EdpOnline.release.xcconfig"; sourceTree = "<group>"; };
+		D00373072002F06800C0D2A6 /* PhotoLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoLocation.swift; sourceTree = "<group>"; };
 		D00983C91F7B21E2002EF018 /* SettingsControllerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsControllerView.swift; sourceTree = "<group>"; };
 		D00EC05C1F7BCF9000198884 /* ControllerSideMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControllerSideMenu.swift; sourceTree = "<group>"; };
 		D01A74F21FD0F78F00BE8711 /* KeyboardContraint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardContraint.swift; sourceTree = "<group>"; };
@@ -221,6 +223,7 @@
 			isa = PBXGroup;
 			children = (
 				D0E003051FE827F200B541BA /* User.swift */,
+				D00373072002F06800C0D2A6 /* PhotoLocation.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -367,6 +370,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D0F049B31FDF820700CA6B2A /* Scratch.swift in Sources */,
+				D00373082002F06800C0D2A6 /* PhotoLocation.swift in Sources */,
 				D00EC05D1F7BCF9000198884 /* ControllerSideMenu.swift in Sources */,
 				D0EFFB9C1FBD40D4001CEE2F /* MapPlaceTreeAnnotation.swift in Sources */,
 				D00983CA1F7B21E2002EF018 /* SettingsControllerView.swift in Sources */,
