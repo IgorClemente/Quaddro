@@ -665,6 +665,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eyq-OT-KZ7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="kxW-Fx-LvR" customClass="RoundViewCustom" customModule="EdpOnline" customModuleProvider="target"/>
                 <exit id="65g-7c-ne6" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1131" y="150"/>

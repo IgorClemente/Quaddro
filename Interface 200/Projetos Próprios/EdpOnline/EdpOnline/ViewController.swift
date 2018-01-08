@@ -119,8 +119,8 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate,
     func loadInformation(forUser u:User) -> Void {
         DispatchQueue.main.async {
            self.uiFullName?.text = "\(u.first_name) \(u.last_name)"
-           self.uiLocality?.text   = "\(u.locality),\(u.uf)"
-           self.uiPoints?.text    = "\(u.points)"
+           self.uiLocality?.text = "\(u.locality),\(u.uf)"
+           self.uiPoints?.text   = "\(u.points)"
         }
     }
     
@@ -130,9 +130,10 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate,
     
     @IBAction func tapSubMenu(_ sender: UIBarButtonItem) {
         guard let botoes  = uiButtonsSubMenu,
-              let viewSubMapa = uiSubMenuMap,
-              let viewSubArvore = tableSubMenuArvores else {
-              return
+              let viewSubMapa   = uiSubMenuMap,
+              let viewSubArvore = tableSubMenuArvores
+            else {
+            return
         }
         
         if let titulo = sender.title {
@@ -291,11 +292,11 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate,
                       contentNotification.title = "Envio de Imagem"
                             
                       let notificationProgress = UNNotificationRequest(identifier: "upload", content: contentNotification, trigger: nil)
-                          UNUserNotificationCenter.current().add(notificationProgress, withCompletionHandler: nil)
-                      }
+                      UNUserNotificationCenter.current().add(notificationProgress, withCompletionHandler: nil)
                    }
-                   NotificationCenter.default.post(name: NSNotification.Name("update-map") , object: nil)
-               }
+                 }
+                 NotificationCenter.default.post(name: NSNotification.Name("update-map") , object: nil)
+              }
             case .failure(let encodingError):
                 print(encodingError)
            }

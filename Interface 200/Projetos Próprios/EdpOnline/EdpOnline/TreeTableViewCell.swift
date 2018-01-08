@@ -46,7 +46,7 @@ class TreeTableViewCell : UITableViewCell {
           if let treeInfoCached = TreeTableViewCell.cacheRam[remoteURL] {
              guard let title  = treeInfoCached["titulo"] as? String,
                    let points = treeInfoCached["pontos"] as? Int,
-                   let locality = treeInfoCached["localidade"] as? String
+                   let locality = treeInfoCached["country"] as? String
                  else {
                  return
              }
@@ -65,10 +65,10 @@ class TreeTableViewCell : UITableViewCell {
                         with: data, options: JSONSerialization.ReadingOptions())
                     
                     guard let info   = json as? [String:Any],
-                        let treeInfo = info["arvore"] as? [String:Any],
-                        let title    = treeInfo["titulo"] as? String,
-                        let points   = treeInfo["pontos"] as? Int,
-                        let locality = treeInfo["localidade"] as? String
+                          let treeInfo = info["arvore"] as? [String:Any],
+                          let title    = treeInfo["titulo"] as? String,
+                          let points   = treeInfo["pontos"] as? Int,
+                          let locality = treeInfo["country"] as? String
                         else {
                         return
                     }
