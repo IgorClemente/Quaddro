@@ -167,8 +167,8 @@
 				D02A8B961FC357C700B4DE9F /* TreeTableViewCell.swift */,
 				D02A8B981FC35B8F00B4DE9F /* WebImageView.swift */,
 				D0F049B21FDF820700CA6B2A /* Scratch.swift */,
-				D01F91141F8BA4F1006EAC9B /* AppSingleton.swift */,
 				D0BEAD4C1FF735B6001419B4 /* TreeDetailViewCell.swift */,
+				D01F91141F8BA4F1006EAC9B /* AppSingleton.swift */,
 			);
 			name = Suporte;
 			sourceTree = "<group>";

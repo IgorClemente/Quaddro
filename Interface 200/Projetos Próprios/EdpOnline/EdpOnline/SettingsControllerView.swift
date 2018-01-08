@@ -98,7 +98,6 @@ class SettingsControllerView : UIViewController, UITextFieldDelegate {
             guard let u = user else {
                 return
             }
-            
             let worlds = fieldName.text?.components(separatedBy: " ")
             
             var user:[String:Any] = [:]
@@ -108,12 +107,13 @@ class SettingsControllerView : UIViewController, UITextFieldDelegate {
             user["localidade"] = u.locality
             user["uf"]      = u.uf
             user["numero_telefone"] = fieldPhoneNumber.text
-            user["email"]   = fieldEmailAccount.text
-            user["pontos"]  = u.points
-            
+            user["email"]    = fieldEmailAccount.text
+            user["pontos"]   = u.points
+            user["keypass"]  = fieldPassword.text
+           
             App.shared.setUserLogged(information: user, { (save) in
                if save {
-                  let sucessAlert = UIAlertController(title: "Atualizar informações", message: "Usuário atualizado", preferredStyle: .alert)
+                  let sucessAlert = UIAlertController(title: "Atualizar informações", message: "Informações atualizadas com Sucesso!", preferredStyle: .alert)
                   let sucessAlertAction = UIAlertAction(title: "OK", style: .default, handler: nil)
                 
                   sucessAlert.addAction(sucessAlertAction)
@@ -134,12 +134,12 @@ extension SettingsControllerView : UIImagePickerControllerDelegate,
     @IBAction func uiChosePhotoUser(_ sender: UIButton) {
         let baseAlert = UIAlertController(title: "Carregar Foto", message: "Escolha uma das opções para carregar\n uma imagem ao perfil", preferredStyle: .actionSheet)
         
-        let actionBaseAlertGalery = UIAlertAction(title: "Galeria", style: .default)
+        let actionBaseAlertGalery = UIAlertAction(title: "Escolher foto", style: .default)
             { (_) in
             self.choseGalery()
         }
         
-        let actionBaseAlertCamera = UIAlertAction(title: "Câmera", style: .default)
+        let actionBaseAlertCamera = UIAlertAction(title: "Tirar foto", style: .default)
             { (_) in
             self.choseCamera()
         }
@@ -160,7 +160,6 @@ extension SettingsControllerView : UIImagePickerControllerDelegate,
             galeryPickerView.sourceType    = .photoLibrary
             galeryPickerView.allowsEditing = true
         }
-        
         galeryPickerView.delegate   = self
         self.present(galeryPickerView, animated: true, completion: nil)
     }
@@ -175,14 +174,13 @@ extension SettingsControllerView : UIImagePickerControllerDelegate,
            cameraPickerView.allowsEditing   = true
            cameraPickerView.cameraFlashMode = .auto
         }
-        
         self.present(cameraPickerView, animated: true, completion: nil)
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info:
          [String : Any]) {
         picker.dismiss(animated: true, completion: nil)
-        guard let originalImage = info[UIImagePickerControllerOriginalImage] as?   UIImage ?? (info[UIImagePickerControllerEditedImage] as? UIImage) else {
+        guard let originalImage = info[UIImagePickerControllerOriginalImage] as? UIImage ?? (info[UIImagePickerControllerEditedImage] as? UIImage) else {
             return
         }
         
