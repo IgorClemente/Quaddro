@@ -332,7 +332,7 @@ extension ViewController : CLLocationManagerDelegate {
     
     func updateMap(infoPlaceMark info:CLPlacemark) -> Void {
         guard let location = info.location else {
-              return
+            return
         }
         
         let regionSize = MKCoordinateSpanMake(0.001,0.001)
