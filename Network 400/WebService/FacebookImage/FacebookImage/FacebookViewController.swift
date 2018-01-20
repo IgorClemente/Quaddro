@@ -66,7 +66,6 @@ class FacebookViewController: UIViewController, UISearchBarDelegate {
             }
             
             if let httpResponse = response as? HTTPURLResponse {
-               print("COD: \(httpResponse.statusCode)")
                if httpResponse.statusCode == 404 {
                   DispatchQueue.main.async {
                     messageLabel.isHidden = false
