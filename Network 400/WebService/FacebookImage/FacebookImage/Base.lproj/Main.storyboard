@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="QuY-3w-apZ">
+    <device id="retina3_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Facebook View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="FacebookViewController" customModule="FacebookImage" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bex-YO-Zkx">
+                                <rect key="frame" x="0.0" y="114" width="320" height="250"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Não foi possível encontrar esse usuário" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KsA-IZ-Z1U">
+                                        <rect key="frame" x="0.0" y="114" width="320" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qxR-NP-Aos">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="250"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="KsA-IZ-Z1U" firstAttribute="centerY" secondItem="Bex-YO-Zkx" secondAttribute="centerY" id="Bng-BI-IaW"/>
+                                    <constraint firstItem="KsA-IZ-Z1U" firstAttribute="leading" secondItem="Bex-YO-Zkx" secondAttribute="leading" id="DcB-j9-XYO"/>
+                                    <constraint firstItem="qxR-NP-Aos" firstAttribute="leading" secondItem="Bex-YO-Zkx" secondAttribute="leading" id="KZV-7H-FVh"/>
+                                    <constraint firstItem="qxR-NP-Aos" firstAttribute="top" secondItem="Bex-YO-Zkx" secondAttribute="top" id="MxG-dV-hLK"/>
+                                    <constraint firstAttribute="bottom" secondItem="qxR-NP-Aos" secondAttribute="bottom" id="aN4-pr-lAp"/>
+                                    <constraint firstAttribute="trailing" secondItem="KsA-IZ-Z1U" secondAttribute="trailing" id="cfd-TK-UUe"/>
+                                    <constraint firstAttribute="height" constant="250" id="qhM-YB-REq"/>
+                                    <constraint firstItem="KsA-IZ-Z1U" firstAttribute="centerX" secondItem="Bex-YO-Zkx" secondAttribute="centerX" id="rHC-dm-sZq"/>
+                                    <constraint firstAttribute="trailing" secondItem="qxR-NP-Aos" secondAttribute="trailing" id="zZf-f1-QaN"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Bex-YO-Zkx" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="AW4-yU-ps3"/>
+                            <constraint firstItem="Bex-YO-Zkx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="DI9-43-OgH"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Bex-YO-Zkx" secondAttribute="trailing" id="T7N-FM-xnW"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="WiW-E9-iYr"/>
+                    <connections>
+                        <outlet property="uiFacebookThumbImage" destination="qxR-NP-Aos" id="7NH-Ba-kR8"/>
+                        <outlet property="uiMessage" destination="KsA-IZ-Z1U" id="ecj-A8-0Ji"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="519.20000000000005" y="133.5832083958021"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Jn6-3C-3Pk">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="QuY-3w-apZ" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="hxj-7I-2LM">
+                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Rla-sE-24k"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WeD-9l-8Fi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-327" y="134"/>
+        </scene>
+    </scenes>
+</document>
