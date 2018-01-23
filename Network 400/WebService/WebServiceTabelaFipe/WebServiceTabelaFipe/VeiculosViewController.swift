@@ -16,54 +16,35 @@ class VeiculosViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        guard let id = self.marca_id else {
+        guard let id = self.marca_id,
+              let tableView = self.uiVeiculosTableView else {
             return
         }
-        self.recovery(veiculosFor: "/api/1/carros/veiculos/\(id).json")
+        
+        AppSingleton.shared.recovery(informationFor:"/api/1/carros/veiculos/\(id).json") { (completed, informations, error) in
+            guard error == nil else {
+                return
+            }
+            
+            if completed {
+               guard let veiculosObject = informations else {
+                   return
+               }
+                
+               veiculosObject.forEach { (object) in
+                  let newVeiculo = VeiculoModel(forJSON: object)
+                  self.veiculos?.append(newVeiculo)
+               }
+                
+               DispatchQueue.main.async {
+                  tableView.reloadData()
+               }
+            }
+        }
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-    }
-    
-    func recovery(veiculosFor endPoint:String) {
-        
-        let uri = "https://fipeapi.appspot.com\(endPoint)"
-        guard let url = URL(string: uri),
-              let tableView = self.uiVeiculosTableView  else {
-            return
-        }
-        
-        let session = URLSession(configuration: .default)
-        let task    = session.dataTask(with: url) { (data, response, error) in
-            if let erro = error {
-               let alertError = UIAlertController(title: "Aconteceu um erro", message: erro.localizedDescription, preferredStyle: .alert)
-               let alertErrorAction = UIAlertAction(title: "Entendi", style: .default, handler: nil)
-               alertError.addAction(alertErrorAction)
-                
-               self.present(alertError, animated: true, completion: nil)
-            }
-            
-            if let dataReceive = data {
-               do {
-                  guard let jsonObject = try JSONSerialization.jsonObject(with: dataReceive, options: JSONSerialization.ReadingOptions()) as? [[String:Any]] else {
-                      return
-                  }
-                
-                  jsonObject.forEach { (veiculo) in
-                      let newVeiculo = VeiculoModel(forJSON: veiculo)
-                      self.veiculos?.append(newVeiculo)
-                  }
-                
-                  DispatchQueue.main.async {
-                      tableView.reloadData()
-                  }
-               } catch let erro {
-                    print("Error parse \(erro.localizedDescription)")
-               }
-            }
-        }
-        task.resume()
     }
 }
 

@@ -18,54 +18,35 @@ class ModelosViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         guard let codigo_marca   = self.codigo_marca,
-              let codigo_veiculo = self.codigo_veiculo else {
+              let codigo_veiculo = self.codigo_veiculo,
+              let tableView      = self.uiModelosTableView else {
             return
         }
-        self.recovery(modelosFor: "/api/1/carros/veiculo/\(codigo_marca)/\(codigo_veiculo).json")
+        
+        AppSingleton.shared.recovery(informationFor: "/api/1/carros/veiculo/\(codigo_marca)/\(codigo_veiculo).json") { (completed, informations, error) in
+            guard error == nil else {
+                return
+            }
+            
+            if completed {
+               guard let modelosObject = informations else {
+                   return
+               }
+               
+               modelosObject.forEach { (object) in
+                   let newModelo = ModeloModel(forJSON: object)
+                   self.modelos?.append(newModelo)
+               }
+                
+               DispatchQueue.main.async {
+                   tableView.reloadData()
+               }
+            }
+        }
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-    }
-    
-    func recovery(modelosFor endPoint:String) {
-        let uri = "https://fipeapi.appspot.com\(endPoint)"
-        
-        guard let url = URL(string: uri),
-              let tableView = self.uiModelosTableView else {
-            return
-        }
-        
-        let session = URLSession(configuration: .default)
-        let task    = session.dataTask(with: url) { (data, response, error) in
-            if let erro = error {
-               let alertError = UIAlertController(title: "Aconteceu um erro", message: erro.localizedDescription, preferredStyle: .alert)
-               let alertErrorAction = UIAlertAction(title: "Entendi", style: .default, handler: nil)
-                
-               alertError.addAction(alertErrorAction)
-               self.present(alertError, animated: true, completion: nil)
-            }
-            
-            if let dataReceive = data {
-               do {
-                  guard let jsonObject = try JSONSerialization.jsonObject(with: dataReceive, options: JSONSerialization.ReadingOptions()) as? [[String:Any]] else {
-                      return
-                  }
-                
-                  jsonObject.forEach { (modelo) in
-                      let newModelo = ModeloModel(forJSON: modelo)
-                      self.modelos?.append(newModelo)
-                  }
-                
-                  DispatchQueue.main.async {
-                      tableView.reloadData()
-                  }
-               } catch let erro {
-                  print("Error parse \(erro.localizedDescription)")
-               }
-            }
-        }
-        task.resume()
     }
 }
 
@@ -93,5 +74,29 @@ extension ModelosViewController: UITableViewDelegate, UITableViewDataSource {
         
         cell.textLabel?.text = modelo.name
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    
+        let index = indexPath.row
+        guard let codigo_marca   = self.codigo_marca,
+              let codigo_veiculo = self.codigo_veiculo,
+              let modelos        = self.modelos else {
+            return
+        }
+        
+        let modelo = modelos[index]
+        let veiculo_informations = ["codigo_marca": codigo_marca,"codigo_veiculo": codigo_veiculo,"codigo_ano": modelo.key] as? [String:Any]
+        performSegue(withIdentifier: "veiculoFipe", sender: veiculo_informations)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let destination = segue.destination as? VeiculoInformationViewController,
+              let information = sender as? [String:Any] else {
+            return
+        }
+        
+        print(information)
+        destination.veiculo_information = information
     }
 }

@@ -20,6 +20,7 @@
 		D0C9C98A20155B6B00AA10E5 /* ModeloModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C9C98920155B6B00AA10E5 /* ModeloModel.swift */; };
 		D0C9C98C201622BA00AA10E5 /* VeiculoInformationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C9C98B201622BA00AA10E5 /* VeiculoInformationModel.swift */; };
 		D0C9C98E2016292000AA10E5 /* AppSingleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C9C98D2016292000AA10E5 /* AppSingleton.swift */; };
+		D0C9C990201683BD00AA10E5 /* VeiculoDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C9C98F201683BD00AA10E5 /* VeiculoDetailTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		D0C9C98920155B6B00AA10E5 /* ModeloModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModeloModel.swift; sourceTree = "<group>"; };
 		D0C9C98B201622BA00AA10E5 /* VeiculoInformationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VeiculoInformationModel.swift; sourceTree = "<group>"; };
 		D0C9C98D2016292000AA10E5 /* AppSingleton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSingleton.swift; sourceTree = "<group>"; };
+		D0C9C98F201683BD00AA10E5 /* VeiculoDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VeiculoDetailTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,22 +72,47 @@
 		43CA6DA42013C1E500EDE613 /* WebServiceTabelaFipe */ = {
 			isa = PBXGroup;
 			children = (
-				43CA6DA92013C1E700EDE613 /* Main.storyboard */,
-				43CA6DAE2013C1E800EDE613 /* LaunchScreen.storyboard */,
+				D0C9C9932016AF4B00AA10E5 /* SupportingFiles */,
+				D0C9C9922016AF4200AA10E5 /* Layout */,
+				D0C9C9912016AF2700AA10E5 /* Model */,
 				43CA6DA52013C1E700EDE613 /* AppDelegate.swift */,
 				43CA6DB72013C39A00EDE613 /* MarcasViewController.swift */,
-				43CA6DB92013C69D00EDE613 /* MarcaModel.swift */,
 				43CA6DBB2013CEBB00EDE613 /* VeiculosViewController.swift */,
-				43CA6DBD2013D31200EDE613 /* VeiculoModel.swift */,
 				D0C9C98520154BC900AA10E5 /* ModelosViewController.swift */,
 				D0C9C98720154BF200AA10E5 /* VeiculoInformationViewController.swift */,
 				43CA6DAC2013C1E700EDE613 /* Assets.xcassets */,
 				43CA6DB12013C1E800EDE613 /* Info.plist */,
-				D0C9C98920155B6B00AA10E5 /* ModeloModel.swift */,
-				D0C9C98B201622BA00AA10E5 /* VeiculoInformationModel.swift */,
-				D0C9C98D2016292000AA10E5 /* AppSingleton.swift */,
 			);
 			path = WebServiceTabelaFipe;
+			sourceTree = "<group>";
+		};
+		D0C9C9912016AF2700AA10E5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				43CA6DBD2013D31200EDE613 /* VeiculoModel.swift */,
+				43CA6DB92013C69D00EDE613 /* MarcaModel.swift */,
+				D0C9C98920155B6B00AA10E5 /* ModeloModel.swift */,
+				D0C9C98B201622BA00AA10E5 /* VeiculoInformationModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D0C9C9922016AF4200AA10E5 /* Layout */ = {
+			isa = PBXGroup;
+			children = (
+				43CA6DAE2013C1E800EDE613 /* LaunchScreen.storyboard */,
+				43CA6DA92013C1E700EDE613 /* Main.storyboard */,
+			);
+			path = Layout;
+			sourceTree = "<group>";
+		};
+		D0C9C9932016AF4B00AA10E5 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				D0C9C98F201683BD00AA10E5 /* VeiculoDetailTableViewCell.swift */,
+				D0C9C98D2016292000AA10E5 /* AppSingleton.swift */,
+			);
+			path = SupportingFiles;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -163,6 +190,7 @@
 				D0C9C98620154BC900AA10E5 /* ModelosViewController.swift in Sources */,
 				43CA6DBC2013CEBB00EDE613 /* VeiculosViewController.swift in Sources */,
 				43CA6DBA2013C69D00EDE613 /* MarcaModel.swift in Sources */,
+				D0C9C990201683BD00AA10E5 /* VeiculoDetailTableViewCell.swift in Sources */,
 				43CA6DA62013C1E700EDE613 /* AppDelegate.swift in Sources */,
 				D0C9C98C201622BA00AA10E5 /* VeiculoInformationModel.swift in Sources */,
 				D0C9C98E2016292000AA10E5 /* AppSingleton.swift in Sources */,

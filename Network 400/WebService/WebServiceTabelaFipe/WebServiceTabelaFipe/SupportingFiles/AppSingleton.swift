@@ -20,29 +20,29 @@ class AppSingleton {
     static let shared = AppSingleton()
     private init() {}
     
-    func recovery(informationFor endPoint:String, completation:@escaping (Bool,[[String:Any]]?)->()) -> Void {
+    func recovery(informationFor endPoint:String, completation:@escaping (Bool,[[String:Any]]?,Error?)->()) -> Void {
         
         let uri = "https://fipeapi.appspot.com\(endPoint)"
         guard let url = URL(string: uri) else {
-            completation(false,nil)
+            completation(false,nil,nil)
             return
         }
     
         let session = URLSession(configuration: .default)
         let task    = session.dataTask(with: url) { (data, response, error) in
             if let erro = error {
-               completation(false,nil)
+               completation(false,nil,erro)
             }
             
             if let dataReceive = data {
                do {
                   guard let arrayObject = try JSONSerialization.jsonObject(with: dataReceive, options: JSONSerialization.ReadingOptions()) as? [[String:Any]] else {
-                      completation(false,nil)
+                      completation(false,nil,nil)
                       return
                   }
-                  completation(true,arrayObject)
+                  completation(true,arrayObject,nil)
                } catch let erro {
-                    completation(false,nil)
+                    completation(false,nil,erro)
                     print("Error parse \(erro.localizedDescription)")
                }
             }

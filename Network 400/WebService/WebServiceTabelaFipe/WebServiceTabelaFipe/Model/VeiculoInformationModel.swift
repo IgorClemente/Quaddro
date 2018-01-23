@@ -29,8 +29,8 @@ import Foundation
 
 class VeiculoInformationModel : NSObject {
     
-    var id:Int?
-    var ano_modelo:Int?
+    var id:String?
+    var ano_modelo:String?
     var marca:String?
     var name:String?
     var veiculo:String?
@@ -43,12 +43,12 @@ class VeiculoInformationModel : NSObject {
     convenience init(forJSON object:[String:Any]) {
         self.init()
         
-        guard let id = object["id"] as? Int else {
+        guard let id = object["id"] as? String else {
             return
         }
         self.id = id
         
-        guard let ano_modelo = object["ano_modelo"] as? Int else {
+        guard let ano_modelo = object["ano_modelo"] as? String else {
             return
         }
         self.ano_modelo = ano_modelo

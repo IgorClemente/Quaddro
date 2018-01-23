@@ -19,7 +19,11 @@ class MarcasViewController: UIViewController {
             return
         }
         
-        AppSingleton.shared.recovery(informationFor: "/api/1/carros/marcas.json") { (completed,information) in
+        AppSingleton.shared.recovery(informationFor: "/api/1/carros/marcas.json") { (completed,information,error) in
+            guard error == nil else {
+                return
+            }
+            
             if completed {
                guard let marcasObject = information else {
                    return
