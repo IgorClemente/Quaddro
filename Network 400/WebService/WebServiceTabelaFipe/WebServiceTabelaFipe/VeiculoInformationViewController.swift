@@ -44,7 +44,6 @@ class VeiculoInformationViewController: UIViewController {
     }
     
     func recovery(informationFor endPoint: String, completation:@escaping (Bool,[String:Any]?)->()) {
-        
         let uri = "https://fipeapi.appspot.com\(endPoint)"
         guard let url = URL(string: uri) else {
             return

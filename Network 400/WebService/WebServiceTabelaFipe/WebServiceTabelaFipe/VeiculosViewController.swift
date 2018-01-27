@@ -11,7 +11,7 @@ import UIKit
 class VeiculosViewController: UIViewController {
 
     @IBOutlet weak var uiVeiculosTableView:UITableView?
-    var marca_id:Int?        = nil
+    var marca_id:Int?            = nil
     var veiculos:[VeiculoModel]? = []
     
     override func viewDidLoad() {
@@ -67,7 +67,6 @@ extension VeiculosViewController: UITableViewDelegate, UITableViewDataSource {
               let veiculos = self.veiculos else {
             return UITableViewCell()
         }
-        
         let index   = indexPath.row
         let veiculo = veiculos[index]
         cell.textLabel?.text = veiculo.fipe_name 
@@ -79,7 +78,6 @@ extension VeiculosViewController: UITableViewDelegate, UITableViewDataSource {
               let codigo_marca = self.marca_id else {
             return
         }
-        
         let index   = indexPath.row
         let veiculo = veiculos[index]
         
@@ -96,7 +94,6 @@ extension VeiculosViewController: UITableViewDelegate, UITableViewDataSource {
               let codigo_veiculo = informations["codigo_veiculo"] as? String else {
             return
         }
-        
         destination.codigo_marca = codigo_marca
         destination.codigo_veiculo = codigo_veiculo
     }

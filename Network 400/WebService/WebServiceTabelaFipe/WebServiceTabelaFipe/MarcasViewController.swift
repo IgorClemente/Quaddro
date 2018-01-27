@@ -64,19 +64,15 @@ extension MarcasViewController: UITableViewDelegate, UITableViewDataSource {
               let marcas = self.marcas else {
             return UITableViewCell()
         }
-        
         let marca = marcas[indexPath.row]
-    
         cell.textLabel?.text = marca.name
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
         guard let marcas = self.marcas else {
             return
         }
-        
         let rowSelected   = indexPath.row
         let marcaSelected = marcas[rowSelected]
         performSegue(withIdentifier: "veiculos", sender: marcaSelected)

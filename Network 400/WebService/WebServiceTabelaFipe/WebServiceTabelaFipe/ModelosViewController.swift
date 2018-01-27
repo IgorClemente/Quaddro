@@ -86,7 +86,7 @@ extension ModelosViewController: UITableViewDelegate, UITableViewDataSource {
         }
         
         let modelo = modelos[index]
-        let veiculo_informations = ["codigo_marca": codigo_marca,"codigo_veiculo": codigo_veiculo,"codigo_ano": modelo.key] as? [String:Any]
+        let veiculo_informations = ["codigo_marca": codigo_marca,"codigo_veiculo": codigo_veiculo,"codigo_ano": modelo.key] as [String:Any]
         performSegue(withIdentifier: "veiculoFipe", sender: veiculo_informations)
     }
     
