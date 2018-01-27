@@ -12,6 +12,7 @@
 		438F8EBA201CF149009F437B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 438F8EB8201CF149009F437B /* Main.storyboard */; };
 		438F8EBC201CF149009F437B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 438F8EBB201CF149009F437B /* Assets.xcassets */; };
 		438F8EBF201CF149009F437B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 438F8EBD201CF149009F437B /* LaunchScreen.storyboard */; };
+		438F8EC8201CF42D009F437B /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 438F8EC7201CF42D009F437B /* libsqlite3.tbd */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,8 @@
 		438F8EBB201CF149009F437B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		438F8EBE201CF149009F437B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		438F8EC0201CF149009F437B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		438F8EC7201CF42D009F437B /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		43E094DE201CF922003B7D7D /* Ponte.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Ponte.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +32,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				438F8EC8201CF42D009F437B /* libsqlite3.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +44,7 @@
 			children = (
 				438F8EB3201CF149009F437B /* SQLite */,
 				438F8EB2201CF149009F437B /* Products */,
+				438F8EC6201CF42D009F437B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,6 +59,7 @@
 		438F8EB3201CF149009F437B /* SQLite */ = {
 			isa = PBXGroup;
 			children = (
+				43E094DE201CF922003B7D7D /* Ponte.h */,
 				438F8EB4201CF149009F437B /* AppDelegate.swift */,
 				438F8EB6201CF149009F437B /* ViewController.swift */,
 				438F8EB8201CF149009F437B /* Main.storyboard */,
@@ -62,6 +68,14 @@
 				438F8EC0201CF149009F437B /* Info.plist */,
 			);
 			path = SQLite;
+			sourceTree = "<group>";
+		};
+		438F8EC6201CF42D009F437B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				438F8EC7201CF42D009F437B /* libsqlite3.tbd */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -280,6 +294,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = CursoQuaddro.SQLite;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = SQLite/Ponte.h;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -295,6 +310,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = CursoQuaddro.SQLite;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = SQLite/Ponte.h;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
