@@ -20,6 +20,13 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        /**
+         
+         FMDB
+         
+         **/
+        
         self.logTextView?.text = nil
         
         // Resgatar o caminho da pasta de documents
@@ -79,6 +86,36 @@ class ViewController: UIViewController {
         // Variável que armazenará o valor gerado pelo select
         var statement:OpaquePointer?
         
+        // Função que executa o comando gerando um resultado
+        if sqlite3_prepare_v2(self.banco!, query, -1, &statement, nil) != SQLITE_OK {
+           self.exibir(log: "Falha ao resgatar registros \(String(cString: sqlite3_errmsg(self.banco!)))")
+           return
+        }
+        
+        // Criar um array para salvar os dados do SELECT
+        var pessoas = [[String: Any]]()
+        
+        // Estrutura de repetição para resgatar todos os registros do SELECT
+        while sqlite3_step(statement) == SQLITE_ROW {
+            // Regastar os dados
+            let id = sqlite3_column_int64(statement, 0)
+            let nome  = sqlite3_column_text(statement, 1)
+            let idade = sqlite3_column_int64(statement, 2)
+            
+            // Converter o cString para String
+            let nomeString = String(cString: nome!)
+            
+            // Adicionar o registro no Array
+            pessoas.append(["id": id,"nome": nomeString,"idade": idade])
+        }
+        
+        // Ao concluir o trabalho, descartar o statement
+        sqlite3_finalize(statement)
+        
+        // Exibir os resultados
+        for pessoa in pessoas {
+            self.exibir(log: "ID \(pessoa["id"]!), NOME: \(pessoa["nome"]!), IDADE: \(pessoa["idade"]!)")
+        }
     }
     
     func exibir(log:String) {
