@@ -26,11 +26,33 @@ class ObjetivosTableViewController: UITableViewController {
         
         // Resgatar um instancia do contexto
         self.contextBanco = self.appDelegate?.persistentContainer.viewContext
+        self.atualizar()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
+    
+    func atualizar() -> Void {
+        
+        // Criar uma requisicao para resgastar os registros do banco fisico
+        let requisicao:NSFetchRequest<Objetivo> = Objetivo.fetchRequest()
+        
+        // Limitar o numero de registros
+        // requisicao.fetchLimit = 2
+        
+        //Disparar a requisicao
+        do {
+             guard let resultadoRequisicao = try self.contextBanco?.fetch(requisicao) else {
+                 return
+             }
+             self.objetivos.append(contentsOf: resultadoRequisicao)
+             self.tableView.reloadData()
+        } catch {
+             print("Error recovery \(error.localizedDescription)")
+        }
+    }
+    
     
     @IBAction func tapAddObjetivo(_ sender: UIBarButtonItem) {
         
@@ -90,10 +112,40 @@ class ObjetivosTableViewController: UITableViewController {
         // Resgatar o objetivo da linha atual
         let objetivo = self.objetivos[indexPath.row]
         cell.textLabel?.text = objetivo.nome
+        cell.accessoryType   = objetivo.concluido ? .checkmark : .none
         return cell
     }
     
 
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        guard let context = self.contextBanco else {
+            return
+        }
+        
+        // Regastar o objetivo selecionado
+        let objetivo = self.objetivos[indexPath.row]
+        
+        // Inverter o valor da flag concluído
+        objetivo.concluido = !objetivo.concluido
+        
+        // Gravar a alteração no disco
+        do {
+            try context.save()
+        } catch {
+            print("Error update \(error.localizedDescription)")
+        }
+        
+        // Regastar a celula tocada
+        let cell = tableView.cellForRow(at: indexPath)
+        
+        // Atualizar o status da célula
+        cell?.accessoryType = objetivo.concluido ? .checkmark : .none
+        
+        // Desselecionar a célula
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
+    
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
@@ -102,18 +154,32 @@ class ObjetivosTableViewController: UITableViewController {
     }
     */
 
-    /*
-    // Override to support editing the table view.
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            // Delete the row from the data source
+            guard let context = self.contextBanco else {
+                return
+            }
+            
+            // Resgatar o registro que será removido
+            let objetivo = self.objetivos[indexPath.row]
+            
+            // Remover do Array local
+            self.objetivos.remove(at: indexPath.row)
+            
+            // Remover do context
+            self.contextBanco?.delete(objetivo)
+            
+            // Salvar as alterações
+            do {
+                try context.save()
+            } catch {
+                print("Error delete \(error.localizedDescription)")
+            }
+            
             tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
+        }
     }
-    */
-
+    
     /*
     // Override to support rearranging the table view.
     override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
