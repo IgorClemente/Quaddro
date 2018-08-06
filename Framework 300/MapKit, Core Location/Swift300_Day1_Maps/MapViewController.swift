@@ -146,7 +146,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
 
 
 extension MapViewController : MKMapViewDelegate {
-
+    
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
         if let lugar = annotation as? FamarciaAnnotation {
             return uiMapa?.dequeueReusableAnnotationView(withIdentifier: lugar.identifier) ?? lugar.viewDaAnnotation()
